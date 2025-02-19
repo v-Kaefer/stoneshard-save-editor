@@ -1,0 +1,63 @@
+{{doc/start}}{{stub}}
+
+This Template is used to display every category & type of items a NPC trades.
+
+==Syntax==
+{{tl|NPCTable/head}}
+
+==Usage==
+The header is always followed by the {{tl|NPCLootTable/row}}, according to the necessary amount of NPCs to be display.
+{{Clear}}
+{{tl|NPCLootTable/head|Bert}}<br>
+{{tl|NPCLootTable/row}}<br>
+|}
+{{Clear}}
+
+Any NPC Loot information added in [[NPCLoot data|NPCLoot data]], can be used with the '/row' template.
+
+===Examples===
+
+====A) With a NPC {{tl|NPCLootTable/head|Bert}}:====
+
+{{NPCLootTable/head|npc=Ormond}}
+|}
+
+====B) With {{tl|NPCLootTable/head|Bert}} & {{tl|NPCLootTable/row|NPC*}}:====
+
+=== Trades ===
+Bert as example
+
+== Buys ==
+* With "head|Bert|Buys", "Buys" & "end"
+{{NPCLootTable/head|Bert|Buys}}
+{{NPCLootTable/row|Bert|Buys}}
+{{NPCLootTable/end}}
+|}
+
+* With "head" & "Buys"
+{{NPCLootTable/head}}
+{{NPCLootTable/row|Bert|Buys}}
+|}
+
+== Sells ==
+* With "head", "Sells" & "end"
+{{NPCLootTable/head}}
+{{NPCLootTable/row|Bert|Sells|Weapons}}
+{{NPCLootTable/end}}
+|}
+
+* With "head|Bert|Sells" & "SellsX3"
+{{NPCLootTable/head|Bert|Sells}}
+{{NPCLootTable/row|Bert|Sells|Weapons}}
+{{NPCLootTable/row|Bert|Sells|Armor}}
+{{NPCLootTable/row|Bert|Sells|Tools}}
+|}
+
+* With "head" & "SellsX2"
+{{NPCLootTable/head}}
+{{NPCLootTable/row|Bert|Sells|Weapons}}
+{{NPCLootTable/row|Bert|Sells|Tools}}
+|}
+
+{{doc/end}}
+[[Category:Template_documentation]]

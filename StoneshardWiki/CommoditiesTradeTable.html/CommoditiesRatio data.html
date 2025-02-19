@@ -1,0 +1,62 @@
+<noinclude>
+==Commodities Ratio data==
+
+This is the data for the Commodities Ratio Table. It is used to generate the table on the [[Commodities Ratio Table]] page.
+
+===Data format (datastring)===
+There are 7 data columns separated by semicolons. Each column represents the price of a commodity in a specific town. The columns are in the following order:
+
+    Grain;Charcoal;Salt;Timber;Beer;Wine;Cider
+
+    Base : 280;300;400;240;240;360;300
+</noinclude><includeonly>{{#switch: {{{1}}}
+
+<!--Osbrook-->
+|Osbrook = {{#switch: {{{2}}}
+|Brukk = ;;1.32;;1.21;1.26;1.21
+|Bert = ;1.16;1.32;1.16;;1.21;1.21
+|Jurg = ;;;1.26;;;
+|Jebar = ;1.26;;;;;
+|#default = No data available.}}
+
+<!--Mannshire-->
+|Mannshire = {{#switch: {{{2}}}
+|Arenn = 1.1;;1.21;;1.26;;
+|Gerlot =	1.1;1.16;1.21;1.26;1.21;;
+|Dirk = ;;;1.38;;;
+|Dietrich = ;1.26;;;;;
+|#default = No data available.}}
+
+<!--Misc-->
+|Misc = {{#switch: {{{2}}}
+|Wigmar = 1.1;;1.21;;1.38;1.26;1.21
+|Kenrick = 1.1;;;1.1;1.25;1.15;1.1
+|Weemart = 1.1;1.2;1.32;1.05;1.26;1.26;1.32
+|#default = No data available.}}
+
+<!--Brynn Inns-->
+|Brynn Inns = {{#switch: {{{2}}}
+|Rico = 1.1;;1.32;;1.21;1.38;1.21
+|Rixa = 1.16;;1.16;;1.38;1.26;1.16
+|Kred = 1.16;;1.16;;1.26;1.26;1.21
+|Farley = 1.16;;1.21;;1.26;1.26;1.21
+|#default = No data available.}}
+
+<!--Brynn Shops-->
+|Brynn Shops = {{#switch: {{{2}}}
+|Fat Yann = 1.21;;1.21;;1.16;1.1;1.1
+|Eric = 1.38;;1.16;;;;
+|Idrich = 1.16;1.26;1.16;1.26;1.21;1.16;1.16
+|Amis = 1.21;1.32;1.1;1.32;1.16;1.1;
+|#default = No data available.}}
+
+<!--Brynn Foreign-->
+|Brynn Foreign = {{#switch: {{{2}}}
+|Esfah = 1.21;1.32;1.21;1.38;1.16;1.1;1.1
+|Ormi = 1.21;1.38;1.16;1.32;1.26;1.16;1.1
+|Zdenebrad = 1.26;1.26;1.1;1.26;1.21;1.21;1.16
+|Rigo Nevic	= 1.16;1.38;1.1;1.32;1.16;1.1;1.21
+|#default = No data available.}}
+
+|#default = No data.}}
+</includeonly><noinclude>{{doc|Template:CommoditiesRatio data}}[[Category:Templates]]</noinclude>

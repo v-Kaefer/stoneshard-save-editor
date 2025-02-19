@@ -1,0 +1,90 @@
+{{doc|start}}
+<noinclude>
+    Page for all Stoneshard NPC Loot data. '''{{c|-|[TEST]}}'''
+    
+    ---
+    
+    NPCLoot data is maintained manually (for now).
+    
+    This template is a standalone from the [[Friendly data]] template and data, which was used to gather some of the data from each NPC, along with the extra data added in their own pages.
+    
+    ==Update Data==
+    
+    The idea here, is to centralize only what the NPCs trade. Buying and selling prices are not needed, as they are already in the determined data pages.<br>
+    
+    To adapt to the official [[Category:Icons|Icons]]. The template {{tl|NPCLootTable/row}}, uses the following categories, only for sub-categories:
+    * Unfortunately, this needs to be changed manually, for every NPC. This is where Friendly NPC and NPCLoot data differ from each other.
+    * This would require a "complete" rewrite of the NPCs infos, to compell with the game icon categories.
+    
+      <nowiki>
+    |SubCategories = {{switch:{{#var:IconCategory}}
+    |Food = Consumables;
+    |Beverages = Consumables;
+    |Drinks = Consumables;
+    |Wateskin = Consumables;
+    "Loot" = <!--TBD -> Most likely, the difference between Jewelry and Valuables-->;
+    |Junk = Other;
+    |Herbs = Medicine;
+    "Reagents" = <!--TBD -> Most likely, food additives & ? -->;
+    |Books & Notes = Scrolls;
+    |Tools & Traps = Tools;
+    |Misc = Other;
+    #default = All}} <!--When icon not found.-->
+    </nowiki>
+    
+    * I could not think of a better way to do this icon verification, without a proper loop or a better way to handle the data. So i will leave this as is, and change manually, as needed.
+    * The thing is, manually cchanging this table, requires you to go to the NPC page, and verify the items listed there and their categories, then update the NPCLoot data page, with the correct categories.
+    
+    You can base it on the "old" NPC page, and list the types of items he sells like this:
+    
+    If a parameter is empty (for example;[[Bert]] does not Sell any Jewelry);it can be left empty or omitted completely.<br>
+    Here are two examples of NPCLoot data syntax;these two would produce the same result:
+    
+      <nowiki>
+    |Bert = {{#switch:{{{2}}}
+      |Buys = Beverages;Armor;Books;Drugs;Food;Jewelry;Medicine;Potions;Tools;Weapons;Valuables
+      |Sells = Weapons;Armor;Jewelry;Medicine;Valuables;Food;Junk
+      |Weapons = Training_Crossbow
+      |Armor = Travelling_Shoes
+      |Beverages = Mannshire_Fortified
+      |Food = Bread;Cheese;Morel
+      |Medicine = Bandage;Healing Salve;Herbal Extract
+      |Tools = Hammer;Pickaxe;Bedroll
+    |#default = }}</nowiki>
+    
+      <nowiki>
+    |Bert = {{#switch:{{{2}}}
+      |Buys = Beverages;Armor;Books;Drugs;Food;Jewelry;Medicine;Potions;Tools;Weapons;Valuables
+      |Sells = Weapons;Armor;Jewelry;Medicine;Valuables;Food;Junk
+      |Weapons = Training_Crossbow
+      |Armor = Travelling_Shoes
+      |Jewelry = 
+      |Beverages = Mannshire_Fortified
+      |Food = Bread;Cheese;Morel
+      |Medicine = Bandage;Healing Salve;Herbal Extract
+      |Tools = Hammer;Pickaxe;Bedroll
+    |#default = }}</nowiki>
+    
+    Used by:
+    * {{tl|NPCLootTable/head}} template.
+    * {{tl|NPCLootTable/row}} template.
+    * {{tl|NPCLootTable/end}} template.
+    
+    <!-- New model:
+    
+    {{#switch:{{{1}}}
+    |NPC1 = {{#switch:{{{2}}}
+      |Buys = Weapons;Armor
+      |Sells = Potions;Tools
+      |Weapons = Sword;Axe;Bow;Training_Crossbow
+      |Armor = Helmet;Shield
+      |Potions = HealthPotion;ManaPotion
+      |Tools = Pickaxe;Hammer
+      |#default = }}
+    }}
+    -->
+    All icons:
+    
+    All;Armor;Consumables;Inventorystash;Jewelry;Loot;Medicine;Other;Potions;Reagents;Scrolls;Tools;Weapons;
+    
+{{doc|end}}

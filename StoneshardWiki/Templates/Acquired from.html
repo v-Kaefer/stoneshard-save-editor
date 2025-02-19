@@ -1,0 +1,389 @@
+<includeonly><!--
+--><!-- Check if item has data in Armor data or Weapon data, define appropriate data page as variable --><!--
+-->{{#vardefine:Datapage|{{#ifeq:{{:Weapon_data|{{ROOTPAGENAME}}}}|Data does not exist.|{{#ifeq:{{:Armor_data|{{ROOTPAGENAME}}}}|Data does not exist.||Armor_data}}|Weapon_data}}}}<!--
+--><!-- if item isn't in either data page, just return empty string for now--><!--
+-->{{#if:{{#var:Datapage}}|<!--
+--- Load complete datastring into a variable - to only load from the data page once. ---
+-->{{#vardefine:Datastring|{{:{{#var:Datapage}}|{{ROOTPAGENAME}}}}}}<!--
+--><!-- Load item data into variables, temporary solution for armor and weapons only --><!--
+-->{{#ifeq:{{#var:Datapage}}|Armor_data|{{#vardefine:Material|{{lc:{{#explode: {{#var:Datastring}}|;|5}}}}}}|{{#vardefine:Material|{{lc:{{#explode: {{#var:Datastring}}|;|3}}}}}}}}<!--
+-->{{#ifeq:{{#var:Datapage}}|Armor_data|{{#vardefine:Tags|{{lc:{{#explode: {{#var:Datastring}}|;|72}}}}}}|{{#vardefine:Tags|{{lc:{{#explode: {{#var:Datastring}}|;|72}}}}}}}}<!--
+-->{{#ifeq:{{#var:Datapage}}|Armor_data|{{#vardefine:LVL|{{#explode: {{#var:Datastring}}|;|0}}}}|{{#vardefine:LVL|{{#explode: {{#var:Datastring}}|;|5}}}}}}<!--
+--><!-- RINGS and AMULETS are only sold by JEWELERS, GENERAL MERCHANTS, PAWNSHOP, DOCK ELF and DWARF, define a variable to easily skip others --><!--
+-->{{#ifeq:{{#var:Datapage}}|Armor_data|{{#vardefine:Jewelry|{{#pos: ring|{{lc:{{#explode: {{#var:Datastring}}|;|2}}}}}}{{#pos: amulet|{{lc:{{#explode: {{#var:Datastring}}|;|2}}}}}}}}}}<!--
+--><!-- Define LVL adjustments at reputation levels into variables --><!--
+-->{{#vardefine:Hatred|-4}}<!--
+-->{{#vardefine:Resentment|-2}}<!--
+-->{{#vardefine:Amity|4}}<!--
+-->{{#vardefine:AmityBrynn|6}}<!--
+-->{{#vardefine:Respect|6}}<!--
+-->{{#vardefine:RespectBrynn|10}}<!--
+Updated to:
+Tier at Hatred = -1 for Brynn and Rotten Willow
+Tier at Resentment .. no change
+Tier at Benevolence = +1 for Brynn, Rotten Willow and Osbrook
+Tier at Amity = +2 for Brynn, Rotten Willow, +1 for Denbrie, Mannshire and Osbrook
+Tier at Respect = +3 for Brynn, +2 for Rotten Willow, +1 for Denbrie, Mannshire and Osbrook
+-->{{#vardefine:Hatred|-4}}<!--
+-->{{#vardefine:HatredBrynn|-1}}<!--
+-->{{#vardefine:Resentment|-2}}<!--
+-->{{#vardefine:Benevolence|1}}<!--
+-->{{#vardefine:Amity|1}}<!--
+-->{{#vardefine:AmityBrynn|2}}<!--
+-->{{#vardefine:Respect|1}}<!--
+-->{{#vardefine:RespectBrynn|3}}<!--
+-->{{#vardefine:RespectRottenWillow|2}}<!--
+
+--><!-- List all the merchants and remove lines based on variables. --><!--
+--><!-- Check if item is JEWELRY, skip merchants that can't sell jewelry to lessen the load --><!--
+-->{{#if: {{#var:Jewelry|}}||
+<!-- Using pos to check if item's material type is sold by the merchant. --><!--
+--><!-- TAILORS only sell CLOTH and LEATHER --><!--
+-->{{#if: {{#pos: cloth leather leather2|{{#var:Material}}}}
+|{{#if: {{#pos: aldor common|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: aldor common|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (8 + {{#var:Respect}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Hold|Hold/{{SUBPAGENAME}}}}|{{#if: {{Translate|Hold|NPCNames}}|{{Translate|Hold|NPCNames}}|Hold}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (8 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (8 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= 8|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (8 + {{#var:Amity}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (8 + {{#var:Respect}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->{{#if: {{#pos: aldor brynn common uncommon rare|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: aldor brynn common uncommon rare|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:RespectBrynn}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Keremit Lawe|Keremit Lawe/{{SUBPAGENAME}}}}|{{#if: {{Translate|Keremit Lawe|NPCNames}}|{{Translate|Keremit Lawe|NPCNames}}|Keremit Lawe}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= 16|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:AmityBrynn}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:RespectBrynn}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->}}<!-- SMITHS only sell METAL --><!--
+-->{{#if: {{#pos: metal|{{#var:Material}}}}
+|{{#if: {{#pos: aldor common|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: aldor common|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (6 + {{#var:Respect}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Jebar|Jebar/{{SUBPAGENAME}}}}|{{#if: {{Translate|Jebar|NPCNames}}|{{Translate|Jebar|NPCNames}}|Jebar}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (6 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (6 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= 6|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (6 + {{#var:Amity}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (6 + {{#var:Respect}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->{{#if: {{#pos: aldor common|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: aldor common|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (10 + {{#var:Respect}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Dietrich|Dietrich/{{SUBPAGENAME}}}}|{{#if: {{Translate|Dietrich|NPCNames}}|{{Translate|Dietrich|NPCNames}}|Dietrich}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (10 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (10 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= 10|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (10 + {{#var:Amity}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (10 + {{#var:Respect}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->{{#if: {{#pos: aldor brynn common uncommon rare|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: aldor brynn common uncommon rare|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:RespectBrynn}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Giles vir Ivet|Giles vir Ivet/{{SUBPAGENAME}}}}|{{#if: {{Translate|Giles vir Ivet|NPCNames}}|{{Translate|Giles vir Ivet|NPCNames}}|Giles vir Ivet}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= 16|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:AmityBrynn}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:RespectBrynn}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->}}<!-- CARPENTERS only sell WOOD --><!--
+-->{{#if: {{#pos: wood|{{#var:Material}}}}
+|{{#if: {{#pos: aldor common|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: aldor common|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (6 + {{#var:Respect}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Jurg|Jurg/{{SUBPAGENAME}}}}|{{#if: {{Translate|Jurg|NPCNames}}|{{Translate|Jurg|NPCNames}}|Jurg}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (6 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (6 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= 6|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (6 + {{#var:Amity}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (6 + {{#var:Respect}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->{{#if: {{#pos: aldor common|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: aldor common|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (10 + {{#var:Respect}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Dirk_(NPC)|Dirk_(NPC)/{{SUBPAGENAME}}}}|{{#if: {{Translate|Dirk|NPCNames}}|{{Translate|Dirk|NPCNames}}|Dirk}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (10 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (10 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= 10|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (10 + {{#var:Amity}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (10 + {{#var:Respect}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->{{#if: {{#pos: aldor brynn common uncommon rare|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: aldor brynn common uncommon rare|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:RespectBrynn}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Noel vir Roan|Noel vir Roan/{{SUBPAGENAME}}}}|{{#if: {{Translate|Noel vir Roan|NPCNames}}|{{Translate|Noel vir Roan|NPCNames}}|Noel vir Roan}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= 16|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:AmityBrynn}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:RespectBrynn}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->}}<!-- Using pos to check if item's origin and rarity tags can be sold by the merchant. --><!--
+--><!-- Explode the variable to check place of origin first (ie. aldor). If matched, check for rarity second. --><!--
+-->{{#if: {{#pos: aldor brynn common|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: aldor brynn common|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 8 and {{#var:LVL}} <= (14 + {{#var:RespectBrynn}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Bern|Bern/{{SUBPAGENAME}}}}|{{#if: {{Translate|Bern|NPCNames}}|{{Translate|Bern|NPCNames}}|Bern}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 8 and {{#var:LVL}} <= (14 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 8 and {{#var:LVL}} <= (14 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 8 and {{#var:LVL}} <= 14|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 8 and {{#var:LVL}} <= (14 + {{#var:AmityBrynn}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 8 and {{#var:LVL}} <= (14 + {{#var:RespectBrynn}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->{{#if: {{#pos: aldor magic|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: aldor magic|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:RespectBrynn}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Renod Kann|Renod Kann/{{SUBPAGENAME}}}}|{{#if: {{Translate|Renod Kann|NPCNames}}|{{Translate|Renod Kann|NPCNames}}|Renod Kann}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= 16|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:AmityBrynn}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:RespectBrynn}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->{{#if: {{#pos: common uncommon elven|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: common uncommon elven rare|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (14 + {{#var:RespectBrynn}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Armuz|Armuz/{{SUBPAGENAME}}}}|{{#if: {{Translate|Armuz|NPCNames}}|{{Translate|Armuz|NPCNames}}|Armuz}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (14 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (14 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= 14|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (14 + {{#var:AmityBrynn}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (14 + {{#var:RespectBrynn}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->{{#if: {{#pos: nistra common uncommon rare|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: nistra common uncommon rare|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!--
+--><!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:RespectBrynn}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Rigo Nevic|Rigo Nevic/{{SUBPAGENAME}}}}|{{#if: {{Translate|Rigo Nevic|NPCNames}}|{{Translate|Rigo Nevic|NPCNames}}|Rigo Nevic}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= 12|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:AmityBrynn}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:RespectBrynn}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->{{#if: {{#pos: skadia common uncommon rare|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: skadia common uncommon rare|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!--
+--><!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:RespectBrynn}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Zdenebrad|Zdenebrad/{{SUBPAGENAME}}}}|{{#if: {{Translate|Zdenebrad|NPCNames}}|{{Translate|Zdenebrad|NPCNames}}|Zdenebrad}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= 12|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:AmityBrynn}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:RespectBrynn}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->}}<!-- ENDIF JEWELRY CHECK --><!--
+-->{{#if: {{#pos: fjall common uncommon rare|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: fjall common uncommon rare|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!--
+--><!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:RespectBrynn}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Ormi|Ormi/{{SUBPAGENAME}}}}|{{#if: {{Translate|Ormi|NPCNames}}|{{Translate|Ormi|NPCNames}}|Ormi}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= 12|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:AmityBrynn}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:RespectBrynn}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->{{#if: {{#pos: aldor common|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: aldor common|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (10 + {{#var:Respect}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Gerlot|Gerlot/{{SUBPAGENAME}}}}|{{#if: {{Translate|Gerlot|NPCNames}}|{{Translate|Gerlot|NPCNames}}|Gerlot}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (10 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (10 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= 10|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (10 + {{#var:Amity}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (10 + {{#var:Respect}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->{{#if: {{#pos: aldor common uncommon|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: aldor common uncommon|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!--
+--><!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (12 + {{#var:RespectBrynn}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Jervey vir Noms|Jervey vir Noms/{{SUBPAGENAME}}}}|{{#if: {{Translate|Jervey vir Noms|NPCNames}}|{{Translate|Jervey vir Noms|NPCNames}}|Jervey vir Noms}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (12 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (12 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= 12|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (12 + {{#var:AmityBrynn}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (12 + {{#var:RespectBrynn}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->{{#if: {{#var:Jewelry}}|{{#if: {{#pos: aldor common uncommon rare|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: aldor common uncommon rare|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!--
+--><!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (14 + {{#var:RespectBrynn}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Letar|Letar/{{SUBPAGENAME}}}}|{{#if: {{Translate|Letar|NPCNames}}|{{Translate|Letar|NPCNames}}|Letar}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (14 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (14 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= 14|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (14 + {{#var:AmityBrynn}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (14 + {{#var:RespectBrynn}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}}}<!--
+-->{{#if: {{#pos: aldor brynn skadia nistra common uncommon|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: aldor brynn skadia nistra common uncommon|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!--
+--><!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (12 + {{#var:RespectBrynn}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|General Merchant (Brynn Mint Square)|General Merchant (Brynn Mint Square)/{{SUBPAGENAME}}}}|{{#if: {{Translate|General Merchant (Brynn Mint Square)|NPCNames}}|{{Translate|General Merchant (Brynn Mint Square)|NPCNames}}|General Merchant (Brynn Mint Square)}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (12 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (12 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= 12|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (12 + {{#var:AmityBrynn}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 4 and {{#var:LVL}} <= (12 + {{#var:RespectBrynn}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->{{#if: {{#pos: aldor brynn skadia nistra common uncommon|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: aldor brynn skadia nistra common uncommon|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!--
+--><!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (14 + {{#var:RespectBrynn}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|General Merchant (Brynn Docks)|General Merchant (Brynn Docks)/{{SUBPAGENAME}}}}|{{#if: {{Translate|General Merchant (Brynn Docks)|NPCNames}}|{{Translate|General Merchant (Brynn Docks)|NPCNames}}|General Merchant (Brynn Docks)}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (14 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (14 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= 14|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (14 + {{#var:AmityBrynn}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (14 + {{#var:RespectBrynn}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->{{#if: {{#pos: aldor brynn aldwynn maen common uncommon rare|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: aldor brynn aldwynn maen common uncommon rare|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:RespectBrynn}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Skinflint Homs|Skinflint Homs/{{SUBPAGENAME}}}}|{{#if: {{Translate|Skinflint Homs|NPCNames}}|{{Translate|Skinflint Homs|NPCNames}}|Skinflint Homs}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= 16|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:AmityBrynn}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (16 + {{#var:RespectBrynn}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->{{#if: {{#pos: elven common uncommon rare|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: elven common uncommon rare|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:RespectBrynn}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Esfah|Esfah/{{SUBPAGENAME}}}}|{{#if: {{Translate|Esfah|NPCNames}}|{{Translate|Esfah|NPCNames}}|Esfah}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= 12|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:AmityBrynn}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:RespectBrynn}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->{{#if: {{#pos: aldor common uncommon rare magic|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: aldor common uncommon rare magic|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!--
+--><!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (14 + {{#var:RespectBrynn}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Ol' Tott|Ol' Tott/{{SUBPAGENAME}}}}|{{#if: {{Translate|Ol' Tott|NPCNames}}|{{Translate|Ol' Tott|NPCNames}}|Ol' Tott}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (14 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (14 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= 14|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (14 + {{#var:AmityBrynn}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (14 + {{#var:RespectBrynn}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->{{#if: {{#pos: aldor common|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: aldor common|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (8 + {{#var:Respect}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|Bert|Bert/{{SUBPAGENAME}}}}|{{#if: {{Translate|Bert|NPCNames}}|{{Translate|Bert|NPCNames}}|Bert}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (8 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;|}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (8 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;|}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= 8|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (8 + {{#var:Amity}})|{{Translate|Amity|Properties}}&nbsp;|}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 2 and {{#var:LVL}} <= (8 + {{#var:Respect}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->{{#if: {{#pos: aldor common|{{#explode:{{#var:Tags}}| |0}}}}|{{#if: {{#pos: aldor common|{{#explode:{{#var:Tags}}| |-1}}}}
+|<!-- First check item's LVL is between merchant's minimum LVL and maximum LVL at Respect. --><!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:Respect}})
+|{{#vardefine:NobodySells|1}}<!--
+--><!-- If true, merchant can sell the item, list the merchant. Now check each reputation individually. --><!--
+-->* [[{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|One-Eyed Wigmar|One-Eyed Wigmar/{{SUBPAGENAME}}}}|{{#if: {{Translate|One-Eyed Wigmar|NPCNames}}|{{Translate|One-Eyed Wigmar|NPCNames}}|One-Eyed Wigmar}}]] (&nbsp;<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:Hatred}})|{{Translate|Hatred|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:Resentment}})|{{Translate|Resentment|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= 12|{{Translate|Neutral|Properties}}&nbsp;{{Translate|Benevolence|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:Amity}})|{{Translate|Amity|Properties}}&nbsp;}}<!--
+-->{{#ifexpr: {{#var:LVL}} >= 6 and {{#var:LVL}} <= (12 + {{#var:Respect}})|{{Translate|Respect|Properties}}}}<!--
+-->)}}<!--
+-->}}}}<!--
+-->{{#if: {{#var:NobodySells}}||Currently no merchant sells this item.}}}}<!--
+--><!-- OLD CODE for Containers, still works but the lists will be outdated for sure - hiding for now --><!--
+{{#if: {{#pos:{{:Barrels|Loot}}|{{ROOTPAGENAME}}}} | * [[Barrels]] | }}
+{{#if: {{#pos:{{:Bookshelves|Loot}}|{{ROOTPAGENAME}}}} | * [[Bookshelves]] | }}
+{{#if: {{#pos:{{:Bookshelves|Treatise}}|{{ROOTPAGENAME}}}} | * [[Bookshelves]] | }}
+{{#if: {{#pos:{{:Carts|Loot}}|{{ROOTPAGENAME}}}} | * [[Carts]] | }}
+{{#if: {{#pos:{{:Chests|Loot}}|{{ROOTPAGENAME}}}} | * [[Chests]] | }}
+{{#if: {{#pos:{{:Coffins|Loot}}|{{ROOTPAGENAME}}}} | * [[Coffins]] | }}
+{{#if: {{#pos:{{:Corpses|Loot}}|{{ROOTPAGENAME}}}} | * [[Corpses]] | }}
+{{#if: {{#pos:{{:Crates|Loot}}|{{ROOTPAGENAME}}}} | * [[Crates]] | }}
+{{#if: {{#pos:{{:Cupboards|Loot}}|{{ROOTPAGENAME}}}} | * [[Cupboards]] | }}
+{{#if: {{#pos:{{:Graves|Loot}}|{{ROOTPAGENAME}}}} | * [[Graves]] | }}
+{{#if: {{#pos:{{:Hero Sarcophagus|Loot}}|{{ROOTPAGENAME}}}} | * [[Hero Sarcophagus]] | }}
+{{#if: {{#pos:{{:Nightstands|Loot}}|{{ROOTPAGENAME}}}} | * [[Nightstands]] | }}
+{{#if: {{#pos:{{:Racks|Loot}}|{{ROOTPAGENAME}}}} | * [[Racks]] | }}
+{{#if: {{#pos:{{:Sarcophagi|Loot}}|{{ROOTPAGENAME}}}} | * [[Sarcophagi]] | }}
+{{#if: {{#pos:{{:Shelves|Loot}}|{{ROOTPAGENAME}}}} | * [[Shelves]] | }}
+{{#if: {{#pos:{{:Vases|Loot}}|{{ROOTPAGENAME}}}} | * [[Vases]] | }}
+{{#if: {{#pos:{{:Wardrobes|Loot}}|{{ROOTPAGENAME}}}} | * [[Wardrobes]] | }}--></includeonly><noinclude>{{doc}}
+[[Category:Templates]]</noinclude>

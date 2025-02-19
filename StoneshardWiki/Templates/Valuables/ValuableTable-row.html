@@ -1,0 +1,34 @@
+<includeonly><!--
+    --- Load complete datastring into a variable - to only load from the Valuable data page once. ---
+    -->{{#vardefine:Datastring|{{:Valuable_data|{{{1}}}}}}}<!--
+    -- Separate/Allocate values from datastring into individual variables. --
+    -->{{#vardefine:ItemID|{{#explode: {{#var:Datastring}}|;|0}}}}<!-- valuable00;
+    -->{{#vardefine:ImageBase|{{#explode: {{#var:Datastring}}|;|1}}}}<!-- (valuable name);
+    -->{{#vardefine:Variants|{{#explode: {{#var:Datastring}}|;|2}}}}<!--
+    -->{{#vardefine:InvSlots|{{#explode: {{#var:Datastring}}|;|3}}}}<!-- 1x1;
+    -->{{#vardefine:Price|{{#explode: {{#var:Datastring}}|;|4}}}}<!-- 100;
+    -->{{#vardefine:ItemDescription|{{#explode: {{#var:Datastring}}|;|5}}}}<!-- (valuable description)
+    --- Load translations that are used multiple times into variables. ---
+    -->{{#vardefine:TranslateName|{{Translate|{{{1}}}|ValuableNames}}}}<!--
+    --- Load translated description or fallback to base description ---
+    --> {{#vardefine:ItemDescription|{{#ifexist:Template:{{uc:{{SUBPAGENAME}}}}_ValuableDescriptions|{{:Template:{{uc:{{SUBPAGENAME}}}}_ValuableDescriptions|{{{1}}}}}|{{#var:ItemDescription}}}}}} <!--
+    --- Define "Link" var, with a subpage verification. If subpagename = pagename, we are not on a subpage, therefore URL becomes "item name". If we are on a subpage, URL becomes "item name/subgpagename". Used for other languages. ---
+    -->{{#vardefine:Link|{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|{{{1}}}|{{{1}}}/{{SUBPAGENAME}}}}}}
+    |- <!-- Starts a new table row. [Image(s) & Name inside row]-->
+    <!-- Display image variants -->
+    | '''[[{{#var:Link}}|{{#if:{{#var:TranslateName}}|{{#var:TranslateName}}|{{{1}}}}}]]'''<!--
+    --><span class="stoneshard sortable" style="display: flex; text-align: center; justify-content: center;"><!-- Flex container ---
+    --- Show image Variants if they exist -->
+    {{#if:{{#explode:{{#var:Variants}}|,|0}}|[[File:{{#explode:{{#var:Variants}}|,|0}}|center|alt={{#var:TranslateName}}|class=image2x|link={{#var:Link}}]]
+    {{#if:{{#explode:{{#var:Variants}}|,|1}}|[[File:{{#explode:{{#var:Variants}}|,|1}}|center|alt={{#var:TranslateName}}|class=image2x|link={{#var:Link}}]]}}
+    {{#if:{{#explode:{{#var:Variants}}|,|2}}|[[File:{{#explode:{{#var:Variants}}|,|2}}|center|alt={{#var:TranslateName}}|class=image2x|link={{#var:Link}}]]}}
+    {{#if:{{#explode:{{#var:Variants}}|,|3}}|[[File:{{#explode:{{#var:Variants}}|,|3}}|center|alt={{#var:TranslateName}}|class=image2x|link={{#var:Link}}]]}}}}</span><!--
+    --- If no Variant is found, show base image ---
+    -->{{#if:{{#explode:{{#var:Variants}}|,|0}}| |
+        {{#ifexist:File:{{#var:ImageBase}}.png|[[File:{{#var:ImageBase}}.png|center|alt={{#var:TranslateName}}|class=image2x|link={{#var:Link}}]]}}
+    }}
+    <!-- Display the rest of the data in the row -->
+    | {{slots|{{#explode: {{#var:InvSlots}}|x|0}}|{{#explode: {{#var:InvSlots}}|x|1}}}}
+    | {{#var:Price}} [[File:Gold.png|27x27px]]
+    | {{#if:{{#var:ItemDescription}}|{{#var:ItemDescription}}|{{1}}}}<!--
+--></includeonly><noinclude>{{doc}}[[Category:Templates]]</noinclude>

@@ -1,0 +1,41 @@
+{{doc/start}}{{stub}}
+
+This Template is used to display every type of items a NPC trades.
+
+==Syntax==
+{{tl|NPCTable/head}}
+
+==Usage==
+The header is always followed by the {{tl|NPCLootTable/row}}, according to the necessary amount of NPCs to be display.
+{{Clear}}
+{{tl|NPCLootTable/head}}<br>
+{{tl|NPCLootTable/row|Ormond}}<br>
+|}
+{{Clear}}
+
+Any NPC Loot information added in [[NPCLoot data|NPCLoot data]], can be used with the '/row' template.
+
+===Examples===
+====a) Only the {{tl|NPCLootTable/head}}:====
+{{NPCLootTable/head}}
+|}
+====b) With a town {{tl|NPCLootTable/head|town=Osbrook}}:====
+
+{{NPCLootTable/head|town=Osbrook}}
+|}
+
+====c) With {{tl|NPCLootTable/head|town=Osbrook}} & {{tl|NPCLootTable/row|NPCs*}}:====
+
+=== Lists of friendly NPCs* ===
+{{NPCLootTable/head|town=Osbrook}}
+{{NPCLootTable/row|Ormond}}
+{{NPCLootTable/row|Jurg}}
+|}
+
+{{NPCLootTable/head|town=Mannshire}}
+{{NPCLootTable/row|Lynd}}
+{{NPCLootTable/row|Dirk_(NPC)}}
+|}
+
+{{doc/end}}
+[[Category:Template_documentation]]

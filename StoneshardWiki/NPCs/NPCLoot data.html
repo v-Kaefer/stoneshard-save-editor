@@ -1,0 +1,240 @@
+<noinclude>{{stub}}
+Page for all Stoneshard NPC Loot data. '''{{c|-|[TEST]}}'''
+
+---
+
+NPCLoot data is maintained manually (for now).
+
+This template is a standalone from the [[Friendly data]] template and data, which was used to gather some of the data from each NPC, along with the extra data added in their own pages.
+
+==Update Data==
+
+The idea here, is to centralize only what the NPCs trade. Buying and selling prices are not needed, as they are already in the determined data pages.<br>
+
+To adapt to the official [[Category:Icons|Icons]]. The template {{tl|NPCLootTable/row}}, uses the following categories, only for sub-categories:
+* Unfortunately, this needs to be changed manually, for every NPC. This is where Friendly NPC and NPCLoot data differ from each other.
+* This would require a "complete" rewrite of the NPCs infos, to compell with the game icon categories.
+
+  <nowiki>
+|SubCategories = {{switch:{{#var:IconCategory}}
+|Food = Consumables;
+|Beverages = Consumables;
+|Drinks = Consumables;
+|Wateskin = Consumables;
+"Loot" = <!--TBD -> Most likely, the difference between Jewelry and Valuables-->;
+|Junk = Other;
+|Herbs = Medicine;
+"Reagents" = <!--TBD -> Most likely, food additives & Ingredients? -->;
+|Books & Notes = Scrolls;
+|Tools & Traps = Tools;
+|Misc = Other;
+#default = All}} <!--When icon not found.-->
+</nowiki>
+
+* I could not think of a better way to do this icon verification, without a proper loop or a better way to handle the data. So i will leave this as is, and change manually, as needed.
+* The thing is, manually cchanging this table, requires you to go to the NPC page, and verify the items listed there and their categories, then update the NPCLoot data page, with the correct categories.
+
+You can base it on the "old" NPC page, and list the types of items he sells like this:
+
+If a parameter is empty, for example: '''[[Bert]] does not Sell any Jewelry.'''<br>{{c|+|It can be left empty or omitted completely}}.<br>Here are two examples of NPCLoot data syntax;these two would produce the same result:
+
+  <nowiki>
+|Bert = {{#switch:{{{2}}}
+  |Buys = Armor;Books;Consumables;Drugs;Food;Jewelry;Medicine;Potions;Tools;Weapons;Valuables
+  |Sells = Weapons;Armor;Jewelry;Medicine;Valuables;Food;Junk
+  |Weapons = Training_Crossbow
+  |Armor = Travelling_Shoes
+  |Consumables = Bread;Cheese;Morel;Mannshire_Fortified
+  |Medicine = Bandage;Healing Salve;Herbal_Extract
+  |Tools = Hammer;Pickaxe;Bedroll
+|#default = }}</nowiki>
+
+  <nowiki>
+|Bert = {{#switch:{{{2}}}
+  |Buys = Armor;Consumables;Scrolls;Jewelry;Medicine;Potions;Tools;Weapons;Valuables
+  |Sells = Weapons;Armor;Consumables;Jewelry;Medicine;Valuables;Junk
+  |Weapons = Training_Crossbow
+  |Armor = Travelling_Shoes
+  |Jewelry = 
+  |Beverages = Mannshire_Fortified
+  |Food = Bread;Cheese;Morel
+  |Medicine = Bandage;Healing Salve;Herbal_Extract
+  |Tools = Hammer;Pickaxe;Bedroll
+|#default = }}</nowiki>
+
+Used by:
+* {{tl|NPCLootTable/head}} template.
+* {{tl|NPCLootTable/row}} template.
+* {{tl|NPCLootTable/end}} template.
+
+<!-- New model:
+
+{{#switch:{{{1}}}
+|NPC1 = {{#switch:{{{2}}}
+  |Buys = Weapons;Armor
+  |Sells = Potions;Tools
+  |Weapons = Sword;Axe;Bow;Training_Crossbow
+  |Armor = Helmet;Shield
+  |Potions = HealthPotion;ManaPotion
+  |Tools = Pickaxe;Hammer
+  |#default = }}
+}}
+-->
+All category icons in alphabetical order:
+
+All;Armor;Consumables;Inventorystash;Jewelry;Loot;Medicine;Other;Potions;Reagents;Scrolls;Tools;Weapons;
+
+{{stub}}</noinclude><includeonly>{{#switch: {{{1}}}
+<!--
+----- OSBROOK -----
+-->
+|Ormond = {{#switch: {{{2}}}
+|Buys = Consumables;Jewelry;Tools;Other<!--Alcohol;Beverages;Food;Jewelry;Tools-->
+|Consumables = Sausage;Smoked_Ham;Fatty_Meat;Tough_Meat;Tender_Meat;Sinewy_Meat;Raw_Drumstick
+|#default = }}
+
+|Jurg = {{#switch: {{{2}}}
+|Buys = Armor;Consumables;Jewelry;Other;Reagents;Tools;Weapons<!--Alcohol;Ammunition;Armor;Beverages;Food;Ingredients;Jewelry;Junk;Materials;Valuables;Weapons-->
+|Sells = Weapons;Armor
+|Weapons = Bows;Crossbows;Staves;Maces;Two-Handed_Maces<br>(Wood);Ammunition
+|Armor = Shields
+|BuysLimitation = "Jurg will pay more [[Crowns]] for wooden items than other merchants."
+|#default = }}
+
+|Margyt = {{#switch: {{{2}}}
+|Buys = Other<!--TBC-->
+|Sells = Consumables
+|Consumables = Cheese;Cooked_Carp;Grape;Lentil_Soup;Pancakes;Peasant_Stew;Pinecap;Smoked_Ham;TomatoDark_Ale;Spirit
+|#default = }}
+
+|Gina = {{#switch: {{{2}}}
+|Buys =
+|Sells = Consumables
+|Consumables = 
+|#default = }}
+
+|Frid = {{#switch: {{{2}}}
+|Buys = Consumables;Reagents;Jewelry;Other;Medicine;Potions;Scrolls;Valuables
+|Sells = Consumables;Medicine;Scrolls
+|Consumables =
+|Medicine = Antitoxin;Bandage;Healing Salve;Herbal_Extract;Leeches;Vivifying Essence;Splint;Soporific_Sponge
+|Reagents = Agrimony;Bogbean;Burdock;Horsetail;Mindwort;Peppermint;Poppy;Thyme
+|Scrolls = Identification_Scroll;Disenchantment_Scroll
+|BuysLimitation = "Selling Medicine and drugs to Frid will yield a better price than other merchants."
+|#default = }}
+
+|Brukk = {{#switch: {{{2}}}
+|Buys = Consumables;Jewelry;Other
+|Sells = Consumables
+|Consumables = Brandy;Dark_Ale;Jug_of_Milk;Mead;Spirit;Waterskin;Bread;Cheese;Cooked_Carp;Cooked_Venison;Dumpling;Garlic;Goat_Cheese;Lentil_Soup;Pancakes;Peasant_Stew;Roasted_Drumstick;Sausage;Smoked_Ham;Tomato;Roasted_Fatty_Meat;Flatbread;Pretzel
+|#default = }}
+
+|Osbrook Female Innkeeper = {{#switch: {{{2}}}
+|Buys = 
+|Sells = Consumables
+|Consumables = Waterskin
+|#default = }}
+
+|Bert = {{#switch:{{{2}}}
+|Buys = Armor;Scrolls;Consumables;Jewelry;Loot;Medicine;Other;Potions;Tools;Weapons
+|Sells = Weapons;Armor;Jewelry;Medicine;Valuables;Consumables;Other;Scrolls
+|Weapons = Training_Crossbow
+|Armor = Travelling_Shoes
+|Jewelry = <!--TODO-->
+|Books & Notes = <!--TODO -> Use "|Scrolls" instead.-->
+|Consumables = Bread;Cheese;Morel;Mannshire_Fortified
+|Medicine = Bandage;Healing_Salve;Herbal_Extract
+|Valuables = <!--TODO-->
+|Scrolls = <!--TODO-->
+|Tools = Hammer;Pickaxe;Bedroll
+|Potions = <!--TODO-->
+|#default = }}
+
+|Alan = {{#switch: {{{2}}}
+|Buys = 
+|Sells = Consumables
+|Consumables =
+|#default = }}
+
+|Jebar = {{#switch: {{{2}}}
+|Buys = Armor;Weapons;Tools
+|Sells = Armor;Tools;Weapons
+|Armor = Shields;Headgear;Chestpieces;Gloves;Belts;Boots
+|Weapons = Swords;Maces;Axes;Daggers;Greatswords;Spears
+|Consumables = Tools
+|#default = }}
+
+|Hold = {{#switch: {{{2}}}
+|Buys =
+|Sells =
+|Armor = Headgear;Gloves;Belts;Chestpieces;Boots
+|Weapons = Quivers
+|Other = Purse
+|BuysLimitation = "Hold will pay more [[Crowns]] for tailored equipment than other merchants."
+|#default = }}
+
+<!--
+----- MANNSHIRE -----
+-->
+
+|Lynd = {{#switch: {{{2}}}
+|Buys = Other;Tools;Weapons
+|Sells = Other;Tools;Weapons
+|Tools = Lockpicks;Repair_Kit
+|Other = Purse
+|#default = }}
+
+|Dirk_(NPC) = {{#switch: {{{2}}}
+|Buys = 
+|Sells = Weapons;Armor
+|Armor = Shields
+|Weapons = Maces;Staves;Shields;Bows;Crossbows;Ammunition
+|#default = }}
+
+|Knud = {{#switch: {{{2}}}
+|Buys = 
+|Sells = Scrolls
+|Scrolls = Maps
+|#default = }}
+
+|Agna = {{#switch: {{{2}}}
+|Buys =
+|Sells = Consumables
+|Consumables = Milk;Cheese
+|#default = }}
+
+|Gunda = {{#switch: {{{2}}}
+|Buys =
+|Sells = Consumables
+|Consumables = Wine;Grapes
+|#default = }}
+
+|Weber Vir Lecri = {{#switch: {{{2}}}
+|Sells = Scrolls
+|Scrolls = Maps;Tools
+|#default = }}
+
+|Selma = {{#switch: {{{2}}}
+|Buys =
+|Sells = Consumables
+|Consumables = Bread;Pancakes;Roasted_Fatty_Meat;Roasted_Drumstick;Peasant_Stew;Lentil_Soup;Smoked_Ham;Sausage;Pretzel;Flatbread;Cooked_Carp;Cheese;Brandy;Dark_Ale;Mead;Waterskin
+|#default = }}
+
+|Arenn = {{#switch: {{{2}}}
+|Buys = 
+|Sells = Consumables
+|Consumables = Bread;Pancakes;Roasted_Fatty_Meat;Roasted_Drumstick;Peasant_Stew;Lentil_Soup;Smoked_Ham;Sausage;Pretzel;Flatbread;Cooked_Carp;Cheese;Brandy;Dark_Ale;Mead;Waterskin
+|#default = }}
+
+|Gerlot = {{#switch: {{{2}}}
+|Buys =
+|Sells = Weapons;Armor;Jewelry;Medicine;Valuables;Consumables;Other;Scrolls
+|Armor = Geomancer_Cowl;Geomancer_Mantle;Magistrate_Mail;Mail_Gloves;Joust Shield;Long shield
+|Consumables = Dumpling;Mead;Pancakes;Potato;Roasted_Drumstick;Sausage;Dark_Ale;Jug_of_Milk;Mannshire_Fortified;Spirit;Waterskin
+|Jewelry = Exquisite_Gold_Ring;Pearl_Necklace;Ruby_Necklace;Silver_Ring;Silver_Amethyst_Ring
+|Medicine = Herbal_Extract
+|Scrolls = Disenchantment_Scroll;Identification_Scroll;Enchantment_Scroll;Axe_Treatise_I;Dagger_Treatise_I;Pyromantic_Treatise_I;Pyromantic_Treatise_III;Geomantic_Treatise_III;Sword_Treatise_I
+|Weapons = Baselard;Felling_Axe;Footman_Mace;Hermit_Staff;Metallic_Staff;Priest_Staff
+|#default = }}
+
+|#default = NPC {{{1}}} does not exist in [[NPCLoot data]].}}</includeonly>

@@ -1,0 +1,160 @@
+<includeonly>
+{{Clear}}''{{#if: {{Translate|Page last edited during patch|WikiNavigation}}|{{Translate|Page last edited during patch|WikiNavigation}}|Page last edited during patch}}:'' {{Patch notes}}{{{1|}}}
+    
+{{Navbox
+| name       = NPC navbox
+| title      = [[NPCs]]
+| listclass  = hlist
+| state      = plain
+| navbar     = plain
+| image      = * [[File:Stoneshard.png|150px|link=Stoneshard Wiki|alt=Stoneshard Wiki]]
+
+| group1     = [[Osbrook|Osbrook NPCs]]
+| list1      = {{flatlist|
+* [[Ormond|Ormond (Butcher)]]
+* [[Jurg|Jurg (Carpenter)]]
+* [[Ram|Ram (Drunkard)]]
+* [[Rickerd|Rickerd (Emissary)]]
+* [[Margyt|Margyt (Food Trader)]]
+* [[Gina|Gina (Fruit Trader)]]
+* [[Frid|Frid (Herbalist)]]
+* [[Brukk|Brukk (Innkeeper)]]
+* [[Elsbeth|Elsbeth (Innkeeper (Night Time))]]
+* [[Bert|Bert (Merchant)]]
+* [[Rona|Rona (Peasant)]]
+* [[Ursa|Ursa (Peasant)]]
+* [[Jebar|Jebar (Smith)]]
+* [[Anselm|Anselm (Stableman)]]
+* [[Hold|Hold (Tailor)]]
+* [[Odar|Odar (Village Elder)]]
+}}
+
+| group2     = [[Mannshire|Manhshire NPCs]]
+| list2      = {{flatlist|
+*[[Knud|Knud (Elder)]]
+*[[Weber vir Lecri|Weber vir Lecri (Governor)]]
+*[[Unar|Unar (Scribe)]]
+*[[Josh|Josh (Priest)]]
+*[[Dietrich|Dietrich (Smith)]]
+*[[Lynd|Lynd (the Blacksmith's Son & Apprentice)]]
+*[[Dirk (NPC)|Dirk|irk (NPC)|Dirk (Carpenter)]]
+*[[Arenn|Arenn (Innkeeper)]]
+*[[Selma|Selma (Hostess)]]
+*[[Gerlot|Gerolt (Merchant)]]
+*[[Irma|Irma (Vegetable Trader)]]
+*[[Agna|Agna (Food Trader)]]
+*[[Gunda|Gunda (Food Trader)]]
+*[[Rald|Rald (Shepherd)]]
+*[[Uta|Uta (Merchant's Daughter)]]
+*[[Hilda|Hilda (Old Woman)]]
+*[[Frida|Frida (Drunkard)]]
+*[[Lotar|Lotar (Drunkard)]]
+*[[Alba|Alba (Peasant)]]
+*[[Celz|Celz (Peasant)]]
+}}
+
+| group3     = [[Brynn|Brynn NPCs]]
+| list3      = {{flatlist|
+<!--=== Mint Square ===-->
+* [[Alviso|Alviso (Banker)]]
+* [[Erwurt vir Lecri|Erwurt vir Lecri (Professor)]]
+* [[Zeremee Lavar|Zeremee Lavar (Professor)]]
+<!--==== Traders ====-->
+* [[Armuz|Armuz (Merchant)]]
+* [[Valden vir Krenn|Valden vir Krenn (Printing House Owner)]]
+* [[Vegetable Trader]]
+* [[Butcher|Butcher (Trader)]]
+* [[General_Merchant_(Brynn_Mint_Square)|General Merchant (Trader)]]
+* [[Herbalist|Herbalist (Trader)]]
+* [[Food Trader|Food Trader (Food Trader)]]
+* [[Fruit Trader|Fruit Trader (Food Trader)]]
+<!--=== Old Towers ===-->
+<!--==== Traders ====-->
+* [[Skinflint Homs|Skinflint Homs (Innkeeper)]]
+* [[Eric|Eric (Baker)]]
+* [[Fat Yann|Fat Yann (Merchant)]]
+* [[Shea|Shea (Merchant)]]
+* [[Bern|Bern (Quartermaster of the Vanguard)]]
+<!--=== Guild Quarter ===-->
+<!--==== Traders ====-->
+* [[Rixa|Rixa (Hostesses)]]
+* [[Maud|Maud (Hostesses)]]
+* [[Letar|Letar (Jewelery Trader)]]
+* [[Giles vir Ivet|Giles vir Ivet (Baliff)]]
+* [[Noel vir Roan|Noel vir Roan (Baliff)]]
+* [[Keremit Lawe|Keremit Lawe (Baliff)]]
+<!--=== Docks ===-->
+<!--==== Traders ====-->
+* [[Skinflint Homs|Skinflint Homs (Innkeeper)]]
+* [[Renod Kann|Renod Kann (Merchant)]]
+* [[General Merchant|General Merchant (Merchant)]]
+* [[Esfah|Elven (Merchant)]]
+* [[Ormi|Dwarven (Merchant)]]
+* [[Rigo Nevic|Nistrian (Merchant)]]
+* [[Zdenebrad|Skadian (Merchant)]]
+}}
+
+| group4     = [[Denbrie|Denbrie NPCs]]
+| list4      = {{flatlist|
+* [[Reynold|Reynold (Sergeant)]]
+* [[Mathis|Mathis (Merchant)]]
+* [[Wystan|Wystan (Fisherman)]]
+* Salt Workers
+* Fisherman
+* Peasants
+* Guards
+}}
+
+}}<br>{{Template:Languages navbox}}
+</includeonly><noinclude>{{doc}}* [[Category:Navigation templates]]</noinclude><!--
+
+* Sold by [[Alan]] in the [[Mill]].
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+<includeonly><!--   {{NPCLootTable/row|Jurg|Sell|Weapons}} ---
+    --- Define variables, goal is to only load each property from the Data page once. ---
+    --- Loads the parameters from the NPC specified in the first parameter ---
+    -->{{#vardefine:Name|{{{1}}}}} <!-- Define NPC name
+    -->{{#vardefine:Action|{{{2}}}}}<!-- Defines Action = second parameter
+    -->{{#vardefine:Category|{{{3}}}}}<!-- Defines Category = third parameter
+    -->{{#vardefine:DataCategories|{{:NPCLoot data|{{{1}}}}}}}<!-- Fetches all data for the specified NPC
+    -->{{#vardefine:CategoryData|{{#var:DataCategories|{{{3}}}}}}}<!-- Fetches the data for the specified category
+    -->{{#vardefine:Items|{{#explode:{{#var:CategoryData}}|;}}}}<!-- Explodes the items in the specified category
+    -->
+    |-
+    <!-- First column: Category -->
+    | '''{{{3}}}'''<br>{{#if:{{#var:Category}}|[[File:{{#var:Category}}_icon.png|42px]]}}<!--
+    --- Second column: Items -->
+    DataCategories = {{#var:DataCategories}}
+    Items = {{#var:Items}}
+    test = {{#if:{{#explode:{{#var:CategoryData}}|;|0}}|[[File:{{#explode:{{#var:CategoryData}}|;|0}}.png|37px|link=]]|No image found }}<!--
+    | <span class="stoneshard sortable" style="display: flex; text-align: center; justify-content: center;"><!-- Flex container --->
+        {{#if:{{#var:Items}}|
+            {{#explode:{{#var:Items}}|;|0}} [[File:{{#explode:{{#var:Items}}|;|0}}_icon.png|37px|link={{#explode:{{#var:Items}}|;|0}}]]<!--
+            -->{{#if:{{#explode:{{#var:Items}}|;|1}}|{{#explode:{{#var:Items}}|;|1}} [[File:{{#explode:{{#var:Items}}|;|1}}_icon.png|37px|link={{#explode:{{#var:Items}}|;|1}}]]}}<!--
+            -->{{#if:{{#explode:{{#var:Items}}|;|2}}|{{#explode:{{#var:Items}}|;|2}} [[File:{{#explode:{{#var:Items}}|;|2}}_icon.png|37px|link={{#explode:{{#var:Items}}|;|2}}]]}}<!--
+            -->{{#if:{{#explode:{{#var:Items}}|;|3}}|{{#explode:{{#var:Items}}|;|3}} [[File:{{#explode:{{#var:Items}}|;|3}}_icon.png|37px|link={{#explode:{{#var:Items}}|;|3}}]]}}<!--
+            -->{{#if:{{#explode:{{#var:Items}}|;|4}}|{{#explode:{{#var:Items}}|;|4}} [[File:{{#explode:{{#var:Items}}|;|4}}_icon.png|37px|link={{#explode:{{#var:Items}}|;|4}}]]}}<!--
+            -->{{#if:{{#explode:{{#var:Items}}|;|5}}|{{#explode:{{#var:Items}}|;|5}} [[File:{{#explode:{{#var:Items}}|;|5}}_icon.png|37px|link={{#explode:{{#var:Items}}|;|5}}]]}}<!--
+            -->{{#if:{{#explode:{{#var:Items}}|;|6}}|{{#explode:{{#var:Items}}|;|6}} [[File:{{#explode:{{#var:Items}}|;|6}}_icon.png|37px|link={{#explode:{{#var:Items}}|;|6}}]]}}
+        | No Items Found
+        }}
+    </span><!--
+--></includeonly><noinclude>{{doc|Template:NPCLootTable/row}}[[Category:Templates]]</noinclude>

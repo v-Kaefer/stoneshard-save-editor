@@ -1,0 +1,96 @@
+<noinclude>'''WORKING: [INCOMPLETE]'''<br>The {{c|+|&#8239}}; Represents a space " ", to not break the reference for the items. {{c|-|DO NOT DELETE}}.</noinclude>
+<includeonly><!--   {{NPCLootTable/row|Jurg|Sell|Weapons}} ---
+    --- Define variables, goal is to only load each property from the Data page once. ---
+    --- Loads the parameters from the NPC specified in the first parameter ---
+    -->{{#vardefine:Name|{{{1}}}}} <!-- Define NPC name
+    -->{{#vardefine:Action|{{{2}}}}}<!-- Defines Action = second parameter
+    -->{{#vardefine:Category|{{{3}}}}}<!-- Defines Category = third parameter
+    -->{{#vardefine:DataCategories|{{:NPCLoot data|{{{1}}}}}}}<!-- Fetches data for the specified NPC
+    -->{{#vardefine:CategoryData|{{#explode:{{#var:DataCategories}}|{{{3}}}}}}}<!-- Fetches the data for the specified category
+    -->{{#vardefine:ItemList|{{#explode:{{:NPCLoot data|{{{1}}}|{{{3}}}}}}}}}<!-- This access the {{{3}}} param directly.
+    -->{{#vardefine:BuysItemList|{{#explode:{{:NPCLoot data|{{{1}}}|Buys}}}}}}<!-- This access the "Buys" param directly.
+    --- Logic for Sub-categories  to receive appropriate icons ---
+    -->{{#vardefine:SellsItemList|{{#explode:{{:NPCLoot data|{{{1}}}|Sells}}}}}}<!-- This access the "Sells" param directly.
+    -->{{#vardefine:SubCategoryList|{{#explode:{{:NPCLoot data|SubCategories}}}}}}<!-- Icons sub-categories
+    --- Iterate over the list of subcategories ---
+    -->{{#foreach:SubCategory|{{#var:SubCategoryList}}|<!--
+        -->{{#vardefine:SubCategoryName|{{#explode:{{#var:SubCategory}}|=|0}}}}<!--
+        -->{{#vardefine:SubCategoryType|{{#explode:{{#var:SubCategory}}|=|1}}}}<!--
+        -->* SubCategory: {{#var:SubCategoryName}}, Type: {{#var:SubCategoryType}}<br>
+        }}
+    
+    -->{{#vardefine:IconCategory|<!--
+    -->{{#vardefine:ReplaceIcon|{{#ifeq:{{#replace:{{#explode:{{#var:SellsItemList}}|;|0}}|_|&#8239;}}}}<!--
+    -->
+    |-
+    | width="5%" | {{#ifeq:{{#var:Action}}|Buys|<!--
+    --- Action is 'Buys': Display NPC Icon ---
+    -->{{#if:{{#var:Name}}|[[File:{{#var:Name}}.png|64px]]|No image found for [[{{#var:Name}}]].}}<br>'''[[{{#var:Name}}]]'''<!--
+    -->}}<!--
+    -->{{#ifeq:{{#var:Action}}|Sells|
+        <!-- Action is "Sells": Display Category Icons -->
+        '''{{{3}}}'''<br>{{#if:{{#var:Category}}|[[File:{{#var:Category}}_icon.png|64px]]}}<!--
+    -->}}
+    <!-- Second column: Conditional Content -->
+    | {{#ifeq:{{#var:Action}}|Buys|<!-- '''[[{{#if:{{#var:BuysItemList}}|;|0|No category found.}}]]'''
+        --- Action is 'Buys': Display categories --- 
+    --><span class="stoneshard sortable" style="display: flex; text-align: center; justify-content: center;"><!-- Flex container ---
+        --><span>'''[[{{#if:{{#explode:{{#var:BuysItemList}}|;|0|No category found.}}}}]]'''<br>{{#if:{{#explode:{{#var:BuysItemList}}|;|0}}|[[File:{{#explode:{{#var:BuysItemList}}|;|0}}_icon.png|64px|link=]]|No icon found.}}</span><!--
+        --><span>'''[[{{#if:{{#explode:{{#var:BuysItemList}}|;|1|No category found.}}}}]]'''<br>{{#if:{{#explode:{{#var:BuysItemList}}|;|1}}|[[File:{{#explode:{{#var:BuysItemList}}|;|1}}_icon.png|64px|link=]]|No icon found }}</span><!--
+        --><span>'''[[{{#if:{{#explode:{{#var:BuysItemList}}|;|2|No category found.}}}}]]'''<br>{{#if:{{#explode:{{#var:BuysItemList}}|;|2}}|[[File:{{#explode:{{#var:BuysItemList}}|;|2}}_icon.png|64px|link=]]|No icon found }}</span><!--
+        --><span>'''[[{{#if:{{#explode:{{#var:BuysItemList}}|;|3|No category found.}}}}]]'''<br>{{#if:{{#explode:{{#var:BuysItemList}}|;|3}}|[[File:{{#explode:{{#var:BuysItemList}}|;|3}}_icon.png|64px|link=]]|No icon found }}</span><!--
+        --><span>'''[[{{#if:{{#explode:{{#var:BuysItemList}}|;|4|No category found.}}}}]]'''<br>{{#if:{{#explode:{{#var:BuysItemList}}|;|4}}|[[File:{{#explode:{{#var:BuysItemList}}|;|4}}_icon.png|64px|link=]]|No icon found }}</span><!--
+        --><span>'''[[{{#if:{{#explode:{{#var:BuysItemList}}|;|5|No category found.}}}}]]'''<br>{{#if:{{#explode:{{#var:BuysItemList}}|;|5}}|[[File:{{#explode:{{#var:BuysItemList}}|;|5}}_icon.png|64px|link=]]|No icon found }}</span><!--
+        --><span>'''[[{{#if:{{#explode:{{#var:BuysItemList}}|;|6|No category found.}}}}]]'''<br>{{#if:{{#explode:{{#var:BuysItemList}}|;|6}}|[[File:{{#explode:{{#var:BuysItemList}}|;|6}}_icon.png|64px|link=]]|No icon found }}</span><!--
+    --></span>}}<!--
+    -->{{#ifeq:{{#var:Action}}|Sells|
+        <!-- Default Action: Display items -->
+        <span class="stoneshard sortable" style="display: flex; text-align: center; justify-content: center;"><!-- Flex container ---
+        --><span>{{#if:{{#explode:{{#var:ItemList}}|;|0}}|'''[[{{#replace:{{#explode:{{#var:ItemList}}|;|0}}|_|&#8239;}}]]'''<br>{{#if:{{#explode:{{#var:ItemList}}|;|0}}|[[File:{{#explode:{{#var:ItemList}}|;|0}}.png|64px|link=]]|No image found.}}}}</span><!-- 
+        --><span>{{#if:{{#explode:{{#var:ItemList}}|;|1}}|'''[[{{#replace:{{#explode:{{#var:ItemList}}|;|1}}|_|&#8239;}}]]'''<br>{{#if:{{#explode:{{#var:ItemList}}|;|1}}|[[File:{{#explode:{{#var:ItemList}}|;|1}}.png|64px|link=]]|}}}}</span><!--
+        --><span>{{#if:{{#explode:{{#var:ItemList}}|;|2}}|'''[[{{#replace:{{#explode:{{#var:ItemList}}|;|2}}|_|&#8239;}}]]'''<br>{{#if:{{#explode:{{#var:ItemList}}|;|2}}|[[File:{{#explode:{{#var:ItemList}}|;|2}}.png|64px|link=]]|No image found }}}}</span><!--
+        --><span>{{#if:{{#explode:{{#var:ItemList}}|;|3}}|'''[[{{#replace:{{#explode:{{#var:ItemList}}|;|3}}|_|&#8239;}}]]'''<br>{{#if:{{#explode:{{#var:ItemList}}|;|3}}|[[File:{{#explode:{{#var:ItemList}}|;|3}}.png|64px|link=]]|No image found }}}}</span><!--
+        --><span>{{#if:{{#explode:{{#var:ItemList}}|;|4}}|'''[[{{#replace:{{#explode:{{#var:ItemList}}|;|4}}|_|&#8239;}}]]'''<br>{{#if:{{#explode:{{#var:ItemList}}|;|4}}|[[File:{{#explode:{{#var:ItemList}}|;|4}}.png|64px|link=]]|No image found }}}}</span><!--
+        --><span>{{#if:{{#explode:{{#var:ItemList}}|;|5}}|'''[[{{#replace:{{#explode:{{#var:ItemList}}|;|5}}|_|&#8239;}}]]'''<br>{{#if:{{#explode:{{#var:ItemList}}|;|5}}|[[File:{{#explode:{{#var:ItemList}}|;|5}}.png|64px|link=]]|No image found }}}}</span><!--
+        --><span>{{#if:{{#explode:{{#var:ItemList}}|;|6}}|'''[[{{#replace:{{#explode:{{#var:ItemList}}|;|6}}|_|&#8239;}}]]'''<br>{{#if:{{#explode:{{#var:ItemList}}|;|6}}|[[File:{{#explode:{{#var:ItemList}}|;|6}}.png|64px|link=]]|No image found }}}}</span>
+</span><!--
+-->}}</includeonly><noinclude>{{doc|Template:NPCLootTable/row}}[[Category:Templates]]</noinclude>
+
+
+
+
+<!--
+--- Define all icons variables. ---
+-->{{#vardefine:Weapons|Weapons_icon.png}}<!--
+-->{{#vardefine:Armor|Armor_icon.png}}<!--
+-->{{#vardefine:Jewelry|Jewelry_icon.png}}<!--
+-->{{#vardefine:Treatises|Treatises_icon.png}}<!--
+-->{{#vardefine:Tools|Tools_icon.png}}<!--
+-->{{#vardefine:Loot|Loot_icon.png}}<!--
+-->{{#vardefine:Medicine|Medicine_icon.png}}<!--
+-->{{#vardefine:Food|Food_icon.png}}<!--
+-->{{#vardefine:Potions|Potions_icon.png}}<!--
+-->{{#vardefine:Scrolls|Scrolls_icon.png}}<!--
+-->{{#vardefine:Reagents|Reagents_icon.png}}<!--
+-->{{#vardefine:Other|Others_icon.png}}<!--
+---
+|[[File:Swords.png|54px|link=Swords]]
+|[[File:Axes.png|54px|link=Axes]]
+|[[File:Maces.png|54px|link=Maces]]
+|[[File:Daggers.png|54px|link=Daggers]]
+|[[File:Notavailable1h.png|54px|link=Wands]]
+|[[File:Bows.png|x162px|link=Bows]]
+|[[File:Crossbows.png|108px|x162px|link=Crossbows]]
+|[[File:Greatswords.png|108px|link=Two-Handed Swords]]
+|[[File:Two-Handed Axes.png|108px|link=Two-Handed Axes]]
+|[[File:Two-Handed Maces.png|108px|link=Two-Handed Maces]]
+|[[File:Spears.png|x162px|link=Spears]]
+|[[File:Staves.png|108px|link=Staves]]
+|[[File:Arrows.png|x142px|link=Ammo]]
+|[[File:Quivers.png|84px|link=Quivers]]
+---
+Search for the NPC in Data.
+Explode the data for Buys or Sells.
+When the Action is Buys, explode the data from Buys and shows these strings as images in the next row.
+When the Action is Sells, explode the data from Sells, then compare with the second argument in the template request ex: {{NPLootTable/row|Sells|Weapons}}, if Weapons exists in the Sells data, explode the Weapons parameter in the NPC data.
+Considering the Action Sells, in the first column of the row, show the data exploded from Sells, as an icon. Then, on the second column of the same row. Show the exploded category from the NPC data as images.
