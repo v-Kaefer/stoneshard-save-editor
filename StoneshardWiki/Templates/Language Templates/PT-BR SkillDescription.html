@@ -1,922 +1,347 @@
 <noinclude>Page for selecting the correct skill tree data.
 
 Selects from:
-<!-- Beasts skill data -->
- <!-- BEASTS SKILLS-->
-|Rend Flesh = Rasgar Carne
-|Snake Stealth = Furtividade de Cobra
-|Loud Barking = Latido Alto
-|Grab 'Em! = Agarre-os!
-
-
-|Animated Servant = Summons two skeletons from the bone mounds closest to the character. <br><br>The skeletons persist for {{w|24}} turns, then fall apart, replenishing {{pos|4%}} Max Health and {{C|Energy|8%}} Max Energy to the Manticore.
-
-|Baleful Scream (harpy) = Lets out a scream, dealing {{w|7 Psionic Damage}} to its target. <br>Has {{w|75%}} chance to {{w|Daze}} its target for {{w|2}} turns or to {{w|Stagger}} for {{w|4}} turns.
-
-|Bone Pyres = Destroys every skeleton in the arena, sending bone shards that deal {{w|12 Piercing}} and {{unholy|10}} Unholy Damage with {{w|40%}} Armor Penetration to all adjacent enemies. <br><br> Creates {{C|Arcane|aether fires}} in place of destroyed skeletons for {{w|8}} turns. While the character is adjacent to an aether fire, it burns {{C|Energy|5%}} of their Max Energy each turn. <br><br>Aether fires can't be extinguished with water, but they can be stamped out by walking over them. Doing so deals {{C|fire|5 Fire}}, {{unholy|5 Unholy}}, {{C|sacred|5 Sacred}}, and {{arcane|5 Arcane Damage}} with {{w|100%}} Armor Penetration.
-
-|Claw Swipe = Delivers a strike, dealing {{pos|+100%}} Damage. <br><br>If the Troll's Energy is more than {{C|Energy|10%}}, the strike gains {{pos|+33%}} Damage, {{pos|+50%}} Bleed Chance, {{pos|+125%}} Knockback Chance, {{pos|+25%}} Accuracy, and {{pos|+30%}} Armor Penetration.
-
-|Corrosive Blood = Receiving melee attacks deals {{C|Caustic|2 Caustic}} and {{C|Poison|1 Poison}} Damage to the attacker. <br><br> Each {{neg|Bleeding}} and {{neg|degree of injury}} increases {{C|Caustic|Caustic Damage}} by {{w|1}}.
-
-
-|Dash (animal) = Performs a dash towards a targeted tile. <br><br>The skill's Energy Cost is increased by {{neg|15%}} for each enemy adjacent to the starting position. <br><br>On arrival grants {{pos|+20%}} Counter Chance and {{pos|+20%}} Dodge Chance for {{w|4}} turns if there's an adjacent enemy.
-
-|Deadly Tail = Delivers a strike to the target: <br><br>With {{w|33%}} chance applies it with {{poison|Poisoning}} for {{w|6}} turns <br> Or with {{w|33%}} chance applies it with {{neg|"Sacrificial Blood"}} for {{w|6}} turns <br>Or with {{w|33%}} chance applies it with {{neg|"Curse"}} for {{w|6}} turns <br><br>The chance of receiving these effects is reduced with Poison, Bleed. and Unholy Resistances respectively.
-
-|Deafening Roar = Lets out a roar, dealing {{psionic|5 Psionic Damage}} to all enemies over a huge area. <br><br>Deafening Roar has {{w|25%}} chance to {{w|Disarm}}, forcing equipped weapons to fall on the ground. <br>If this effect fails to apply, has {{w|75%}} chance to {{w|Stun}} for {{w|2}} turns. <br>If this other effect fails to apply as well, has {{w|100%}} chance to {{w|Daze}} for {{w|5}} turns.
-
-|Disturbed Hive = Every {{w|8}} turns spawns a {{neg|Deathsting Swarm}} {{w|(up to 3)}}. <br><br>Each instance of Damage {{neg|reduces}} the countdown for the next swarm by {{w|1}} turn.
-
-|Dying Rage = Grants {{pos|-50}} Pain Limit, {{pos|-25}} Damage Taken, and {{pos|+25}} Damage when Health is below {{neg|40%}}.
-
-|Earthshaking Strike (Young Troll) = Strikes the ground, affecting targets in a large area. This attack has {{pos|+33%}} Stun Chance and {{pos|+66%}} Daze Chance.
-
-|Elusive Predators = Grants {{pos|+50%}} Dodge Chance and {{pos|25%}} Counter Chance. <br>Allows to escape from the battlefield {{w|2}} turns after beginning to {{w|Retreat}}.
-
-|Grab ’Em! = Attacks a target's random body part, dealing {{pos|100%}} damage with {{pos|+25%}} Bodypart Damage. <br><br>If the attack hits the legs, it has a chance to {{w|Immobilize}}. <br>If the attack hits the arms, it has a chance to {{w|Disarm}}, causing a weapon from the corresponding slot to fall on the ground. <br><br>The higher the {{w|Protection}} of the affected Body Part, the lower the chances of {{w|Immobilization}} and {{w|Disarming}}.
-
-|Howl = Generates a large amount of {{w|Noise}}, attracting nearby wolves within this map tile and instantly {{pos|refreshing}} active Cooldowns of all other wolves within Vision.
-
-|Lion Leap = Performs a leap to a targeted tile. This ability can't be used if one of the paws is {{neg|Severely Injured}}.
-
-|Loud Barking = When the Dog becomes Hostile, puts this ability on a {{W|5}} turn cooldown. Makes a huge ammount of {{w|noise}}, attracting all allies within {{W|25}} tiles.
-
-|Pack Sense = Grants {{pos|+3%}} Dodge Chance, {{pos|+3%}} Crit Chance, and {{pos|-5%}} Cooldown Duration for every other wolf within Vision.
-
-|Peck = Performs an attack with  {{pos|+50%}} Bodypart Damage, {{pos|+25%}} Crit Chance, and {{pos|+50%}} Bleed Chance. <br><br>If this attack hits the {{w|head}} and deals at least {{neg|4%}} of the target Max Health as damage, applies the target with {{neg|Blindness}} for {{w|2}} turns.
-
-|Primal Aether = Marks an area <br><br> Next turn launches an energy arc that hits everything in its trajectory, dealing {{arcane|12 Arcane}}, {{C|sacred|12 Sacred}}, and {{unholy|12 Unholy Damage}} with {{w|80%}} Armor Penetration, {{pos|+125%}} Knockback Chance, and {{pos|+100%}} Stun Chance.
-
-
-|Ramming Charge (bison) = Rushes towards the target from up to {{w|6}} tiles away, delivering an attack with {{pos|+10%}} Damage, {{pos|+15%}} Stun Chance, and {{pos|20%}} Knockback chance for each tile traveled.
-
-
-|Ramming Charge (boar) = Rushes towards the target from up to {{w|6}} tiles away, delivering an attack with {{pos|+10%}} Damage, {{pos|+15%}} Stun Chance, and {{pos|20%}} Knockback chance for each tile traveled.
-
-
-|Ramming Charge (moose) = Rushes towards the target from up to {{w|6}} tiles away, delivering an attack with {{pos|+10%}} Damage, {{pos|+15%}} Stun Chance, and {{pos|20%}} Knockback chance for each tile traveled.
-
-
-|Rapid Flight = Rushes towards a targeted tile, receiving {{pos|+25%}} Dodge Chance for {{w|2}} turns. <br><br>This skill doesn't go on cooldown if the harpy's wings aren't injured.
-
-
-|Regenerative Carapace = Each turn restores {{pos|5%}} Armor Durability. Every {{w|1%}} of Armor Durability grants {{pos|+0.5%}} Magic and Nature Resistances.
-
-
-|Rend Flesh = Delivers a strike with {{pos|+100%}} Bodypart Damage and {{pos|+50%}} Armor Damage.
-
-
-|Rock Toss = Marks an area. Next turn throws a rock at it, dealing {{w|60 Crushing Damage}} to all affected targets. <br><br>Each tile of distance to the target increases the Damage of Rock Toss by {{pos|10%}}.
-
-
-|Shockwave = Marks an area. Next turn delivers a strike, dealing {{w|45 Crushing Damage}} to all affected targets with {{w|150%}} chance to Knock them back. Each tile of distance to the target increases the Shockwave Damage by {{pos|10%}}.
-
-
-|Snake Stealth = Snakes hide in the grass, only attacking when encroached upon. <br><br> Snakes can be spotted with high {{w|Perception}} or by using {{w|"Examine Surroundings"}}.
-
-
-|Swarm = Grants {{pos|+0.25%}} Dodge Chance and {{neg|-1%}} Damage for each {{neg|missing}} percent of Health.
-
-
-|Taste for Flesh = Delivers a strike with {{pos|+150%}} Bodypart Damage, {{pos|+80%}} Bleed Chance, and {{pos|+25%}} Life Drain. If this attack inflicts an injury or worsens an already existing one, the Gulon replenishes {{pos|+25%}} Max Health.
-
-
-|Troll Regeneration = Removes all negative effects. then grants the effect of {{pos|"Troll Regeneration"}} for {{w|4}} turns: <br><br>{{pos|-75%}} Damage Taken <br>{{pos|+50%}} Fortitude <br>Replenishes {{pos|5%}} Max Health per turn <br>{{neg|Can't use abilities, move, or attack}} <br>Receiving a melee hit {{neg|removes}} the effect and applies {{neg|+200%}} Damage Taken for {{w|2}} turns.
-
-|Unbearable Stench = Has {{w|33%}} chance to provoke {{neg|Coughing}} in all adjacent enemies. This effect from multiple harpies doesn't stack.
-
-
-|Vengeance of the Dead = Marks {{w|6-8}} tiles in a large area around the character, including the tile they're currently standing on. <br><br>Next turn cause bone spikes to erupt from the marked tiles, dealing {{w|28 Piercing}} and {{unholy|12 Unholy Damage}} with {{w|60%}} Armor Penetration, {{pos|+100%}} Bleed Chance, and {{pos|+100%}} Immobilization Chance. Bone Spikes persist for {{w|12}} turns, but can be destroyed with damage or when this ability is used again.
-
-
-|Voracity = Each subsequent attack against a target grants {{pos|+15%}} Life Drain and {{pos|7.5%}} Armor Penetration for {{w|6}} turns.
-
-
-|Web Spit = Spits a web at the target, dealing {{C|Caustic|8 Caustic}} and {{C|Poison|4 Poison}} Damage to the target while also applying the effect of {{neg|"Web"}} for {{w|6-8}} turns.
-
-<!-- Brigands skill data -->
- <!-- BRIGANDS SKILLS -->
-|Coordinated Advance = For each ally within Vision, grants {{pos|+7.5%}} Weapon Damage and {{pos|+5%}} Crit Chance both to them and the Renegade. Using Abilities reduce the Renegade's and his allies's Active Cooldowns by {{w|1}} turn.
-
-|Dead or Alive = Applies the target with an effect that persists until the Paymaster's death. <br><br>When attacking the affected target, all Brigands with the Paymaster within their Vision gain: <br><br> {{pos|+10%}}Accuracy <br>{{pos|+15%}}Armor Penetration <br>{{pos|+20%}} Bodypart Damage
-
-|Net Throw = Throws a hunting net with {{W|88%}} Acurracy. If it hits the target, applies it with {{neg|"Net"}} for {{w|6}} turns: <br><br>{{neg|+30%}} Fumble Chance <br>{{neg|-25%}} Dodge Chance <br>{{neg|-50%}} Block Chance <br>{{neg|-50%}} Counter Chance <br>{{neg|+30%}} Backfire Chance
-
-|Raise the Banner! = Restores the fleeing Brigands' {{w|will to fight}} and grants all Brigands within Vision the effect of {{pos|"Battle Rage"}} for {{w|10-15}} turns.
-
-|Sic! = Applies a target with {{neg|"Sic!"}} for {{w|10}} turns. <br><br> Dogs deal {{pos|+50%}} Damage to targets under the effect of {{w|"Sic!}}.
-
-
-<!-- Undead skill data -->
- <!-- UNDEAD SKILLS -->
-|Binding Sigil = Sigilo de Ligação
-|Soul Sacrifice = Sacrifício de Alma
-|Death Touch = Toque da Morte
-|Bolt of Darkness = Raio de Escuridão
-|Curse = Maldição
-|Curse of Weakness = Maldição de Fraqueza
-|Necrophage = Necrófago
-|Rend Flesh = Rasgar Carne
-|Resurrection = Ressurreição
-|Sigil of Darkness = Sigilo de Escuridão
-|Bone Throw = Arremesso de Osso
-|Unholy Blessing = Benção Profana
-|Dispersal = Dispersão
-|Grave Chill = Arrepio de Túmulo
-
-|Abominable Vitality = {{w|Tis but a flesh wound!}} Upon receiving lethal damage, the Restless has {{W|75%}} chance to {{W|avoid death}}, {{pos|fully}} Replenishing its Health while {{neg|losing}} its most damaged body part.
-
-|Binding Sigil = Activates {{pos|"Binding Sigil"}} and grants the same effect to an Undead ally for {{w|13}} turns: <br><br>Grants the ally {{pos|-33%}} Damage Taken <br>Transfer {{W|33%}} of the damage received by the caster to the ally <br>Replenishes Energy to the caster for {{W|33%}} of the damage dealt by the ally.
-
-|Bolt of Darkness = Shoots a bolt of dark energy dealing {{neg|Unholy Damage}}.
-
-|Bone Throw = Throws a bone at a target, dealing {{w|3 Crushing}}, {{w|3 Piercing}}, {{poison|3 Poison}}, and {{unholy|3 Unholy}} with {{w|80%}} Accuracy, {{w|30%}} Daze Chance and {{w|30%}} Bleed Chance.
-
-|Curse of Decay = Applies the target with {{neg|"Curse of Decay"}} for {{W|13}} turns: <br><br>{{neg|-6%}} Max Health <br>{{neg|-6%}} Max Energy <br>{{neg|-6%}}Energy Restoration <br>{{neg|9%}}Healing Efficiency <br><br>{{W|IV}} stacks of the effect: each turn worsens the Condition of a random body part by {{neg|1%}} <br><br>Each turn applies an extra stack of the effect (up to {{W|IV}}. Basic strikes, shots, and using abilities reduce the number of stacks by {{pos|2}}.
-
-|Curse of Agony = Applies target with {{neg|"Curse of Agony"}} for {{W|13}} turns: <br><br>{{neg|+1%}} Pain Change <br>{{neg|-6%}} Weapon Damage <br>{{neg|-9%}} Magic Power <br>{{neg|-9%}} Fortitude <br>{{neg|-9%}} Unholy Resistance <br><br>The penalties change dynamically depending on the target's current Pain.
-
-|Deadly Premonition = Applies the target with {{neg|"Deadly Premonition"}} for an indefinite number of turns: <br><br>Grants the next used {{W|Attack}} skill or {{W|Spell}} {{neg|+50%}} Fumble Chance, {{neg|+50%}} Backfire Chance, and {{neg|+50%}} Cooldown Duration. <br><br>Using {{W|Attack}} skills or {{W|Spells}} removes the effect and reduces the caster's cooldowns by {{pos|2}} turns.
-
-|Death Touch = Deals {{unholy|13 Unholy Damage}}. <br><br>Replenishes Health to all Undead within Vision for {{pos|66%}} of the damage dealt by the spell.
-
-|Desecration =  Shoots a bolt of dark energy, dealing {{c|Unholy|9 Unholy Damage}} with {{W|90%}} Accuracy. If the spell hits the target, burns its Energy for the amount of damage dealt and replenishes the same amount of Energy to the caster.
-
-|Spectral Haunting = Activates {{pos|"Spectral Haunting"}} for {{W|1}} turn. Receiving damage removes the effect. <br><br>While {{pos|"Spectral Haunting"}} is active, grants all received strikes and shots {{neg|+20%}} Fumble Chance and {{neg|-10%}} Accuracy. When the effect expires, the Wraith disappears for {{W|2}}-{{W|4}} turns, then materializes on a tile adjacent to an enemy and delivers a strike to them. <br><br>If the strike hits its target, increases the Wraith's Max Health by {{pos|20%}} and permanently grants it {{pos|+3%}} Crit Chance.
-
-|Grave Chill = Deals {{unholy|9 Unholy}} and {{C|Frost|9 Frost Damage}} an adjacent tile and two tiles behind it. <br><br>With {{W|94%}} chance {{W|Immobilizes}} all targets within the spell's area of effect and applies them with {{neg|+25%}} Fumble Chance and {{neg|-25%}} Energy Restoration for {{W|2}} turns.
-
-|Necrophage = Consumes a flesh-covered corpse. Replenishes {{pos|50%}} Max Health and {{c|Energy|50%}} Max Energy, then transforms into a more powerful ghoul.
-
-|Putrid Odor = Applies all adjacent enemies with {{neg|+5%}} Fumble Chance, {{neg|+0.5%}} Intoxication Change, and {{neg|-0.25%}} Morale Change. <br><br>Each turn with {{W|20%}} chance causes all adjacent enemies to {{neg|Cough}}. <br><br>These effects don't stack.
-
-|Lesser Ritual of Resurrection = Reanimates a slain Undead, replenishing it {{pos|66%}} Max Health and {{c|Energy|66%}} Max Energy. <br><br>The reanimated undead's Armor Durability is set to {{W|0%}}, and all its abilities are put on cooldown for {{W|50%}} of the maximum number of turns.
-
-|Greater Ritual of Resurrection = Reanimates all slain Undead within {{W|6}} tiles, replenishing them {{pos|33%}} Max Health and {{c|Energy|33%}} Max Energy. <br><br>The reanimated undead's Armor Durability is set to {{W|0%}}, and all its abilities are put on cooldown.
-
-|Blasphemous Sigil = Creates a {{W|Rune}} on the targeted tile, which persists for {{W|9}} turns. <br><br>Remaining on the {{W|Rune}} deals {{unholy|9 Unholy Damage}} and replenishes Energy to the caster for {{W|100%}} of the damage dealt. <br><br>The {{W|Rune}} doesn't harm Undead or Proselytes, instead granting them {{pos|-33%}} Fumble Chance, {{pos|+33%}} Energy Restoration, and {{pos|+9%}} Crit Chance.
-
-|Soul Sacrifice =  Applies an Undead ally with {{neg|"Soul Sacrifice"}} until the next turn. <br><br>When the effect expires, the target explodes, dealing {{unholy|Unholy Damage}} equal to its remaining Health (but no more than {{W|20%}} of its maximum amount) to all adjacent tiles. <br><br>The spell can only be used on targets with less than {{neg|20%}} Health.
-
-|Steal Essence =  Steals {{neg|6%}} Max Health and {{c|Energy|6%}} Max Energy from an Undead ally, transferring them to the caster. <br><br> Activates {{pos|"Stolen Essence"}} for {{w|3-}} turns: <br><br>{{pos|+13%}} Magic Power <br>{{pos|-9%}} Spells Energy Cost <br>{{pos|-9%}} Cooldowns Duration <br>{{pos|-9%}} Damage Taken <br>Using {{W|Spells}} replenishes Health for {{W|9%}} of the Energy spent <br><br>The repeated use of the spell grants an extra stack of the effect (up to {{W|IV}}) and refreshes its duration.
-
-|Strangling Grasp =  Performs a {{W|charge}} towards the target and delivers a strike with {{neg|-50%}} Weapon Damage and {{W|57%}} Immobilization Chance. <br><br>{{pos|Doubles}} the bonus to Immobilization Chance if the target is affected by {{neg|"Curse of Decay"}} and {{pos|nulifies}} the penalty to Weapon Damage if it's affected by {{neg|"Curse of Agony"}}.
-
-|Unholy Blessing = Replenishes {{pos|13%}} Max Healht to the target and grants {{pos|"Unholy Blessing"}} for {{w|13}} turns: <br><br>{{pos|13%}} Life Drain <br>{{pos|13%}} Energy Drain <br>{{pos|13%}} Damage Reflection.
-
-|Wraith Summoning =  Summons a {{W|Wraith}} on the targeted tile. The {{W|Wraith's}} power depends on the number of {{pos|"Stolen Essence"}} stacks.<br><br>Using the ability removes {{pos|"Stolen Essence"}}.
-
-
-<!-- Proselyte skill data -->
- <!-- PROSELYTE SKILLS -->
-|Baleful Scream = Grito Funesto
-|Blood Craze = Loucura de Sangue
-|Swipe = Golpe
-|Curse of Weakness = Maldição de Fraqueza
-|Driven by Pain = Movido pela Dor
-|Chain Strike = Golpe em Cadeia
-|Immolation = Imolação
-|Lacerate = Lacerar
-|Lash Blessing = Benção de Chicote
-|Mark of the Feast = Marca do Banquete
-|Sacrificial Blood = Sangue Sacrificial
-|Summon Blood Golem = Invocar Golem de Sangue
-|Vampiric Blood = Sangue Vampírico
-|Vampiric Rune = Runa Vampírica
-|Willing Sacrifice = Sacrifício Voluntário
-
-
-|Anthems of Bloodshed =
-|Description=Grants each {{w|sixth}} strike with {{pos|+99%}} Crit Chance and {{pos|+66%}} Bleed Chance. <br><br>If the strike hits its target, grants {{pos|"Blood Vow"}} to all allies within Vision for {{w|3}} turns: <br><br>{{pos|+33%}} Life Drain <br>{{pos|+33%}} Healing Efficiency <br>{{pos|-33%}} Abilities Energy Cost.
-
-|Baleful Scream =
-|Description=Lets out a shriek, dealing {{c|Psionic|6 Psionic Damage}}. <br>With {{w|75%}} chance {{w|Dazes}} the target or causes it to {{w|Stagger}} for {{w|2}} turns.
-
-|Bestial Charge =
-|Description=Charges forward in a {{w|5}} tiles line. The first target in its path takes {{pos|666%}} damage. <br><br>If the Archon collides with the scenery during the charge, he is {{w|Stunned}} for {{w|2}} turns.
-
-|Bestial Rage =
-|Description=Receiving damage, hitting targets, and using abilities increases the Yagram's hidden {{neg|Rage}} stat. When it reaches its maximum, activates {{pos|"Bestial Rage"}} for an indefinite number of turns: <br><br> {{pos|+33%}} Damage <br>{{pos|+66%}} Knockback Chance <br>{{neg|+33%}} Damage Taken <br>{{neg|66%}} chance to deliver a strike to a random adjacent target instead of the original one
-
-|Blessed in Death =
-|Description=While the Dead Martyr is within its allies' Vision, grants them {{pos|+9%}} Weapon Damage, {{pos|+9%}} Accuracy, {{pos|-9%}} Damage Taken. <br><br>Destroying the Dead Martyr removes the previously granted {{pos|"Blood Vow"}}.
-
-|Blister Burst =
-|Description=Loses {{neg|6%}} Max Health. Deals {{unholy|6 Unholy}} and {{caustic|6 Caustic Damage}} to all adjacent targets except Proselytes and Undead. <br>Replenishes {{pos|9%}} Health and {{C|Energy|9%}} Max Energy to all affected Proselytes. <br><br>Creates {{W|Blood Puddles}} on all adjacent tiles for {{w|6}} turns. <br><br>Remaining in the {{W|Blood Puddle}} deals {{unholy|6 Unholy}} and {{caustic|6 Caustic Damage}} and grants {{neg|-6%}} Unholy Resistance for {{w|13}} turns. <br><br>{{W|Blood Puddles}} don't harm Proselytes, instead replenishing them {{pos|3%}} Max Health and {{C|Energy|3%}} Max Energy each turn.
-
-|Blood Craze =
-|Description=Hitting an enemy grants {{pos|"Blood Craze"}} for {{w|3}} turns:<br><br>{{pos|+6%}} Weapon Damage <br>{{pos|+3%}} Crit Chance <br><br>While {{pos|"Blood Craze"}} is active, each next hit grants an extra stack of the effect (up to {{w|VI}}) and refreshes its duration.
-
-|Blood Scent =
-|Description=Each {{neg|Bleeding}} enemy or ally within Vision grants {{pos|+6%}} Damage, {{pos|+9%}} Counter Chance, and {{pos|+3%}} Crit Chance. <br><br>If an enemy within 9 tiles starts {{neg|Bleeding}}, attracts the Proselyte to their location.
-
-|Blood Clot =
-|Description=Launches a clot of blood at the target, dealing {{unholy|4 Unholy Damage}} and {{C|Caustic|4 Caustic Damage}}.
-
-|Blood Puddle =
-|Description=Marks an area. Next turn pours a puddle of boiling blood in it. <br><br>Puddles persist for {{w|2}} turns and deal {{unholy|15 Unholy Damage}} and {{C|Caustic|15 Caustic Damage}} per turn.
-
-|Blood Spit =
-|Description=Loses {{neg|3%}} Max Health. Spits blood, dealing {{unholy|13 Unholy}} and {{caustic|9 Caustic Damage}} with {{W|95%}} Accuracy.<br><br>If the skill hits its target, applies it with {{neg|-6%}} Unholy Resistance for {{w|13}} turns and creates a {{W|Blood Puddle}} on its tile for {{W|3}} turns. <br><br>Remaining in the {{W|Blood Puddle}} deals {{unholy|13 Unholy}} and {{caustic|6 Caustic Damage}} and also grants {{neg|-6%}} Unholy Resistance for {{w|13}} turns. <br><br>{{W|Blood Puddles}} don't harm Proselytes, instead replenishing them {{pos|3%}} Max Health and {{C|Energy|3%}} Max Energy each turn.
-
-|Bloodthirst =
-|Description=Delivers a strike with {{pos|+27%}} Life Drain and {{pos|+27%}} Bleed Chance. <br><br>Activates {{pos|"Vampiric Blood"}} for {{w|3}} turns:<br><br>{{pos|+9%}} Life Drain<br>Replenishes {{pos|6%}} Max Health and Energy each turn.
-
-|Brand of Anguish =
-|Description=Delivers a strike with {{pos|+33%}} Fire Damage, causing {{W|100%}} more Pain. <br><br>If the strike hits a target affected by positive effects, removes one of them and permanently grants the Brander {{pos|+9%}} Life Drain.
-
-|Burnt Offering =
-|Description=Destroys a corpse within Vision, leaving a {{W|Pyre}} in its place, which persists until it's extinguished or the Brander's death. Replenishes {{pos|9%}} Max Health. <br><br>Each burning {{W|Pyre}} replenishes {{pos|3%}} Max Health to the Brander each turn, and also grants him {{c|Fire|+3}} Fire Damage, {{pos|-6%}} Damage Taken, and {{pos|+6%}} Crit Chance. The effect stacks up to {{W|6}} times.
-
-|Cannibalistic Craze =
-|Description = '''Repositions''' to a tile with a fleshy corpse and consumes it, replenishing {{c|+|13%}} Max Health and {{c|Energy|26%}} Max Energy.<br><br>With 33% chance activates one of the following effects for 9 turns:<br><br>[[Blood Craze]]<br>[[Blood Oath]]<br>[[Rapid Restoration]]<br>[[Battle Rage]].
-
-|Chain Strike =
-|Description=Delivers a strike with {{neg|-66%}} Damage, {{pos|+66%}} Daze Chance and {{pos|+66%}} Knockback Chance.
-
-|Corpse Devourment =
-|Description=Devours a corpse, replenishing {{pos|33%}} Max Health and {{C|Energy|33%}} Max Energy.
-
-|Devastating Power =
-|Description=Marks a tile. Next turn delivers a strike to the marked tile with {{pos|+33%}} Weapon Damage, {{pos|+33%}} Bodypart Damage, and {{pos|+66%}} Stun Chance.<br><br>{{pos|Doubles}} the bonuses if the strike is delivered to a target affected by {{W|Immobilization}}, {{W|Daze}}, {{W|Stun}}, {{W|Stagger}}, or {{W|Confusion}}.
-
-|Driven by Pain =
-|Description=Grants {{pos|+0.33%}} Damage, {{pos|-0.33%}} Damage Taken and {{pos|+0.13%}} Life Drain for each missing {{neg|percent}} of Health.
-
-|Earthshaking Strike =
-|Description=Delivers a strike to three adjacent tiles and three tiles behind them with {{pos|+33%}} Stun Chance and {{pos|+66%}} Daze Chance. <br><br>Each target within the skill's area of effect increases the Yagram's {{neg|Rage}}.
-
-|Embrace the Murk =
-|Description=Performs a {{W|teleportation}} to the targeted tile. <br><br>Removes all negative effects and activates {{pos|"Murk"}} for {{W|9}} turns: <br><br>{{pos|+6%}}Crit Chance <br>{{pos|+9%}} Bodypart Damage <br>{{pos|+9%}} Bleed Chance <br>{{pos|+9%}} Life Drain <br>Replenishes {{pos|+6%}} Max Health and {{C|Energy|+6%}} Max Energy each turn. <br><br>Each turn grants a stack of the effect (up to {{w|VI}}). <br><br>While {{pos|"Murk"}} is active, grants {{pos|+66%}} Dodge Chance. Receiving damage, using abilities, and delivering strikes removes the effect. <br><br>This ability can't be used while affected by {{w|Immobilization}} or {{neg|"Net"}}.
-
-|Face of Horror =
-|Description=Makes a large amount of {{W|noise}} and deals {{C|Psionic|9 Psionic Damage}} with {{W|99%}} chance to {{W|Immobilize}} the target for {{W|2}} turns. The chance to {{W|Immobilize}} can be reduced by the target's Psionic Resistance.<br><br>Activates {{pos|"Battle Rage"}} and grants the same effect to all Proselytes within Vision for {{W|9}} turns.
-
-|Feed the Host =
-|Description=Replenishes {{pos|66%}} of the damage dealt as Health to the summoner.
-
-|Fiery Embers =
-|Description=Deals {{c|Fire|9 Fire}} and {{unholy|3 Unholy Damage}}, then creates {{W|Fiery Embers}} on the target's tile and three behind it, which persists for {{W|6}} turns. <br><br> Remaining on {{W|Fiery Embers}} applies {{neg|-9%}} Fire Resistance, {{neg|+6%}} Fumble Chance, and with {{W|33%}} chance causes the target to {{c|Fire|Ignite}}. The chance to {{c|Fire|Ignite}} can be reduced by the target's Fire Resistance. <br><br>The effect stacks up to {{W|6}} times. {{W|Fiery Embers}} don't harm Proselytes.
-
-|Flesh Explosion =
-|Description=The Blood Golem explodes the next turn after its death, dealing {{unholy|9 Unholy}} and {{C|caustic|26 Caustic Damage}} to all adjacent tiles.
-
-|Fling Away =
-|Description=Delivers a strike with {{pos|+50%}} Stagger Chance, {{pos|+50%}} Stun Chance, and {{pos|+150%}} chance to Knock the target back {{w|2}} tiles.
-
-|For Whom The Bell Tolls =
-|Description=Makes a large amount of {{W|noise}}, attracting all proselyte within {{w|9}} tiles. <br><br>Deals {{psionic|9 Psionic Damage}} with {{W|75%}} Armor Penetration to all enemies within {{W|9}} tiles and applies them with {{neg|+9%}} Damage Taken for {{w|9}} turns and {{neg|-6%}} Sanity.
-
-|Herald of Ruination =
-|Description=Delivers a strike to a large area within {{W|4}} tiles with {{pos|+99%}} Daze Chance and {{W|99%}} chance to cause {{W|Confusion}} for {{W|2}} turns. The chance to {{W|Confuse}} can be reduced by a target's Move Resistance.<br><br>Reduces all cooldowns by {{pos|3}} turns for each target or object of environment within the skill's area of effect.
-
-|Immolation =
-|Description=Upon death, grants {{pos|"Blood Vow"}} to all Proselytes within Vision for {{W|6}} turns: <br><br>{{pos|+33%}} Life Drain<br>{{pos|+33%}} Healing Efficiency<br>{{pos|-33%}} Abilities Energy Cost
-
-|Jump Away =
-|Description=Jumps {{w|2}} tiles or less, gains {{pos|+66%}} Dodge Chance and {{pos|-33%}} Damage Taken for the next turn.
-
-|Lacerate =
-|Description=Delivers a strike with {{neg|-66%}} Damage and {{pos|+66%}} Bleed Chance.
-
-|Lash Blessing =
-|Description=Delivers a strike with {{neg|-66%}} Weapon Damage to himself or an ally, granting {{pos|"Battle Rage"}} for {{w|9}} turns: <br><br>{{pos|+10%}} Damage <br>{{pos|+7.5%}} Crit Chance <br>{{pos|+20%}} Crit Efficiency
-
-|Life Leech =
-|Description=Deals {{unholy|9 Unholy Damage}} <br><br>Replenishes Health for the amount of damage dealt by the spell. If Health is at {{neg|100%}}, increase it by the same amount for {{W|9}} turns.
-
-|Mark of the Feast =
-|Description=Applies {{neg|"Mark of the Feast"}} for {{W|3}} turns: <br><br>{{pos|-26%}} Bleed Resistance <br>{{pos|-13%}} Dodge Chance <br><br>Grants all received attacks {{pos|+13%}} Life Drain. <br><br>Receiving a {{neg|Bleeding}} prolongs the effect by {{neg|1}} turn.
-
-|Murkstrike =
-|Description=Performs a {{W|charge}} towards the target and delivers a strike with {{pos|+66%}} Crit Efficiency, {{pos|+66%}} Daze Chance, {{pos|+66%}} Armor Penetration. <br><br>This skill can be used only while affected by {{pos|"Murk"}}.
-
-|Murkwalk =
-|Description=Performs a {{W|teleportation}} to the targeted tile. <br><br> Grants {{pos|+18%}} Dodge Chance for {{w|3}} turns and reduces all Cooldowns by {{pos|3}} turns. <br><br>This ability can't be used while affected by {{w|Immobilization}} or {{neg|"Net"}}.
-
-|Neverending Torment =
-|Description=Loses {{neg|3%}} Max Health each turn while there's both an enemy and an ally within Vision. If the Martyr is Alarmed, and there are no enemies within Vision, the Health loss is {{neg|tripled}}. <br><br>Upon death, grants "Blood Vow" to a random ally within Vision for {{W|99}} turns: <br><br>{{Pos|+33%}} Life Drain <br>{{pos|+33%}}Healing Efficiency <br>{{pos|+33%}} Abilities Energy Cost
-
-|One Body =
-|Description=Transfers {{neg|66%}} of the damage received by the Tentacle to the Summoner. <br>Transfers {{neg|33%}} of the damage received by the summoner to the Tentacle. When the Tentacle is destroyed, the summoner loses {{neg|9%}} Max Health and is applied with {{neg|+33%}} Damage Taken for an indefinite number of turns. <br><br>Killing the Anmarrak destroys its Tentacle Arm as well.
-
-|Phantom Bats =
-|Description=Marks an area. <br><br>Next turn releases a swarm of spectral bats at it, dealing {{unholy|26 Unholy Damage}} and applying {{unholy|Curse}} for {{w|13}} turns.
-
-|Sacrificial Blood =
-|Description=Applies the target with "Sacrificial Blood", which remains active until the caster's death. <br><br> Using {{W|Spells}} against a target affected by this effect grants {{pos|+9%}} Magic Power and {{pos|+9%}} Healing Efficiency (both effects stack up to {{W|6}} times) and also reduces all cooldowns by {{pos|3}} turns.
-
-|Summon Blood Golem =
-|Description=Summons a {{w|Blood Golem}} on the targeted tile.
-
-|Summon the Restless =
-|Description=Reanimates one of the bodies in the corpse pile.
-
-|Summon Worm =
-|Description=Spends {{neg|3%}} Max health to summon a {{w|Leechworm}} on a targeted tile.
-
-|Tongue Leech =
-|Description=Deals {{w|9 Piercing}}, {{poison|6 Poison}}, and {{unholy|6 Unholy Damage}}  with {{pos|+33%}} Armor Penetration, {{pos|+66%}} Bleed Chance, {{pos|+66%}} Immobilization Chance, and {{pos|+66%}} Life Drain.
-
-|Tongue Pull =
-|Description=Deals {{w|9 Crushing}}, {{poison|6 Poison}}, and {{unholy|6 Unholy Damage}} with {{pos|+33%}} Armor Penetration and {{w|99%}} chance to {{w|Pull}} the target {{w|4}} tiles closer. <br><br>This skill can't be countered.
-
-|Tongue Push =
-|Description=Deals {{w|9 Crushing}}, {{poison|6 Poison}}, and {{unholy|6 Unholy Damage}} with {{pos|+33%}} Armor Penetration and {{w|99%}} chance to {{W|knock}} the target back {{w|2}} tiles. <br><br>This skill can't be countered.
-
-|Tentacle Arm (skill) =
-|Description=Summons a {{cl|White|Tentacle Arm}} on a targeted tile and activates the effect of {{pos|"Mountain of Flesh"}} for an indefinite number of turns: <br><br> {{pos|-99%}} Damage Taken <br>{{pos|+200%}} Move Resistance <br>{{pos|+66%}} Control Resistance <br>{{pos|+66%}} Healing Efficiency <br>{{neg|Disables basic attacks and movement to other tiles}}
-
-|Unholy Anthems =
-|Description=Grants one of the following effects to all Proselytes within {{w|9}} for {{w|6}} turns: <br><br>{{pos|Rapid Restoration}} <br>{{pos|Sturdiness}} <br>{{pos|Battle Rage}}
-
-|Unholy Ritual =
-|Description=Replenishes {{pos|+50%}} Max Health to all the Restless and grants them {{pos|+50%}} Damage.
-
-|Draining Sigil =
-|Description=Creates a {{W|Rune}} on the target's tile and two more on the tiles adjacent to it. The {{W|Runes}} persist for {{W|9}} turns or until the caster's death. <br><br>Remaining on the {{W|Runes}} deals {{c|Unholy|9 Unholy Damage}} with {{W|29%}} Immobilization Chance and permanently increases the caster's Max Health by {{pos|6%}}. <br><br>The {{W|Runes}} don't harm Proselytes, instead replenishing them {{pos|9%}} Max Health each turn.
-
-|Wild Swipe =
-|Description=Deliver a strike to three adjacent targets with {{pos|+100%}} Knockback Chance.
-
-|Wild Swipe (Ascended Archon) =
-|Description=Deliver a strike to three adjacent targets with {{pos|+100%}} Knockback Chance.
-
-|Wild Swipe (Enhanced) =
-|Description=Deliver a strike to three adjacent targets with {{pos|+100%}} Knockback Chance.
-
-|Willing Sacrifice =
-|Description=Replenishes Health to all allies within Vision for the amount of damage received.
-
-|Witness His Might! =
-|Description=Each type of Proselyte within Vision grants {{pos|+6%}} Max Health and {{pos|+6%}} Weapon Damage. <br><br>Hitting an enemy applies them with {{neg|+3%}} Damage Taken for {{w|6}} turns for each type of Proselyte within Vision.
-
-|Wormfood =
-|Description=Destroys a flesh-covered corpse and summons {{w|Leechworms}} on the tiles adjacent to it. The number of summoned {{w|Leechworms}} depends on the corpse's size. <br><br>Grants already existing worms {{pos|+9%}} Max Health, {{pos|+9%}} Bleed Chance, and {{pos|+9%}} Crit Chance.  
-
-
-<!-- Sword skill data -->
-<noinclude>Page for all Stoneshard Sword skill data.
 </noinclude><includeonly>{{#switch: {{{1}}}
 
-|Cleaving Strike= {{#switch: {{{2}}}
-|Active=attack
-|Type=Target Area, 3 Tiles
-|Range=1
-|Energy=10
-|Cooldown=8
-|Modifiers=Strength, Agility, Perception
-|Requirements=- Requires one-handed sword Delivers a strike to three adjacent targets with {{Positive|+25%}} Bodypart Damage and {{Positive|+50%}} Bleed Chance.<br><br>Grants {{Positive|+5%}} Counter Chance for {{W|5}} turns for each enemy hit by the strike.<br><br>The effect stacks up to {{W|3}} times.
-|Formuladesc=Delivers a strike to three adjacent targets with {{Positive|+(15 + AGL)%}} Bodypart Damage and {{Positive|+(30 + (2 * STR))%}} Bleed Chance.<br><br>Grants {{Positive|+(0.5 * PRC)%}} Counter Chance for {{W|5}} turns for each enemy hit by the strike.<br><br>The effect stacks up to {{W|3}} times.
-|Enemydesc=Delivers a strike to three adjacent targets with {{Positive|+{{#expr: 15 + {{EnemyAttributes|AGL}}}}%}} Bodypart Damage and {{Positive|+{{#expr: 30 + (2 * {{EnemyAttributes|STR}})}}%}} Bleed Chance.<br><br>Grants {{Positive|+{{#expr: 0.5 * {{EnemyAttributes|PRC}}}}%}} Counter Chance for {{W|5}} turns for each enemy hit by the strike.<br><br>The effect stacks up to {{W|3}} times.
-|formula_raw=Bodypart Damage: {{Positive| 10 + STR}}<br>Bleeding Chance: {{Positive| 20 + 2 * AGL}}<br>
-|#default = }}
-
-|Keeping Distance= {{#switch: {{{2}}}
-|Active=maneuver
-|Type=Target Tile
-|Range=1
-|Energy=14
-|Cooldown=10
-|Modifiers=Strength, Agility, Perception
-|Requirements=- Requires one-handed sword {{W|Repositions}} to an adjacent tile.<br><br>Next turn delivers a free strike to a random adjacent enemy with {{Positive|+50%}} Stagger Chance and {{Positive|+10%}} Crit Chance.
-|Formuladesc={{W|Repositions}} to an adjacent tile.<br><br>Next turn delivers a free strike to a random adjacent enemy with {{Positive|+(30 + (2 * STR))%}} Stagger Chance and {{Positive|+((0.5 * AGL) +(0.5 * PRC))%}} Crit Chance.
-|formula_raw=Stagger Chance: {{Positive| 20 + 1.5 * STR}}<br>Crit Chance: {{Positive| 0.25 * AGL + 0.5 * PRC}}<br>
-|#default = }}
-
-|Blade Maintenance= {{#switch: {{{2}}}
-|Active=passive
-|Requirements=- Requires one-handed sword Grants sword strikes {{Pos|+5%}} Bleed Chance if the equipped {{W|sword's}} Durability is above {{W|80%}}, {{Pos|+5%}} Weapon Damage if its above {{W|90%}}, and {{Pos|+3%}} Crit Chance if it's above {{W|95%}}.<br><br>Reduces {{W|swords'}} Durability loss by {{W|50%}} when blocking with them and by {{W|20%}} when delivering strikes.
-|#default = }}
-
-|Fencer Stance= {{#switch: {{{2}}}
-|Active=stance
-|Type=No Target
-|Energy=12
-|Cooldown=10
-|Requirements=- Requires one-handed sword Activates {{Pos|"Fencer Stance"}} for {{W|8}} turns:<br><br>{{Pos|+5%}} Counter Chance <br>{{Pos|+5%}} Block Chance <br>{{Pos|+5%}} Dodge Chance <br>{{Pos|+8%}} Bleed Chance<br><br>Using this ability tree's skills grants an extra stack of the effect (up to {{W|IV}} stacks).<br><br>Basic sword strikes prolong the duration by {{Pos|1}} turn (up to {{W|12}}) but reduce its number of stacks (no more than once per turn).<br><br>Only one {{W|Stance}} effect can be active at a time.
-|formula_raw=Weapon Damage: {{Positive| Weapon Damage - 10}}<br>
-|#default = }}
-
-|Steady Tempo= {{#switch: {{{2}}}
-|Active=passive
-|Requirements=- Requires one-handed sword Using the ability tree's skills grants {{pos|+10%}} Energy Restoration for {{W|5}} turns and reduces the cooldown of the ability tree's random {{W|Attack}} skill by {{pos|1}} turn.<br><br> The effect stacks up to {{W|4}} times.
-|#default = }}
-
-|Gloat= {{#switch: {{{2}}}
-|Active=passive
-|Requirements=- Requires one-handed sword Grants sword strikes {{Pos|+1.5%}} Crit Chance, {{Pos|+3%}} Weapon Damage, and {{pos|+3%}} Energy Drain for each negative effect affecting the target.<br><br>{{pos|Doubles}} the bonuses if the negative effect is {{neg|Bleeding}}.
-|#default = }}
-
-|Onrush= {{#switch: {{{2}}}
-|Active=attack/charge
-|Type=Target Object
-|Range=4
-|Energy=20
-|Cooldown=14
-|Modifiers=Strength, Agility, Perception
-|Requirements=- Requires one-handed sword Performs a {{W|Charge}} towards the target and delivers a strike with {{Positive|+20%}} Weapon Damage and {{Positive|+10%}} Armor Penetration.<br><br>If the strike does damage, applies the target with {{Negative|-15%}} Bleed Resistance and {{Negative|+10%}} Damage Taken for {{W|4}} turns.
-|Formuladesc=Performs a {{W|Charge}} towards the target and delivers a strike with {{Positive|(PRC + AGL)%}} Weapon Damage and {{Positive|((0.5 * AGL) + (0.5 * PRC))%}} Armor Penetration.<br><br>If the strike does damage, applies the target {{Negative|-(1.5 * AGL)%}} Bleed Resistance and {{Negative|+(PRC))%}} Damage Taken for {{W|4}} turns.
-|formula_raw=Weapon Damage: {{Positive| 1.5 * STR + 0.5 * AGL}}<br>Armor Piercing: {{Positive| 0.5 * AGL + PRC}}<br>Bleed Debuff: {{Positive| 1.5 * AGL}}<br>Damage Debuff: {{Positive| PRC}}<br>
-|#default = }}
-
-|Honed Edge= {{#switch: {{{2}}}
-|Active=passive
-|Requirements=- Requires one-handed sword Sword hits grants {{Pos|+5%}} Bleed Chance and {{Pos|+3%}} Armor Penetration for {{W|5}} turns.<br>The effect stacks up to {{W|5}} times.
-|#default = }}
-
-|#default = Data does not exist.}}</includeonly><noinclude>[[Category:Data]]</noinclude>
-
-<!-- Axe skill data -->
-<!-- Mace skill data -->
-<!-- Dagger skill data -->
-<!-- Two-handed Sword skill data -->
-<!-- Two-handed Axe skill data -->
-<!-- Two-handed Mace skill data -->
-<!-- Spear skill data -->
-<!-- Ranged skill data -->
-<!-- Shield skill data -->
-<!-- Staff skill data -->
-<!-- Basic skill data -->
-<!-- Athletic skill data -->
-<!-- Warfare skill data -->
-<!-- Magic Mastery skill data -->
-<!-- Dual Wielding skill data -->
-<!-- Survival skill data -->
-<!-- Armored Combat skill data -->
-<!-- Pyromancy skill data -->
-<!-- Geomancy skill data -->
-<!-- Electromancy skill data -->
-</noinclude><includeonly>{{#switch: {{{1}}}
 <!--
-
------ SWORD SKILLS -----
-
+ BEASTS SKILLS
 -->
-|Cleaving Strike
-|Keeping Distance
-|Blade Maintenance
-|Fencer Stance
-|Steady Tempo
-|Gloat
-|Onrush
-|Honed Edge = Sword skill data
+|Animated Servant = Summona dois esqueletos dos montes de ossos mais próximos ao personagem. <br><br>Os esqueletos persistem por {{w|24}} turnos, então se desfazem, repondo {{pos|4%}} de Vida Máxima e {{C|Energia|8%}} de Energia Máxima ao Mantícora.
+
+|Baleful Scream (harpy) = Deixa escapar um grito, causando {{w|7 Psionic Damage}} ao alvo. <br>Tem {{w|75%}} de chance de {{w|Daze}} o alvo por {{w|2}} turnos ou de {{w|Stagger}} por {{w|4}} turnos.
+
+|Bone Pyres = Destrói cada esqueleto na arena, enviando fragmentos de ossos que causam {{w|12 Piercing}} e {{unholy|10}} Unholy Damage com {{w|40%}} de Penetração de Armadura a todos os inimigos adjacentes. <br><br> Cria {{C|Arcane|fogos etéreos}} no lugar dos esqueletos destruídos por {{w|8}} turnos. Enquanto o personagem estiver adjacente a um fogo etéreo, ele queima {{C|Energia|5%}} de sua Energia Máxima a cada turno. <br><br>Os fogos etéreos não podem ser apagados com água, mas podem ser apagados pisando sobre eles. Fazer isso causa {{C|fire|5 Fire}}, {{unholy|5 Unholy}}, {{C|sacred|5 Sacred}}, e {{arcane|5 Arcane Damage}} com {{w|100%}} de Penetração de Armadura.
+
+|Claw Swipe = Disfere um golpe, causando {{pos|+100%}} de Dano. <br><br>Se a Energia do Troll for maior que {{C|Energia|10%}}, o golpe ganha {{pos|+33%}} de Dano, {{pos|+50%}} de Chance de Sangramento, {{pos|+125%}} de Chance de Knockback, {{pos|+25%}} de Precisão e {{pos|+30%}} de Penetração de Armadura.
+
+|Corrosive Blood = Receber ataques corpo a corpo causa {{C|Caustic|2 Caustic}} e {{C|Poison|1 Poison}} de Dano ao atacante. <br><br> Cada {{neg|Sangramento}} e {{neg|grau de lesão}} aumenta o {{C|Caustic|Dano Caustico}} em {{w|1}}.
+
+|Dash (animal) = Performa um dash em direção a um tile alvo. <br><br>O Custo de Energia da habilidade é aumentado em {{neg|15%}} para cada inimigo adjacente à posição de início. <br><br>Na chegada, concede {{pos|+20%}} de Chance de Contra-ataque e {{pos|+20%}} de Chance de Esquiva por {{w|4}} turnos se houver um inimigo adjacente.
+
+|Deadly Tail = Disfere um golpe no alvo: <br><br>Com {{w|33%}} de chance, aplica {{poison|Envenenamento}} por {{w|6}} turnos <br> Ou com {{w|33%}} de chance, aplica {{neg|"Sangue Sacrificial"}} por {{w|6}} turnos <br>Ou com {{w|33%}} de chance, aplica {{neg|"Maldição"}} por {{w|6}} turnos <br><br>A chance de receber esses efeitos é reduzida com Resistências a Veneno, Sangramento e Profano, respectivamente.
+
+|Deafening Roar = Solta um rugido, causando {{psionic|5 Psionic Damage}} a todos os inimigos em uma grande área. <br><br>O Rugido Ensurdecedor tem {{w|25%}} de chance de {{w|Desarmar}}, forçando as armas equipadas a caírem no chão. <br>Se este efeito falhar em se aplicar, tem {{w|75%}} de chance de {{w|Atordoar}} por {{w|2}} turnos. <br>Se este outro efeito também falhar em se aplicar, tem {{w|100%}} de chance de {{w|Atordoar}} por {{w|5}} turnos.
+
+|Disturbed Hive = Cada {{w|8}} turnos, invoca um {{neg|Enxame de Ferrões}} {{w|(até 3)}}. <br><br>Cada instância de Dano {{neg|reduz}} a contagem regressiva para o próximo enxame em {{w|1}} turno.
+
+|Dying Rage = Concede {{pos|-50}} de Limite de Dor, {{pos|-25}} de Dano Recebido e {{pos|+25}} de Dano quando a Vida está abaixo de {{neg|40%}}.
+
+|Earthshaking Strike (Young Troll) = Bate no chão, afetando alvos em uma grande área. Este ataque tem {{pos|+33%}} de Chance de Atordoamento e {{pos|+66%}} de Chance de Daze.
+
+|Elusive Predators = Concede {{pos|+50%}} de Chance de Esquiva e {{pos|25%}} de Chance de Contra-ataque. <br>Permite escapar do campo de batalha {{w|2}} turnos após começar a {{w|Retirada}}.
+
+|Grab ’Em! = Ataca uma parte aleatória do corpo do alvo, causando {{pos|100%}} de dano com {{pos|+25%}} de Dano em Partes do Corpo. <br><br>Se o ataque atingir as pernas, tem uma chance de {{w|Imobilizar}}. <br>Se o ataque atingir os braços, tem uma chance de {{w|Desarmar}}, fazendo com que uma arma do slot correspondente caia no chão. <br><br>Quanto maior a {{w|Proteção}} da Parte do Corpo afetada, menores são as chances de {{w|Imobilização}} e {{w|Desarmamento}}.
+
+|Howl = Gera uma grande quantidade de {{w|Noise}}, atraindo lobos próximos dentro deste tile do mapa e instantaneamente {{pos|reiniciando}} os Cooldowns ativos de todos os outros lobos dentro da Visão.
+
+|Lion Leap = Performa um salto para um tile alvo. Esta habilidade não pode ser usada se uma das patas estiver {{neg|Severamente Ferida}}.
+
+|Loud Barking = Quando o Cão se torna Hostil, coloca esta habilidade em cooldown de {{W|5}} turnos. Faz um grande barulho, atraindo todos os aliados dentro de {{W|25}} tiles.
+
+|Pack Sense = Concede {{pos|+3%}} de Chance de Esquiva, {{pos|+3%}} de Chance de Crítico e {{neg|-5%}} de Duração de Cooldown para cada outra harpia dentro da Visão.
+
+|Peck = Performa um ataque com {{pos|+50%}} de Dano em Partes do Corpo, {{pos|+25%}} de Chance de Crítico e {{pos|+50%}} de Chance de Sangramento. <br><br>Se este ataque atingir a {{w|cabeça}} e causar pelo menos {{neg|4%}} da Vida Máxima do alvo como dano, aplica o alvo com {{neg|Cegueira}} por {{w|2}} turnos.
+
+|Primal Aether = Marca uma área. <br><br> No próximo turno, lança um arco de energia que atinge tudo em sua trajetória, causando {{arcane|12 Arcane}}, {{C|sacred|12 Sacred}}, e {{unholy|12 Unholy Damage}} com {{w|80%}} de Penetração de Armadura, {{pos|+125%}} de Chance de Knockback e {{pos|+100%}} de Chance de At
+
+|Ramming Charge (bison) = Avança rapidamente para um tile alvo, entregando um golpe com {{pos|+10%}} de Dano, {{pos|+15%}} de Chance de Atordoamento e {{pos|+20%}} de Chance de Knockback para cada tile percorrido.
+
+|Ramming Charge (boar) = Avança rapidamente para um tile alvo, entregando um golpe com {{pos|+10%}} de Dano, {{pos|+15%}} de Chance de Atordoamento e {{pos|+20%}} de Chance de Knockback para cada tile percorrido.
+
+|Ramming Charge (moose) = Avança rapidamente para um tile alvo, entregando um golpe com {{pos|+10%}} de Dano, {{pos|+15%}} de Chance de Atordoamento e {{pos|+20%}} de Chance de Knockback para cada tile percorrido.
+
+|Rapid Flight = Avança rapidamente para um tile alvo, recebendo {{pos|+25%}} de Chance de Esquiva por {{w|2}} turnos. <br><br>Esta habilidade não entra em cooldown se as asas da harpia não estiverem feridas.
+
+|Regenerative Carapace = Cada turno restaura {{pos|5%}} de Durabilidade da Armadura. Cada {{w|1%}} de Durabilidade da Armadura concede {{pos|+0.5%}} de Resistência Mágica e de Natureza.
+
+|Rend Flesh = Disfere um golpe com {{pos|+100%}} de Dano em Partes do Corpo e {{pos|+50%}} de Dano em Armadura.
+
+|Rock Toss = Marca uma área. No próximo turno, entrega um golpe, causando {{w|45 Crushing Damage}} a todos os alvos afetados com {{w|150%}} de chance de Knockback. Cada tile de distância para o alvo aumenta o Dano do Rock Toss em {{pos|10%}}.
+
+|Shokcwave = Marca uma área. No próximo turno, entrega um golpe, causando {{w|45 Crushing Damage}} a todos os alvos afetados com {{w|150%}} de chance de Knockback. Cada tile de distância para o alvo aumenta o Dano do Shockwave em {{pos|10%}}.
+
+|Snake Stealth = Cobras se escondem na grama, atacando apenas quando são ameaçadas. <br><br> Cobras podem ser detectadas com alta {{w|Perception}} ou usando {{w|"Examine Surroundings"}}.
+
+|Swarm = Concede {{pos|+0.25%}} de Chance de Esquiva e {{neg|-1%}} de Dano para cada {{neg|percentual}} de Vida faltante.
+
+|Taste for Flesh = Disfere um golpe com {{pos|+150%}} de Dano em Partes do Corpo, {{pos|+80%}} de Chance de Sangramento e {{pos|+25%}} de Drenagem de Vida. Se este ataque causar uma lesão ou piorar uma já existente, o Gulon reabastece {{pos|+25%}} de Vida Máxima.
+
+|Troll Regeneration = Remove todos os efeitos negativos. Então concede o efeito de {{pos|"Troll Regeneration"}} por {{w|4}} turnos: <br><br>{{pos|-75%}} de Dano Recebido <br>{{pos|+50%}} de Fortitude <br>Reabastece {{pos|5%}} de Vida Máxima por turno <br>{{neg|Não pode usar habilidades, se mover ou atacar}} <br>Receber um golpe corpo a corpo {{neg|remove}} o efeito e aplica {{neg|+200%}} de Dano Recebido por {{w|2}} turnos.
+
+|Unbrable Stench = Tem {{w|33%}} de chance de provocar {{neg|Tosse}} em todos os inimigos adjacentes. Este efeito de múltiplas harpias não se acumula.
+
+|Vengeance of the Dead = Marca {{w|6-8}} tiles em uma grande área ao redor do personagem, incluindo o tile em que ele está atualmente. <br><br> No próximo turno, faz com que espinhos de ossos irrompam dos tiles marcados, causando {{w|28 Piercing}} e {{unholy|12 Unholy Damage}} com {{w|60%}} de Penetração de Armadura, {{pos|+100%}} de Chance de Sangramento e {{pos|+100%}} de Chance de Imobilização. Os Espinhos de Ossos persistem por {{w|12}} turnos, mas podem ser destruídos com dano ou quando esta habilidade é usada novamente.
+
+|Voracity = Cada ataque subsequente contra um alvo concede {{pos|+15%}} de Drenagem de Vida e {{pos|7.5%}} de Penetração de Armadura por {{w|6}} turnos.
+
+|Web Spit = Cospe uma teia no alvo, causando {{C|Caustic|8 Caustic}} e {{C|Poison|4 Poison}} de Dano ao alvo, enquanto também aplica o efeito de {{neg|"Web"}} por {{w|6-8}} turnos.
+
+
 <!--
-
------ AXE SKILLS -----
-
+ BRIGANDS SKILLS 
 -->
-|Mutilating Lunge
-|Cut Through
-|No Mercy
-|Ferocity
-|Massacre
-|Reprisal
-|Execution
-|Tormenting Swings = Axe skill data
+|Coordinated Advance = Para cada aliado dentro do campo de visão, concede {{pos|+7.5%}} de Dano de Arma e {{pos|+5%}} de Chance de Crítico tanto para eles quanto para o Renegado. Usar Habilidades reduz os Cooldowns Ativos do Renegado e de seus aliados em {{w|1}} turno.
+
+|Dead or Alive = Aplica o alvo com um efeito que persiste até a morte do Mestre de Pagamentos. <br><br> Ao atacar o alvo afetado, todos os Brigands com o Mestre de Pagamentos em sua Visão ganham: <br><br> {{pos|+10%}} Precisão <br>{{pos|+15%}} Penetração de Armadura <br>{{pos|+20%}} Dano em Partes do Corpo
+
+|Net Throw = Joga uma rede de caça com {{W|88%}} de Precisão. Se atingir o alvo, aplica-o com {{neg|"Net"}} por {{w|6}} turnos: <br><br>{{neg|+30%}} Chance de Erro <br>{{neg|-25%}} Chance de Esquiva <br>{{neg|-50%}} Chance de Bloqueio <br>{{neg|-50%}} Chance de Contra-ataque <br>{{neg|+30%}} Chance de Retrocesso
+
+|Raise the Banner! = Restaura a vontade de lutar dos Brigands em fuga e concede a todos os Brigands dentro da Visão o efeito de {{pos|"Battle Rage"}} por {{w|10-15}} turnos.
+
+|Sic! = Aplica o alvo com {{neg|"Sic!"}} por {{w|10}} turnos. <br><br> Os Cães causam {{pos|+50%}} de Dano aos alvos sob o efeito de {{w|"Sic!"}}.
+
+
 <!--
-
------ MACE SKILLS -----
-
+ UNDEAD SKILLS 
 -->
-|Armor Break
-|Onslaught
-|Dazing Strikes
-|Moment of Weakness
-|Hammer and Anvil
-|Respite
-|Knock Out
-|Concussion = Mace skill data
+|Abominable Vitality = {{w|É apenas um arranhão!}} Ao receber dano letal, o Inquieto tem {{W|75%}} de chance de {{W|evitar a morte}}, {{pos|totalmente}} Repondo sua Vida enquanto {{neg|perde}} sua parte do corpo mais danificada.
+
+|Binding Sigil = Ativa {{pos|"Binding Sigil"}} e concede o mesmo efeito a um aliado Morto-Vivo por {{w|13}} turnos: <br><br>Concede ao aliado {{pos|-33%}} de Dano Recebido <br>Transfere {{W|33%}} do dano recebido pelo lançador para o aliado <br>Reabastece a Energia do lançador para {{W|33%}} do dano causado pelo aliado.
+
+|Bolt of Darkness = Dispara um raio de energia sombria, causando {{unholy|9 Unholy Damage}} com {{W|90%}} de Precisão. Se o feitiço atingir o alvo, queima sua Energia pela quantidade de dano causado e reabastece a mesma quantidade de Energia ao lançador.
+
+|Bone Throw = Lança um osso em um alvo, causando {{w|3 Crushing}}, {{w|3 Piercing}}, {{poison|3 Poison}}, e {{unholy|3 Unholy}} com {{w|80%}} de Precisão, {{w|30%}} de Chance de Atordoamento e {{w|30%}} de Chance de Sangramento.
+
+|Curse of Decay = Aplica o alvo com {{neg|"Maldição da Decadência"}} por {{W|13}} turnos: <br><br>{{neg|-6%}} de Vida Máxima <br>{{neg|-6%}} de Energia Máxima <br>{{neg|-6%}} de Restauração de Energia <br>{{neg|9%}} de Eficiência de Cura <br><br>{{W|IV}} pilhas do efeito: cada turno piora a Condição de uma parte do corpo aleatória em {{neg|1%}} <br><br>Cada turno aplica uma pilha extra do efeito (até {{W|IV}}. Golpes básicos, tiros e uso de habilidades reduzem o número de pilhas em {{pos|2}}.
+
+|Curse of Agony = Aplica o alvo com {{neg|"Maldição da Agonia"}} por {{W|13}} turnos: <br><br>{{neg|+1%}} de Mudança de Dor <br>{{neg|-6%}} de Dano de Arma <br>{{neg|-9%}} de Poder Mágico <br>{{neg|-9%}} de Fortitude <br>{{neg|-9%}} de Resistência Profana <br><br>As penalidades mudam dinamicamente dependendo da Dor atual do alvo.
+
+|Deadly Premonition = Aplica o alvo com {{neg|"Premonição Mortal"}} por um número indefinido de turnos: <br><br>Concede ao próximo uso de uma habilidade de {{W|Ataque}} ou {{W|Feitiço}} {{neg|+50%}} de Chance de Erro, {{neg|+50%}} de Chance de Retrocesso e {{neg|+50%}} de Duração de Cooldown. <br><br>Usar habilidades de {{W|Ataque}} ou {{W|Feitiço}} remove o efeito e reduz os Cooldowns do lançador em {{pos|2}} turnos.
+
+|Death Touch = Causa {{unholy|13 Unholy Damage}}. <br><br>Reabastece a Vida de todos os Mortos-Vivos dentro da Visão para {{pos|66%}} do dano causado pelo feitiço.
+
+|Desecration = Dispara um raio de energia sombria, causando {{unholy|9 Unholy Damage}} com {{W|90%}} de Precisão. Se o feitiço atingir o alvo, queima sua Energia pela quantidade de dano causado e reabastece a mesma quantidade de Energia ao lançador.
+
+|Spectral Haunting = Ativa {{pos|"Spectral Haunting"}} por {{W|1}} turno. Receber dano remove o efeito. <br><br>Enquanto {{pos|"Spectral Haunting"}} está ativo, concede a todos os golpes e tiros recebidos {{neg|+20%}} de Chance de Erro e {{neg|-10%}} de Precisão. Quando o efeito expira, o Wraith desaparece por {{W|2}}-{{W|4}} turnos, então se materializa em um tile adjacente a um inimigo e entrega um golpe a ele. <br><br>Se o golpe atingir seu alvo, aumenta a Vida Máxima do Wraith em {{pos|20%}} e permanentemente concede a ele {{pos|+3%}} de Chance de Crítico.
+
+|Grave Chill = Causa {{unholy|9 Unholy}} e {{C|Frost|9 Frost Damage}} em um tile adjacente e dois tiles atrás dele. <br><br>Com {{W|94%}} de chance {{W|Imobiliza}} todos os alvos dentro da área de efeito do feitiço e os aplica com {{neg|+25%}} de Chance de Erro e {{neg|-25%}} de Restauração de Energia por {{W|2}} turnos.
+
+|Necrophage = Consome um cadáver coberto de carne. Reabastece {{pos|50%}} de Vida Máxima e {{C|Energia|50%}} de Energia Máxima, então se transforma em um necrófago mais poderoso.
+
+|Putrid Odor = Aplica a todos os inimigos adjacentes {{neg|+5%}} de Chance de Erro, {{neg|+0.5%}} de Chance de Intoxicação e {{neg|-0.25%}} de Mudança de Moral. <br><br>A cada turno, com {{W|20%}} de chance, faz com que todos os inimigos adjacentes {{neg|Tossem}}. <br><br>Esses efeitos não se acumulam.
+
+|Lesser Ritual of Ressurection = Reanima um Morto-Vivo abatido, repondo {{pos|66%}} de Vida Máxima e {{C|Energia|66%}} de Energia Máxima. <br><br>A Durabilidade da Armadura do Morto-Vivo reanimado é definida como {{W|0%}}, e todas as suas habilidades são colocadas em cooldown por {{W|50%}} do número máximo de turnos.
+
+|Greater Ritual of Resurrection = Reanima todos os Mortos-Vivos abatidos dentro de {{W|6}} tiles, repondo {{pos|33%}} de Vida Máxima e {{C|Energia|33%}} de Energia Máxima. <br><br>A Durabilidade da Armadura do Morto-Vivo reanimado é definida como {{W|0%}}, e todas as suas habilidades são colocadas em cooldown. 
+
+|Blasphemous Sigil = Cria uma {{W|Runa}} no tile alvo, que persiste por {{W|9}} turnos. <br><br>Permanecer na {{W|Runa}} causa {{unholy|9 Unholy Damage}} e reabastece a Energia do lançador para {{W|100%}} do dano causado. <br><br>A {{W|Runa}} não prejudica Mortos-Vivos ou Prosélitos, em vez disso, concede a eles {{pos|-33%}} de Chance de Erro, {{pos|+33%}} de Restauração de Energia e {{pos|+9%}} de Chance de Crítico.
+
+|Soul Sacrifice = Aplica um aliado Morto-Vivo com {{neg|"Sacrifício de Alma"}} até o próximo turno. <br><br>Quando o efeito expira, o alvo explode, causando {{unholy|Unholy Damage}} igual à sua Vida restante (mas não mais do que {{W|20%}} de seu valor máximo) a todos os tiles adjacentes. <br><br>O feitiço só pode ser usado em alvos com menos de {{neg|20%}} de Vida.
+
+|Steal Essence = Rouba {{neg|6%}} de Vida Máxima e {{C|Energia|6%}} de Energia Máxima de um aliado Morto-Vivo, transferindo-os para o lançador. <br><br> Ativa {{pos|"Stolen Essence"}} por {{w|3-}} turnos: <br><br>{{pos|+13%}} de Poder Mágico <br>{{pos|-9%}} de Custo de Energia de Feitiços <br>{{pos|-9%}} de Duração de Cooldowns <br>{{pos|-9%}} de Dano Recebido <br>Usar {{W|Feitiços}} reabastece a Vida para {{W|9%}} da Energia gasta <br><br>O uso repetido do feitiço concede uma pilha extra do efeito (até {{W|IV}}) e renova sua duração.
+
+|Strangling Grasp = Performa um {{W|charge}} em direção ao alvo e entrega um golpe com {{neg|-50%}} de Dano de Arma e {{W|57%}} de Chance de Imobilização. <br><br>{{pos|Dobra}} o bônus de Chance de Imobilização se o alvo estiver afetado por {{neg|"Maldição da Decadência"}} e {{pos|anula}} a penalidade de Dano de Arma se estiver afetado por {{neg|"Maldição da Agonia"}}.
+
+|Unholy Blessing = Reabastece {{pos|13%}} de Vida Máxima ao alvo e concede {{pos|"Unholy Blessing"}} por {{w|13}} turnos: <br><br>{{pos|13%}} de Drenagem de Vida <br>{{pos|13%}} de Drenagem de Energia <br>{{pos|13%}} de Reflexão de Dano.
+
+|Wraith Summoning = Invoca um {{W|Wraith}} no tile alvo. O poder do {{W|Wraith}} depende do número de pilhas de {{pos|"Stolen Essence"}}.<br><br>Usar a habilidade remove {{pos|"Stolen Essence"}}.
+
+
 <!--
-
------ DAGGER SKILLS -----
-
+ PROSELYTE SKILLS 
 -->
-|Double Lunge
-|Gaping Wound
-|From the Shadows
-|Quick Hands
-|Painful Stabs
-|Deadly Trick
-|Weakening Jabs
-|Coup de Grace
-|Danse Macabre
-|Counterattack Mastery = Dagger skill data
-<!--
+|Anthems of Bloodshed = Concede que cada {{w|sexto}} golpe tenha {{pos|+99%}} de Chance de Crítico e {{pos|+66%}} de Chance de Sangramento. <br><br>Se o golpe atingir seu alvo, concede {{pos|"Voto de Sangue"}} a todos os aliados dentro da Visão por {{w|3}} turnos: <br><br>{{pos|+33%}} de Drenagem de Vida <br>{{pos|+33%}} de Eficiência de Cura <br>{{pos|-33%}} de Custo de Energia de Habilidades.
 
------ TWO-HANDED SWORD SKILLS -----
+|Baleful Scream = Deixa escapar um grito, causando {{w|7 Psionic Damage}} ao alvo. <br>Tem {{w|75%}} de chance de {{w|Daze}} o alvo por {{w|2}} turnos ou de {{w|Stagger}} por {{w|4}} turnos.
 
+|Bestial Charge = Avança em linha reta por {{w|5}} tiles. O primeiro alvo em seu caminho recebe {{pos|666%}} de dano. <br><br>Se o Arconte colidir com o cenário durante a carga, ele é {{w|Atordoado}} por {{w|2}} turnos.
+
+|Bestial Rage = A o receber dano, atingir alvos e usar habilidades aumenta a estatística oculta de {{neg|Rage}} do Yagram. Quando ela atinge seu máximo, ativa {{pos|"Bestial Rage"}} por um número indefinido de turnos: <br><br> {{pos|+33%}} de Dano <br>{{pos|+66%}} de Chance de Knockback <br>{{neg|+33%}} de Dano Recebido <br>{{neg|66%}} de chance de desferir um golpe em um alvo aleatório adjacente em vez do original...
+
+|Blessed in Death = Enquanto o Mártir Morto estiver dentro da Visão de seus aliados, concede a eles {{pos|+9%}} de Dano de Arma, {{pos|+9%}} de Precisão, {{pos|-9%}} de Dano Recebido. <br><br>Destruir o Mártir Morto remove o {{pos|"Voto de Sangue"}} anteriormente concedido.
+|Blister Burst = Loses {{neg|6%}} Max Health. Deals {{unholy|6 Unholy}} and {{caustic|6 Caustic Damage}} to all adjacent targets except Proselytes and Undead. <br>Replenishes {{pos|9%}} Health and {{C|Energy|9%}} Max Energy to all affected Proselytes. <br><br>Creates {{W|Blood Puddles}} on all adjacent tiles for {{w|6}} turns. <br><br>Remaining in the {{W|Blood Puddle}} deals {{unholy|6 Unholy}} and {{caustic|6 Caustic Damage}} and grants {{neg|-6%}} Unholy Resistance for {{w|13}} turns. <br><br>{{W|Blood Puddles}} don't harm Proselytes, instead replenishing them {{pos|3%}} Max Health and {{C|Energy|3%}} Max Energy each turn.
+
+|Blood Craze = Hitting an enemy grants {{pos|"Blood Craze"}} for {{w|3}} turns:<br><br>{{pos|+6%}} Weapon Damage <br>{{pos|+3%}} Crit Chance <br><br>While {{pos|"Blood Craze"}} is active, each next hit grants an extra stack of the effect (up to {{w|VI}}) and refreshes its duration.
+
+|Blood Scent = Each {{neg|Bleeding}} enemy or ally within Vision grants {{pos|+6%}} Damage, {{pos|+9%}} Counter Chance, and {{pos|+3%}} Crit Chance. <br><br>If an enemy within 9 tiles starts {{neg|Bleeding}}, attracts the Proselyte to their location.
+
+|Blood Clot = Launches a clot of blood at the target, dealing {{unholy|4 Unholy Damage}} and {{C|Caustic|4 Caustic Damage}}.
+
+|Blood Puddle = Marks an area. Next turn pours a puddle of boiling blood in it. <br><br>Puddles persist for {{w|2}} turns and deal {{unholy|15 Unholy Damage}} and {{C|Caustic|15 Caustic Damage}} per turn.
+
+|Blood Spit = Loses {{neg|3%}} Max Health. Spits blood, dealing {{unholy|13 Unholy}} and {{caustic|9 Caustic Damage}} with {{W|95%}} Accuracy.<br><br>If the skill hits its target, applies it with {{neg|-6%}} Unholy Resistance for {{w|13}} turns and creates a {{W|Blood Puddle}} on its tile for {{W|3}} turns. <br><br>Remaining in the {{W|Blood Puddle}} deals {{unholy|13 Unholy}} and {{caustic|6 Caustic Damage}} and also grants {{neg|-6%}} Unholy Resistance for {{w|13}} turns. <br><br>{{W|Blood Puddles}} don't harm Proselytes, instead replenishing them {{pos|3%}} Max Health and {{C|Energy|3%}} Max Energy each turn.
+
+|Bloodthirst = Delivers a strike with {{pos|+27%}} Life Drain and {{pos|+27%}} Bleed Chance. <br><br>Activates {{pos|"Vampiric Blood"}} for {{w|3}} turns:<br><br>{{pos|+9%}} Life Drain<br>Replenishes {{pos|6%}} Max Health and Energy each turn.
+
+|Brand of Anguish = Delivers a strike with {{pos|+33%}} Fire Damage, causing {{W|100%}} more Pain. <br><br>If the strike hits a target affected by positive effects, removes one of them and permanently grants the Brander {{pos|+9%}} Life Drain.
+
+|Burnt Offering = Destroys a corpse within Vision, leaving a {{W|Pyre}} in its place, which persists until it's extinguished or the Brander's death. Replenishes {{pos|9%}} Max Health. <br><br>Each burning {{W|Pyre}} replenishes {{pos|3%}} Max Health to the Brander each turn, and also grants him {{c|Fire|+3}} Fire Damage, {{pos|-6%}} Damage Taken, and {{pos|+6%}} Crit Chance. The effect stacks up to {{W|6}} times.
+
+|Cannibalistic Craze =  '''Repositions''' to a tile with a fleshy corpse and consumes it, replenishing {{c|+|13%}} Max Health and {{c|Energy|26%}} Max Energy.<br><br>With 33% chance activates one of the following effects for 9 turns:<br><br>[[Blood Craze]]<br>[[Blood Oath]]<br>[[Rapid Restoration]]<br>[[Battle Rage]].
+
+|Chain Strike = Delivers a strike with {{neg|-66%}} Damage, {{pos|+66%}} Daze Chance and {{pos|+66%}} Knockback Chance.
+
+|Corpse Devourment = Devours a corpse, replenishing {{pos|33%}} Max Health and {{C|Energy|33%}} Max Energy.
+
+|Devastating Power = Marks a tile. Next turn delivers a strike to the marked tile with {{pos|+33%}} Weapon Damage, {{pos|+33%}} Bodypart Damage, and {{pos|+66%}} Stun Chance.<br><br>{{pos|Doubles}} the bonuses if the strike is delivered to a target affected by {{W|Immobilization}}, {{W|Daze}}, {{W|Stun}}, {{W|Stagger}}, or {{W|Confusion}}.
+
+|Driven by Pain = Grants {{pos|+0.33%}} Damage, {{pos|-0.33%}} Damage Taken and {{pos|+0.13%}} Life Drain for each missing {{neg|percent}} of Health.
+
+|Earthshaking Strike = Delivers a strike to three adjacent tiles and three tiles behind them with {{pos|+33%}} Stun Chance and {{pos|+66%}} Daze Chance. <br><br>Each target within the skill's area of effect increases the Yagram's {{neg|Rage}}.
+
+|Embrace the Murk = Performs a {{W|teleportation}} to the targeted tile. <br><br>Removes all negative effects and activates {{pos|"Murk"}} for {{W|9}} turns: <br><br>{{pos|+6%}}Crit Chance <br>{{pos|+9%}} Bodypart Damage <br>{{pos|+9%}} Bleed Chance <br>{{pos|+9%}} Life Drain <br>Replenishes {{pos|+6%}} Max Health and {{C|Energy|+6%}} Max Energy each turn. <br><br>Each turn grants a stack of the effect (up to {{w|VI}}). <br><br>While {{pos|"Murk"}} is active, grants {{pos|+66%}} Dodge Chance. Receiving damage, using abilities, and delivering strikes removes the effect. <br><br>This ability can't be used while affected by {{w|Immobilization}} or {{neg|"Net"}}.
+
+|Face of Horror = Makes a large amount of {{W|noise}} and deals {{C|Psionic|9 Psionic Damage}} with {{W|99%}} chance to {{W|Immobilize}} the target for {{W|2}} turns. The chance to {{W|Immobilize}} can be reduced by the target's Psionic Resistance.<br><br>Activates {{pos|"Battle Rage"}} and grants the same effect to all Proselytes within Vision for {{W|9}} turns.
+
+|Feed the Host = Replenishes {{pos|66%}} of the damage dealt as Health to the summoner.
+
+|Fiery Embers = Deals {{c|Fire|9 Fire}} and {{unholy|3 Unholy Damage}}, then creates {{W|Fiery Embers}} on the target's tile and three behind it, which persists for {{W|6}} turns. <br><br> Remaining on {{W|Fiery Embers}} applies {{neg|-9%}} Fire Resistance, {{neg|+6%}} Fumble Chance, and with {{W|33%}} chance causes the target to {{c|Fire|Ignite}}. The chance to {{c|Fire|Ignite}} can be reduced by the target's Fire Resistance. <br><br>The effect stacks up to {{W|6}} times. {{W|Fiery Embers}} don't harm Proselytes.
+
+|Flesh Explosion = The Blood Golem explodes the next turn after its death, dealing {{unholy|9 Unholy}} and {{C|caustic|26 Caustic Damage}} to all adjacent tiles.
+
+|Fling Away = Delivers a strike with {{pos|+50%}} Stagger Chance, {{pos|+50%}} Stun Chance, and {{pos|+150%}} chance to Knock the target back {{w|2}} tiles.
+
+|For Whom The Bell Tolls = Makes a large amount of {{W|noise}}, attracting all proselyte within {{w|9}} tiles. <br><br>Deals {{psionic|9 Psionic Damage}} with {{W|75%}} Armor Penetration to all enemies within {{W|9}} tiles and applies them with {{neg|+9%}} Damage Taken for {{w|9}} turns and {{neg|-6%}} Sanity.
+
+|Herald of Ruination = Delivers a strike to a large area within {{W|4}} tiles with {{pos|+99%}} Daze Chance and {{W|99%}} chance to cause {{W|Confusion}} for {{W|2}} turns. The chance to {{W|Confuse}} can be reduced by a target's Move Resistance.<br><br>Reduces all cooldowns by {{pos|3}} turns for each target or object of environment within the skill's area of effect.
+
+|Immolation = Upon death, grants {{pos|"Blood Vow"}} to all Proselytes within Vision for {{W|6}} turns: <br><br>{{pos|+33%}} Life Drain<br>{{pos|+33%}} Healing Efficiency<br>{{pos|-33%}} Abilities Energy Cost
+
+|Jump Away = Jumps {{w|2}} tiles or less, gains {{pos|+66%}} Dodge Chance and {{pos|-33%}} Damage Taken for the next turn.
+
+|Lacerate = Delivers a strike with {{neg|-66%}} Damage and {{pos|+66%}} Bleed Chance.
+
+|Lash Blessing = Delivers a strike with {{neg|-66%}} Weapon Damage to himself or an ally, granting {{pos|"Battle Rage"}} for {{w|9}} turns: <br><br>{{pos|+10%}} Damage <br>{{pos|+7.5%}} Crit Chance <br>{{pos|+20%}} Crit Efficiency
+
+|Life Leech = Deals {{unholy|9 Unholy Damage}} <br><br>Replenishes Health for the amount of damage dealt by the spell. If Health is at {{neg|100%}}, increase it by the same amount for {{W|9}} turns.
+
+|Mark of the Feast = Applies {{neg|"Mark of the Feast"}} for {{W|3}} turns: <br><br>{{pos|-26%}} Bleed Resistance <br>{{pos|-13%}} Dodge Chance <br><br>Grants all received attacks {{pos|+13%}} Life Drain. <br><br>Receiving a {{neg|Bleeding}} prolongs the effect by {{neg|1}} turn.
+
+|Murkstrike = Performs a {{W|charge}} towards the target and delivers a strike with {{pos|+66%}} Crit Efficiency, {{pos|+66%}} Daze Chance, {{pos|+66%}} Armor Penetration. <br><br>This skill can be used only while affected by {{pos|"Murk"}}.
+
+|Murkwalk = Performs a {{W|teleportation}} to the targeted tile. <br><br> Grants {{pos|+18%}} Dodge Chance for {{w|3}} turns and reduces all Cooldowns by {{pos|3}} turns. <br><br>This ability can't be used while affected by {{w|Immobilization}} or {{neg|"Net"}}.
+
+|Neverending Torment = Loses {{neg|3%}} Max Health each turn while there's both an enemy and an ally within Vision. If the Martyr is Alarmed, and there are no enemies within Vision, the Health loss is {{neg|tripled}}. <br><br>Upon death, grants "Blood Vow" to a random ally within Vision for {{W|99}} turns: <br><br>{{Pos|+33%}} Life Drain <br>{{pos|+33%}}Healing Efficiency <br>{{pos|+33%}} Abilities Energy Cost
+
+|One Body = Transfers {{neg|66%}} of the damage received by the Tentacle to the Summoner. <br>Transfers {{neg|33%}} of the damage received by the summoner to the Tentacle. When the Tentacle is destroyed, the summoner loses {{neg|9%}} Max Health and is applied with {{neg|+33%}} Damage Taken for an indefinite number of turns. <br><br>Killing the Anmarrak destroys its Tentacle Arm as well.
+
+|Phantom Bats = Marks an area. <br><br>Next turn releases a swarm of spectral bats at it, dealing {{unholy|26 Unholy Damage}} and applying {{unholy|Curse}} for {{w|13}} turns.
+
+|Sacrificial Blood = Applies the target with "Sacrificial Blood", which remains active until the caster's death. <br><br> Using {{W|Spells}} against a target affected by this effect grants {{pos|+9%}} Magic Power and {{pos|+9%}} Healing Efficiency (both effects stack up to {{W|6}} times) and also reduces all cooldowns by {{pos|3}} turns.
+
+|Summon Blood Golem = Summons a {{w|Blood Golem}} on the targeted tile.
+
+|Summon the Restless = Reanimates one of the bodies in the corpse pile.
+
+|Summon Worm = Spends {{neg|3%}} Max health to summon a {{w|Leechworm}} on a targeted tile.
+
+|Tongue Leech = Deals {{w|9 Piercing}}, {{poison|6 Poison}}, and {{unholy|6 Unholy Damage}}  with {{pos|+33%}} Armor Penetration, {{pos|+66%}} Bleed Chance, {{pos|+66%}} Immobilization Chance, and {{pos|+66%}} Life Drain.
+
+|Tongue Pull = Deals {{w|9 Crushing}}, {{poison|6 Poison}}, and {{unholy|6 Unholy Damage}} with {{pos|+33%}} Armor Penetration and {{w|99%}} chance to {{w|Pull}} the target {{w|4}} tiles closer. <br><br>This skill can't be countered.
+
+|Tongue Push = Deals {{w|9 Crushing}}, {{poison|6 Poison}}, and {{unholy|6 Unholy Damage}} with {{pos|+33%}} Armor Penetration and {{w|99%}} chance to {{W|knock}} the target back {{w|2}} tiles. <br><br>This skill can't be countered.
+
+|Tentacle Arm (skill) = Summons a {{cl|White|Tentacle Arm}} on a targeted tile and activates the effect of {{pos|"Mountain of Flesh"}} for an indefinite number of turns: <br><br> {{pos|-99%}} Damage Taken <br>{{pos|+200%}} Move Resistance <br>{{pos|+66%}} Control Resistance <br>{{pos|+66%}} Healing Efficiency <br>{{neg|Disables basic attacks and movement to other tiles}}
+
+|Unholy Anthems = Grants one of the following effects to all Proselytes within {{w|9}} for {{w|6}} turns: <br><br>{{pos|Rapid Restoration}} <br>{{pos|Sturdiness}} <br>{{pos|Battle Rage}}
+
+|Unholy Ritual = Replenishes {{pos|+50%}} Max Health to all the Restless and grants them {{pos|+50%}} Damage.
+
+|Draining Sigil = Creates a {{W|Rune}} on the target's tile and two more on the tiles adjacent to it. The {{W|Runes}} persist for {{W|9}} turns or until the caster's death. <br><br>Remaining on the {{W|Runes}} deals {{c|Unholy|9 Unholy Damage}} with {{W|29%}} Immobilization Chance and permanently increases the caster's Max Health by {{pos|6%}}. <br><br>The {{W|Runes}} don't harm Proselytes, instead replenishing them {{pos|9%}} Max Health each turn.
+
+|Wild Swipe = Causa um golpe em três alvos adjacentes com {{pos|+100%}} de Chance de Knockback.
+
+|Wild Swipe (Ascended Archon) = Causa um golpe em três alvos adjacentes com {{pos|+100%}} de Chance de Knockback.
+
+|Wild Swipe (Enhanced) = Causa um golpe em três alvos adjacentes com {{pos|+100%}} de Chance de Knockback.
+
+|Willing Sacrifice = Replenishes Health to all allies within Vision for the amount of damage received.
+
+|Witness His Might! = Each type of Proselyte within Vision grants {{pos|+6%}} Max Health and {{pos|+6%}} Weapon Damage. <br><br>Hitting an enemy applies them with {{neg|+3%}} Damage Taken for {{w|6}} turns for each type of Proselyte within Vision.
+
+|Wormfood = Destroys a flesh-covered corpse and summons {{w|Leechworms}} on the tiles adjacent to it. The number of summoned {{w|Leechworms}} depends on the corpse's size. <br><br>Grants already existing worms {{pos|+9%}} Max Health, {{pos|+9%}} Bleed Chance, and {{pos|+9%}} Crit Chance.  
+
+
+<!-- 
+ ATHLETIC SKILLS 
 -->
-|Parry
-|Hewing Strike
-|Recklessness
-|Arc Cleave
-|Feast of Steel
-|Fight to the Death
-|Revanche
-|Heroic Charge
-|Taste of Victory
-|Courage = Two-handed Sword skill data
-<!--
+|Mighty Kick = Causa {{W|10 Crushing Damage}} com {{W|120%}} de Precisão, {{W|100%}} de Chance de Imobilização e {{W|80%}} de Chance de Knockback.<br><br>O dano causado depende da Proteção das {{W|botas}} equipadas.<br><br>Ao atingir o alvo, aplica-o com {{Neg|-30%}} de Poder de Bloqueio Máximo, {{Neg|-20%}} de Resistência ao Controle, {{Neg|-20%}} de Resistência ao Movimento e {{neg|-15%}} de Esquiva de Crítico por {{W|4}} turnos.<br><br>O efeito se acumula até {{W|2}} vezes.
 
------ TWO-HANDED AXE SKILLS -----
+|Leg Sweep = Causa {{W|7 Crushing Damage}} em três tiles adjacentes com {{W|100%}} de Precisão e {{W|85%}} de Chance de Imobilização.<br>Então permite {{W|Reposition}} para um tile adjacente.<br><br>O dano causado depende da Proteção das {{W|botas}} equipadas.<br><br>Ao atingir o alvo, aplica-o com {{Neg|+10%}} de Chance de Erro, {{Neg|-10%}} de Chance de Crítico e {{W|-10%}} de Dano de Arma por {{W|3}} turnos.<br><br>O efeito se acumula até {{W|2}} vezes.<br><br>Se o alvo foi atingido pelo golpe e está adjacente após o uso da habilidade, com {{W|125%}} de chance aplica-o com {{W|Stagger}}.
 
+|Disengage = Reduz a chance de acionar ataques de oportunidade (de {{Neg|50%}} para {{Neg|25%}}).<br><br>Concede {{pos|+0.2%}} de Resistência Mágica e {{pos|+0.2}} de Resistência à Natureza para cada {{pos|1%}} de Chance de Esquiva<br><br>Aplica todos os inimigos adjacentes com {{Neg|+3%}} de Chance de Erro, {{Neg|-3%}} de Precisão e {{neg|-3%}} de Chance de Crítico.
+
+|Not This Time = Bloqueios totais e esquivas concedem {{pos|+5%}} de Resistência ao Controle e {{pos|+5%}} de Resistência ao Movimento por {{W|5}} turnos.<br><br>O efeito se acumula até {{W|2}} vezes.<br><br>Uma vez a cada {{W|90}} turnos remove {{w|Stun}}, {{w|Daze}}, {{w|Stagger}} ou {{w|Immobilization}} ao recebê-los.
+
+|Dash = Performa um {{W|charge}} em direção ao tile alvo.<br><br>Concede a habilidade {{Neg|-1}} de Alcance para cada inimigo adjacente (até {{W|2}} de alcance).<br><br>Se houver inimigos adjacentes após o uso da habilidade, concede {{Pos|+15%}} de Chance de Esquiva e {{Pos|+15%}} de Chance de Contra-ataque por {{W|2}} turnos.
+
+|Sudden Lunge = Inflige um golpe com {{Neg|-50%}} de Dano de Arma e {{W|80%}} de Chance de Stagger.<br><br>Reduz todos os Cooldowns em {{Pos|2}} turnos.<br><br>Se o golpe causar dano, coloca as habilidades do alvo em um Cooldown de {{W|2}} turnos.<br><br>Se equipado com uma {{W|lança}}, concede a habilidade {{Pos|+1}} de Alcance.
+
+|Push the Falling = {{W|Dazing}}, {{W|Stunning}}, {{W|Staggering}}, {{W|Confusing}}, {{W|Immobilizing}} e causar {{Neg|Bleeding}} com golpes reabastece {{c|Energia|4%}} de Energia Máxima.<br><br>Usar {{W|"Mighty Kick"}} contra alvos com esses efeitos prolonga sua duração em {{Neg|1-2}} turnos, dependendo do limite de duração de cada efeito individual.
+
+|Inner Reserves = Uma vez a cada {{W|30}} turnos, reabastece {{C|Energia|15%}} de Energia Máxima quando a Energia cai abaixo de {{C|Energia|33%}}.
+
+|Elusiveness = Ativa {{W|5}} pilhas de {{Pos|"Elusiveness"}} por {{W|6}} turnos:<br><br>{{Pos|+6%}} de Chance de Esquiva<br>{{Pos|-3%}} de Dano Recebido<br><br>Cada esquiva, bem como golpes e tiros errados recebidos, prolongam a duração do efeito em {{pos|1}} turno (até {{W|6}}), mas reduzem o número de pilhas.<br><br>Mover-se para outros tiles ({{W|Cargas}} e {{W|Manobras}} contam também) concede uma pilha extra do efeito para cada tile percorrido (até {{W|V}}).<br><br>Aplica todos os inimigos adjacentes com {{Neg|+10%}} de Chance de Erro por {{W|4}} turnos.<br><br>O efeito não se acumula.
+
+|No Time to Linger = Concede golpes e tiros contra alvos {{W|Dazed}}, {{W|Stunned}}, {{W|Staggered}}, {{W|Confused}}, {{W|Immobilized}}, ou {{Neg|Bleeding}} {{Pos|+5%}} de Precisão, {{pos|-5%}} de Chance de Erro e {{Pos|+5%}} de Chance de Crítico.<br><br>Usar {{Pos|"Sudden Lunge"}} contra alvos com esses efeitos concede ao golpe {{Pos|+25%}} de Dano de Arma e não consome um turno.
+
+|Adrenaline Rush = Restaura {{c|Energia|10%}} de Energia Máxima, concede {{Pos|-20%}} de Dor e ativa {{Pos|"Adrenaline Rush"}} por {{W|5}} turnos:<br><br>{{Pos|-5%}} de Dano Recebido<br>{{Pos|-10%}} de Custo de Energia de Habilidades<br>{{Pos|+10%}} de Restauração de Energia<br>{{Pos|+5%}} de Chance de Crítico<br>{{Pos|+10%}} de Resistência à Dor<br>{{W|III}} pilhas: reduz todos os Cooldowns em {{Pos|1}} turno.<br>{{W|VI}} pilhas: reabastece {{pos|4%}} de Vida Máxima se a Vida atual estiver abaixo de {{neg|40%}}<br><br>Concede uma pilha extra do efeito (até {{W|VI}}) para cada inimigo dentro da Visão ao ativá-lo.<br>Os inimigos adjacentes são contados duas vezes.<br><br>A duração do efeito e a quantidade de Dor reduzida e Energia reabastecida aumentam com a Vida faltante.
+
+|Sprint Training = Concede {{Pos|+1}} de Alcance, {{Pos|-30%}} de Custo de Energia e {{Pos|-30%}} de Duração de Cooldown para todas as habilidades de {{W|Carga}}.
+
+|Peak Performance = Concede {{Pos|+10%}} de Dano de Arma, {{Pos|+10%}} de Chance de Esquiva e {{Pos|-10%}} de Duração de Cooldowns se a Energia estiver acima de {{c|Energia|50%}}.
+
+<!-- 
+ WARFARE SKILLS
 -->
-|Hooking Chop
-|Dismember
-|Shieldbreaker
-|Reign in Blood
-|Rampage
-|Fatal Strike
-|Finish `Em!
-|Make Space
-|Tool of Execution
-|Maim and Kill = Two-handed Axe skill data
-<!--
+|Seize the Initiative = Aplica o alvo com {{Neg|-20%}} de Chance de Esquiva e {{Neg|-20%}} de Chance de Bloqueio até o próximo turno e desfere um golpe em sua parte do corpo menos protegida com {{Pos|+10%}} de Precisão e {{Pos|-10%}} de Chance de Erro.<br><br>Se o golpe causar dano, ativa {{Pos|"Seized Initiative"}} por {{W|2}} turnos:<br><br>{{Pos|+5%}} de Precisão<br>{{Pos|-5%}} de Chance de Erro<br>{{Pos|-10%}} de Duração de Cooldowns<br>{{Pos|-10%}} de Custo de Energia de Habilidades<br><br>Aplica o alvo com {{Neg|"Initiative Loss"}} por {{W|2}} turnos, que penaliza as mesmas estatísticas.<br><br>Golpes e tiros que causam dano prolongam a duração de ambos os efeitos em {{Pos|1}} turno.<br><br>{{Neg|"Initiative Loss"}} só pode estar ativo em um alvo por vez.<br><br>Concede à habilidade {{Pos|+1}} de Alcance (se equipado com uma {{W|lança}}) ou define seu Alcance para o da arma (se equipado com uma {{W|arma de longo alcance}}).
 
------ TWO-HANDED MACE SKILLS -----
+|War Cry = Com {{W|90%}} de chance {{W|Confunde}} todos os inimigos dentro de {{W|9}} tiles por {{W|10}} turnos ou {{W|Atordoa}} por {{W|2-3}} turnos.<br><br>Ativa {{Pos|"Battle Rage"}} por {{W|4}} turnos ({{W|+2}} turnos para cada inimigo {{W|Confundido}} ou {{W|Atordoado}} pela habilidade):<br><br>{{Pos|+10%}} de Dano de Arma<br>{{Pos|+5%}} de Chance de Crítico<br>{{Pos|+20%}} de Eficiência de Crítico
 
+|Opportune Moment = Golpes críticos, tiros e contra-ataques que causam dano reabastecem {{c|Energia|5%}} de Energia Máxima.
+
+|Setup = Avançar um turno, trocar para outro equipamento ou usar {{W|Posturas}} e {{W|Manobras}} concede {{Pos|+5%}} de Precisão, {{Pos|-5%}} de Dano Recebido e {{Pos|-5%}} de Custo de Energia de Habilidades por {{W|3}} turnos.<br><br>O efeito se acumula até {{W|2}} vezes.
+
+|Offensive Tactic = Ativa {{Pos|"Tática Ofensiva"}} por {{W|6}} turnos ({{W|+1}} turno para cada inimigo dentro da Visão):<br><br>{{Pos|+2%}} de Chance de Crítico<br>{{Pos|+4%}} de Precisão<br>{{Pos|-3%}} de Chance de Erro<br>{{Pos|-4%}} de Custo de Energia de Habilidades<br>{{Pos|-4%}} de Duração de Cooldowns<br><br>Golpes básicos, tiros e o uso de habilidades de {{W|Ataque}} reduzem o número de pilhas (não mais de uma vez por turno).<br><br>Matar inimigos aumenta o número de pilhas em {{Pos|2}} (até {{W|VI}}).<br><br>Enquanto {{Pos|"Tática Ofensiva"}} está ativa, usar {{W|"Tática Defensiva"}} não consome um turno.<br><br>Apenas uma {{Pos|"Tática"}} pode estar ativa por vez.
+
+|Defensive Tactic = Ativa {{Pos|"Tática Defensiva"}} por {{W|6}} turnos ({{W|+1}} turno para cada inimigo dentro da Visão):<br><br>{{Pos|+4%}} de Esquiva de Crítico<br>{{Pos|+3%}} de Chance de Bloqueio<br>{{Pos|+5%}} de Chance de Esquiva<br>{{Pos|+4%}} de Chance de Contra-ataque<br>{{Pos|+6%}} de Resistência a Sangramento<br><br>Golpes básicos, tiros e o uso de habilidades de {{W|Ataque}} reduzem o número de pilhas.<br><br>Matar inimigos aumenta o número de pilhas em {{Pos|2}} (até {{W|VI}}).<br><br>Enquanto {{Pos|"Tática Defensiva"}} está ativa, usar {{W|"Tática Ofensiva"}} não consome um turno.<br><br>Apenas uma {{Pos|"Tática"}} pode estar ativa por vez.
+
+|Right on Target = Concede a todas as habilidades de {{W|Ataque}} {{Pos|+3%}} de Precisão, {{Pos|-3%}} de Chance de Erro e {{Pos|+3%}} de Chance de Crítico.<br><br>Se equipado com uma {{W|arma de uma mão}} enquanto o segundo slot de arma estiver {{W|vazio}}, concede:<br><br>{{Pos|+2%}} de Eficiência da Mão Principal<br>{{Pos|+5%}} de Dano de Arma<br>{{Pos|+5%}} de Penetração de Armadura<br>{{Pos|-5%}} de Chance de Erro<br>{{Pos|-5%}} de Dano Recebido<br>{{Pos|-10%}} de Custo de Energia de Habilidades<br><br>O bônus de Eficiência da Mão Principal depende do número de Pontos de Habilidade investidos nas árvores de {{W|Armas}}.
+
+|Intimidation = Golpes e tiros bem-sucedidos aplicam seus alvos com {{Neg|-5%}} de Esquiva de Crítico e {{Neg|-5%}} de Fortitude por {{W|5}} turnos.<br><br>O efeito se acumula até {{W|5}} vezes.<br><br>Aumenta o impacto negativo das ações do personagem na {{W|vontade de lutar}} dos inimigos em {{Pos|+50%}}.
+
+|Against the Odds = Ativa {{Pos|"Against the Odds"}} por {{W|2}} turnos:<br><br>{{Pos|-50%}} de Dano Recebido<br>{{Pos|+50%}} de Resistência a Sangramento<br>{{Pos|+50%}} de Resistência ao Movimento<br>{{Pos|+50%}} de Resistência ao Controle<br>{{pos|+50%}} de Esquiva de Crítico<br><br>Enquanto {{Pos|"Against the Odds"}} está ativo, a Vida não pode cair abaixo de {{Neg|25%}}, e matar inimigos reabastece {{Pos|25%}} de Vida Máxima e {{c|Energia|25%}} de Energia Máxima.<br><br>O primeiro golpe recebido no mesmo turno em que a habilidade é usada não causará dano.
+
+|Finisher = Performa um {{W|charge}} em direção ao alvo e desfere um golpe em sua parte do corpo mais danificada com {{Pos|+25%}} de Dano de Parte do Corpo, {{Pos|+15%}} de Chance de Crítico, {{Pos|-20%}} de Chance de Erro e {{Pos|+50%}} de Dreno de Energia.<br><br>Mata instantaneamente o alvo se o golpe colocar sua Vida abaixo de {{Neg|13%}} (mas não mais que {{W|15}}).<br><br>Se o golpe matar seu alvo, reabastece instantaneamente todos os Cooldowns de outras habilidades e reabastece {{c|Energia|15%}} de Energia Máxima.<br><br>Se equipado com uma {{W|lança}}, concede à habilidade {{Pos|+1}} de Alcance.
+
+|Tactical Advantage = Concede {{W|+2}} turnos adicionais à duração de {{Pos|"Tática Defensiva"}} e {{Pos|"Tática Ofensiva"}}.<br><br>Concede a todas as {{W|Posturas}} e {{W|Manobras}} {{Pos|-20%}} de Custo de Energia e {{Pos|-20%}} de Duração de Cooldowns.<br><br>Se afetado por {{Pos|"Tática Ofensiva"}}, usar {{W|"Tática Defensiva"}} reabastece {{Pos|5%}} de Vida Máxima e {{c|Energia|20%}} de Energia Máxima.<br><br>Se afetado por {{Pos|"Tática Defensiva"}}, usar {{W|"Tática Ofensiva"}} concede {{Pos|+25%}} de Dano de Arma por {{W|3}} turnos.<br><br>O efeito não se acumula.
+
+|Thirst for Battle = Ativa {{Pos|"Thirst for Battle"}} por {{W|8}} turnos.<br><br>Cada {{Neg|percentual}} de Vida faltante concede:<br><br>{{Pos|+0.5%}} de Dano de Arma<br>{{Pos|+0.25%}} de Chance de Crítico<br>{{Pos|+0.5%}} de Eficiência de Crítico<br>{{Pos|+0.33%}} de Dreno de Vida<br>{{Pos|+0.5%}} de Dreno de Energia<br><br>O poder do efeito muda dinamicamente dependendo da Vida atual.<br><br>Golpes e tiros críticos prolongam a duração do efeito em {{Pos|1}} turno (até {{W|8}}).<br><br>O primeiro golpe recebido no mesmo turno em que a habilidade é usada é garantido para acionar um contra-ataque.
+
+|Armor Crusher = Concede golpes e tiros {{Pos|+10%}} de Penetração de Armadura e {{Pos|+50%}} de Dano de Armadura se a Durabilidade da Armadura do alvo estiver acima de {{W|0%}}.<br><br>Ao atingir o alvo, aplica-o com {{W|+10%}} de Dano Recebido por {{W|5}} turnos se ele {{W|não tiver Armadura}} ou sua Durabilidade de Armadura estiver em {{W|0%}}.<br><br>Concede {{pos|+5%}} de Chance de Crítico por {{W|5}} turnos para cada golpe ou tiro bloqueado pelo alvo.<br><br>Ambos os efeitos se acumulam até {{W|3}} vezes.
+
+|Final Push = Concede {{Pos|+5%}} de Dano de Arma e {{Pos|+5%}} de Precisão para cada {{Neg|20%}} de Vida faltante.<br><br>Concede {{Pos|-5%}} de Duração de Cooldowns e {{Pos|-10%}} de Custo de Energia de Habilidades para cada {{c|Energia|20%}} de Energia faltante.<br><br>Concede {{pos|+5%}} de Fortitude, {{pos|+5%}} de Resistência a Sangramento, {{pos|+5%}} de Resistência ao Controle e {{pos|+5%}} de Resistência ao Movimento para cada efeito negativo.
+
+<!-- 
+ ELECTROMANCY SKILLS
 -->
-|Mighty Swing
-|Unstoppable Force
-|Unbalance
-|Keep Them Coming
-|Forceful Slam
-|Striker Stance
-|Bonebreaker (Two-Handed Mace skill)
-|Skull Crusher
-|Severe Concussion
-|Revel in Battle = Two-handed Mace skill data
-<!--
+|Jolt = Causa {{c|Shock|6 de Dano de Choque}} ao alvo com {{W|35%}} de chance de Knockback e {{W|70%}} de chance de aplicar {{Neg|"Resonance"}} por {{W|8}} turnos: <br><br>{{Neg|-20%}} de Resistência ao Choque <br>{{Neg|-7.5%}} de Resistência ao Movimento <br>{{Neg|-5%}} de Resistência ao Controle <br> {{Neg|+10%}} de Duração de Cooldowns
 
------ SPEAR SKILLS -----
+|Impulse = Causa {{c|Shock|10 de Dano de Choque}} a todos os alvos adjacentes com {{W|40%}} de chance de Knockback. Se o feitiço falhar em causar Knockback, aplica {{W|Stagger}} por {{W|1}} turno. <br><br>Tem {{W|85%}} de chance de aplicar alvos afetados com {{Neg|"Impulse"}} por {{W|8}} turnos: <br><br>{{Neg|-25%}} de Resistência ao Choque <br>{{Neg|-15%}} de Resistência ao Movimento <br>{{Neg|-10%}} de Resistência ao Controle <br>{{Neg|+20%}} de Duração de Cooldowns <br>Cada turno causa {{c|Shock|2 de Dano de Choque}} com {{W|15%}} de chance de causar Knockback. <br><br>Alvos afetados por {{Neg|"Impulse"}} contam como {{c|Shock|Resonating}}, e a duração do efeito é prolongada por aplicações adicionais de {{Neg|"Resonance"}}.
 
--->
-|Nail Down
-|Impaling Lunge
-|Precise Hits
-|No Retreat
-|Determination
-|Pikeman Stance
-|Wounding Spearhead
-|Regroup
-|One at a Time!
-|Stay Back! = Spear skill data
-<!--
+|Short Circuit = Causa {{c|Shock|6 de Dano de Choque}} a todos os alvos adjacentes com {{W|40%}} de chance de Knockback. Se o feitiço falhar em causar Knockback, aplica {{W|Stagger}} por {{W|1}} turno. <br><br>Tem {{W|85%}} de chance de aplicar alvos afetados com {{Neg|"Impulse"}} por {{W|8}} turnos: <br><br>{{Neg|-25%}} de Resistência ao Choque <br>{{Neg|-15%}} de Resistência ao Movimento <br>{{Neg|-10%}} de Resistência ao Controle <br>{{Neg|+20%}} de Duração de Cooldowns <br>Cada turno causa {{c|Shock|2 de Dano de Choque}} com {{W|15%}} de chance de causar Knockback. <br><br>Alvos afetados por {{Neg|"Impulse"}} contam como {{c|Shock|Resonating}}, e a duração do efeito é prolongada por aplicações adicionais de {{Neg|"Resonance"}}.
 
------ RANGED WEAPON SKILLS -----
+|Static Field = Aplica todos os alvos {{c|Shock|Resonating}} dentro da Visão com o efeito de {{Neg|"Static Field"}} por {{W|5}} turnos.<br>Cada turno a área de efeito do campo estático:<br><br>Tem {{W|10%}} de chance de aplicar imobilização.<br>Causa {{c|Shock|2 de Dano de Choque}} ao alvo principal do efeito e a todos adjacentes a ele, exceto o lançador, aplicando-os com {{Neg|-4%}} de Resistência ao Choque por {{W|10}} turnos (Este efeito se acumula até {{W|5}} vezes). Alvos {{W|Imobilizados}} recebem dano dobrado.
 
--->
-|Taking Aim
-|Distracting Shot
-|Constant Practice
-|Dexterity
-|Startling Volley
-|Suppression
-|Anticipation
-|Spot Weakness
-|Long Shot
-|Hunter's Mark
-|Precision
-|Headshot
-|Shoot to Kill
-|Upper Hand = Ranged skill data
-<!--
+|Ball Lightning = Summona uma bola de raio em um tile alvo por {{W|4}} turnos. A duração aumenta em {{W|1}} turno para cada inimigo {{c|Shock|Resonating}} dentro da Visão.<br><br>A cada turno, a bola de raio faz o seguinte em um raio de {{W|2}} tiles:<br><br>Causa {{c|Shock|3 de Dano de Choque}}<br>Tem {{W|15%}} de chance de {{W|Pull}} em direção a si mesmo<br><br>A bola de raio causa {{Pos|25%}} mais dano a alvos adjacentes.<br>Ser Knocked back ou Puxado para a bola de raio causa {{Pos|200%}} de seu dano.
 
------ SHIELD SKILLS -----
+|Chain Lightning = Causa {{c|Shock|12 de Dano de Choque}} ao alvo, então salta para o alvo {{c|Shock|Resonating}} mais próximo dentro de {{W|8}} tiles, prolongando a duração de sua {{Neg|"Resonance"}} por {{Pos|3}} turnos.<br><br>Tem {{W|60%}} de chance de aplicar {{W|Stagger}}, e reduz os Cooldowns ativos da árvore de habilidades em {{Pos|2}} turnos para cada alvo afetado.<br><br>O raio pode atingir cada alvo individual apenas uma vez por lançamento.
 
--->
-|Raise Shield
-|Breakthrough
-|Moment of Retribution
-|Embodiment of Resilience
-|Shield Bash
-|Last Bastion
-|Hold the Line!
-|Retaliation = Shield skill data
-<!--
+|Tempest = Summona um raio para atingir o alvo, então invoca raios adicionais para atingir {{W|2}} inimigos mais dentro da Visão, priorizando os afetados por {{c|Shock|Resonance}}.<br><br>Causa {{c|Shock|10 de Dano de Choque}} e remove {{Neg|"Resonance"}}, com {{W|20%}} de chance de Stun no alvo. O dano e a chance de Stun aumentam em {{Pos|5%}} para cada turno restante do {{Neg|"Resonance"}} removido.<br><br>Para cada {{W|Stun}} aplicado por este feitiço, invoca um raio adicional para atingir um alvo aleatório dentro da Visão.<br><br>Instantaneamente mata inimigos com ou abaixo de {{Neg|20%}} de Vida Máxima se sua Vida atual for igual ou menor que {{W|50}}.
 
------ STAFF SKILLS -----
+|Residual Charge = Concede {{Pos|+5%}} de Dano de Arma. Lançar feitiços da árvore de habilidades concede ataques corpo a corpo {{Pos|+15%}} de Dano de Arma, causado como {{c|Shock|Choque}}, por {{W|6}} turnos. <br><br>Para cada Ponto de Habilidade investido em Eletromancia, esses ataques fortalecidos aplicam ao alvo {{Neg|-0.5%}} de Resistência ao Choque por 6 turnos.<br><br>Raios naturais que ocorrem dentro da Visão concedem ao personagem {{Pos|+10%}} de Poder Eletromântico por {{W|240}} turnos.
 
--->
-|Hail of Blows
-|Step Aside!
-|Destabilizing Hits
-|Battle Trance
-|Unwavering Stance
-|Triumph
-|Now or Never
-|Peacemaker = Staff skill data
-<!--
+|Potential Difference = Concede a {{W|Impulse}} {{W|25%}} de chance de causar {{W|dano dobrado}} cada vez que causa Knockback, com {{W|50%}} de chance de Imobilizar o alvo.
 
------ BASIC SKILLS -----
+|Unlimited Power = Concede {{Pos|+0.1%}} de Poder Mágico para cada {{Pos|percentual restante}} de Energia Máxima e {{Pos|+0.1%}} de Restauração de Energia para cada {{Neg|percentual faltante}}.
 
--->
-|Examine Surroundings
-|Element of Surprise = Basic skill data
-<!--
+|Conductivity = Cada inimigo afetado por {{Neg|"Static Field"}} ou permanecendo em sua área de efeito tem sua Energia queimada por {{W|35%}} do {{c|Shock|Dano de Choque}} que recebem dele.<br><br>Reabastece a Energia do lançador pelo mesmo valor.
 
------ ATHLETIC SKILLS -----
+|Chain Reaction = Lançar feitiços da árvore de habilidades aplica todos os alvos afetados com {{Neg|-5%}} de Resistência ao Choque por {{W|8}} turnos por cada alvo {{c|Shock|Resonating}} dentro da Visão.
 
--->
-|Mighty Kick
-|Leg Sweep
-|Disengage
-|Not This Time
-|Dash
-|Sudden Lunge
-|Push the Falling
-|Inner Reserves
-|Elusiveness
-|No Time to Linger
-|Adrenaline Rush
-|Sprint Training
-|Peak Performance = Athletic skill data
-<!--
+|Resonance Cascade = Lançar feitiços desta árvore de habilidades tem {{W|20%}} de chance de aplicar um alvo aleatório dentro da Visão com {{W|3}} turnos de {{Neg|"Resonance"}} se ele ainda não estiver afetado por ele.<br><br>Se não houver tais alvos, tem 20% de chance de afetar um alvo {{c|Shock|Resonating}} aleatório dentro da Visão, prolongando a duração de sua {{Neg|"Resonance"}} ou {{Neg|"Impulse"}} por {{W|3}} turnos.
 
------ WARFARE SKILLS -----
+|Recharge = Cada alvo {{c|Shock|Resonating}} dentro da Visão concede {{Pos|+3%}} de Restauração de Energia.<br><br>Matar inimigos com feitiços desta árvore de habilidades concede {{Pos|-5%}} de Custo de Energia de Feitiços e {{Pos|-7.5%}} de Duração de Cooldowns por {{W|8}} turnos para cada alvo {{c|Shock|Resonating}} dentro da Visão.
 
--->
-|Seize the Initiative
-|War Cry
-|Opportune Moment
-|Setup
-|Offensive Tactic
-|Defensive Tactic
-|Right on Target
-|Intimidation
-|Against the Odds
-|Finisher
-|Tactical Advantage
-|Thirst for Battle
-|Armor Crusher
-|Final Push = Warfare skill data
-<!--
 
------ MAGIC MASTERY SKILLS -----
-
--->
-|Seal of Finesse
-|Seal of Power
-|Seal of Insight
-|Seal of Cleansing
-|Seal of Reflection
-|Seal of Shackles
-|Precise Movements
-|Dissipation
-|Body and Spirit
-|Lingering Incantations
-|Thaumaturgy
-|Arcane Lore = Magic Mastery skill data
-<!--
-
------ DUAL WIELDING SKILLS -----
-
--->
-|Flurry of Strikes
-|Deflect
-|Dual Wielding Training
-|Dying Fervor
-|Enough for Everyone
-|Concentration
-|Berserk Tradition
-|Whirlwind
-|Unstoppable
-|More Blood! = Dual Wielding skill data
-<!--
-
------ SURVIVAL SKILLS -----
-
--->
-|First Aid
-|Adaptability
-|Pathfinder
-|Will to Survive
-|Austerity
-|Ever Vigilant
-|Huntmaster
-|Resourcefulness
-|Make a Halt
-|Butchering
-|Cauterize Wounds = Survival skill data
-<!--
-
------ ARMORED COMBAT SKILLS -----
-
--->
-|Self-Repair
-|Brace for Impact!
-|Hard Target
-|Flexible Defense
-|Battle-Forged
-|Unyielding Defense
-|Battering Ram
-|Custom Adjustments= Armored Combat skill data
-<!--
-
------ GEOMANCY SKILLS -----
-
--->
-|Runic Boulder
-|Stone Armor
-|Rune of Enfeeblement
-|Stone Spikes
-|Petrification
-|Rune of Binding
-|Rune of Fortifying
-|Rune of Absorption
-|Earthquake
-|Rune of Destabilization
-|Boulder Toss
-|Overflowing Power
-|Rune of Cycle
-|Rune of Sustention = Geomancy skill data
-<!--
-
------ PYROMANCY SKILLS -----
-
--->
-|Fire Barrage
-|Ring of Fire
-|Baptism by Fire
-|Flame Saturation
-|Blaze
-|Magma Rain
-|Scorch
-|Feed the Flames
-|Melting Ray
-|Incineration
-|Safe Distance
-|Inferno
-|Excess Heat
-|Pyromania = Pyromancy skill data
-<!--
-
------ ELECTROMANCY SKILLS -----
-
--->
-|Jolt
-|Impulse
-|Short Circuit
-|Static Field
-|Ball Lightning
-|Chain Lightning
-|Tempest
-|Residual Charge
-|Potential Difference
-|Unlimited Power
-|Conductivity
-|Resonance Cascade
-|Chain Reaction
-|Recharge = Electromancy skill data
-<!--
-
------ BEASTS SKILLS -----
-
--->
-|Animated Servant
-|Baleful Scream (harpy)
-|Bone Pyres
-|Claw Swipe
-|Corrosive Blood
-|Dash (animal)
-|Deadly Tail
-|Deafening Roar
-|Disturbed Hive
-|Dying Rage
-|Earthshaking Strike (Young Troll)
-|Elusive Predators
-|Grab ’Em!
-|Howl
-|Lion Leap
-|Loud Barking
-|Pack Sense
-|Peck
-|Primal Aether
-|Ramming Charge (bison)
-|Ramming Charge (boar)
-|Ramming Charge (moose)
-|Rapid Flight
-|Regenerative Carapace
-|Rend Flesh
-|Rock Toss
-|Shockwave
-|Snake Stealth
-|Swarm
-|Taste for Flesh
-|Troll Regeneration
-|Unbearable Stench
-|Vengeance of the Dead
-|Voracity
-|Web Spit = Beasts skill data
-<!--
-
------ BRIGAND SKILLS -----
-
--->
-|Coordinated Advance
-|Dead or Alive
-|Net Throw
-|Raise the Banner!
-|Sic! = Brigands skill data
-<!--
-
------ UNDEAD SKILLS -----
-
--->
-|Abominable Vitality
-|Binding Sigil
-|Bolt of Darkness
-|Bone Throw
-|Curse of Decay
-|Curse of Agony
-|Deadly Premonition
-|Death Touch
-|Desecration
-|Spectral Haunting
-|Grave Chill
-|Necrophage
-|Putrid Odor
-|Lesser Ritual of Resurrection
-|Greater Ritual of Resurrection
-|Blasphemous Sigil
-|Soul Sacrifice
-|Steal Essence
-|Strangling Grasp
-|Unholy Blessing
-|Wraith Summoning= Undead skill data
-<!--
-
------ PROSELYTE SKILLS -----
-
--->
-|Anthems of Bloodshed
-|Baleful Scream
-|Bestial Charge
-|Bestial Rage
-|Blessed in Death
-|Blister Burst
-|Blood Clot
-|Blood Craze
-|Blood Puddle
-|Blood Scent
-|Blood Spit
-|Bloodthirst
-|Brand of Anguish
-|Burnt Offering
-|Chain Strike
-|Corpse Devourment
-|Devastating Power
-|Driven by Pain
-|Earthshaking Strike
-|Embrace the Murk
-|Feed the Host
-|Face of Horror
-|Fiery Embers
-|Flesh Explosion
-|Fling Away
-|For Whom The Bell Tolls
-|Herald of Ruination
-|Immolation
-|Jump Away
-|Lacerate
-|Lash Blessing
-|Life Leech
-|Mark of the Feast
-|Murkstrike
-|Murkwalk
-|Neverending Torment
-|One Body
-|Phantom Bats
-|Sacrificial Blood
-|Summon Blood Golem
-|Summon the Restless
-|Summon Worm
-|Tentacle Arm (skill)
-|Tongue Leech
-|Tongue Pull
-|Tongue Push
-|Unholy Anthems
-|Unholy Ritual
-|Draining Sigil
-|Wild Swipe
-|Wild Swipe (Ascended Archon)
-|Wild Swipe (Enhanced)
-|Willing Sacrifice
-|Witness His Might!
-|Wormfood = Proselyte skill data
-<!--
-
------ ENEMY SKILLS -----
-
--->
-|Blood Oath
-|Crimson Banner
-|Dark Ritual
-|Driven by Pain
-|Flesh Explosion
-|Swipe
-|Vampiric Blood = Enemy skill data
-|#default = Skill data missing.
-}}</includeonly><noinclude>[[Category:Data]]</noinclude>
+|#default = Nome Alterado ou Descrição sem Tradução}}</includeonly><noinclude>{{Doc}}[[Category:PT-BR Language templates]]</noinclude>
