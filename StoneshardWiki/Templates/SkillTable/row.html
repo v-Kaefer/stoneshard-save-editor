@@ -2,22 +2,22 @@
 -->{{#vardefine:Modifiers|{{#if: {{:{{#var:Skilltree}}|{{{1}}}|Modifiers}}|{{:{{#var:Skilltree}}|{{{1}}}|Modifiers}}|}}}}<!--
 -->{{#vardefine:Active|{{#if: {{:{{#var:Skilltree}}|{{{1}}}|Active}}|{{:{{#var:Skilltree}}|{{{1}}}|Active}}|}}}}<!--
 --><tr>
-    <td align="center">[[File:{{{1}}}.png|center|link={{#ifeq: {{#var:Skilltree}}|Skill data missing.||{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|{{{1}}}|{{{1}}}/{{SUBPAGENAME}}}}}}|{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|{{{1}}}|{{Translate|{{{1}}}|SkillNames}}]]{{#ifeq: {{#var:Skilltree}}|Skill data missing.|[[{{{1}}}]]|{{cl|{{#var:Active}}|{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|{{{1}}}|{{{1}}}/{{SUBPAGENAME}}}}|{{#if:{{:{{#var:Skilltree}}|{{{1}}}|Name}}|{{:{{#var:Skilltree}}|{{{1}}}|Name}}|{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|{{{1}}}|{{Translate|{{{1}}}|SkillNames}}}}}}}}}}</td><!--
-    -->{{#if:{{#var:skill table hidebasicstats}}||<td><!--
-    -->{{#ifeq: {{#var:Skilltree}}|Skill data missing.|Skill with name "{{{1|{{ROOTPAGENAME}}}}}" does not exist.<br><br>Add it to [[Skill data]] or fix the Skill name.|<!--
-    -->{{#if: {{#var:Active}} | {{#switch: {{lc:{{#var:Active}}}}
-    | attack/charge = <div style="text-align: center;">{{c|Active|{{Translate|Attack|Properties}} / {{Translate|Charge|Properties}}}}</div>{{Clear}}
-    | attack/maneuver = <div style="text-align: center;">{{c|Active|{{Translate|Attack|Properties}} / {{Translate|Maneuver|Properties}}}}</div>{{Clear}}
-    | #default = <div style="text-align: center;">{{c|{{#var:Active}}|{{ucfirst:{{Translate|{{#var:Active}}|Properties}}}}}}</div>{{Clear}}
-    }}}}<!--
-    -->{{#if: {{:{{#var:Skilltree}}|{{{1}}}|Type}} | <div style="float: left">{{Translate|Type|Properties}}:</div><div style="float: right">{{Translate|{{:{{#var:Skilltree}}|{{{1}}}|Type}}|Properties}}</div>{{Clear}}}}<!--
-    -->{{#if: {{:{{#var:Skilltree}}|{{{1}}}|Range}} | <div style="float: left">{{Translate|Range|Properties}}:</div><div style="float: right">{{Translate|{{:{{#var:Skilltree}}|{{{1}}}|Range}}|Properties}}</div>{{Clear}}}}<!--
-    -->{{#if: {{:{{#var:Skilltree}}|{{{1}}}|Energy}} | <div style="float: left">{{Translate|Energy|Properties}}:</div><div style="float: right">{{:{{#var:Skilltree}}|{{{1}}}|Energy}}</div>{{Clear}}}}<!--
-    -->{{#if: {{:{{#var:Skilltree}}|{{{1}}}|Cooldown}} | <div style="float: left">{{Translate|Cooldown|Properties}}:</div><div style="float: right">{{:{{#var:Skilltree}}|{{{1}}}|Cooldown}}</div>{{Clear}}}}<!--
-    -->{{#if:{{#var:skill table enemyskills}}||<!--
-    -->{{#if: {{#var:Modifiers}} | <div style="float: left">{{Translate|Modified by|Properties}}:</div><div style="float: right">{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|{{#var:Modifiers}}|{{Translate|{{#explode:{{#var:Modifiers}}|, }}|Properties}}{{#if: {{#explode:{{#var:Modifiers}}|, |1}}|{{#ifeq:{{SUBPAGENAME}}|zh|、|, }}{{Translate|{{#explode:{{#var:Modifiers}}|, |1}}|Properties}}}}{{#if: {{#explode:{{#var:Modifiers}}|, |2}}|{{#ifeq:{{SUBPAGENAME}}|zh|、|, }}{{Translate|{{#explode:{{#var:Modifiers}}|, |2}}|Properties}}}}}}</div>{{Clear}}}}<!--
-    -->{{#if: {{:{{#var:Skilltree}}|{{{1}}}|Requirements}} | <div align="left">{{C|Req|{{Translate|{{:{{#var:Skilltree}}|{{{1}}}|Requirements}}|Properties}}}}</div>}}}}</td>}}<!--
-    -->}}<!--
+<td align="center">[[File:{{{1}}}.png|center|link={{#ifeq: {{#var:Skilltree}}|Skill data missing.||{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|{{{1}}}|{{{1}}}/{{SUBPAGENAME}}}}}}|{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|{{{1}}}|{{Translate|{{{1}}}|SkillNames}}]]{{#ifeq: {{#var:Skilltree}}|Skill data missing.|[[{{{1}}}]]|{{cl|{{#var:Active}}|{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|{{{1}}}|{{{1}}}/{{SUBPAGENAME}}}}|{{#if:{{:{{#var:Skilltree}}|{{{1}}}|Name}}|{{:{{#var:Skilltree}}|{{{1}}}|Name}}|{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|{{{1}}}|{{Translate|{{{1}}}|SkillNames}}}}}}}}}}}}</td><!--
+-->{{#if:{{#var:skill table hidebasicstats}}||<td><!--
+-->{{#ifeq: {{#var:Skilltree}}|Skill data missing.|Skill with name "{{{1|{{ROOTPAGENAME}}}}}" does not exist.<br><br>Add it to [[Skill data]] or fix the Skill name.|<!--
+-->{{#if: {{#var:Active}} | {{#switch: {{lc:{{#var:Active}}}}
+| attack/charge = <div style="text-align: center;">{{c|Active|{{Translate|Attack|Properties}} / {{Translate|Charge|Properties}}}}</div>{{Clear}}
+| attack/maneuver = <div style="text-align: center;">{{c|Active|{{Translate|Attack|Properties}} / {{Translate|Maneuver|Properties}}}}</div>{{Clear}}
+| #default = <div style="text-align: center;">{{c|{{#var:Active}}|{{ucfirst:{{Translate|{{#var:Active}}|Properties}}}}}}</div>{{Clear}}
+}}}}<!--
+-->{{#if: {{:{{#var:Skilltree}}|{{{1}}}|Type}} | <div style="float: left">{{Translate|Type|Properties}}:</div><div style="float: right">{{Translate|{{:{{#var:Skilltree}}|{{{1}}}|Type}}|Properties}}</div>{{Clear}}}}<!--
+-->{{#if: {{:{{#var:Skilltree}}|{{{1}}}|Range}} | <div style="float: left">{{Translate|Range|Properties}}:</div><div style="float: right">{{Translate|{{:{{#var:Skilltree}}|{{{1}}}|Range}}|Properties}}</div>{{Clear}}}}<!--
+-->{{#if: {{:{{#var:Skilltree}}|{{{1}}}|Energy}} | <div style="float: left">{{Translate|Energy|Properties}}:</div><div style="float: right">{{:{{#var:Skilltree}}|{{{1}}}|Energy}}</div>{{Clear}}}}<!--
+-->{{#if: {{:{{#var:Skilltree}}|{{{1}}}|Cooldown}} | <div style="float: left">{{Translate|Cooldown|Properties}}:</div><div style="float: right">{{:{{#var:Skilltree}}|{{{1}}}|Cooldown}}</div>{{Clear}}}}<!--
+-->{{#if:{{#var:skill table enemyskills}}||<!--
+-->{{#if: {{#var:Modifiers}} | <div style="float: left">{{Translate|Modified by|Properties}}:</div><div style="float: right">{{#ifeq:{{SUBPAGENAME}}|{{PAGENAME}}|{{#var:Modifiers}}|{{Translate|{{#explode:{{#var:Modifiers}}|, }}|Properties}}{{#if: {{#explode:{{#var:Modifiers}}|, |1}}|{{#ifeq:{{SUBPAGENAME}}|zh|、|, }}{{Translate|{{#explode:{{#var:Modifiers}}|, |1}}|Properties}}}}{{#if: {{#explode:{{#var:Modifiers}}|, |2}}|{{#ifeq:{{SUBPAGENAME}}|zh|、|, }}{{Translate|{{#explode:{{#var:Modifiers}}|, |2}}|Properties}}}}}}</div>{{Clear}}}}<!--
+-->{{#if: {{:{{#var:Skilltree}}|{{{1}}}|Requirements}} | <div align="left">{{C|Req|{{Translate|{{:{{#var:Skilltree}}|{{{1}}}|Requirements}}|Properties}}}}</div>}}}}</td>}}<!--
+-->}}<!--
 --><td>{{#ifeq: {{#var:Skilltree}}|Skill data missing.|Skill with name "{{{1|{{ROOTPAGENAME}}}}}" does not exist.<br><br>Add it to [[Skill data]] or fix the Skill name.|<!--
 -->{{#if: {{{2|}}}|{{C|Gray|{{Translate|{{:{{#var:Skilltree}}|{{{1}}}|Enemydesc}}|SkillDescription}}}}|{{C|Gray|{{Translate|{{:{{#var:Skilltree}}|{{{1}}}|Description}}|SkillDescription}}}}}}}}</td><!--
 -->{{#if:{{#var:skill table passivebonus}}|<td>{{#ifeq: {{#var:Skilltree}}|Skill data missing.|Skill with name "{{{1|{{ROOTPAGENAME}}}}}" does not exist.<br><br>Add it to [[Skill data]] or fix the Skill name.|{{#if: {{:{{#var:Skilltree}}|{{{1}}}|Passivevalue1}}|<br>{{C|Orange|{{Translate|Passive bonus|Properties}}:}}<br>{{:{{#var:Skilltree}}|{{{1}}}|Passivevalue1}} {{Translate|{{:{{#var:Skilltree}}|{{{1}}}|Passivebonus1}}|Properties}}{{#if: {{:{{#var:Skilltree}}|{{{1}}}|Passivevalue2}} |<br>{{:{{#var:Skilltree}}|{{{1}}}|Passivevalue2}} {{Translate|{{:{{#var:Skilltree}}|{{{1}}}|Passivebonus2}}|Properties}}}}{{#if: {{:{{#var:Skilltree}}|{{{1}}}|Passivevalue3}} |<br>{{:{{#var:Skilltree}}|{{{1}}}|Passivevalue3}} {{Translate|{{:{{#var:Skilltree}}|{{{1}}}|Passivebonus3}}|Properties}}}} }} }}</td>}}<!--
@@ -25,3 +25,11 @@
 -->{{#if:{{#var:skill table formula}}|<td>{{C|Gray|{{#if: {{:{{#var:Skilltree}}|{{{1}}}|Formuladesc}}|<br>{{C|Orange|{{Translate|Formula|Properties}}:}}<br>{{#if: {{:{{#var:Skilltree}}|{{{1}}}|Formuladesc}}|{{:{{#var:Skilltree}}|{{{1}}}|Formuladesc}}<br>}} }} }}</td>}}<!--
 -->{{#if:{{#var:skill table notes}}|<td>{{:{{#var:Skilltree}}|{{{1}}}|Notes}}</td>}}<!--
 --></tr></includeonly><noinclude>{{doc}}[[Category:Templates]]</noinclude>
+
+
+
+<td>{{#ifeq: {{#var:Skilltree}}|Skill data missing.|Skill with name "{{{1|{{ROOTPAGENAME}}}}}" does not exist.<br><br>Add it to [[Skill data]] or fix the Skill name.|<!--
+    -->{{#if: {{{2|}}}|{{C|Gray|{{Translate|{{:{{#var:Skilltree}}|{{{1}}}|Enemydesc}}|SkillDescription}}}}|{{C|Gray|{{Translate|{{:{{#var:Skilltree}}|{{{1}}}|Description}}|SkillDescription}}}}}}}}</td>
+
+<td>{{#ifeq: {{#var:Skilltree}}|Skill data missing.|Skill with name "{{{1|{{ROOTPAGENAME}}}}}" does not exist.<br><br>Add it to [[Skill data]] or fix the Skill name.|<!--
+    -->{{C|Gray|{{Translate|{{:{{#var:Skilltree}}|{{{1}}}|Description}}|SkillDescription}}}}}}</td><!--
