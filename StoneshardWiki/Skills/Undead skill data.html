@@ -1,0 +1,241 @@
+<noinclude>Page for all Stoneshard Undead enemies skill data.
+</noinclude><includeonly>{{#switch: {{{1}}}
+
+|Abominable Vitality= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description={{w|Tis but a flesh wound!}} Upon receiving lethal damage, the Restless has {{W|75%}} chance to {{W|avoid death}}, {{pos|fully}} Replenishing its Health while {{neg|losing}} its most damaged body part.
+|#default = }}
+
+|Binding Sigil= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Object
+|Range=8
+|Energy=18
+|Cooldown=13
+|Backfireper=33
+|Backfiredmg=0
+|Requirements=
+|Description=Activates {{pos|"Binding Sigil"}} and grants the same effect to an Undead ally for {{w|13}} turns: <br><br>Grants the ally {{pos|-33%}} Damage Taken <br>Transfer {{W|33%}} of the damage received by the caster to the ally <br>Replenishes Energy to the caster for {{W|33%}} of the damage dealt by the ally.
+|Image:Unbearable Stench.png
+|#default = }}
+
+|Bolt of Darkness= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Object
+|Range=5
+|Energy=15
+|Cooldown=7
+|Backfireper=30
+|Backfiredmg=0
+|Requirements=
+|Description=Shoots a bolt of dark energy dealing {{neg|Unholy Damage}}.
+|#default = }}
+
+|Bone Throw= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Object
+|Range=4
+|Energy=10
+|Cooldown=10
+|Requirements=
+|Description=Throws a bone at a target, dealing {{w|3 Crushing}}, {{w|3 Piercing}}, {{poison|3 Poison}}, and {{unholy|3 Unholy}} with {{w|80%}} Accuracy, {{w|30%}} Daze Chance and {{w|30%}} Bleed Chance.
+|#default = }}
+
+|Curse of Decay= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Object
+|Range=10
+|Energy=18
+|Cooldown=21
+|Backfireper=33
+|Backfiredmg=0
+|Requirements=
+|Description=Applies the target with {{neg|"Curse of Decay"}} for {{W|13}} turns: <br><br>{{neg|-6%}} Max Health <br>{{neg|-6%}} Max Energy <br>{{neg|-6%}}Energy Restoration <br>{{neg|9%}}Healing Efficiency <br><br>{{W|IV}} stacks of the effect: each turn worsens the Condition of a random body part by {{neg|1%}} <br><br>Each turn applies an extra stack of the effect (up to {{W|IV}}. Basic strikes, shots, and using abilities reduce the number of stacks by {{pos|2}}.
+|#default = }}
+
+|Curse of Agony= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Object
+|Range=9
+|Energy=13
+|Cooldown=13
+|Backfireper=29
+|Backfiredmg=0
+|Requirements=
+|Description=Applies target with {{neg|"Curse of Agony"}} for {{W|13}} turns: <br><br>{{neg|+1%}} Pain Change <br>{{neg|-6%}} Weapon Damage <br>{{neg|-9%}} Magic Power <br>{{neg|-9%}} Fortitude <br>{{neg|-9%}} Unholy Resistance <br><br>The penalties change dynamically depending on the target's current Pain.
+|#default = }}
+
+|Deadly Premonition= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=Target Object
+|Range=8
+|Energy=9
+|Cooldown=9
+|Requirements=
+|Description=Applies the target with {{neg|"Deadly Premonition"}} for an indefinite number of turns: <br><br>Grants the next used {{W|Attack}} skill or {{W|Spell}} {{neg|+50%}} Fumble Chance, {{neg|+50%}} Backfire Chance, and {{neg|+50%}} Cooldown Duration. <br><br>Using {{W|Attack}} skills or {{W|Spells}} removes the effect and reduces the caster's cooldowns by {{pos|2}} turns.
+|#default = }}
+
+|Death Touch= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Object
+|Range=6
+|Energy=26
+|Cooldown=13
+|Backfireper=12.50
+|Backfiredmg=0
+|Requirements=
+|Description=Deals {{unholy|13 Unholy Damage}}. <br><br>Replenishes Health to all Undead within Vision for {{pos|66%}} of the damage dealt by the spell.
+|#default = }}
+
+|Desecration= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Object
+|Range=6
+|Energy=13
+|Cooldown=4
+|Backfireper=33
+|Backfiredmg=0
+|Requirements=
+|Description= Shoots a bolt of dark energy, dealing {{c|Unholy|9 Unholy Damage}} with {{W|90%}} Accuracy. If the spell hits the target, burns its Energy for the amount of damage dealt and replenishes the same amount of Energy to the caster.
+|#default = }}
+
+|Spectral Haunting= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Object
+|Range=1
+|Energy=25
+|Cooldown=60
+|Backfireper=12.50
+|Backfiredmg=0
+|Requirements=
+|Description=Activates {{pos|"Spectral Haunting"}} for {{W|1}} turn. Receiving damage removes the effect. <br><br>While {{pos|"Spectral Haunting"}} is active, grants all received strikes and shots {{neg|+20%}} Fumble Chance and {{neg|-10%}} Accuracy. When the effect expires, the Wraith disappears for {{W|2}}-{{W|4}} turns, then materializes on a tile adjacent to an enemy and delivers a strike to them. <br><br>If the strike hits its target, increases the Wraith's Max Health by {{pos|20%}} and permanently grants it {{pos|+3%}} Crit Chance.
+|#default = }}
+
+|Grave Chill= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Area
+|Range=1
+|Energy=26
+|Cooldown=18
+|Requirements=
+|Description=Deals {{unholy|9 Unholy}} and {{C|Frost|9 Frost Damage}} an adjacent tile and two tiles behind it. <br><br>With {{W|94%}} chance {{W|Immobilizes}} all targets within the spell's area of effect and applies them with {{neg|+25%}} Fumble Chance and {{neg|-25%}} Energy Restoration for {{W|2}} turns.
+|#default = }}
+
+|Necrophage= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=Target Object
+|Range=1
+|Energy=1
+|Requirements=
+|Description=Consumes a flesh-covered corpse. Replenishes {{pos|50%}} Max Health and {{c|Energy|50%}} Max Energy, then transforms into a more powerful ghoul.
+|#default = }}
+
+|Putrid Odor= {{#switch: {{{2}}}
+|Active=passive
+|Description=Applies all adjacent enemies with {{neg|+5%}} Fumble Chance, {{neg|+0.5%}} Intoxication Change, and {{neg|-0.25%}} Morale Change. <br><br>Each turn with {{W|20%}} chance causes all adjacent enemies to {{neg|Cough}}. <br><br>These effects don't stack.
+|#default = }}
+
+|Lesser Ritual of Resurrection= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Object
+|Range=6
+|Energy=33
+|Cooldown=26
+|Backfireper=28.50
+|Backfiredmg=0
+|Requirements=
+|Description=Reanimates a slain Undead, replenishing it {{pos|66%}} Max Health and {{c|Energy|66%}} Max Energy. <br><br>The reanimated undead's Armor Durability is set to {{W|0%}}, and all its abilities are put on cooldown for {{W|50%}} of the maximum number of turns.
+|#default = }}
+
+|Greater Ritual of Resurrection= {{#switch: {{{2}}}
+|Active=spell
+|Type=No Target
+|Range=6
+|Energy=66
+|Cooldown=30
+|Backfireper=28.50
+|Backfiredmg=0
+|Requirements=
+|Description=Reanimates all slain Undead within {{W|6}} tiles, replenishing them {{pos|33%}} Max Health and {{c|Energy|33%}} Max Energy. <br><br>The reanimated undead's Armor Durability is set to {{W|0%}}, and all its abilities are put on cooldown.
+|#default = }}
+
+|Blasphemous Sigil= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Tile
+|Range=11
+|Energy=13
+|Cooldown=13
+|Backfireper=12.50
+|Backfiredmg=0
+|Requirements=
+|Description=Creates a {{W|Rune}} on the targeted tile, which persists for {{W|9}} turns. <br><br>Remaining on the {{W|Rune}} deals {{unholy|9 Unholy Damage}} and replenishes Energy to the caster for {{W|100%}} of the damage dealt. <br><br>The {{W|Rune}} doesn't harm Undead or Proselytes, instead granting them {{pos|-33%}} Fumble Chance, {{pos|+33%}} Energy Restoration, and {{pos|+9%}} Crit Chance.
+|#default = }}
+
+|Soul Sacrifice= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Object
+|Range=8
+|Energy=13
+|Cooldown=3
+|Backfireper=33
+|Backfiredmg=0
+|Requirements=
+|Description= Applies an Undead ally with {{neg|"Soul Sacrifice"}} until the next turn. <br><br>When the effect expires, the target explodes, dealing {{unholy|Unholy Damage}} equal to its remaining Health (but no more than {{W|20%}} of its maximum amount) to all adjacent tiles. <br><br>The spell can only be used on targets with less than {{neg|20%}} Health.
+|#default = }}
+
+|Steal Essence= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Object
+|Range=7
+|Energy=13
+|Cooldown=6
+|Backfireper=29
+|Backfiredmg=0
+|Requirements=
+|Description= Steals {{neg|6%}} Max Health and {{c|Energy|6%}} Max Energy from an Undead ally, transferring them to the caster. <br><br> Activates {{pos|"Stolen Essence"}} for {{w|3-}} turns: <br><br>{{pos|+13%}} Magic Power <br>{{pos|-9%}} Spells Energy Cost <br>{{pos|-9%}} Cooldowns Duration <br>{{pos|-9%}} Damage Taken <br>Using {{W|Spells}} replenishes Health for {{W|9%}} of the Energy spent <br><br>The repeated use of the spell grants an extra stack of the effect (up to {{W|IV}}) and refreshes its duration.
+|#default = }}
+
+|Strangling Grasp= {{#switch: {{{2}}}
+|Active=attack/charge
+|Type=Target Object
+|Range=2
+|Energy=8
+|Cooldown=8
+|Requirements=
+|Description= Performs a {{W|charge}} towards the target and delivers a strike with {{neg|-50%}} Weapon Damage and {{W|57%}} Immobilization Chance. <br><br>{{pos|Doubles}} the bonus to Immobilization Chance if the target is affected by {{neg|"Curse of Decay"}} and {{pos|nulifies}} the penalty to Weapon Damage if it's affected by {{neg|"Curse of Agony"}}.
+|#default = }}
+
+|Unholy Blessing= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Object
+|Range=11
+|Energy=20
+|Cooldown=15
+|Backfireper=17.50
+|Backfiredmg=0
+|Requirements=
+|Description=Replenishes {{pos|13%}} Max Healht to the target and grants {{pos|"Unholy Blessing"}} for {{w|13}} turns: <br><br>{{pos|13%}} Life Drain <br>{{pos|13%}} Energy Drain <br>{{pos|13%}} Damage Reflection.
+|#default = }}
+
+|Wraith Summoning= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Tile
+|Range=6
+|Energy=33
+|Cooldown=13
+|Requirements=
+|Description= Summons a {{W|Wraith}} on the targeted tile. The {{W|Wraith's}} power depends on the number of {{pos|"Stolen Essence"}} stacks.<br><br>Using the ability removes {{pos|"Stolen Essence"}}.
+|#default = }}
+
+|Fall of Giants= {{#switch: {{{2}}}
+|Active=passive
+|Description= When Health drops below {{neg|85%}}, {{neg|50%}}, {{neg|45%}}, {{neg|30%}}, and {{neg|15%}} for the first time, puts {{W|"Mighty Swing"}} on a 2 turns cooldown and causes {{W|Stagger}}.
+|#default = }}
+
+|Unsteady Gait= {{#switch: {{{2}}}
+|Active=passive
+|Description= Moving to other tile grants {{neg|-5%}} {{W|Weapon Damage}}, {{neg|+5%}} Fumble Chance, and {{neg|-5%}} Accuracy for 5 turns.<br><br>The effect stacks up to 5 times.
+|#default = }}
+
+|#default = Data does not exist.}}</includeonly><noinclude>[[Category:Data]]</noinclude>

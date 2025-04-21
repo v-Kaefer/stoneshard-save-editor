@@ -1,0 +1,540 @@
+<noinclude>Page for all Stoneshard Proselyte enemies skill data.
+</noinclude><includeonly>{{#switch: {{{1}}}
+
+|Anthems of Bloodshed= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Grants each {{w|sixth}} strike with {{pos|+99%}} Crit Chance and {{pos|+66%}} Bleed Chance. <br><br>If the strike hits its target, grants {{pos|"Blood Vow"}} to all allies within Vision for {{w|3}} turns: <br><br>{{pos|+33%}} Life Drain <br>{{pos|+33%}} Healing Efficiency <br>{{pos|-33%}} Abilities Energy Cost.
+|#default = }}
+
+|Baleful Scream= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=Target Object
+|Range=6
+|Energy=13
+|Cooldown=9
+|Requirements=
+|Description=Lets out a shriek, dealing {{c|Psionic|6 Psionic Damage}}. <br>With {{w|75%}} chance {{w|Dazes}} the target or causes it to {{w|Stagger}} for {{w|2}} turns.
+|#default = }}
+
+|Bestial Charge= {{#switch: {{{2}}}
+|Active=charge
+|Type=Target Object
+|Range=5
+|Energy=
+|Cooldown=4
+|Requirements=
+|Description=Charges forward in a {{w|5}} tiles line. The first target in its path takes {{pos|666%}} damage. <br><br>If the Archon collides with the scenery during the charge, he is {{w|Stunned}} for {{w|2}} turns.
+|#default = }}
+
+|Bestial Rage= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Receiving damage, hitting targets, and using abilities increases the Yagram's hidden {{neg|Rage}} stat. When it reaches its maximum, activates {{pos|"Bestial Rage"}} for an indefinite number of turns: <br><br> {{pos|+33%}} Damage <br>{{pos|+66%}} Knockback Chance <br>{{neg|+33%}} Damage Taken <br>{{neg|66%}} chance to deliver a strike to a random adjacent target instead of the original one
+|#default = }}
+
+|Blessed in Death= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=While the Dead Martyr is within its allies' Vision, grants them {{pos|+9%}} Weapon Damage, {{pos|+9%}} Accuracy, {{pos|-9%}} Damage Taken. <br><br>Destroying the Dead Martyr removes the previously granted {{pos|"Blood Vow"}}.
+|#default = }}
+
+|Blister Burst= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=Target Area
+|Range=1
+|Energy=9
+|Cooldown=9
+|Requirements=
+|Description=Loses {{neg|6%}} Max Health. Deals {{unholy|6 Unholy}} and {{caustic|6 Caustic Damage}} to all adjacent targets except Proselytes and Undead. <br>Replenishes {{pos|9%}} Health and {{C|Energy|9%}} Max Energy to all affected Proselytes. <br><br>Creates {{W|Blood Puddles}} on all adjacent tiles for {{w|6}} turns. <br><br>Remaining in the {{W|Blood Puddle}} deals {{unholy|6 Unholy}} and {{caustic|6 Caustic Damage}} and grants {{neg|-6%}} Unholy Resistance for {{w|13}} turns. <br><br>{{W|Blood Puddles}} don't harm Proselytes, instead replenishing them {{pos|3%}} Max Health and {{C|Energy|3%}} Max Energy each turn.
+|#default = }}
+
+|Blood Craze= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Hitting an enemy grants {{pos|"Blood Craze"}} for {{w|3}} turns:<br><br>{{pos|+6%}} Weapon Damage <br>{{pos|+3%}} Crit Chance <br><br>While {{pos|"Blood Craze"}} is active, each next hit grants an extra stack of the effect (up to {{w|VI}}) and refreshes its duration.
+|#default = }}
+
+|Blood Scent= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Each {{neg|Bleeding}} enemy or ally within Vision grants {{pos|+6%}} Damage, {{pos|+9%}} Counter Chance, and {{pos|+3%}} Crit Chance. <br><br>If an enemy within 9 tiles starts {{neg|Bleeding}}, attracts the Proselyte to their location.
+|#default = }}
+
+|Blood Clot= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Object
+|Range=1
+|Energy=
+|Cooldown=5
+|Backfireper=0
+|Backfiredmg=0
+|Requirements=
+|Description=Launches a clot of blood at the target, dealing {{unholy|4 Unholy Damage}} and {{C|Caustic|4 Caustic Damage}}.
+|#default = }}
+
+|Blood Puddle= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Area
+|Range=4
+|Energy=
+|Cooldown=5
+|Backfireper=0
+|Backfiredmg=0
+|Requirements=
+|Description=Marks an area. Next turn pours a puddle of boiling blood in it. <br><br>Puddles persist for {{w|2}} turns and deal {{unholy|15 Unholy Damage}} and {{C|Caustic|15 Caustic Damage}} per turn.
+|#default = }}
+
+|Blood Spit= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Object
+|Range=5
+|Energy=9
+|Cooldown=4
+|Requirements=
+|Description=Loses {{neg|3%}} Max Health. Spits blood, dealing {{unholy|13 Unholy}} and {{caustic|9 Caustic Damage}} with {{W|95%}} Accuracy.<br><br>If the skill hits its target, applies it with {{neg|-6%}} Unholy Resistance for {{w|13}} turns and creates a {{W|Blood Puddle}} on its tile for {{W|3}} turns. <br><br>Remaining in the {{W|Blood Puddle}} deals {{unholy|13 Unholy}} and {{caustic|6 Caustic Damage}} and also grants {{neg|-6%}} Unholy Resistance for {{w|13}} turns. <br><br>{{W|Blood Puddles}} don't harm Proselytes, instead replenishing them {{pos|3%}} Max Health and {{C|Energy|3%}} Max Energy each turn.
+|#default = }}
+
+|Bloodthirst= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Object
+|Range=1
+|Energy=9
+|Cooldown=13
+|Requirements=
+|Description=Delivers a strike with {{pos|+27%}} Life Drain and {{pos|+27%}} Bleed Chance. <br><br>Activates {{pos|"Vampiric Blood"}} for {{w|3}} turns:<br><br>{{pos|+9%}} Life Drain<br>Replenishes {{pos|6%}} Max Health and Energy each turn.
+|#default = }}
+
+|Brand of Anguish= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Object
+|Range=1
+|Energy=9
+|Cooldown=6
+|Requirements=
+|Description=Delivers a strike with {{pos|+33%}} Fire Damage, causing {{W|100%}} more Pain. <br><br>If the strike hits a target affected by positive effects, removes one of them and permanently grants the Brander {{pos|+9%}} Life Drain.
+|#default = }}
+
+|Burnt Offering= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=Target Object
+|Range=6
+|Energy=33
+|Cooldown=3
+|Requirements=
+|Description=Destroys a corpse within Vision, leaving a {{W|Pyre}} in its place, which persists until it's extinguished or the Brander's death. Replenishes {{pos|9%}} Max Health. <br><br>Each burning {{W|Pyre}} replenishes {{pos|3%}} Max Health to the Brander each turn, and also grants him {{c|Fire|+3}} Fire Damage, {{pos|-6%}} Damage Taken, and {{pos|+6%}} Crit Chance. The effect stacks up to {{W|6}} times.
+|#default = }}
+
+|Cannibalistic Craze= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=Target Object
+|Range=1
+|Energy=
+|Cooldown=13
+|Modifiers=
+|Requirements=
+|Description = '''Repositions''' to a tile with a fleshy corpse and consumes it, replenishing {{c|+|13%}} Max Health and {{c|Energy|26%}} Max Energy.<br><br>With 33% chance activates one of the following effects for 9 turns:<br><br>[[Blood Craze]]<br>[[Blood Oath]]<br>[[Rapid Restoration]]<br>[[Battle Rage]].
+|#default = }}
+
+|Chain Strike= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Object
+|Range=1
+|Energy=13
+|Cooldown=6
+|Requirements=
+|Description=Delivers a strike with {{neg|-66%}} Damage, {{pos|+66%}} Daze Chance and {{pos|+66%}} Knockback Chance.
+|#default = }}
+
+|Corpse Devourment= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=Target Object
+|Range=1
+|Energy=50
+|Cooldown=
+|Requirements=
+|Description=Devours a corpse, replenishing {{pos|33%}} Max Health and {{C|Energy|33%}} Max Energy.
+|#default = }}
+
+|Devastating Power= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Tile
+|Range=1
+|Energy=26
+|Cooldown=18
+|Requirements=
+|Description=Marks a tile. Next turn delivers a strike to the marked tile with {{pos|+33%}} Weapon Damage, {{pos|+33%}} Bodypart Damage, and {{pos|+66%}} Stun Chance.<br><br>{{pos|Doubles}} the bonuses if the strike is delivered to a target affected by {{W|Immobilization}}, {{W|Daze}}, {{W|Stun}}, {{W|Stagger}}, or {{W|Confusion}}.
+|#default = }}
+
+|Driven by Pain= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Grants {{pos|+0.33%}} Damage, {{pos|-0.33%}} Damage Taken and {{pos|+0.13%}} Life Drain for each missing {{neg|percent}} of Health.
+|#default = }}
+
+|Earthshaking Strike= {{#switch: {{{2}}}
+|Active=attack
+|Type=No Target
+|Range=3
+|Energy=26
+|Cooldown=6
+|Requirements=
+|Description=Delivers a strike to three adjacent tiles and three tiles behind them with {{pos|+33%}} Stun Chance and {{pos|+66%}} Daze Chance. <br><br>Each target within the skill's area of effect increases the Yagram's {{neg|Rage}}.
+|#default = }}
+
+|Embrace the Murk= {{#switch: {{{2}}}
+|Active=spell
+|Type=No Target
+|Range=4
+|Energy=26
+|Cooldown=26
+|Backfireper=20
+|Backfiredmg=0
+|Requirements=
+|Description=Performs a {{W|teleportation}} to the targeted tile. <br><br>Removes all negative effects and activates {{pos|"Murk"}} for {{W|9}} turns: <br><br>{{pos|+6%}}Crit Chance <br>{{pos|+9%}} Bodypart Damage <br>{{pos|+9%}} Bleed Chance <br>{{pos|+9%}} Life Drain <br>Replenishes {{pos|+6%}} Max Health and {{C|Energy|+6%}} Max Energy each turn. <br><br>Each turn grants a stack of the effect (up to {{w|VI}}). <br><br>While {{pos|"Murk"}} is active, grants {{pos|+66%}} Dodge Chance. Receiving damage, using abilities, and delivering strikes removes the effect. <br><br>This ability can't be used while affected by {{w|Immobilization}} or {{neg|"Net"}}.
+|#default = }}
+
+|Face of Horror= {{#switch: {{{2}}}
+|Active=active
+|Type=Target Object
+|Range=4
+|Energy=9
+|Cooldown=9
+|Requirements=
+|Description=Makes a large amount of {{W|noise}} and deals {{C|Psionic|9 Psionic Damage}} with {{W|99%}} chance to {{W|Immobilize}} the target for {{W|2}} turns. The chance to {{W|Immobilize}} can be reduced by the target's Psionic Resistance.<br><br>Activates {{pos|"Battle Rage"}} and grants the same effect to all Proselytes within Vision for {{W|9}} turns.
+|#default = }}
+
+|Feed the Host= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Replenishes {{pos|66%}} of the damage dealt as Health to the summoner.
+|#default = }}
+
+|Fiery Embers= {{#switch: {{{2}}}
+|Active=active
+|Type=Target Area
+|Range=3
+|Energy=18
+|Cooldown=9
+|Requirements=
+|Description=Deals {{c|Fire|9 Fire}} and {{unholy|3 Unholy Damage}}, then creates {{W|Fiery Embers}} on the target's tile and three behind it, which persists for {{W|6}} turns. <br><br> Remaining on {{W|Fiery Embers}} applies {{neg|-9%}} Fire Resistance, {{neg|+6%}} Fumble Chance, and with {{W|33%}} chance causes the target to {{c|Fire|Ignite}}. The chance to {{c|Fire|Ignite}} can be reduced by the target's Fire Resistance. <br><br>The effect stacks up to {{W|6}} times. {{W|Fiery Embers}} don't harm Proselytes.
+|#default = }}
+
+|Flesh Explosion= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=No Target
+|Requirements=
+|Description=The Blood Golem explodes the next turn after its death, dealing {{unholy|9 Unholy}} and {{C|caustic|26 Caustic Damage}} to all adjacent tiles.
+|#default = }}
+
+|Fling Away= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Object
+|Range=1
+|Energy=26
+|Cooldown=9
+|Requirements=
+|Description=Delivers a strike with {{pos|+50%}} Stagger Chance, {{pos|+50%}} Stun Chance, and {{pos|+150%}} chance to Knock the target back {{w|2}} tiles.
+|#default = }}
+
+|For Whom The Bell Tolls= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=No Target
+|Range=
+|Energy=13
+|Cooldown=66
+|Requirements=
+|Description=Makes a large amount of {{W|noise}}, attracting all proselyte within {{w|9}} tiles. <br><br>Deals {{psionic|9 Psionic Damage}} with {{W|75%}} Armor Penetration to all enemies within {{W|9}} tiles and applies them with {{neg|+9%}} Damage Taken for {{w|9}} turns and {{neg|-6%}} Sanity.
+|#default = }}
+
+|Herald of Ruination= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Area
+|Range=4
+|Energy=33
+|Cooldown=13
+|Requirements=
+|Description=Delivers a strike to a large area within {{W|4}} tiles with {{pos|+99%}} Daze Chance and {{W|99%}} chance to cause {{W|Confusion}} for {{W|2}} turns. The chance to {{W|Confuse}} can be reduced by a target's Move Resistance.<br><br>Reduces all cooldowns by {{pos|3}} turns for each target or object of environment within the skill's area of effect.
+|#default = }}
+
+|Immolation= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Upon death, grants {{pos|"Blood Vow"}} to all Proselytes within Vision for {{W|6}} turns: <br><br>{{pos|+33%}} Life Drain<br>{{pos|+33%}} Healing Efficiency<br>{{pos|-33%}} Abilities Energy Cost
+|#default = }}
+
+|Jump Away= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=Target Tile
+|Range=1
+|Energy=
+|Cooldown=4
+|Requirements=
+|Description=Jumps {{w|2}} tiles or less, gains {{pos|+66%}} Dodge Chance and {{pos|-33%}} Damage Taken for the next turn.
+|#default = }}
+
+|Lacerate= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Object
+|Range=1
+|Energy=9
+|Cooldown=9
+|Requirements=
+|Description=Delivers a strike with {{neg|-66%}} Damage and {{pos|+66%}} Bleed Chance.
+|#default = }}
+
+|Lash Blessing= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=Target Object
+|Range=1
+|Energy=9
+|Cooldown=1
+|Requirements=
+|Description=Delivers a strike with {{neg|-66%}} Weapon Damage to himself or an ally, granting {{pos|"Battle Rage"}} for {{w|9}} turns: <br><br>{{pos|+10%}} Damage <br>{{pos|+7.5%}} Crit Chance <br>{{pos|+20%}} Crit Efficiency
+|#default = }}
+
+|Life Leech= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Object
+|Range=2
+|Energy=26
+|Cooldown=12
+|Backfireper=20
+|Backfiredmg=0
+|Requirements=
+|Description=Deals {{unholy|9 Unholy Damage}} <br><br>Replenishes Health for the amount of damage dealt by the spell. If Health is at {{neg|100%}}, increase it by the same amount for {{W|9}} turns.
+|#default = }}
+
+|Mark of the Feast= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Object
+|Range=10
+|Energy=13
+|Cooldown=13
+|Backfireper=14
+|Backfiredmg=0
+|Requirements=
+|Description=Applies {{neg|"Mark of the Feast"}} for {{W|3}} turns: <br><br>{{pos|-26%}} Bleed Resistance <br>{{pos|-13%}} Dodge Chance <br><br>Grants all received attacks {{pos|+13%}} Life Drain. <br><br>Receiving a {{neg|Bleeding}} prolongs the effect by {{neg|1}} turn.
+|#default = }}
+
+|Murkstrike= {{#switch: {{{2}}}
+|Active=attack/charge
+|Type=Target Object
+|Range=9
+|Energy=13
+|Cooldown=13
+|Requirements=
+|Description=Performs a {{W|charge}} towards the target and delivers a strike with {{pos|+66%}} Crit Efficiency, {{pos|+66%}} Daze Chance, {{pos|+66%}} Armor Penetration. <br><br>This skill can be used only while affected by {{pos|"Murk"}}.
+|#default = }}
+
+|Murkwalk= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Tile
+|Range=6
+|Energy=9
+|Cooldown=6
+|Backfireper=12.50
+|Backfiredmg=0
+|Requirements=
+|Description=Performs a {{W|teleportation}} to the targeted tile. <br><br> Grants {{pos|+18%}} Dodge Chance for {{w|3}} turns and reduces all Cooldowns by {{pos|3}} turns. <br><br>This ability can't be used while affected by {{w|Immobilization}} or {{neg|"Net"}}.
+|#default = }}
+
+|Neverending Torment= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Loses {{neg|3%}} Max Health each turn while there's both an enemy and an ally within Vision. If the Martyr is Alarmed, and there are no enemies within Vision, the Health loss is {{neg|tripled}}. <br><br>Upon death, grants "Blood Vow" to a random ally within Vision for {{W|99}} turns: <br><br>{{Pos|+33%}} Life Drain <br>{{pos|+33%}}Healing Efficiency <br>{{pos|+33%}} Abilities Energy Cost
+|#default = }}
+
+|One Body= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Transfers {{neg|66%}} of the damage received by the Tentacle to the Summoner. <br>Transfers {{neg|33%}} of the damage received by the summoner to the Tentacle. When the Tentacle is destroyed, the summoner loses {{neg|9%}} Max Health and is applied with {{neg|+33%}} Damage Taken for an indefinite number of turns. <br><br>Killing the Anmarrak destroys its Tentacle Arm as well.
+|#default = }}
+
+|Phantom Bats= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Area
+|Range=3
+|Energy=
+|Cooldown=4
+|Requirements=
+|Description=Marks an area. <br><br>Next turn releases a swarm of spectral bats at it, dealing {{unholy|26 Unholy Damage}} and applying {{unholy|Curse}} for {{w|13}} turns.
+|#default = }}
+
+|Sacrificial Blood= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Object
+|Range=8
+|Energy=18
+|Cooldown=17
+|Backfireper=20
+|Backfiredmg=0
+|Requirements=
+|Description=Applies the target with "Sacrificial Blood", which remains active until the caster's death. <br><br> Using {{W|Spells}} against a target affected by this effect grants {{pos|+9%}} Magic Power and {{pos|+9%}} Healing Efficiency (both effects stack up to {{W|6}} times) and also reduces all cooldowns by {{pos|3}} turns.
+|#default = }}
+
+|Summon Blood Golem= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Tile
+|Range=11
+|Energy=66
+|Cooldown=66
+|Backfireper=20
+|Backfiredmg=0
+|Requirements=
+|Description=Summons a {{w|Blood Golem}} on the targeted tile.
+|#default = }}
+
+|Summon the Restless= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Tile
+|Range=4
+|Energy=
+|Cooldown=5
+|Backfireper=0
+|Backfiredmg=0
+|Requirements=
+|Description=Reanimates one of the bodies in the corpse pile.
+|#default = }}
+
+|Summon Worm= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=Target Tile
+|Range=6
+|Energy=9
+|Cooldown=3
+|Requirements=
+|Description=Spends {{neg|3%}} Max health to summon a {{w|Leechworm}} on a targeted tile.
+|#default = }}
+
+|Tongue Leech= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Object
+|Range=5
+|Energy=33
+|Cooldown=9
+|Requirements=
+|Description=Deals {{w|9 Piercing}}, {{poison|6 Poison}}, and {{unholy|6 Unholy Damage}}  with {{pos|+33%}} Armor Penetration, {{pos|+66%}} Bleed Chance, {{pos|+66%}} Immobilization Chance, and {{pos|+66%}} Life Drain.
+|#default = }}
+
+|Tongue Pull= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Object
+|Range=5
+|Energy=26
+|Cooldown=9
+|Requirements=
+|Description=Deals {{w|9 Crushing}}, {{poison|6 Poison}}, and {{unholy|6 Unholy Damage}} with {{pos|+33%}} Armor Penetration and {{w|99%}} chance to {{w|Pull}} the target {{w|4}} tiles closer. <br><br>This skill can't be countered.
+|#default = }}
+
+|Tongue Push= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Object
+|Range=1
+|Energy=13
+|Cooldown=6
+|Requirements=
+|Description=Deals {{w|9 Crushing}}, {{poison|6 Poison}}, and {{unholy|6 Unholy Damage}} with {{pos|+33%}} Armor Penetration and {{w|99%}} chance to {{W|knock}} the target back {{w|2}} tiles. <br><br>This skill can't be countered.
+|#default = }}
+
+|Tentacle Arm (skill)= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=Target Tile
+|Range=9
+|Energy=6
+|Cooldown=1
+|Requirements=
+|Description=Summons a {{cl|White|Tentacle Arm}} on a targeted tile and activates the effect of {{pos|"Mountain of Flesh"}} for an indefinite number of turns: <br><br> {{pos|-99%}} Damage Taken <br>{{pos|+200%}} Move Resistance <br>{{pos|+66%}} Control Resistance <br>{{pos|+66%}} Healing Efficiency <br>{{neg|Disables basic attacks and movement to other tiles}}
+|#default = }}
+
+|Unholy Anthems= {{#switch: {{{2}}}
+|Active=attack
+|Type=No Target
+|Range=
+|Energy=13
+|Cooldown=18
+|Backfireper=20
+|Backfiredmg=0
+|Requirements=
+|Description=Grants one of the following effects to all Proselytes within {{w|9}} for {{w|6}} turns: <br><br>{{pos|Rapid Restoration}} <br>{{pos|Sturdiness}} <br>{{pos|Battle Rage}}
+|#default = }}
+
+|Unholy Ritual= {{#switch: {{{2}}}
+|Active=spell
+|Type=No Target
+|Range=1
+|Energy=
+|Cooldown=5
+|Backfireper=5
+|Backfiredmg=0
+|Requirements=
+|Description=Replenishes {{pos|+50%}} Max Health to all the Restless and grants them {{pos|+50%}} Damage.
+|#default = }}
+
+|Draining Sigil= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Tile
+|Range=9
+|Energy=26
+|Cooldown=18
+|Backfireper=20
+|Backfiredmg=0
+|Requirements=
+|Description=Creates a {{W|Rune}} on the target's tile and two more on the tiles adjacent to it. The {{W|Runes}} persist for {{W|9}} turns or until the caster's death. <br><br>Remaining on the {{W|Runes}} deals {{c|Unholy|9 Unholy Damage}} with {{W|29%}} Immobilization Chance and permanently increases the caster's Max Health by {{pos|6%}}. <br><br>The {{W|Runes}} don't harm Proselytes, instead replenishing them {{pos|9%}} Max Health each turn.
+|#default = }}
+
+|Wild Swipe= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Area
+|Range=1
+|Energy=
+|Cooldown=8
+|Requirements=
+|Description=Deliver a strike to three adjacent targets with {{pos|+100%}} Knockback Chance.
+|#default = }}
+
+|Wild Swipe (Ascended Archon)= {{#switch: {{{2}}}
+|Active=active
+|Type=Target Area
+|Range=1
+|Energy=
+|Cooldown=0
+|Requirements=
+|Description=Deliver a strike to three adjacent targets with {{pos|+100%}} Knockback Chance.
+|#default = }}
+
+|Wild Swipe (Enhanced)= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Area
+|Range=1
+|Energy=
+|Cooldown=0
+|Requirements=
+|Description=Deliver a strike to three adjacent targets with {{pos|+100%}} Knockback Chance.
+|#default = }}
+
+|Willing Sacrifice= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Replenishes Health to all allies within Vision for the amount of damage received.
+|#default = }}
+
+|Witness His Might!= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Each type of Proselyte within Vision grants {{pos|+6%}} Max Health and {{pos|+6%}} Weapon Damage. <br><br>Hitting an enemy applies them with {{neg|+3%}} Damage Taken for {{w|6}} turns for each type of Proselyte within Vision.
+|#default = }}
+
+|Wormfood= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Object
+|Range=6
+|Energy=13
+|Cooldown=6
+|Backfireper=12.50
+|Backfiredmg=0
+|Requirements=
+|Description=Destroys a flesh-covered corpse and summons {{w|Leechworms}} on the tiles adjacent to it. The number of summoned {{w|Leechworms}} depends on the corpse's size. <br><br>Grants already existing worms {{pos|+9%}} Max Health, {{pos|+9%}} Bleed Chance, and {{pos|+9%}} Crit Chance.  
+|#default = }}
+
+|#default = Data does not exist.}}</includeonly><noinclude>[[Category:Data]]</noinclude>

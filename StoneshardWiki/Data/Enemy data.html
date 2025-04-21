@@ -1,0 +1,518 @@
+<noinclude>Page for all Stoneshard enemy data.
+
+This data is edited with the parser. If you need to edit this manually, here's the order of values as of Rags to Riches patch.
+
+    Tier;ID;AI pattern;Monster Type;Faction;Weapon;Armor Class;Size;Body type (matter);XP;Health;Energy;Protection (Head);Protection (Body);Protection (Hands);Protection (Legs);Accuracy;Dodge Chance;Block Chance;Block Power;Block Recovery;Crit Avoidance;Crit Chance;Crit Efficiency;Counter Chance;Fumble Chance;Backfire Chance;Fortitude;Health Restoration;Energy Restoration;Cooldowns Duration;Move Resistance;Stun Resistance;Bleed Resistance;Bleed Chance;Stun Chance;Daze Chance;Knockback Chance;Immobilization Chance;Stagger Chance;STR;AGL;VIT;PRC;WIL;Damage Reflected;Vision;Bonus Range;Health Drain;Energy Drain;Healing Efficiency;Avoiding Chance (?);Amount of Heads;Amount of Torsos;Amount of Left Legs;Amount of Right Legs;Amount of Left Hands;Amount of Right Hands;IP (?);Pain Resistance;Morale;Threat Time (?);Bodypart Damage;Magic Power;Armor Penetration;Slashing Damage;Piercing Damage;Crushing Damage;Rending Damage;Fire Damage;Shock Damage;Poison Damage;Caustic Damage;Frost Damage;Arcane Damage;Unholy Damage;Sacred Damage;Psionic Damage;Physical Resistance;Nature Resistance;Magic Resistance;Slashing Resistance;Piercing Resistance;Crushing Resistance;Rending Resistance;Fire Resistance;Shock Resistance;Poison Resistance;Caustic Resistance;Frost Resistance;Arcane Resistance;Unholy Resistance;Sacred Resistance;Psionic Resistance;canBlock;canDisarm;canSwim;Swimming Cost;Alternative name (for wiki);Description
+
+==Usage==
+You can copy the values above and copy the line (or lines) you want to edit, and import them into a CSV editor, for example [[https://edit-csv.net https://edit-csv.net]]. Open the Read options and check the "Has Header" checkbox.
+
+You'll get a table format that's easier to read.
+
+To obtain one specific value, use the '''<nowiki>#explode</nowiki>''' parser function.
+
+Used by the {{tl|Enemy}} template.
+</noinclude><includeonly>{{#switch: {{{1}}}
+<!--
+
+----- ENEMIES -----
+
+-->
+
+|Restless = 1;o_zombie;Melee;undead;Undead;claws;Light;medium;flesh;15;80;40;;1;1;1;62;-25;;;;;;;;42;;-10;;3;50;;;20;;;;;;;11;6;17;3;3;;6;;;;25;;1;1;1;1;1;1;75;100;0;;;;;;;;6;;;;;;;1;;;;;;;;;;;;50;;;;100;-50;;;;;1;;The restless are often raised by beginner necromancers. It's much easier to sustain life in those who died fairly recently.
+    
+|Restless Peasant (Axe) = 1;o_zombieAxe;Melee;undead;Undead;axe;Light;medium;flesh;20;80;40;1;2;1;1;62;-25;;;;;;;;42;;-10;;3;50;;;20;;;;;;5;11;6;17;3;3;;6;;;;25;;1;1;1;1;1;1;75;100;0;;5;;5;12;;;;;;;;;;1;;;5;;;;;;;;;50;;;;100;-50;;;;;1;Restless Peasant;Occasionally village folk attempt to fight the undead by themselves, only bolstering their ranks as a result.
+    
+|Restless Peasant (Axe) (Unarmed) = 1;o_zombieAxeNH;Melee;undead;Undead;claws;Light;medium;flesh;20;80;40;1;2;1;1;62;-25;;;;;;;;42;;-10;;3;50;;;20;;;;;;;11;6;17;3;3;;6;;;;25;;1;1;1;1;1;1;75;100;0;;;;;;;;6;;;;;;;1;;;;;;;;;;;;50;;;;100;-50;;;;;1;Restless Peasant (Unarmed);Occasionally village folk attempt to fight the undead by themselves, only bolstering their ranks as a result.
+    
+|Restless Peasant (Dagger) = 1;o_zombieDagger;Melee;undead;Undead;dagger;Light;medium;flesh;20;80;40;1;2;1;1;62;-25;;;;;;;;42;;-10;;3;50;;;20;5;;;;;;11;6;17;3;3;;6;;;;25;;1;1;1;1;1;1;75;100;0;;;;;;10;;;;;;;;;1;;;5;;;;;;;;;50;;;;100;-50;;;;;1;Restless Peasant;Occasionally village folk attempt to fight the undead by themselves, only bolstering their ranks as a result.
+    
+|Restless Peasant (Dagger) (Unarmed) = 1;o_zombieDaggerNH;Melee;undead;Undead;claws;Light;medium;flesh;20;80;40;1;2;1;1;62;-25;;;;;;;;42;;-10;;3;50;;;20;;;;;;;11;6;17;3;3;;6;;;;25;;1;1;1;1;1;1;75;100;0;;;;;;;;6;;;;;;;1;;;;;;;;;;;;50;;;;100;-50;;;;;1;Restless Peasant (Unarmed);Occasionally village folk attempt to fight the undead by themselves, only bolstering their ranks as a result.
+    
+|Restless Peasant (Pitchfork) = 1;o_zombiePitchfork;Melee;undead;Undead;spear;Light;medium;flesh;20;80;40;1;2;1;1;62;-25;;;;;;;;42;;-10;;3;50;;;20;;;;;5;;11;6;17;3;3;;6;;;;25;;1;1;1;1;1;1;75;100;0;;10;;;;11;;;;;;;;;1;;;5;;;;;;;;;50;;;;100;-50;;;;;1;Restless Peasant;Occasionally village folk attempt to fight the undead by themselves, only bolstering their ranks as a result.
+    
+|Restless Peasant (Pitchfork) (Unarmed) = 1;o_zombiePitchforkNH;Melee;undead;Undead;claws;Light;medium;flesh;20;80;40;1;2;1;1;62;-25;;;;;;;;42;;-10;;3;50;;;20;;;;;;;11;6;17;3;3;;6;;;;25;;1;1;1;1;1;1;75;100;0;;;;;;;;6;;;;;;;1;;;;;;;;;;;;50;;;;100;-50;;;;;1;Restless Peasant (Unarmed);Occasionally village folk attempt to fight the undead by themselves, only bolstering their ranks as a result.
+    
+|Risen Recruit (Sword) = 2;o_skeleton_swordsman;Melee;undead;Undead;sword;Light;medium;bones;45;70;50;;;;;74;-10;10;16;10;5;4;;5;28;;;;5;33;10;20;;20;;;;;;18;9;12;6;6;;7;;;;;;1;1;1;1;1;1;85;100;0;;5;;5;16;;;;;;;;;;2;;;;;;;;;;;;;;;;100;-50;;1;;;1;Risen Recruit;Hastily armed under the orders of a necromancer, this skeleton is quite capable of dispatching an inexperienced adversary.
+    
+|Risen Recruit (Axe) = 2;o_skeleton_axeman;Melee;undead;Undead;axe;Light;medium;bones;45;70;50;;;;;74;-10;10;16;10;5;4;10;3;32;;;;5;33;10;20;;;;;;;20;18;9;12;6;6;;7;;;;;;1;1;1;1;1;1;85;100;0;;15;;10;17;;;;;;;;;;2;;;;;;;;;;;;;;;;100;-50;;1;;;1;Risen Recruit;Hastily armed under the orders of a necromancer, this skeleton is quite capable of dispatching an inexperienced adversary.
+    
+|Risen Recruit (Mace) = 2;o_skeleton_maceman;Melee;undead;Undead;mace;Light;medium;bones;45;70;50;;;;;74;-10;10;16;10;5;4;;3;30;;;;5;33;10;20;;;;20;;;;18;9;12;6;6;;7;;;;;;1;1;1;1;1;1;85;100;0;;5;;15;;;16;;;;;;;;2;;;;;;;;;;;;;;;;100;-50;;1;;;1;Risen Recruit;Hastily armed under the orders of a necromancer, this skeleton is quite capable of dispatching an inexperienced adversary.
+    
+|Risen Watchman = 2;o_skeleton_spearman;Melee;undead;Undead;spear;Light;medium;bones;45;70;50;;;;;74;-10;6;13;5;5;4;5;3;29;;;;5;33;10;20;;;;;;20;;12;12;12;9;6;;7;;;;;;1;1;1;1;1;1;85;100;0;;10;;10;;15;;;;;;;;;2;;;;;;;;;;;;;;;;100;-50;;;;;1;;Hastily armed under the orders of a necromancer, this skeleton is quite capable of dispatching an inexperienced adversary.
+    
+|Risen Archer = 2;o_skeleton_bowman;Ranger;undead;Undead;bow;Light;medium;bones;45;65;50;;;;;12;-10;;;;;3;;;31;;;;5;33;10;20;;;;;10;;;9;9;12;15;6;;7;5;;;;;1;1;1;1;1;1;85;100;0;;;;5;;13;;;;;;;;;1;;;;;;;;;;;;;;;;100;-50;;;;;1;;Fragmented consciousness makes it difficult for the undead to use ranged weapons. Nevertheless, they will keep on shooting till the end.
+    
+|Risen Archer (Melee) = 2;o_skeleton_bowman;Melee;undead;Undead;sword;Light;medium;bones;45;65;50;;;;;74;-10;;;;;2;;;34;;;;5;33;10;20;;;;;;;;9;9;12;15;6;;7;;;;;;1;1;1;1;1;1;85;100;0;;;;5;;;12;;;;;;;;2;;;;;;;;;;;;;;;;100;-50;;;;;1;Risen Archer;Fragmented consciousness makes it difficult for the undead to use ranged weapons. Nevertheless, they will keep on shooting till the end.
+    
+|Risen Monk = 2;o_skeleton_monk;Mage;undead;Undead;claws;Light;medium;bones;45;65;70;;1;;;55;-10;;;;;;;;32;;;;8;33;5;5;;;;;;;;9;3;18;15;9;;7;;;5;;;1;1;1;1;1;1;85;100;0;;;5;;;;;8;;;;;;;3;;;;;;;;;;;;;;;;100;-50;;;;;1;;The Order had built many crypts to grant its followers eternal peace after death. Unfortunately, this practice made things easier for the necromantic cults which raised their heads centuries later.
+    
+|Restless Guard (Sword) = 2;o_zombieGuardSword;Melee;undead;Undead;sword;Medium;medium;flesh;35;90;45;8;6;6;6;66;-25;5;11;;;3;;;34;;-10;;3;40;5;10;33;10;;;;;;12;6;18;3;3;;6;;;;25;;1;1;1;1;1;1;80;100;0;;5;;5;14;;;;;;;;;;2;;;10;;;;;;;;;50;;;;100;-50;;;;;1;Restless Guard;This restless is doomed to hunt those he once swore to protect.
+    
+|Restless Guard (Sword) (Unarmed) = 2;o_zombieGuardSwordNH;Melee;undead;Undead;claws;Medium;medium;flesh;35;90;45;8;6;6;6;66;-25;;;;;;;;34;;-10;;3;40;5;10;33;;;;;;;12;6;18;3;3;;6;;;;25;;1;1;1;1;1;1;80;100;0;;;;;;;;8;;;;;;;2;;;10;;;;;;;;;50;;;;100;-50;;;;;1;Restless Guard (Unarmed);This restless is doomed to hunt those he once swore to protect.
+    
+|Restless Guard (Spear) = 2;o_zombieGuardSpear;Melee;undead;Undead;spear;Medium;medium;flesh;35;90;45;8;6;6;6;66;-25;5;11;;;3;;;34;;-10;;3;40;5;10;33;;;;;10;;12;6;18;3;3;;6;;;;25;;1;1;1;1;1;1;80;100;0;;10;;5;;14;;;;;;;;;2;;;10;;;;;;;;;50;;;;100;-50;;;;;1;Restless Guard;This restless is doomed to hunt those he once swore to protect.
+    
+|Restless Guard (Spear) (Unarmed) = 2;o_zombieGuardSpearNH;Melee;undead;Undead;claws;Medium;medium;flesh;35;90;45;8;6;6;6;66;-25;;;;;;;;34;;-10;;3;40;5;10;33;;;;;;;12;6;18;3;3;;6;;;;25;;1;1;1;1;1;1;80;100;0;;;;;;;;8;;;;;;;2;;;10;;;;;;;;;50;;;;100;-50;;;;;1;Restless Guard (Unarmed);This restless is doomed to hunt those he once swore to protect.
+    
+|Restless Guard (Halberd) = 2;o_zombieGuardHalberd;Melee;undead;Undead;spear;Medium;medium;flesh;35;90;45;8;6;6;6;66;-25;5;11;;;3;;;34;;-10;;3;40;5;10;33;5;;;;5;;12;6;18;3;3;;6;;;;25;;1;1;1;1;1;1;80;100;0;;15;;5;14;;;;;;;;;;2;;;10;;;;;;;;;50;;;;100;-50;;;;;1;Restless Guard;This restless is doomed to hunt those he once swore to protect.
+    
+|Restless Guard (Halberd) (Unarmed) = 2;o_zombieGuardHalberdNH;Melee;undead;Undead;claws;Medium;medium;flesh;35;90;45;8;6;6;6;66;-25;;;;;;;;34;;-10;;3;40;5;10;33;;;;;;;12;6;18;3;3;;6;;;;25;;1;1;1;1;1;1;80;100;0;;;;;;;;8;;;;;;;2;;;10;;;;;;;;;50;;;;100;-50;;;;;1;Restless Guard (Unarmed);This restless is doomed to hunt those he once swore to protect.
+    
+|Restless Brigand = 2;o_zombieBrigandSword;Melee;undead;Undead;sword;Light;medium;flesh;35;80;45;2;6;4;4;66;-25;4;8;;;3;;4;34;;-10;;3;40;5;10;33;15;;;;;;12;6;18;3;3;;6;;;;25;;1;1;1;1;1;1;80;100;0;;10;;10;17;;;;;;;;;;2;;;10;;;;;;;;;50;;;;100;-50;;;;;1;;Attempting to plunder an ancient crypt seldom goes according to plan...
+    
+|Restless Brigand (Unarmed) = 2;o_zombieBrigandSwordNH;Melee;undead;Undead;claws;Light;medium;flesh;35;80;45;2;6;4;4;66;-25;;;;;;;;34;;-10;;3;40;5;10;33;;;;;;;12;6;18;3;3;;6;;;;25;;1;1;1;1;1;1;80;100;0;;;;;;;;8;;;;;;;2;;;10;;;;;;;;;50;;;;100;-50;;;;;1;Restless Brigand (Unarmed);He may be dead, mindless, and robbed of free will, but his hands still remember how to handle a weapon.
+    
+|Risen Squire (Sword) = 3;o_skeleton_footman;Melee;undead;Undead;sword;Medium;medium;bones;70;85;60;6;6;4;4;81;-10;16;22;15;10;8;5;10;16;;15;;10;25;15;30;;30;;;;;;20;10;13;7;7;;7;;;;;;1;1;1;1;1;1;90;100;0;;10;;10;20;;;;;;;;;;4;;;15;;;;;;;;;;;;;100;-50;;1;;;1;Risen Squire;It was the common soldiers of the Order who bore the brunt of the holy wars. And while many now rest in unmarked graves, the most valiant were honored with a place in the crypts.
+    
+|Risen Squire (Axe) = 3;o_skeleton_militiaman;Melee;undead;Undead;axe;Medium;medium;bones;70;85;60;6;6;4;4;81;-10;16;22;15;10;8;15;6;19;;15;;10;25;15;30;;;;;;;30;20;10;13;7;7;;7;;;;;;1;1;1;1;1;1;90;100;0;;25;;20;21;;;;;;;;;;4;;;15;;;;;;;;;;;;;100;-50;;1;;;1;Risen Squire;It was the common soldiers of the Order who bore the brunt of the holy wars. And while many now rest in unmarked graves, the most valiant were honored with a place in the crypts.
+    
+|Risen Squire (Mace) = 3;o_skeleton_defender;Melee;undead;Undead;mace;Medium;medium;bones;70;85;60;8;6;4;4;81;-10;16;22;15;10;8;5;6;18;;25;;10;25;15;30;;;;30;;;;20;10;13;7;7;;7;;;;;;1;1;1;1;1;1;90;100;0;;10;;30;;;20;;;;;;;;4;;;15;;;;;;;;;;;;;100;-50;;1;;;1;Risen Squire;It was the common soldiers of the Order who bore the brunt of the holy wars. And while many now rest in unmarked graves, the most valiant were honored with a place in the crypts.
+    
+|Risen Sariant = 3;o_skeleton_guard;Melee;undead;Undead;spear;Medium;medium;bones;70;85;60;8;6;4;4;81;-10;10;18;10;10;8;10;6;17;;15;;10;25;15;30;;;;;;30;;13;13;13;10;7;;7;;;;;;1;1;1;1;1;1;90;100;0;;15;;20;;18;;;;;;;;;4;;;15;;;;;;;;;;;;;100;-50;;;;;1;;Somewhere deep in his tormented soul, this soldier is probably glad to be back at his post.
+    
+|Risen Bowman = 3;o_skeleton_ranger;Ranger;undead;Undead;bow;Light;medium;bones;70;85;60;2;4;2;2;17;-10;;;;5;7;5;;18;;15;;10;25;15;30;;;;;30;;;10;10;13;16;7;;7;6;;;;;1;1;1;1;1;1;90;100;0;;10;;10;;16;;;;;;;;;2;;;10;;;;;;;;;;;;;100;-50;;;;;1;;What this skeleton lacks in accuracy, it more than makes up for with an utter absence of fear and hesitation.
+    
+|Risen Bowman (Melee) = 3;o_skeleton_rangerMelee;Melee;undead;Undead;bow;Light;medium;bones;70;75;60;2;4;2;2;81;-10;;;;5;5;5;;20;;15;;10;25;15;30;;;;;;;;10;10;13;16;7;;7;;;;;;1;1;1;1;1;1;90;100;0;;5;;5;;;17;;;;;;;;4;;;10;;;;;;;;;;;;;100;-50;;;;;1;Risen Bowman;What this skeleton lacks in accuracy, it more than makes up for with an utter absence of fear and hesitation.
+    
+|Risen Priest = 3;o_skeleton_priest;Mage;undead;Undead;claws;Light;medium;bones;70;75;85;1;2;1;1;60;-10;;;;;;;;19;;15;;15;25;10;10;;;;;;;;10;3;20;16;10;;7;;;10;;;1;1;1;1;1;1;90;100;0;;;15;;;;;9;;;;;;;6;;;5;;;;;;;;;;;;;100;-50;;;;;1;;A stark reminder that righteousness in life and unwavering devotion to one's vows do not guarantee peace in death.
+    
+|Ghast = 3;o_ghast;Mage;undead;Undead;claws;Light;medium;flesh;85;65;120;;2;1;1;60;-15;;;;;;;;17;20;;;25;-10;5;;200;;;;;;;7;10;10;20;26;;8;;5;20;;;1;1;1;1;1;1;100;100;0;;;20;5;;;;10;;;;;;;7;;;10;15;20;;;;;;;66;;;;100;-50;;;;;1;;Necromancy is a heavy burden, and not every warlock is capable of carrying it. Those who lose their minds to madness transform into ghasts, malicious creatures obsessed with death.
+    
+|Restless Soldier (Mace) = 3;o_zombieSoldierMace;Melee;undead;Undead;mace;Medium;medium;flesh;60;95;50;7;6;6;6;72;-25;8;15;;;5;;;24;;-10;;5;33;10;15;50;;;20;;;;13;7;20;3;3;;6;;;;;;1;1;1;1;1;1;85;100;0;;10;;20;;;17;;;;;;;;3;;;15;;;;;;;;;50;;;;100;-50;;;;;1;Restless Soldier;He may be dead, mindless, and robbed of free will, but his hands still remember how to handle a weapon.
+    
+|Restless Soldier (Mace) (Unarmed) = 3;o_zombieSoldierMaceNH;Melee;undead;Undead;claws;Medium;medium;flesh;60;95;50;7;6;6;6;72;-25;;;;;;;;24;;-10;;5;33;10;15;50;;;;;;;13;7;20;3;3;;6;;;;;;1;1;1;1;1;1;85;100;0;;;;;;;;8;;;;;;;3;;;15;;;;;;;;;50;;;;100;-50;;;;;1;Restless Soldier (Unarmed);He may be dead, mindless, and robbed of free will, but his hands still remember how to handle a weapon.
+    
+|Restless Soldier (Axe) = 3;o_zombieSoldierAxe;Melee;undead;Undead;axe;Medium;medium;flesh;60;95;50;11;6;6;6;72;-25;8;15;;;5;10;;24;;-10;;5;33;10;15;50;;;;;;20;13;7;20;3;3;;6;;;;;;1;1;1;1;1;1;85;100;0;;20;;15;17;;;;;;;;;;3;;;15;;;;;;;;;50;;;;100;-50;;;;;1;Restless Soldier;He may be dead, mindless, and robbed of free will, but his hands still remember how to handle a weapon.
+    
+|Restless Soldier (Axe) (Unarmed) = 3;o_zombieSoldierAxeNH;Melee;undead;Undead;claws;Medium;medium;flesh;60;95;50;11;6;6;6;72;-25;;;;;;;;24;;-10;;5;33;10;15;50;;;;;;;13;7;20;3;3;;6;;;;;;1;1;1;1;1;1;85;100;0;;;;;;;;8;;;;;;;3;;;15;;;;;;;;;50;;;;100;-50;;;;;1;Restless Soldier (Unarmed);He may be dead, mindless, and robbed of free will, but his hands still remember how to handle a weapon.
+    
+|Restless Soldier (Halberd) = 3;o_zombieSoldierHalberd;Melee;undead;Undead;spear;Medium;medium;flesh;60;110;50;12;10;8;8;68;-25;12;20;;;8;5;;31;;-10;;5;33;10;15;50;25;;;;;25;13;7;20;3;3;;6;;;;;;1;1;1;1;1;1;85;100;0;;15;;15;21;;;;;;;;;;3;;;15;;;;;;;;;50;;;;100;-50;;;;;1;Restless Soldier;He may be dead, mindless, and robbed of free will, but his hands still remember how to handle a weapon.
+    
+|Restless Soldier (Halberd) (Unarmed) = 3;o_zombieSoldierHalberdNH;Melee;undead;Undead;claws;Medium;large;flesh;60;110;50;12;10;8;8;72;-25;;;;;;;;24;;-10;;5;33;10;15;50;;;;;;;13;7;20;3;3;;6;;;;;;1;1;1;1;1;1;85;100;0;;;;;;;;8;;;;;;;3;;;15;;;;;;;;;50;;;;100;-50;;;;;1;Restless Soldier (Unarmed);He may be dead, mindless, and robbed of free will, but his hands still remember how to handle a weapon.
+    
+|Risen Companion (Sword) = 4;o_skeleton_soldier;Melee;undead;Undead;sword;Heavy;medium;bones;100;100;70;12;18;10;10;89;-10;24;30;20;20;16;10;15;7;;20;;15;20;25;45;;40;;;;;;21;11;14;7;7;;8;;;;;;1;1;1;1;1;1;;100;0;;15;;20;23;;;;;;;;;;6;;;25;;;;;;;;;;;;;100;-50;;1;;;1;Risen Companion;The people of Aldor bury their noble warriors in full battle gear, so that they can defend themselves in the afterlife. And defend they do...
+    
+|Risen Companion (Axe) = 4;o_skeleton_warrior;Melee;undead;Undead;axe;Heavy;medium;bones;100;100;70;11;18;10;10;89;-10;24;30;20;20;16;25;10;8;;20;;15;20;25;45;;;;;;;40;21;11;14;7;7;;8;;;;;;1;1;1;1;1;1;;100;0;;30;;35;24;;;;;;;;;;6;;;25;;;;;;;;;;;;;100;-50;;1;;;1;Risen Companion;The people of Aldor bury their noble warriors in full battle gear, so that they can defend themselves in the afterlife. And defend they do...
+    
+|Risen Companion (Mace) = 4;o_skeleton_armorbreaker;Melee;undead;Undead;mace;Heavy;medium;bones;100;100;70;11;18;10;10;89;-10;24;30;20;20;16;10;10;8;;30;;15;20;25;45;;;;40;;;;21;11;14;7;7;;8;;;;;;1;1;1;1;1;1;;100;0;;15;;40;;;23;;;;;;;;6;;;25;;;;;;;;;;;;;100;-50;;1;;;1;Risen Companion;The people of Aldor bury their noble warriors in full battle gear, so that they can defend themselves in the afterlife. And defend they do...
+    
+|Risen Sergeant = 4;o_skeleton_halberdier;Melee;undead;Undead;spear;Heavy;medium;bones;100;100;70;10;18;10;10;89;-10;15;25;15;20;16;15;10;7;;20;;15;20;25;45;;;;;;30;30;14;14;14;11;7;;8;;;;;;1;1;1;1;1;1;;100;0;;20;;35;;22;;;;;;;;;6;;;25;;;;;;;;;;;;;100;-50;;;;;1;;The people of Aldor bury their noble warriors in full battle gear, so that they can defend themselves in the afterlife. And defend they do...
+    
+|Risen Crossbowman = 4;o_skeleton_crossbowman;Ranger;undead;Undead;crossbow;Medium;medium;bones;100;90;70;8;10;8;8;33;-10;;;;10;14;10;;8;;20;;15;20;25;45;;;;;;35;;11;11;14;18;7;;8;7;;;;;1;1;1;1;1;1;;100;0;;15;;30;;24;;;;;;;;;4;;;20;;;;;;;;;;;;;100;-50;;;;;1;;Though the crossbow in the skeletal hands threatens to crumble to dust at any moment, each bolt launched with it remains as deadly as ever.
+    
+|Risen Crossbowman (Melee) = 4;o_skeleton_crossbowman;Melee;undead;Undead;sword;Medium;medium;bones;100;90;70;8;10;8;8;89;-10;;;;10;10;10;;8;;20;;15;20;25;45;;;;;;;;11;11;14;18;7;;8;;;;;;1;1;1;1;1;1;;100;0;;5;;20;;;20;;;;;;;;6;;;20;;;;;;;;;;;;;100;-50;;;;;1;Risen Crossbowman;Though the crossbow in the skeletal hands threatens to crumble to dust at any moment, each bolt launched with it remains as deadly as ever.
+    
+|Risen Chaplain = 4;o_skeleton_highpriest;Mage;undead;Undead;claws;Light;medium;bones;100;90;100;1;3;1;1;66;-10;;;;;;;;8;;;;20;20;15;17;;;;;;;;11;4;21;18;11;;8;;;15;;;1;1;1;1;1;1;;100;0;;;26;;;;;11;;;;;;;9;;;5;;;;;;;;;;;;;100;-50;;;;;1;;Only a century ago, the high clergy wielded power that even kings had to reckon with. What would the Order's founding fathers think of the Hieron today?..
+    
+|Accursed Ghast = 4;o_ghast_accursed;Mage;undead;Undead;claws;Light;medium;flesh;120;75;145;;3;2;2;66;-15;;;;;;;;7;10;;;35;-20;10;;200;;;;;;;7;11;11;21;28;;9;1;10;35;;;1;1;1;1;1;1;;100;0;;;40;10;;;;10;;;;;;;10;;;15;25;35;;;;;;;66;;;;100;-50;;;;;1;;No matter how withered its victim's body may be, the ghast curse will sustain a semblance of life and conscience in it for years on end.
+    
+|Putrid Restless Soldier (Halberd) = 4;o_zombieHalberdDecayedSoldier;Melee;undead;Undead;spear;Medium;medium;flesh;80;115;60;10;14;10;10;80;-25;18;27;;10;10;10;;15;;-10;;8;25;15;23;66;25;;;;;25;14;7;21;4;4;;7;;;;;;1;1;1;1;1;1;80;100;0;;20;;20;19;;;;;;4;;;;4;;;20;;;;;;;;;66;;;;100;-50;;;;;1;Putrid Restless Soldier;This restless' decay is so far-gone that it can no longer be halted even by magic. A couple more weeks, and the maggot-infested flesh will begin to peel off, revealing the bare bone beneath.
+    
+|Putrid Restless Soldier (Halberd) (Unarmed) = 4;o_zombieHalberdDecayedSoldierNH;Melee;undead;Undead;claws;Medium;medium;flesh;80;115;60;10;14;10;10;80;-25;;;;10;;;;15;;-10;;8;25;15;23;66;;;;;;;14;7;21;4;4;;7;;;;;;1;1;1;1;1;1;80;100;0;;;;;;;;8;;;;;;;4;;;20;;;;;;;;;66;;;;100;-50;;;;;1;Putrid Restless Soldier (Unarmed);This restless' decay is so far-gone that it can no longer be halted even by magic. A couple more weeks, and the maggot-infested flesh will begin to peel off, revealing the bare bone beneath.
+    
+|Putrid Restless Soldier (Two-Handed Mace) = 4;o_zombie2HMaceDecayedSoldier;Melee;undead;Undead;2hmace;Medium;medium;flesh;80;115;60;11;18;10;10;80;-25;18;27;;10;10;15;;15;;-10;;8;25;15;23;66;;25;25;;;;14;7;21;4;4;;7;;;;;;1;1;1;1;1;1;80;100;0;;25;;35;;;22;;;;4;;;;4;;;20;;;;;;;;;66;;;;100;-50;;;;;1;Putrid Restless Soldier;This restless' decay is so far-gone that it can no longer be halted even by magic. A couple more weeks, and the maggot-infested flesh will begin to peel off, revealing the bare bone beneath.
+    
+|Putrid Restless Soldier (Two-Handed Mace) (Unarmed) = 4;o_zombie2HMaceDecayedSoldierNH;Melee;undead;Undead;claws;Medium;medium;flesh;80;115;60;11;18;10;10;80;-25;;;;10;;;;15;;-10;;8;25;15;23;66;;;;;;;14;7;21;4;4;;7;;;;;;1;1;1;1;1;1;80;100;0;;;;;;;;8;;;;;;;4;;;20;;;;;;;;;66;;;;100;-50;;;;;1;Putrid Restless Soldier (Unarmed);This restless' decay is so far-gone that it can no longer be halted even by magic. A couple more weeks, and the maggot-infested flesh will begin to peel off, revealing the bare bone beneath.
+    
+|Putrid Restless Soldier (Two-Handed Axe) = 4;o_zombie2HAxeDecayedSoldier;Melee;undead;Undead;2haxe;Medium;medium;flesh;80;115;60;8;18;10;10;80;-25;18;27;;10;10;15;;15;;-10;;8;25;15;23;66;;;;;;35;14;7;21;4;4;;7;;;;;;1;1;1;1;1;1;80;100;0;;30;;25;22;;;;;;4;;;;4;;;20;;;;;;;;;66;;;;100;-50;;;;;1;Putrid Restless Soldier;This restless' decay is so far-gone that it can no longer be halted even by magic. A couple more weeks, and the maggot-infested flesh will begin to peel off, revealing the bare bone beneath.
+    
+|Putrid Restless Soldier (Two-Handed Axe) (Unarmed) = 4;o_zombie2HAxeDecayedSoldierNH;Melee;undead;Undead;claws;Medium;medium;flesh;80;115;60;8;18;10;10;80;-25;;;;10;;;;15;;-10;;8;25;15;23;66;;;;;;;14;7;21;4;4;;7;;;;;;1;1;1;1;1;1;80;100;0;;;;;;;;10;;;;;;;4;;;20;;;;;;;;;66;;;;100;-50;;;;;1;Putrid Restless Soldier (Unarmed);This restless' decay is so far-gone that it can no longer be halted even by magic. A couple more weeks, and the maggot-infested flesh will begin to peel off, revealing the bare bone beneath.
+    
+|Risen Knight-Brother (Two-Handed Axe) = 5;o_skeleton_knightAxe;Melee;undead;Undead;2haxe;Heavy;medium;bones;125;120;100;8;20;16;16;95;-10;25;33;20;35;29;40;10;-5;;30;;20;15;40;60;;;;;;;65;23;11;15;11;8;;9;;;;;;1;1;1;1;1;1;;100;0;;30;;50;36;;;;;;;;;;8;;;30;;;;;;;;;;;;;100;-50;;;;;1;Risen Knight-Brother;Once he faithfully served the royal court. Now he serves again... to other, less worthy masters.
+    
+|Risen Knight-Brother (Two-Handed Sword) = 5;o_skeleton_knightSword;Melee;undead;Undead;2hsword;Heavy;medium;bones;125;120;100;15;18;16;16;95;-10;29;40;20;35;29;30;15;-5;;30;;20;15;40;60;;65;;;;;;23;11;15;11;8;;9;;;;;;1;1;1;1;1;1;;100;0;;25;;40;35;;;;;;;;;;8;;;30;;;;;;;;;;;;;100;-50;;;;;1;Risen Knight-Brother;Once he faithfully served the royal court. Now he serves again... to other, less worthy masters.
+    
+|Risen Knight-Brother (Two-Handed Mace) = 5;o_skeleton_knightHammer;Melee;undead;Undead;2hmace;Heavy;medium;bones;125;120;100;12;18;14;14;95;-10;25;33;20;35;29;35;10;-5;;30;;20;15;40;60;;;50;;;;;23;11;15;11;8;;9;;;;;;1;1;1;1;1;1;;100;0;;20;;65;;;35;;;;;;;;8;;;30;;;;;;;;;;;;;100;-50;;;;;1;Risen Knight-Brother;Once he faithfully served the royal court. Now he serves again... to other, less worthy masters.
+    
+|Risen Guardsman (Sword) = 5;o_skeleton_guardianSword;Melee;undead;Undead;sword;Heavy;medium;bones;125;150;110;20;24;18;18;89;-10;38;50;50;50;21;15;33;-4;;30;;15;15;40;60;;50;;;;;;23;8;23;8;8;;9;;;;;;1;1;1;1;1;1;;100;0;;15;;30;30;;;;;;;;;;8;;;35;;;;;;;;;;;;;100;-50;;1;;;1;Risen Guardsman;A paragon of valor in life, a slave to a heretic mage in death... It's hard to imagine a more cruel fate for this former knight.
+    
+|Risen Guardsman (Mace) = 5;o_skeleton_guardianMace;Melee;undead;Undead;mace;Heavy;medium;bones;125;150;110;16;24;20;20;89;-10;38;50;50;50;21;15;25;-4;;40;;15;15;40;60;;;35;35;;;;23;8;23;8;8;;9;;;;;;1;1;1;1;1;1;;100;0;;15;;45;;;30;;;;;;;;8;;;35;;;;;;;;;;;;;100;-50;;1;;;1;Risen Guardsman;A paragon of valor in life, a slave to a heretic mage in death... It's hard to imagine a more cruel fate for this former knight.
+    
+|Risen Guardsman (Two-Handed Axe) = 5;o_skeleton_guardianAxe;Melee;undead;Undead;2haxe;Heavy;medium;bones;125;150;110;10;30;24;24;89;-10;21;28;33;50;24;25;15;-4;;30;;15;15;40;60;;;;;;;50;23;8;23;8;8;;9;;;;;;1;1;1;1;1;1;;100;0;;35;;40;33;;;;;;;;;;8;;;35;;;;;;;;;;;;;100;-50;;;;;1;Risen Guardsman;A paragon of valor in life, a slave to a heretic mage in death... It's hard to imagine a more cruel fate for this former knight.
+    
+|Risen Guardsman (Spear) = 5;o_skeleton_guardianSpear;Melee;undead;Undead;spear;Heavy;medium;bones;125;150;110;10;30;24;24;89;-10;21;28;33;50;24;20;20;-4;;30;;15;15;40;60;;;;;;65;;23;8;23;8;8;;9;;;;;;1;1;1;1;1;1;;100;0;;20;;40;;30;;;;;;;;;8;;;35;;;;;;;;;;;;;100;-50;;;;;1;Risen Guardsman;A paragon of valor in life, a slave to a heretic mage in death... It's hard to imagine a more cruel fate for this former knight.
+    
+|Ancient Ghast = 5;o_ghast_elder;Mage;undead;Undead;claws;Light;medium;flesh;150;90;175;;4;2;2;74;-15;;;;;;;;3;5;;;50;-33;20;;200;;;;;;;8;11;11;23;30;;10;2;15;50;;;1;1;1;1;1;1;;100;0;;;70;15;;;;10;;;;;;;13;;;20;35;50;;;;;;;66;;;;100;-50;;;;;1;;Before finally succumbing to long-awaited death, the most insidious of necromancers may continue existing for centuries as ghasts.
+    
+|Occultist = 1;o_occultist;Mage;human;Undead;dagger;Light;medium;flesh;60;65;95;;2;1;1;66;-5;;;;;;;;36;33;;9;20;26;;;;;;;;;;8;11;8;14;14;;8;-1;;;;;1;1;1;1;1;1;;10;66;;;-10;5;;10;;;;;;;;;3;;;5;10;10;;;;;;;;;;;25;-50;;;1;1;1;;Studying the occult is a slippery slope with few chances to turn back. And sooner or later, anyone who fails to restrain their curiosity becomes slaves to it instead.
+    
+|Archivist = 2;o_archivist;Mage;human;Undead;claws;Light;medium;flesh;135;75;120;;3;2;2;70;-5;;;;9;;;;29;20;;6;33;6;;10;5;;;;;;;9;12;9;18;12;;8;1;;;;;1;1;1;1;1;1;;15;33;;;15;;;;;9;;;;;;;6;;;10;25;25;;;;;;;;;;;50;-50;;;1;1;1;;This warlock has devoted his life to the search and study of occult manuscripts - and he'll stop at nothing to acquire the next forbidden text.
+    
+|Necromancer (Staff) = 2;o_necromancer;Melee;human;Undead;2hStaff;Light;medium;flesh;135;80;105;;3;2;2;74;-5;;;;3;;;;29;25;;6;25;9;;15;10;;;;;;;12;9;9;15;15;;8;;;;;;1;1;1;1;1;1;;15;33;;;10;10;;;13;;;;;;;;6;;;10;15;15;;;;;;;;;;;33;-50;;;1;1;1;Necromancer;One of the hierarchs of the secret cult that is growing in strength in Aldor. He has perfectly mastered the art of raising the dead.
+    
+|Undertaker = 3;o_undertaker;Mage;human;Undead;2hStaff;Light;medium;flesh;210;80;160;;3;1;1;68;-9;;;;13;;;;17;20;;3;40;-26;;20;15;;;;;;;13;10;13;13;16;;8;;;;;;1;1;1;1;1;1;;25;0;;;20;15;;;14;;;;;;;;9;;;15;20;20;;;;;;;;;;;50;-50;;;1;1;1;;Undertakers wander the world collecting suitable corpses for their experiments and defiling one cemetery after another.
+    
+|Ritualist = 3;o_ritualist;Mage;human;Undead;2hStaff;Light;medium;flesh;210;90;125;;4;2;2;77;-5;;;;9;;;;17;15;;3;30;-13;;30;20;;;;;;;10;13;10;13;20;;9;2;;;;;1;1;1;1;1;1;;25;0;;;30;20;;;16;;;;;;;;6;;;15;25;25;;;;;;;;;;;66;-50;;;1;1;1;;Rituals of high necromancy require the caster to give up the most important thing - their free will. Those unwilling to take the necessary step meet their death much sooner than they'd prefer.
+    
+|Mortician = 4;o_mortician;Mage;human;Undead;claws;Light;medium;flesh;300;95;190;;4;2;2;71;-9;;;;26;;;;7;15;;1;35;-33;;25;33;;;;;;;14;11;14;14;18;;9;1;;;;;1;1;1;1;1;1;;33;0;;;35;10;;;;6;;;;;;;18;;;20;30;30;;;;;;;;;;;66;-50;;;1;1;1;;The withered fingers of the mortician have brushed against the bones of peasants, priests, knights, and kings. To those who serve death, it's all the same.
+    
+|Wraithbinder = 5;o_wraithbinder;Mage;human;Undead;claws;Light;medium;flesh;375;120;220;;5;3;3;84;-5;;;;33;;;;-5;6;;1;66;-66;;33;50;;;;;;;11;15;8;15;26;;10;4;;33;;;1;1;1;1;1;1;;66;0;;;90;13;;;;9;;;;;6;;18;;;25;35;35;;;;;;;;;;;75;-50;;;1;1;1;;Summoning a dead man's spirit in its purest form, skipping the search for a suitable vessel altogether, is a pinnacle of the art of necromancy.
+    
+|Husk = 3;o_armored_husk;Melee;undead;Undead;2hmace;Light;large;bones;210;180;100;;30;16;16;68;-25;;;;;20;66;;28;;-33;;5;33;35;;;;40;;40;;40;33;3;23;3;3;;7;;;;;;1;1;1;1;1;1;90;;0;;35;;35;;;30;;;;;;;;3;;;25;;;;;;;;;;;;;50;-50;;;1;1;1;;Through a special ritual, its soul was stripped of memories and self-awareness, imbuing the body with unnatural strength and durability upon its return.
+    
+|Crypt Keeper = 4;o_crypt_warden;Melee;undead;Undead;spear;Light;medium;bones;300;165;170;9;9;6;6;85;-5;15;15;;35;15;;15;12;20;35;;35;;25;35;;;;33;;;33;18;7;21;11;14;;8;1;10;20;;;1;1;1;1;1;1;;;0;;10;15;15;;;15;;2;;;;;;9;;;20;33;33;;;;;;;;;;;50;-50;;;1;1;1;;Cursed to endlessly roam the crypt's halls, the keeper's sole duty is to preserve the ghostly light of its candles - a twisted mockery of the Hieronite burial customs.
+    
+|Restless Hero = 4;o_restless_hero;Melee;undead;Undead;2haxe;Medium;medium;flesh;300;175;80;16;18;12;12;89;-25;21;19;;13;10;25;;9;;;;10;20;30;50;70;40;;;;;40;21;11;21;11;7;;8;;;;;;1;1;1;1;1;1;;100;0;;25;;35;26;;;;;;;;;;6;;;30;15;15;;;;;;;;;;;100;-50;;;;;1;;Honor, valor, suffering, and rage - all melded together in the fading consciousness of the restless hero, bracing for the final stand in his own tomb.
+    
+|Restless Hero (Unarmed) = 4;o_restless_heroNH;Melee;undead;Undead;claws;Medium;medium;flesh;300;175;80;16;18;12;12;80;;;;;;5;;;50;;;;10;20;25;40;70;;;;;;;21;11;21;11;7;;8;;;;;;1;1;1;1;1;1;;100;0;;10;;5;;;;12;;;;;;;6;;;30;15;15;;;;;;;;;;;100;-50;;;;;1;Restless Hero (Unarmed);N/A
+    
+|Risen Marshal = 5;o_revenant;Melee;undead;Undead;2hsword;Light;medium;flesh;375;165;160;6;30;26;26;105;-15;46;60;35;26;30;25;25;5;;33;9;25;13;33;50;80;75;;;;;50;19;15;15;15;11;;9;1;10;10;;;1;1;1;1;1;1;;100;0;;50;;50;33;;;;;;;;;;13;;;33;33;33;;;;;;;;;;;100;-50;;;1;1;1;;After their death, commanders of the Order were to be embalmed and buried in hidden tombs to protect their bodies from potential defilers. Or was it to better preserve them for the future to come?..
+    
+|Spectral Herald = 5;o_spectral_herald;Mage;spectre;Undead;claws;Light;medium;ectoplasm;375;60;100;;;;;90;90;;;;66;;;;3;;50;;75;-33;200;200;200;;;;;;;8;8;8;23;34;;10;3;10;75;;;1;1;1;1;1;1;999;100;0;;;99;66;;;;9;;;;;6;;9;;;13;13;13;;;;;;;;;;;50;-50;;;1;1;1;;In folk tales, the heralds are spoken of in hushed tones - their appearance inevitably marks the beginning of a great disaster.
+    
+|Small Ghoul = 2;o_ghoul_small;Melee;undead;Undead;claws;Light;small;flesh;40;70;60;;;;;70;25;;;;3;;;5;32;;-10;5;10;;;;10;10;;;;10;;12;18;12;12;6;;7;;5;;;35;1;1;1;1;1;1;;;110;;5;;5;;;;14;;;;;;;1;;;;10;10;;;;;-25;;;;;;100;-50;;;;;1;;People cursed during their lifetime turn into ghouls. Now their hunger can only be satisfied by fresh carrion.
+    
+|Ghoul = 3;o_ghoul_medium;Melee;undead;Undead;claws;Light;medium;flesh;70;90;80;;;;;75;20;;;;9;5;10;10;19;;;10;25;;20;15;20;25;;;;20;;16;16;16;13;7;;8;1;10;;;20;1;1;1;1;1;1;;;;;15;;10;;;;17;;;;;;;3;;;10;20;20;;;;;-25;;;;;;100;-50;;;;;1;;People cursed during their lifetime turn into ghouls. Now their hunger can only be satisfied by fresh carrion.<br>This ghoul has fed recently.
+    
+|Large Ghoul = 4;o_ghoul_large;Melee;undead;Undead;claws;Light;large;flesh;100;120;100;;;;;85;10;;;;13;15;25;25;8;;25;15;35;-20;40;30;40;40;;;;;30;21;14;21;14;7;;9;2;25;;;10;1;1;1;1;1;1;100;;0;;30;;20;;;;21;;;;;;;6;;;20;30;30;;;;;-25;;;;;;100;-50;;;;;1;;People cursed during their lifetime turn into ghouls. Now their hunger can only be satisfied by fresh carrion.<br>This ghoul has grown rather fat.
+    
+|Well of Souls = 1;o_soul_salvatory;Melee;spawner;Undead;;Heavy;large;other;100;60;500;;;;;;-25;;;;;;;;;;;;;;200;200;200;;;;;;;0;0;0;0;0;;8;;;;;100;;1;;;;;999;100;0;;;;;;;;;;;;;;;;;;50;75;75;;15;-33;;;;;;;;100;-50;;;;;0;;The souls trapped inside will never find peace.
+    
+|Wraith Squire = 2;o_ghost_squire;Melee;spectre;Undead;spear;Light;medium;ectoplasm;80;20;130;;;;;66;40;;;;50;4;;;32;;50;;;;200;200;200;;;;;;;12;12;9;12;12;;7;;10;25;;100;1;1;;;;;999;100;0;;;;33;;9;;;;;;;4;;5;;;;;;;;;;;;;;;;100;-50;;;;;0;;To be anointed as knights, squires of the Order had to first prove their courage on the battlefield. Very few survived the ordeal - but now, many years after their death, some of them were given a second chance.
+    
+|Wraith Sergeant = 3;o_ghost_sergeant;Melee;spectre;Undead;2hsword;Light;medium;ectoplasm;120;25;150;;;;;72;50;;;;50;9;5;;19;;50;;;-10;200;200;200;;;;;;;13;13;10;13;13;;8;;10;30;;100;1;1;;;;;999;100;0;;;;50;12;;;;;;;;4;;8;;;3;6;6;;;;;;;;;;;100;-50;;;;;0;;The minds of the Order's sergeants are clouded with dark magic. Instead of the crumbling crypt hallways they see the narrow streets of Eastern cities: the first Radiant War is in full swing - and by the Host, they won't disgrace their faith.
+    
+|Wraith Warrior = 3;o_ghost_knight;Melee;spectre;Undead;sword;Light;medium;ectoplasm;120;25;150;;;;;68;50;18;14;100;50;5;10;;19;;50;;;-10;200;200;200;;;;;;;13;13;10;13;13;;8;;10;35;;100;1;1;;;;;999;100;0;;;;66;12;;;;;;;;4;;7;;;6;9;9;;;;;;;;;;;100;-50;;1;;;0;;Legends say that the templars who break their Oath can never find peace, bound to keep on returning to the living world time and time again.
+    
+|Wraith Templar = 4;o_ghost_templar;Melee;spectre;Undead;mace;Light;medium;ectoplasm;160;30;180;;;;;75;60;27;19;100;50;10;15;;3;;50;;;-25;200;200;200;;;;;;;14;14;11;14;14;;9;;10;40;;100;1;1;;;;;999;100;0;;;;75;;;13;;;;;;4;;10;;;9;13;13;;;;;;;;;;;100;-50;;1;;;0;;The inexplicable yearning some templars had for forbidden and occult knowledge went far beyond a simple desire to better understand their opponent.
+    
+|Wraith Commander = 5;o_ghost_commander;Melee;spectre;Undead;2haxe;Light;medium;ectoplasm;200;40;220;;;;;84;70;;;;50;24;25;;3;;50;;;;200;200;200;;;;;;;15;15;11;15;15;;10;;10;50;;100;1;1;;;;;999;100;0;;;;75;18;;;;;;;;4;;14;;;9;13;13;;;;;;;;;;;100;-50;;;;;0;;Leaders of the Order took many of its secrets to their grave, which makes a commander's sarcophagus a rare and desirable find for any necromancer.
+    
+|Wraith = 1;o_ghost;Melee;spectre;Undead;claws;Light;medium;ectoplasm;40;15;115;;;;;58;30;;;;50;;;;40;;50;;;25;200;200;200;;;;;;;11;11;8;11;11;;6;;10;25;;100;1;1;;;;;999;100;0;;;;25;;;;6;;;;;4;;3;;;;;;;;;;;;;;;;100;-50;;;;;0;;Guests from the beyond are notorious for their inhuman malice and vengefulness.
+    
+|Wraith Monk = 2;o_ghost_monk;Melee;spectre;Undead;claws;Light;medium;ectoplasm;80;20;130;;;;;62;40;;;;50;;;;32;;50;;;;200;200;200;;;;;;;6;6;9;15;24;;7;;10;33;;100;1;1;;;;;999;100;0;;;15;33;;;;6;;;;;4;;6;;;;;;;;;;;;;;;;100;-50;;;;;0;;The majority of the Order's initiates were recruited from monasteries: its commanders found swordsmanship to be much easier to teach than piety.
+    
+|Wraith Cleric = 3;o_ghost_cleric;Melee;spectre;Undead;2hStaff;Light;medium;ectoplasm;120;25;150;;;;;68;50;;;;50;;;;19;;50;;;-10;200;200;200;;;;;;;7;7;7;16;26;;8;1;10;50;;100;1;1;;;;;999;100;0;;;33;50;;;9;;;;;;4;;9;;;3;6;6;;;;;;;;;;;100;-50;;;;;0;;Being resurrected after death is the most terrible fate that can befall a devout Hieronite, as it forever prevents them from reuniting with the Host.
+    
+|Wraith Seer = 4;o_ghost_seer;Melee;spectre;Undead;claws;Light;medium;ectoplasm;160;30;180;;;;;75;60;;;;50;;;;8;;50;;;-25;200;200;200;;;;;;;7;7;7;18;28;;9;2;10;100;;100;1;1;;;;;999;100;0;;;66;66;;;;6;;;;;4;;13;;;6;9;9;;;;;;;;;;;100;-50;;;;;0;;Most attempts to attain the forbidden come at a price. More often than not, it's paid after death.
+    
+|Risen Axonian = 2;o_skeleton_manticore;Melee;undead;Undead;spear;Light;medium;bones;1;80;40;;;;;90;;;;;;;;;10;;-25;;;50;;;;35;;;;50;;12;15;12;15;3;;30;;;;;;1;1;1;1;1;1;80;100;0;;15;;25;;23;;;;;;;;;;;;;;;;;;;;;;;;;33;-50;;;;;1;;After being dead for thousands of years, they were resurrected to serve Axonia one last time.
+    
+|Ritual Restless = 1;o_church_zombie;Melee;undead;Undead;claws;Light;medium;flesh;1;25;15;;;;;50;;;;;;;;;50;;-25;;;;-25;-25;100;;;;;;;6;6;6;3;3;;30;;;;;;1;1;1;1;1;1;60;100;0;;;;;;;;6;;;;;;;;;;;;;;;;;;;;50;;;;-50;;;;;1;;The few specks of life, trapped in this fetid, swollen body, are sustained by forbidden magic.
+    
+|Tormentor = 1;o_proselyte_tormentor;Melee;vampire;Vampire;mace;Light;medium;flesh;25;80;85;;;;;62;;;;;3;1;;;33;;9;9;9;;6;9;9;6;;;;;;14;14;11;8;6;;7;;6;6;;;1;1;1;1;1;1;;13;0;;6;;9;;;13;;;;;;;;3;;;;;;;;;;;;;;;;33;-66;;;1;1;1;;Tormentors praise the Court with devious tortures, reveling in the sight of wounded flesh.
+    
+|Immolated = 1;o_proselyte_immolated;Melee;vampire;Vampire;claws;Light;medium;flesh;25;65;45;;;;;58;;;;;;;;;33;;;;;;;;-9;;;;;;;6;11;6;6;6;;7;;6;6;;;1;1;1;1;1;1;;33;0;;;;;;;;9;;;;;;;3;;;;;;;;;;;;;;;;33;-66;;;;1;1;;Unspeakable suffering has left this insane cultist with a single desire - to die for a higher purpose.
+    
+|Harbinger = 1;o_proselyte_harbinger;Melee;vampire;Vampire;claws;Light;medium;flesh;25;80;85;;;;;69;;;;;3;;;;39;;;9;6;;;;9;;;;;;;6;14;8;14;11;;8;;6;6;;;1;1;1;1;1;1;;13;0;;;;;;;;6;;;;;;;3;;;;;;;;;;;;;;;;33;-66;25;;1;1;1;;Proselyte women aren't uncommon. But many of them can't withstand the transformation and lose their mind in the process, turning into raving furies.
+    
+|Martyr = 1;o_proselyte_martyr;Melee;vampire;Vampire;claws;Light;medium;flesh;10;40;40;;;;;66;-100;;;;;;;-100;33;;;;;;200;;-9;;;;;;;3;6;3;17;6;;10;;;;;;1;1;1;1;1;1;;99;0;;;;;;;;3;;;;;;;3;;;;;;;;;;;;;;;;33;-66;;;;;100;;The sight of martyrs' agony only strengthens other Proselytes' loyalty to the Court. How deep into madness does one need to descend to volunteer for something like this?..
+    
+|Dead Martyr = 1;o_proselyte_martyr_dead;Melee;vampire;Vampire;claws;Light;medium;flesh;5;40;;;;;;;-100;;;;;;;-100;;;;;;;200;;200;;;;;;;3;3;3;3;3;;0;;;;;;1;1;1;1;1;1;999;200;0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;33;-66;;;;;100;;The long-lasting torment and suffering has finally been brought to an end, but martyrs continue serving the Court even in death.
+    
+|Apostate = 1;o_proselyte_apostate;Melee;vampire;Vampire;claws;Light;medium;flesh;75;95;115;;1;;1;69;;;;;3;;;;33;26;;9;13;;;;9;;;;;;;6;14;8;14;11;;8;;6;6;;;1;1;1;1;1;1;;13;0;;;9;5;;;;9;;;;;;;6;;;;;;;;;;;;;;;;33;-66;;;1;1;1;;Apostates are former clerics of the Host, drawn mad by the apocalyptic visions of their new patron. They are in charge of choosing which cultists are worthy of receiving the Gift.
+    
+|Adept = 2;o_proselyte_adept;Melee;vampire;Vampire;dagger;Light;medium;flesh;45;105;110;1;1;;;74;6;;;;9;;;;26;33;13;13;13;;;;13;9;;;;;;9;12;9;12;18;;8;;9;9;13;;1;1;1;1;1;1;;26;0;;;;6;;11;;;;;;;;;3;;;6;6;6;;;;;;;;;;;33;-66;;;1;1;1;;A small-time heretic, who hopes to elevate his position in the cult by diligently studying blood magic.
+    
+|Flagellant = 2;o_proselyte_flagellant;Melee;vampire;Vampire;mace;Light;medium;flesh;45;110;100;;;;;70;6;;;;9;6;6;3;28;;26;13;26;;6;9;13;9;;9;;;9;12;18;6;12;12;;8;;9;9;13;;1;1;1;1;1;1;90;66;0;;13;;6;;6;;6;;;;;;;6;;;13;9;9;;;;;;;;;;;33;-66;;;1;1;1;;Pain is the best proof of devotion. Flagellants incessantly torment themselves, hoping to garner favor from their god.
+    
+|Toller = 2;o_proselyte_toller;Melee;vampire;Vampire;2hStaff;Light;medium;flesh;45;90;95;;;;;66;6;;;;9;5;;;28;;13;13;13;;6;24;13;;;18;;;;15;6;9;18;12;;8;;9;9;13;;1;1;1;1;1;1;;26;0;;;;6;;;11;;;;;;;;6;;;6;6;6;;;;;;;;;;;33;-66;;;1;1;1;;Echoing through the pitch darkness of underground tunnels, the otherworldly cluttering of his bell can send even the most reckless hotheads fleeing in terror.
+    
+|Outcast = 2;o_proselyte_outcast;Melee;vampire;Vampire;claws;Light;medium;flesh;45;95;95;;;;;70;13;;;;9;6;6;9;26;;13;13;13;-6;6;6;13;13;;;;;;18;18;6;12;6;;8;;9;9;13;13;1;1;1;1;1;1;90;33;0;;13;;9;;;;15;;;;;;;3;;;6;6;6;;;;;;;;;;;33;-66;;;;;1;;Those cultists whose body rejected the Gift become outcasts. Driven completely insane, they drag out a miserable existence as fighting animals.
+    
+|Matriarch = 2;o_proselyte_matriarch;Melee;vampire;Vampire;dagger;Light;large;flesh;135;160;100;;;;;66;-13;;;;9;7;9;;26;;13;13;13;-9;33;13;13;18;;;;13;;15;9;18;3;15;;5;;9;9;13;;1;1;1;1;1;1;;33;0;;33;;9;;13;;;;;;;;;6;;;6;6;6;;;;;;;;;;;33;-66;;;;;1;;The fervor of Proselyte women often garners them a borderline religious reverence. The most zealous of them become matriarchs, first in line for receiving the Gift.
+    
+|Chosen = 3;o_proselyte_champion;Melee;vampire;Vampire;claws;Light;large;flesh;70;145;130;;;;;74;9;;;;13;14;9;9;18;;13;33;26;-13;26;33;26;18;;;33;;33;26;16;20;13;10;;9;;13;13;26;;1;1;1;1;1;1;105;33;0;;9;;18;;;;16;;;;;;;9;;;13;13;13;;;;;;;;;;;33;-66;;;1;1;1;;The Court favors only the most devoted followers. It takes a long time to adjust to the new, inhumane body after receiving the Gift.
+    
+|Sanguimage = 3;o_proselyte_hierarch;Melee;vampire;Vampire;2hStaff;Light;medium;flesh;70;125;150;2;3;;;77;6;9;6;;13;7;;;16;9;26;26;66;-13;9;13;26;;;13;;;;10;13;10;20;20;;9;1;9;9;26;;1;1;1;1;1;1;;33;0;;;26;13;;;12;;;;;;;;9;;;13;13;13;;;;;;;;;;;33;-66;;;1;1;1;;A heresiarch whose main purpose is to provide guidance for the rest of the cult.
+    
+|Blood Golem = 2;o_blood_golem;Melee;undead;Vampire;claws;Light;medium;ooze;70;75;45;3;3;3;3;66;-9;;;;3;3;;;30;;-33;;;-13;;;-33;;;;;;18;15;6;18;6;3;;6;;;;;;1;1;1;1;1;1;999;200;0;;;;13;;;;6;;;;6;;;6;;;6;6;6;;;;;-33;;;;;;33;-66;;;;;1;;A chaotically pulsating manifestation of boiling blood, defiled flesh, and pernicious magic.
+    
+|Saggul = 3;o_proselyte_saggul;Ranger;vampire;Vampire;claws;Light;medium;flesh;70;105;110;;;;;68;-6;;;;13;3;;;19;;;26;13;;-9;9;26;;;;;;;7;13;7;26;10;;9;;13;13;26;;1;1;;;1;1;;33;0;;;;6;;;;6;;;;3;;;6;;;13;13;13;;;;;;;;33;;;66;-66;;;1;;1;;Sagguls still bear the mark of the Crimson plague, although for them it's a blessing rather than a curse.
+    
+|Impaler = 3;o_proselyte_impaler;Melee;vampire;Vampire;spear;Light;medium;flesh;70;115;115;;;;;81;26;;;;13;10;13;13;14;;9;26;33;-26;13;26;26;33;;;;39;;13;20;13;23;10;;10;;13;13;26;33;1;1;1;1;1;1;105;33;0;;13;;26;;16;;;;;;;;;9;;;13;13;13;;;;;;;;;;;66;-66;;;1;1;1;;Impalers are unmatched in their ability to track down and capture those poor souls who unknowingly wander into the catacombs. The victims that survive the hunt either join the cult or serve as sacrifices for the Court.
+    
+|Abomination = 3;o_proselyte_abomination;Melee;vampire;Vampire;claws;Light;large;flesh;210;210;120;;;;;71;-3;;;;13;14;13;;20;;13;26;26;-13;33;33;26;;;39;39;;39;26;13;26;7;7;;9;;13;13;26;;1;1;1;1;1;1;105;66;0;;26;;33;;;9;9;;;;;;;9;;;13;13;13;;;;;;;;;;;33;-66;;;;;1;;The Gift is only the first of many trials awaiting the most devoted Proselytes. Suffice to say, not everyone manages to pass them...
+    
+|Fiend (Two-Handed Mace) = 4;o_proselyte_gifted_mace;Melee;vampire;Vampire;2hmace;Light;medium;flesh;100;165;145;;;;;94;18;18;13;;33;26;33;13;6;;26;33;33;-26;26;39;33;;26;39;39;;;28;21;18;11;7;;10;;26;26;33;;1;1;1;1;1;1;113;66;0;;18;;39;;;19;;;;;;;;12;;;26;26;26;;;;;;;;;;;66;-66;;;1;1;1;Fiend;This Proselyte is a perfect soldier: inhumanly strong, ferocious, and feeling no pain, fear, or mercy.
+    
+|Fiend (Two-Handed Axe) = 4;o_proselyte_gifted_axe;Melee;vampire;Vampire;2haxe;Light;medium;flesh;100;165;145;;;;;94;18;18;13;;33;26;39;13;6;;26;33;33;-26;26;39;33;39;;;;;39;28;21;18;11;7;;10;;26;26;33;;1;1;1;1;1;1;113;66;0;;26;;33;21;;;;;;;;;;12;;;26;26;26;;;;;;;;;;;66;-66;;;1;1;1;Fiend;This Proselyte is a perfect soldier: inhumanly strong, ferocious, and feeling no pain, fear, or mercy.
+    
+|Girrud = 4;o_proselyte_girrud;Melee;vampire;Vampire;fangs;Light;medium;flesh;100;125;130;;;;;85;26;;;;26;12;6;;8;;13;33;33;-26;13;26;33;13;;;;;18;14;25;11;25;7;;10;;26;26;33;;1;1;1;1;1;1;113;66;0;;;;9;;;;9;;;3;;;;9;;;26;26;26;;;;;;;;;;;66;-66;;;1;;1;;Girruds are too far gone in their disturbing metamorphosis, giving off the impression that their repugnant tongues have a mind of their own.
+    
+|Tentacle Arm = 4;o_proselyte_anmara_tentacle;Melee;vampire;Vampire;claws;Light;small;flesh;5;75;60;6;6;6;6;83;;;;;13;24;13;26;13;;33;;;;300;;66;33;;;;33;;11;11;4;4;4;;6;;;;;;;1;;;;;999;200;0;;13;;26;;6;;9;;;;;;;6;;;26;26;26;;;;;;;;;;;66;-66;;;;;1;;Anmarraks have no trouble growing new tentacles in place of damaged and destroyed ones.
+    
+|Anmarrak = 4;o_proselyte_anmara;Melee;vampire;Vampire;claws;Light;large;flesh;300;225;145;;;;;75;-13;;;;26;13;9;;18;;26;13;13;;33;33;33;;;;66;;33;28;11;28;11;11;;8;;13;13;33;;1;1;1;1;1;1;113;66;0;;13;;26;;;;14;;;;;;;9;;;26;26;26;;;;;;;;;;;66;-66;;;;;1;;The only thing keeping this vaguely human-shaped product of vile rituals alive is its blind faith in the Court.
+    
+|Brander = 4;o_proselyte_brander;Melee;vampire;Vampire;spear;Light;large;flesh;300;225;130;9;;;;89;18;;;;39;18;13;9;6;;33;26;26;;13;66;33;;;39;;39;39;21;21;21;7;14;;7;;33;33;66;;1;1;1;1;1;1;113;99;0;;33;;26;;9;;;9;;;;;;15;;;33;33;33;;;;;33;;;;;;66;-66;;;1;;1;;For branders, the sight of raging flames is almost as exciting as the suffering of those around them.
+    
+|Yagram = 5;o_proselyte_yagram;Melee;vampire;Vampire;claws;Light;large;flesh;125;250;165;;;;;89;-13;;;;33;33;66;13;6;;33;66;33;-33;66;66;66;;;;66;;66;38;11;23;11;8;;10;;33;33;66;;1;1;1;1;1;1;126;99;0;;13;;52;;;13;13;;;;;;;18;;;33;33;33;;;;;;;;;;;66;-66;;;;;1;;This bestial cultist's mind is clouded with unbridled rage - there is very little human left in it.
+    
+|Murkstalker = 5;o_proselyte_murkstalker;Melee;vampire;Vampire;claws;Light;medium;flesh;125;180;190;;;;;105;33;;;;66;26;33;33;-4;;13;66;66;;26;39;66;66;;;;66;;19;30;15;15;8;;11;;33;33;66;26;1;1;1;1;1;1;113;99;0;;26;;66;;;;23;;;;;;;18;;;33;33;33;;;;;;;;;;;66;-66;;;1;;1;;The horrific murkstalkers resemble underground bats not only in appearance but also in their behaviour, taking full advantage of the catacombs' impenetrable shadows.
+    
+|Juggernaut = 5;o_proselyte_juggernaut;Melee;vampire;Vampire;2hmace;Light;large;flesh;375;465;190;3;;6;;95;-33;;;;33;66;33;;-12;;33;33;33;;66;66;33;;33;66;;;66;45;4;30;8;8;;9;;13;13;33;;1;1;1;1;1;1;133;99;0;;33;;79;;;33;;;;;;;;13;;;26;26;26;;;;;;;;;;;66;-66;;;;;1;;Fortunately, Proselytes almost never leave their catacombs - otherwise even city walls wouldn't be enough to stop the onslaught of juggernauts.
+    
+|Wormbearer = 5;o_proselyte_wormbearer;Ranger;vampire;Vampire;claws;Light;large;flesh;375;355;190;;;;;92;-33;;;;39;26;9;;9;;33;3;33;;99;39;13;;;;39;;39;23;8;38;8;11;;9;;13;13;66;;1;1;1;1;1;1;113;99;0;;18;;33;;;;17;;;;;;;18;;;33;33;33;;;;;;;;;;;66;-66;;;;;1;;Wormbearers are the grotesque embodiment of the Court cults: the host suffers from its parasites, while the parasites suffer for their host.
+    
+|Leechworm = 3;o_proselyte_worm;Melee;vampire;Vampire;fangs;Light;small;flesh;5;33;50;;;;;85;66;;;;;9;33;26;26;;-33;;;;-33;-33;-66;99;;;;;;3;13;3;3;3;;6;;66;66;66;33;1;;;;;;999;200;0;;66;;66;;13;;;;;6;;;;6;;;33;33;33;;;;;;;;;;;66;-66;;;;;100;;Bloated with blood, these heinous creatures are driven solely by hunger and the desire to rip and devastate.
+    
+|Cultist = 1;o_vampire_guard;Melee;vampire;Vampire;dagger;Light;medium;flesh;100;33;40;1;2;1;1;66;;;;;;;;;33;;;;;;;;;;;;;;;8;8;8;8;8;;6;;;;;;1;1;1;1;1;1;;;0;;;;;;9;;;;;;;;;;;;;;;;;;;;;;;;13;66;-66;;;;;1;;This neophyte was tasked with guarding you. He hasn't been doing a very good job so far.
+    
+|Ascended Archon = 5;vampire_archont_beast;Melee;vampire;Vampire;claws;Light;giant;flesh;333;169;169;;;;;69;;;;;;;;;13;;;;13;;;;;;;;;;;19;19;15;15;15;;13;;;;;;1;1;1;1;1;1;;;0;;;;13;;;;13;;;;;;;6;;;6;6;6;;;;;;;;;;;100;-66;;;;;1;;This monster is only capable of feeling two things: pain and animalistic fury, fueled by the Stoneshard lodged deep inside him.
+    
+|Archon = 5;o_vampire_archont;Melee;vampire;Vampire;claws;Light;medium;flesh;1;60;130;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;20;50;-66;;;;;1;;A leader of the vampiric cult, occupying this monastery. The Stoneshard in his hands doesn't bode well.
+    
+|Goon (Club) = 1;o_bandit_goon_club;Melee;human;Brigand;mace;Light;medium;flesh;25;70;60;;1;;1;66;-3;;;;;;;;33;;;5;10;;;;;;;;;;5;8;8;8;8;8;;8;;;;;;1;1;1;1;1;1;85;-10;125;;;;5;;;14;;;;;;;;;;;3;;;;;;;;;;;;;;;;;1;1;1;Goon;A former peasant who had to turn to a life of crime in an attempt to not starve to death. Fodder for dirty and dangerous work.
+    
+|Goon (Cleaver) = 1;o_bandit_goon_cleaver;Melee;human;Brigand;sword;Light;medium;flesh;25;70;60;;1;;1;73;-3;;;;;;;;30;;;5;10;;;;;5;;;;;;8;8;8;8;8;;8;;;;;;1;1;1;1;1;1;85;-10;125;;;;5;14;;;;;;;;;;;;;3;;;;;;;;;;;;;;;;;1;1;1;Goon;A former peasant who had to turn to a life of crime in an attempt to not starve to death. Fodder for dirty and dangerous work.
+    
+|Goon (Flail) = 1;o_bandit_goon_flail;Melee;human;Brigand;mace;Light;medium;flesh;25;70;60;;;;1;66;-3;;;;;;;;38;;;5;10;;;;;;;5;;;;8;8;8;8;8;;8;;;;;;1;1;1;1;1;1;85;-10;125;;;;5;;;15;;;;;;;;;;;3;;;;;;;;;;;;;;;;;1;1;1;Goon;A former peasant who had to turn to a life of crime in an attempt to not starve to death. Fodder for dirty and dangerous work.
+    
+|Rebel = 1;o_bandit_rioter;Melee;human;Brigand;spear;Light;medium;flesh;25;70;60;;1;;1;73;-3;;;;;;;;30;;;5;10;;;;;;;;;5;;8;8;8;11;8;;8;;;;;;1;1;1;1;1;1;85;-10;125;;;;10;;13;;;;;;;;;;;;3;;;;;;;;;;;;;;;;;1;1;1;;Even the meekest of folks may take up arms when faced by poverty and the prospect of hungry death.
+    
+|Enforcer (Two-Handed Mace) = 1;o_bandit_enforcer_2hmace;Melee;human;Brigand;2hmace;Light;medium;flesh;25;75;60;;1;;1;55;-5;;;;;;;;39;;;5;10;;;;;;;10;10;;;11;8;11;6;6;;8;;;;;;1;1;1;1;1;1;85;-10;125;;;;10;;;16;;;;;;;;;;;3;;;;;;;;;;;;;;;;;1;1;1;Enforcer;This dimwitted brute's remarkable strength more than makes up for his lack of smarts.
+    
+|Enforcer (Two-Handed Axe) = 1;o_bandit_enforcer_2haxe;Melee;human;Brigand;2haxe;Light;medium;flesh;25;75;60;;2;;;62;-5;;;;;;;;36;;;5;10;;;;;10;;;;;;11;8;8;8;6;;8;;;;;;1;1;1;1;1;1;85;-10;125;;5;;10;17;;;;;;;;;;;;;3;;;;;;;;;;;;;;;;;1;1;1;Enforcer;This dimwitted brute's remarkable strength more than makes up for his lack of smarts.
+    
+|Enforcer (Two-Handed Sword) = 1;o_bandit_enforcer_2hsword;Melee;human;Brigand;2hsword;Light;medium;flesh;25;75;60;;2;;;66;-5;;;;;;;;33;;;5;10;;;;;;;;;;10;8;11;8;8;6;;8;;;;;;1;1;1;1;1;1;85;-10;125;;;;10;16;;;;;;;;;;;;;3;;;;;;;;;;;;;;;;;1;1;1;Enforcer;This dimwitted brute's remarkable strength more than makes up for his lack of smarts.
+    
+|Poacher = 1;o_bandit_poacher;Ranger;human;Brigand;bow;Light;medium;flesh;25;70;60;;2;;1;5;;;;;;;;;30;;;5;10;;;;;;;;;;;11;11;8;8;6;;8;6;;;;;1;1;1;1;1;1;85;-10;133;;;;5;;12;;;;;;;;;;;;3;;;;;;;;;;;;;;;;;1;1;1;;Poachers were at odds with the law even before the war, when they secretly hunted on the lands of nobility.
+    
+|Poacher (Melee) = 1;o_bandit_poacher;Melee;human;Brigand;mace;Light;medium;flesh;25;70;60;;2;;;62;;;;;;;;;36;;;5;10;;;;;;;;;;;11;11;8;8;6;;8;;;;;;1;1;1;1;1;1;85;-10;150;;;;;;;11;;;;;;;;;;;3;;;;;;;;;;;;;;;;;1;1;1;Poacher;Poachers were at odds with the law even before the war, when they secretly hunted on the lands of nobility.
+    
+|Brute = 1;o_bandit_kingpin;Melee;human;Brigand;mace;Light;large;flesh;75;90;75;;2;;1;73;-5;;;;;1;;;26;;;10;15;;10;10;5;;;5;15;;;11;8;11;8;11;;8;;;;;;1;1;1;1;1;1;85;5;;;;;15;;;17;;;;;;;;;;;3;;;;;;;;;;;;;;;;;1;1;1;;A burly fellow, who is dead sure that every problem can be resolved with intimidation and violence.
+    
+|Madman = 1;o_bandit_madman;Melee;human;Brigand;dagger;Light;medium;flesh;75;75;75;;;;1;77;15;;;;;5;;5;35;;;5;15;;-5;-5;-5;12;;;;;;6;14;8;11;8;;7;;;;;;1;1;1;1;1;1;80;50;0;;15;;10;;12;;;;;2;;;;;;;;;;;;;;;;;;;;;;;;1;1;1;;It's said that serving a sentence in the Aldorian quarries can break even the strongest minds, let alone actual psychopaths, already drawn to pain and blood.
+    
+|Henchman (Axe) = 2;o_bandit_henchman_axe;Melee;human;Brigand;axe;Light;medium;flesh;45;90;75;;4;1;1;70;4;11;19;10;;3;5;3;24;;;10;12;;15;5;10;15;;;;;;12;9;12;9;9;;8;;;;;;1;1;1;1;1;1;;;115;;10;;10;19;;;;;;;;;;;;;10;;;;;;;;;;;;;;;;1;1;1;1;Henchman;The bandits who manage to stay alive long enough to earn their cronies' respect eventually become henchmen to the gang's leader.
+    
+|Henchman (Mace) = 2;o_bandit_henchman_mace;Melee;human;Brigand;mace;Light;medium;flesh;45;90;75;;3;2;2;70;4;11;19;10;;3;;3;24;;;10;12;;15;5;10;;;15;;;;12;9;12;9;9;;8;;;;;;1;1;1;1;1;1;;;115;;5;;15;;;18;;;;;;;;;;;10;;;;;;;;;;;;;;;;1;1;1;1;Henchman;The bandits who manage to stay alive long enough to earn their cronies' respect eventually become henchmen to the gang's leader.
+    
+|Henchman (Flail) = 2;o_bandit_henchman_flail;Melee;human;Brigand;mace;Light;medium;flesh;45;90;75;1;4;1;1;70;4;11;19;10;;3;5;3;24;;;10;12;;15;5;10;;;10;;;10;12;9;12;9;9;;8;;;;;;1;1;1;1;1;1;;;115;;10;;10;19;;;;;;;;;;;;;10;;;;;;;;;;;;;;;;1;1;1;1;Henchman;The bandits who manage to stay alive long enough to earn their cronies' respect eventually become henchmen to the gang's leader.
+    
+|Thug (Spear) = 2;o_bandit_thug_spear;Melee;human;Brigand;spear;Light;medium;flesh;45;90;70;1;4;2;2;74;;5;10;;;5;;4;22;;;10;16;;10;5;10;;;;;15;;12;15;9;15;9;;8;;;;;;1;1;1;1;1;1;;;;;5;;10;;18;;;;;;;;;;;;10;;;;;;;;-5;;;;;;;;;1;1;1;Thug;A grimy and malnourished commoner, ready to commit any crime for a piece of bread and a couple of gold coins.
+    
+|Thug (Two-Handed Axe) = 2;o_bandit_thug_2haxe;Melee;human;Brigand;2haxe;Light;medium;flesh;45;90;75;;3;2;2;70;;;;;;6;15;6;28;;;10;16;;10;5;10;20;;;;;;15;9;12;15;9;;8;;;;;;1;1;1;1;1;1;;;;;15;;15;23;;;;;;;;;;;;;10;;;;;;;;;;;;;;;;;1;1;1;Thug;A grimy and malnourished commoner, ready to commit any crime for a piece of bread and a couple of gold coins.
+    
+|Thug (Two-Handed Sword) = 2;o_bandit_thug_2hsword;Melee;human;Brigand;2hsword;Light;medium;flesh;45;90;75;;4;2;2;74;;8;12;;;5;10;8;26;;;10;16;;10;5;10;;;;;;20;12;12;12;15;9;;8;;;;;;1;1;1;1;1;1;;;;;10;;10;22;;;;;;;;;;;;;10;;;;;;;;;;;;;;;;;1;1;1;Thug;A grimy and malnourished commoner, ready to commit any crime for a piece of bread and a couple of gold coins.
+    
+|Thug (Two-Handed Mace) = 2;o_bandit_thug_2hmace;Melee;human;Brigand;2hmace;Light;medium;flesh;45;90;75;2;3;2;2;66;;;;;;5;10;6;28;;;10;16;;10;5;10;;;15;15;;;18;9;12;12;9;;8;;;;;20;1;1;1;1;1;1;;;;;10;;15;;;21;;;;;;;;;;;10;;;;;;;;;;;;;;;;;1;1;1;Thug;A grimy and malnourished commoner, ready to commit any crime for a piece of bread and a couple of gold coins.
+    
+|Thug (Two-Handed Flail) = 2;o_bandit_thug_2hflail;Melee;human;Brigand;2hmace;Light;medium;flesh;45;90;75;;4;1;1;70;4;;;;;7;;4;30;;;10;12;;10;10;10;;;15;;;15;12;9;12;9;9;;8;;;;;;1;1;1;1;1;1;;;115;;10;;10;19;;;;;;;;;;;;;10;;;;;;;;;;;;;;;;1;1;1;1;Thug;A grimy and malnourished commoner, ready to commit any crime for a piece of bread and a couple of gold coins.
+    
+|Mancatcher (enemy) = 2;o_bandit_mancatcher;Melee;human;Brigand;spear;Light;medium;flesh;45;90;75;1;2;2;2;70;8;;;;;6;;10;19;;;10;12;;5;5;5;;;;;30;;9;15;9;12;9;;8;;;;;;1;1;1;1;1;1;;;115;;10;;5;;16;;;;;;;;;;;;5;;;;;;;;;;;;;;;;;1;1;1;Mancatcher;A skillful and cruel headhunter that doesn't shy away from using the most dastardly tactics to catch his prey.
+    
+|War Dog = 2;o_bandit_dog;Melee;beast;Brigand;fangs;Light;small;flesh;20;45;100;;;;;78;35;;;;;3;;25;31;;;30;35;;-15;;;10;;;;15;10;9;18;9;18;3;;10;;;;;30;1;1;1;1;1;1;;;150;;15;;5;;;;16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;;A hunting dog trained to tear people apart. Constant hunger and abuse turned it into a ferocious monster.
+    
+|Crook = 2;o_bandit_crook;Melee;human;Brigand;dagger;Light;medium;flesh;45;80;85;1;2;1;2;82;16;6;8;;;8;10;16;14;;;10;20;;5;;5;10;;;;;;9;18;9;15;9;;8;;;;;15;1;1;1;1;1;1;;;;;5;;10;;16;;;;;2;;;;;;;5;;;;;;;;;;;;;;;;;1;1;1;;A cold-blooded thug willing to kill for a fistful of coins... or just for the thrill of it.
+    
+|Outlaw = 2;o_bandit_outlaw;Ranger;human;Brigand;bow;Light;medium;flesh;45;90;85;;2;1;1;22;6;;;;;3;;;24;;;10;12;;;;5;;;;10;;;9;15;9;18;9;;8;7;;;;15;1;1;1;1;1;1;;;;;5;;5;;18;;;;;;;;;;;;5;;;;;;;;;;;;;;;;;1;1;1;;Highwaymen firmly follow one simple rule: shoot first, ask questions later.
+    
+|Outlaw (Melee) = 2;o_bandit_outlaw;Melee;human;Brigand;dagger;Light;medium;flesh;45;90;85;;2;1;1;62;6;;;;;2;;;29;;;10;12;;;;5;;;;;;;9;15;9;18;9;;8;;;;;;1;1;1;1;1;1;;;125;;5;;5;;16;;;;;;;;;;;;5;;;;;;;;;;;;;;;;;1;1;1;Outlaw;Highwaymen firmly follow one simple rule: shoot first, ask questions later.
+    
+|Firestarter = 2;o_bandit_firestarter;Melee;human;Brigand;axe;Light;medium;flesh;135;100;85;1;4;2;2;94;10;;;;;8;;;19;;;15;20;;10;15;15;;;;;;25;15;12;15;9;9;;8;;;;;;1;1;1;1;1;1;85;25;;;15;;20;;;22;;;;;;;;;;;10;;;;;;;25;;;;;;;;;;1;1;1;;Leaving nothing behind but smoldering ruins can be an effective strategy - no witnesses, no loose ends.
+    
+|Rabble-Rouser = 2;o_bandit_rabblerouser;Melee;human;Brigand;2hStaff;Light;medium;flesh;135;85;100;;2;1;1;70;25;15;20;25;20;3;;;28;;;10;25;;5;5;5;;;;15;;;9;12;12;12;12;;8;;;;;;1;1;1;1;1;1;85;;;;;;10;;;17;;;;;;;;;;;5;;;;;;;;;;;;;;;;;1;1;1;;This crafty blackguard's arsenal is stocked with thrilling promises, sweet half-truths, and bold-faced lies.
+    
+|Turncoat (Sword) = 3;o_bandit_turncoat_sword;Melee;human;Brigand;sword;Light;medium;flesh;70;105;90;7;6;4;4;85;;20;28;20;10;10;5;15;13;;10;15;16;-10;25;20;20;20;;;;;;13;16;13;13;10;;9;;;;;;1;1;1;1;1;1;;10;75;;10;;10;23;;;;;;;;;;;;;20;;;;;;;;-15;;;;;;;;1;1;1;1;Turncoat;Some guards eventually come to a conclusion that robbing is more profitable than protecting others from being robbed.
+    
+|Turncoat (Axe) = 3;o_bandit_turncoat_axe;Melee;human;Brigand;axe;Light;medium;flesh;70;105;85;5;6;4;4;81;;17;22;20;10;10;15;10;14;;10;15;16;-10;25;20;20;25;;;;;;16;13;13;13;10;;9;;;;;;1;1;1;1;1;1;;10;75;;15;;20;24;;;;;;;;;;;;;20;;;;;;;;-15;;;;;;;;1;1;1;1;Turncoat;Some guards eventually come to a conclusion that robbing is more profitable than protecting others from being robbed.
+    
+|Turncoat (Mace) = 3;o_bandit_turncoat_mace;Melee;human;Brigand;mace;Light;medium;flesh;70;105;85;7;6;4;4;77;;17;22;20;10;12;5;10;15;;10;15;16;-10;25;20;20;;;20;15;;;20;10;13;13;10;;9;;;;;;1;1;1;1;1;1;;10;75;;15;;25;;;24;;;;;;;;;;;20;;;;;;;;-15;;;;;;;;1;1;1;1;Turncoat;Some guards eventually come to a conclusion that robbing is more profitable than protecting others from being robbed.
+    
+|Turncoat (Flail) = 3;o_bandit_turncoat_flail;Melee;human;Brigand;mace;Light;medium;flesh;70;105;85;6;7;4;4;77;;17;22;20;10;12;15;10;15;;10;15;16;-10;25;20;20;;;15;;;20;20;10;13;13;10;;9;;;;;;1;1;1;1;1;1;;10;75;;15;;20;;;24;;;;;;;;;;;20;;;;;;;;-15;;;;;;;;1;1;1;1;Turncoat;Some guards eventually come to a conclusion that robbing is more profitable than protecting others from being robbed.
+    
+|Marauder (Two-Handed Axe) = 3;o_bandit_marauder_2haxe;Melee;human;Brigand;2haxe;Medium;medium;flesh;70;105;85;;9;3;5;77;5;;;;5;14;25;10;16;;10;15;18;-10;20;5;20;30;;;;;;16;10;13;16;10;;9;;;;;;1;1;1;1;1;1;;10;80;;20;;25;29;;;;;;;;;;;;;20;;;;;;;;-10;;;;;;;;;1;1;1;Marauder;A commoner or a deserter, who somehow got hold of decent gear and then went on a spree across the realm.
+    
+|Marauder (Two-Handed Sword) = 3;o_bandit_marauder_2hsword;Melee;human;Brigand;2hsword;Medium;medium;flesh;70;105;85;8;7;4;4;81;5;15;24;;5;14;15;15;14;;10;15;18;-10;20;20;20;25;;;;;25;16;10;13;16;10;;9;;;;;;1;1;1;1;1;1;;10;80;;15;;15;28;;;;;;;;;;;;;20;;;;;;;;-5;;;;;;;;;1;1;1;Marauder;A commoner or a deserter, who somehow got hold of decent gear and then went on a spree across the realm.
+    
+|Marauder (Two-Handed Flail) = 3;o_bandit_marauder_2hflail;Melee;human;Brigand;2hmace;Light;medium;flesh;70;105;85;6;6;3;3;68;5;;;;5;16;25;;22;;10;15;18;-10;20;20;15;;20;30;;;;20;10;13;13;10;;9;;;;;;1;1;1;1;1;1;;10;80;;20;;20;;;30;;;;;;;;;;;20;;;;;;;;-5;;;;;;;;;1;1;1;Marauder;A commoner or a deserter, who somehow got hold of decent gear and then went on a spree across the realm.
+    
+|Marauder (Two-Handed Mace) = 3;o_bandit_marauder_2hmace;Melee;human;Brigand;2hmace;Medium;medium;flesh;70;105;85;5;8;5;3;77;5;;;;5;14;15;5;16;;10;15;18;-10;20;20;20;;;25;25;;;20;10;13;13;10;;9;;;;;;1;1;1;1;1;1;;10;80;;15;;30;;;26;;;;;;;;;;;20;;;;;;;;-5;;;;;;;;;1;1;1;Marauder;A commoner or a deserter, who somehow got hold of decent gear and then went on a spree across the realm.
+    
+|Marauder (Halberd) = 3;o_bandit_marauder_halberd;Melee;human;Brigand;spear;Light;medium;flesh;70;105;85;5;6;4;4;77;8;12;17;;5;8;15;10;13;;10;15;20;-10;15;20;15;;;;;25;25;13;16;10;16;10;;9;;;;;;1;1;1;1;1;1;;10;75;;10;;15;;21;;;;;;;;;;;;20;;;;;;;;-15;;;;;;;;;1;1;1;Marauder;A commoner or a deserter, who somehow got hold of decent gear and then went on a spree across the realm.
+    
+|Marauder (Spear) = 3;o_bandit_marauder_spear;Melee;human;Brigand;spear;Medium;medium;flesh;70;105;85;4;6;4;5;85;10;8;14;;5;12;10;10;11;;10;15;20;-10;15;20;15;;;;;30;;13;16;10;16;10;;9;;;;;;1;1;1;1;1;1;;10;75;;10;;15;;21;;;;;;;;;;;;20;;;;;;;;-15;;;;;;;;;1;1;1;Marauder;A commoner or a deserter, who somehow got hold of decent gear and then went on a spree across the realm.
+    
+|Cutthroat = 3;o_bandit_cutthroat;Melee;human;Brigand;dagger;Light;medium;flesh;70;95;110;1;4;3;3;85;30;12;10;;;18;20;24;8;;10;15;30;-15;15;5;10;15;;;;;;10;20;10;16;10;;9;;;;;30;1;1;1;1;1;1;;10;75;;20;;20;;20;;;;;4;;;;;;;10;;;;;;;;;;;;;;;;;1;1;1;;This scoundrel is excellent at wielding his daggers and, most importantly, enjoys putting them to use.
+    
+|Drummer = 3;o_bandit_drummer;Mage;human;Brigand;mace;Light;medium;flesh;70;90;110;5;4;2;3;72;16;;;;20;3;;5;20;;25;15;24;-20;20;30;15;;;10;;;;10;10;16;16;13;;10;;;;;;1;1;1;1;1;1;;25;50;;;;5;;;14;;;;;;;;;;;15;;;;;;;;-15;;;;;;;;1;1;1;1;;The rhythm of a war drum can awaken something primal even in hearts usually driven by cowardice.
+    
+|Ambusher = 3;o_bandit_ambusher;Ranger;human;Brigand;crossbow;Light;medium;flesh;70;105;90;6;4;2;3;30;12;;;;5;5;10;;11;;10;15;16;-10;10;5;15;;;;;30;;10;16;10;20;10;;9;7;;;;;1;1;1;1;1;1;;10;80;;10;;20;;23;;;;;;;;;;;;15;;;;;;;;-15;;;;;;;;;1;1;1;;Arbalesters are fully aware of how deadly the combination of crossbows and ambushes can be.
+    
+|Ambusher (Melee) = 3;o_bandit_ambusher;Melee;human;Brigand;sword;Light;medium;flesh;70;105;90;6;4;2;3;77;12;;;;5;3;5;;15;;10;15;16;;10;5;15;10;;;;;;10;16;10;20;10;;9;;;;;;1;1;1;1;1;1;;10;;;5;;10;20;;;;;;;;;;;;;15;;;;;;;;-15;;;;;;;;;1;1;1;Ambusher;Arbalesters are fully aware of how deadly the combination of crossbows and ambushes can be.
+    
+|Hired Sorcerer (Pyromancer) = 3;o_bandit_hired_sorcerer_pyro;Mage;human;Brigand;2hStaff;Light;medium;flesh;70;85;125;;2;;2;72;8;;;;;1;;;18;25;-10;5;20;10;;;;;;10;;;;7;10;10;20;20;;9;;;;;;1;1;1;1;1;1;;;115;;;16;5;;;15;;3;;;;;;;;;3;;;;;;;15;10;;;;;;;;;1;1;1;Hired Sorcerer;This wandering sorcerer isn't encumbered by a strict moral code, willing to offer his services to anyone as long as the payment is right.
+    
+|Hired Sorcerer (Electromancer) = 3;o_bandit_hired_sorcerer_electro;Mage;human;Brigand;2hStaff;Light;medium;flesh;70;80;135;;3;2;3;77;12;;;;;3;;;18;20;-10;5;30;;;;;;;15;;;;10;13;10;16;16;;9;;;;;;1;1;1;1;1;1;;;100;;10;8;5;;;17;;3;;;;;;;;;5;;;;;;;;15;;;;;;;;;1;1;1;Hired Sorcerer;This wandering sorcerer isn't encumbered by a strict moral code, willing to offer his services to anyone as long as the payment is right.
+    
+|Brigand Warlock = 3;o_bandit_warlock;Mage;human;Brigand;2hStaff;Light;medium;flesh;210;95;150;1;4;3;3;77;10;12;14;;5;5;;;15;15;5;10;35;;10;5;10;;;15;;;15;10;13;13;20;23;;9;;5;5;;;1;1;1;1;1;1;;10;90;;;24;10;;;18;;4;;;;;;;;;5;20;20;;;;;;;;;;;;;;;1;1;1;;Warlocks aren't particularly picky about neither their means, nor their ends. For many of them the life of banditry is a perfect way to earn some easy coin while honing their magical skill.
+    
+|Bonebreaker (Two-Handed Axe) = 3;o_bandit_bonebreaker_axe;Melee;human;Brigand;2haxe;Heavy;large;flesh;210;145;75;;16;5;5;72;-25;;;;10;16;35;;28;;15;20;8;15;40;10;25;40;;;;;;26;7;16;13;13;;9;;;;;;1;1;1;1;1;1;;15;60;;25;;30;31;;;;;;;;;;;;;20;;;;;;;;-15;;;;;;;;;1;1;1;Bonebreaker;The only thing this thug truly believes is that might makes right. Whoever stands in his way is bound to deeply regret it.
+    
+|Bonebreaker (Two-Handed Mace) = 3;o_bandit_bonebreaker_mace;Melee;human;Brigand;2hmace;Heavy;large;flesh;210;135;65;5;10;4;4;68;-25;;;;10;13;20;;25;;15;20;8;15;40;25;25;;;35;40;;;26;7;16;13;13;;9;;;;;;1;1;1;1;1;1;;15;60;;20;;35;;;29;;;;;;;;;;;20;;;;;;;;-15;;;;;;;;;1;1;1;Bonebreaker;The only thing this thug truly believes is that might makes right. Whoever stands in his way is bound to deeply regret it.
+    
+|Deserter (Sword) = 4;o_bandit_deserter_sword;Melee;human;Brigand;sword;Heavy;medium;flesh;100;125;110;10;15;8;8;94;;35;44;25;20;20;15;15;5;;10;15;16;-10;30;30;30;35;;;;;;14;18;14;14;11;;9;;;;;;1;1;1;1;1;1;;10;75;;10;;15;27;;;;;;;;;;;;;20;;;;;;;;-15;;;;;;;;1;1;1;1;Deserter;Some soldiers are sick of serving in the armies of the Council and the Magistrate. Banding together and robbing innocents - now that's where the excitement is.
+    
+|Deserter (Axe) = 4;o_bandit_deserter_axe;Melee;human;Brigand;axe;Heavy;medium;flesh;100;125;100;9;15;8;8;89;;30;38;20;20;20;25;10;6;;10;15;16;-10;30;30;30;40;;;;;;18;14;14;14;11;;9;;;;;;1;1;1;1;1;1;;10;75;;20;;25;28;;;;;;;;;;;;;20;;;;;;;;-15;;;;;;;;1;1;1;1;Deserter;Some soldiers are sick of serving in the armies of the Council and the Magistrate. Banding together and robbing innocents - now that's where the excitement is.
+    
+|Deserter (Flail) = 4;o_bandit_deserter_flail;Melee;human;Brigand;mace;Heavy;medium;flesh;100;125;100;10;14;8;8;85;;30;38;20;20;24;25;5;9;;10;15;16;-10;30;30;30;;;30;;;30;14;14;14;18;11;;9;;;;;;1;1;1;1;1;1;;10;75;;15;;25;;;31;;;;;;;;;;;20;;;;;;;;-15;;;;;;;;1;1;1;1;Deserter;Some soldiers are sick of serving in the armies of the Council and the Magistrate. Banding together and robbing innocents - now that's where the excitement is.
+    
+|Deserter (Two-Handed Flail) = 4;o_bandit_deserter_2hflail;Melee;human;Brigand;mace;Heavy;medium;flesh;100;125;100;7;16;9;7;82;;;;;20;27;35;;12;;10;15;16;-10;30;30;30;;25;40;;;;25;11;14;11;11;;9;;;;;;1;1;1;1;1;1;;10;75;;25;;25;;;36;;;;;;;;;;;20;;;;;;;;-15;;;;;;;;1;1;1;1;Deserter;Some soldiers are sick of serving in the armies of the Council and the Magistrate. Banding together and robbing innocents - now that's where the excitement is.
+    
+|Magistrate Deserter (Halberd) = 4;o_bandit_magistrate_deserter_halberd;Melee;human;Brigand;spear;Medium;medium;flesh;100;130;100;10;8;6;6;99;15;15;19;;15;20;25;30;4;;20;25;32;-30;25;35;25;;;;;50;;14;18;11;18;11;;10;;;;;15;1;1;1;1;1;1;;30;30;;45;;50;;31;;;;;;;;;;;;25;;;;;;;;-15;;;;;;;;;1;1;1;Magistrate Deserter;When the war just began, the Magistrate's promises of cutting the nobles down a size and granting everyone a plethora of freedoms looked appealing to a lot of folks. The realization that the rich had simply replaced the old nobility came only after the truce.
+    
+|Magistrate Deserter (Two-Handed Axe) = 4;o_bandit_magistrate_deserter_2haxe;Melee;human;Brigand;2haxe;Medium;medium;flesh;100;130;100;11;8;6;6;89;15;14;15;;15;20;35;30;5;;20;25;32;-30;25;35;25;50;;;;;;18;11;14;18;11;;10;;;;;15;1;1;1;1;1;1;;30;30;;50;;45;34;;;;;;;;;;;;;25;;;;;;;;-15;;;;;;;;;1;1;1;Magistrate Deserter;When the war just began, the Magistrate's promises of cutting the nobles down a size and granting everyone a plethora of freedoms looked appealing to a lot of folks. The realization that the rich had simply replaced the old nobility came only after the truce.
+    
+|Magistrate Deserter (Two-Handed Mace) = 4;o_bandit_magistrate_deserter_2hmace;Melee;human;Brigand;2hmace;Medium;medium;flesh;100;130;100;12;8;6;6;94;15;12;17;;15;20;25;30;6;;20;25;32;-30;25;35;25;;;50;50;;;21;11;14;14;11;;10;;;;;15;1;1;1;1;1;1;;30;30;;40;;60;;;32;;;;;;;;;;;25;;;;;;;;-15;;;;;;;;;1;1;1;Magistrate Deserter;When the war just began, the Magistrate's promises of cutting the nobles down a size and granting everyone a plethora of freedoms looked appealing to a lot of folks. The realization that the rich had simply replaced the old nobility came only after the truce.
+    
+|Banneret = 4;o_bandit_banneret;Melee;human;Brigand;spear;Medium;medium;flesh;100;115;95;9;10;5;5;85;15;8;15;;10;10;10;5;12;;15;20;28;-15;20;25;20;20;;;;25;;14;18;11;14;14;;10;;;;;;1;1;1;1;1;1;;25;25;;15;;15;;20;;;;;;;;;;;;25;;;;;;;;-5;;;;;;;;;1;1;1;;Large brigand gangs function similarly to small armies - they have their own strict hierarchies, traditions, symbols, and flags.
+    
+|Marksman = 4;o_bandit_marksman;Ranger;human;Brigand;bow;Medium;medium;flesh;100;115;95;6;9;4;7;32;20;;;;10;14;15;;6;;10;20;20;-15;20;20;20;;;;30;;;11;18;11;21;11;;10;10;;;;;1;1;1;1;1;1;;15;60;;10;;25;;24;;;;;;;;;;;;15;;;;;;;;-10;;;;;;;;;1;1;1;;This brigand is so accurate with a bow that he could shoot an apple off his own son's head.
+    
+|Marksman (Melee) = 4;o_bandit_marksman;Melee;human;Brigand;sword;Medium;medium;flesh;100;115;95;6;9;4;7;80;20;;;;10;6;5;5;11;;10;20;20;5;20;20;20;10;;;;;;11;18;11;21;11;;10;;;;;;1;1;1;1;1;1;;15;80;;5;;15;23;;;;;;;;;;;;;15;;;;;;;;-10;;;;;;;;;1;1;1;Marksman;This brigand is so accurate with a bow that he could shoot an apple off his own son's head.
+    
+|Magehunter = 4;o_bandit_magehunter;Melee;human;Brigand;sword;Light;medium;flesh;100;120;120;1;6;3;6;94;35;9;15;;25;26;10;;2;;30;20;35;-20;25;25;33;30;;;;;;11;14;11;21;14;;10;2;;;;;1;1;1;1;1;1;;35;40;;15;10;15;27;;;;;;;;;;;;;15;50;50;;;;;;;;;;;;;;;1;1;1;;Sorcerers can be troublesome opponents, but this headhunter knows their strengths and weaknesses inside and out.
+    
+|Brigand Geomancer = 4;o_bandit_geomancer;Melee;human;Brigand;2hStaff;Light;medium;flesh;100;115;155;3;6;5;5;85;25;12;19;;25;10;;;12;20;;10;25;;5;5;15;;20;20;;;20;11;11;14;18;18;;10;;;;;;1;1;1;1;1;1;;10;;;5;35;5;;;23;;;;;;;3;;;;5;30;30;;;;;;;;;;15;;;;;1;1;1;;Not every sorcerer manages to find themselves a place at the Academy or a noble court, which often leads them down the path of crime.
+    
+|Brigand Electromancer = 4;o_bandit_electromancer;Mage;human;Brigand;2hStaff;Light;medium;flesh;100;100;140;2;3;2;2;80;10;;;;;10;;;15;20;;10;25;;5;5;10;;;15;;;;7;11;11;21;21;;10;;;;;;1;1;1;1;1;1;;10;;;5;25;5;;;20;;;4;;;;;;;;5;25;25;;;;;;25;;;;;;;;;1;1;1;;Not every sorcerer manages to find themselves a place at the Academy or a noble court, which often leads them down the path of crime.
+    
+|Wolfhound = 4;o_bandit_dog_elite;Melee;beast;Brigand;fangs;Light;small;flesh;40;75;95;;;;;85;60;;;;30;30;25;40;10;;20;50;50;-30;10;10;25;25;;;;35;35;14;21;11;21;4;;12;;;;;60;1;1;1;1;1;1;;75;25;;30;;15;;;;23;;;;;;;;;;10;;;;;;;;;;;;;;;;;;;1;;The bloodshot eyes of this hound are filled with murderous intent and determination to protect its master till its dying breath.
+    
+|Beast Trapper = 4;o_bandit_huntmaster;Ranger;human;Brigand;bow;Medium;medium;flesh;300;120;95;10;14;10;8;40;15;;;;15;20;35;;6;;15;15;30;-15;25;25;20;40;;;;40;;14;18;14;25;11;;10;8;;;;;1;1;1;1;1;1;;20;60;;20;;35;;32;;;;;;;;;;;;25;;;;;;;;;;;;;;;;;1;1;1;;This avid hunter had an epiphany that watching people fighting for their lives is much more entertaining for him than stalking wildlife.
+    
+|Beast Trapper (Melee) = 4;o_bandit_huntmaster;Melee;human;Brigand;axe;Medium;medium;flesh;300;120;95;10;14;10;8;85;15;;;;15;10;15;10;8;;15;15;30;;25;25;20;25;;;;;;14;18;14;25;11;;10;;;;;;1;1;1;1;1;1;;20;60;;10;;25;28;;;;;;;;;;;;;25;;;;;;;;;;;;;;;;;1;1;1;Beast Trapper;This avid hunter had an epiphany that watching people fighting for their lives is much more entertaining for him than stalking wildlife.
+    
+|Paymaster = 4;o_bandit_paymaster;Melee;human;Brigand;2hsword;Medium;medium;flesh;300;140;95;2;12;12;10;99;35;33;30;30;30;30;40;35;3;;20;25;35;-15;35;20;33;45;;;;;50;18;21;14;18;11;;10;;;;;15;1;1;1;1;1;1;;40;40;;25;;40;36;;;;;;;;;;;;;20;;;;;;;;-10;;;;;;;;;1;1;1;;When dealing with mercenaries, there's a simple rule to keep in mind: if you can't solve a problem with money, solve it with a lot of money.
+    
+|Rogue Knight = 4;o_bandit_condottiere;Melee;human;Brigand;sword;Heavy;medium;flesh;300;165;90;12;16;16;14;85;-10;45;55;50;50;10;20;20;7;;50;40;20;10;40;40;40;30;;;;;;25;11;25;14;11;;10;;;;33;;1;1;1;1;1;1;;50;20;;25;;25;27;;;;;;;;;;;;;40;;;;;;;;-20;;;;;;;;1;1;1;1;;Only two things can turn a knight into a mercenary or a brigand: boredom and poverty.
+    
+|Ringleader (Sword) = 5;o_bandit_ringleader_sword;Melee;human;Brigand;2hsword;Heavy;medium;flesh;125;180;110;13;17;15;15;121;14;21;25;35;35;30;30;40;-6;;25;30;24;-35;40;50;40;40;;;;;;15;19;15;15;11;;10;;;;;;1;1;1;1;1;1;;35;30;;20;;25;33;;;;;;;;;;;;;25;;;;;;;;-15;;;;;;;;;1;1;1;Ringleader;The most cunning and ruthless brigand of the gang, egging the others on commiting new villainies.
+    
+|Ringleader (Axe) = 5;o_bandit_ringleader_axe;Melee;human;Brigand;2hsword;Heavy;medium;flesh;125;180;110;15;16;14;14;121;9;34;43;20;35;24;40;40;-6;;25;30;24;-35;45;50;40;45;;;;;;15;19;15;15;11;;10;;;;;;1;1;1;1;1;1;;35;30;;30;;30;35;;;;;;;;;;;;;25;;;;;;;;-15;;;;;;;;;1;1;1;Ringleader;The most cunning and ruthless brigand of the gang, egging the others on commiting new villainies.
+    
+|Renegade (Two-Handed Axe) = 5;o_bandit_renegade_2haxe;Melee;human;Brigand;2haxe;Heavy;medium;flesh;125;150;115;11;18;16;15;95;6;;;;30;38;50;15;-4;;15;20;24;-15;35;50;40;60;;;;;;19;11;15;19;11;;10;;;;;;1;1;1;1;1;1;;20;50;;40;;40;41;;;;;;;;;;;;;33;;;;;;;;-15;;;;;;;;;1;1;1;Renegade;In times of war, honor and loyalty are empty words. Personal gain and staying sated become the priority.
+    
+|Renegade (Two-Handed Sword) = 5;o_bandit_renegade_2hsword;Melee;human;Brigand;2hsword;Heavy;medium;flesh;125;150;115;17;18;14;13;110;6;25;33;10;30;35;40;20;-4;;15;20;24;-15;35;50;40;50;;;;;60;19;11;15;19;11;;9;;;;;;1;1;1;1;1;1;;20;50;;33;;35;40;;;;;;;;;;;;;33;;;;;;;;-15;;;;;;;;;1;1;1;Renegade;In times of war, honor and loyalty are empty words. Personal gain and staying sated become the priority.
+    
+|Renegade (Two-Handed Mace) = 5;o_bandit_renegade_2hmace;Melee;human;Brigand;2hmace;Heavy;medium;flesh;125;150;115;12;17;16;18;100;6;13;20;;30;30;40;15;-6;;15;20;24;-15;35;50;40;;;60;60;;;23;11;15;15;11;;10;;;;;;1;1;1;1;1;1;;20;50;;35;;50;;;38;;;;;;;;;;;33;;;;;;;;-15;;;;;;;;;1;1;1;Renegade;In times of war, honor and loyalty are empty words. Personal gain and staying sated become the priority.
+    
+|Renegade (Halberd) = 5;o_bandit_renegade_halberd;Melee;human;Brigand;mace;Heavy;medium;flesh;125;150;115;12;15;15;16;105;6;17;25;;30;27;40;20;-4;;15;20;30;-15;35;50;40;;;;;60;;19;15;15;15;11;;10;;;;;;1;1;1;1;1;1;;20;50;;20;;35;;;38;;;;;;;;;;;33;;;;;;;;-15;;;;;;;;;1;1;1;Renegade;In times of war, honor and loyalty are empty words. Personal gain and staying sated become the priority.
+    
+|Renegade (Two-Handed Flail) = 5;o_bandit_renegade_2hflail;Melee;human;Brigand;sword;Heavy;medium;flesh;125;150;115;13;20;15;14;89;6;;;;30;35;25;25;3;;15;20;30;-15;40;50;40;;40;60;;;;15;19;15;15;11;;10;;;;;;1;1;1;1;1;1;;20;50;;30;;45;33;;;;;;;;;;;;;33;;;;;;;;-15;;;;;;;;;1;1;1;Renegade;In times of war, honor and loyalty are empty words. Personal gain and staying sated become the priority.
+    
+|Duelist = 5;o_bandit_duelist;Melee;human;Brigand;sword;Heavy;medium;flesh;125;130;130;10;15;8;8;116;50;30;18;30;30;24;33;50;-6;;20;25;40;-35;40;35;50;40;;;;;;15;19;15;15;11;;10;;;;;25;1;1;1;1;1;1;;35;30;;25;;40;23;;;;;;;;;;;;;30;;;;;;;;-20;;;;;;;;;1;1;1;;For some, dueling has little to do with honor, serving only as a means of cruel, blood-pumping entertainment.
+    
+|Heavy Crossbowman = 5;o_bandit_arbalester;Ranger;human;Brigand;crossbow;Heavy;medium;flesh;125;115;100;15;16;12;14;40;8;;;;25;18;30;;3;;20;25;26;-25;30;35;35;;;;;60;;11;19;11;23;11;;10;8;;;;;1;1;1;1;1;1;;25;50;;30;;35;;33;;;;;;;;;;;;30;;;;;;;;-20;;;;;;;;;1;1;1;;Both the Council and the Magistrate were more than happy to bolster their armies with mercenary crossbowmen. After the truce, many of them were left without work - it didn't take long before they switched to alternative ways of making ends meet.
+    
+|Heavy Crossbowman (Melee) = 5;o_bandit_arbalester;Melee;human;Brigand;sword;Heavy;medium;flesh;125;115;100;15;16;12;14;89;8;;;;25;10;15;;5;;20;25;26;-15;30;35;35;20;;;;;;11;19;11;23;11;;10;;;;;;1;1;1;1;1;1;;25;75;;15;;20;31;;;;;;;;;;;;;30;;;;;;;;-20;;;;;;;;1;1;1;1;Heavy Crossbowman;Both the Council and the Magistrate were more than happy to bolster their armies with mercenary crossbowmen. After the truce, many of them were left without work - it didn't take long before they switched to alternative ways of making ends meet.
+    
+|Brigand Pyromancer = 5;o_bandit_pyromancer;Mage;human;Brigand;2hStaff;Light;medium;flesh;125;150;160;2;4;2;4;84;12;6;10;;;5;15;;8;5;10;15;33;-10;;;15;;;25;;;;8;11;11;23;23;;10;;;;;;1;1;1;1;1;1;;10;90;;10;60;10;;;25;;5;;;;;;;;;10;30;30;;;;;35;;;;;;;;;;1;1;1;;Not every sorcerer manages to find themselves a place at the Academy or a noble court, which often leads them down the path of crime.
+    
+|Robber Baron (Two-Handed Sword) = 5;o_bandit_raubritter_2hsword;Melee;human;Brigand;2hsword;Heavy;medium;flesh;375;180;110;20;20;18;18;100;-20;32;40;;60;23;35;25;-6;;30;35;16;-20;50;60;50;55;;;;;65;23;15;23;19;11;;8;;;;;;1;1;1;1;1;1;;40;20;;45;;55;41;;;;;;;;;;;;;40;;;;;;;;-25;;;;;;;;;1;1;1;Robber Baron;Rather than living off their subjects' taxes, some noblemen find it much more profitable and exciting to put together a gang and start razing neighboring lands.
+    
+|Robber Baron (Two-Handed Mace) = 5;o_bandit_raubritter_2hmace;Melee;human;Brigand;2hmace;Heavy;medium;flesh;375;180;110;22;20;18;18;95;-20;21;28;;60;23;30;15;-2;;30;35;16;-20;50;60;50;;;65;65;;;30;11;23;15;11;;8;;;;;;1;1;1;1;1;1;;40;20;;40;;65;;;40;;;;;;;;;;;40;;;;;;;;-25;;;;;;;;;1;1;1;Robber Baron;Rather than living off their subjects' taxes, some noblemen find it much more profitable and exciting to put together a gang and start razing neighboring lands.
+    
+|Robber Baron (Mace) = 5;o_bandit_raubritter_flail;Melee;human;Brigand;mace;Heavy;medium;flesh;375;180;110;24;20;18;18;89;-20;42;50;30;70;23;30;20;0;;30;35;16;-20;50;60;50;;45;65;;;35;23;15;26;15;11;;8;;;;;;1;1;1;1;1;1;;40;20;;50;;60;;;38;;;;;;;;;;;40;;;;;;;;-25;;;;;;;;1;1;1;1;Robber Baron;Rather than living off their subjects' taxes, some noblemen find it much more profitable and exciting to put together a gang and start razing neighboring lands.
+    
+|Rogue Witchfinder = 5;o_bandit_witchhunter;Melee;human;Brigand;dagger;Heavy;medium;flesh;375;150;110;3;16;10;10;116;65;17;20;15;45;45;25;60;-8;;40;35;33;-35;40;30;40;35;;;;;;15;26;11;23;15;;8;1;;10;;35;1;1;1;1;1;1;;30;30;;20;;45;;25;;;;;;;;;;;;25;65;65;;;;;;-10;;;;;;;;1;1;1;1;;All too often, faith is nothing more than a noble facade for other, far baser impulses...
+    
+|Stone Eater Soldier = 3;o_rockeater_soldier;Melee;beast;carnivore;fangs;Light;medium;flesh;50;100;100;;;;;84;33;;;;10;6;10;14;24;;;5;60;-30;;;;40;;;;;;10;12;10;14;4;;7;;;;;;1;1;2;2;;;90;;125;10;20;;30;;;;28;;;;;;;;;;10;;;;;;;;;;;;;;;;;;1;1;;Stone Eater Soldier
+    
+|Stone Eater Hunter = 3;o_rockeater_hunter;Melee;beast;carnivore;fangs;Light;medium;flesh;50;100;100;;;;;84;33;;;;10;6;10;14;24;;;5;60;-30;;;;40;;;;;;10;12;10;14;4;;7;;;;;;1;1;2;2;;;90;;125;10;20;;30;;;;28;;;;;;;;;;10;;;;;;;;;;;;;;;;;;1;1;;Stone Eater Hunter
+    
+|Stone Eater Worker = 3;o_rockeater_worker;Melee;beast;carnivore;fangs;Light;medium;flesh;50;100;100;;;;;84;33;;;;10;6;10;14;24;;;5;60;-30;;;;40;;;;;;10;12;10;14;4;;7;;;;;;1;1;2;2;;;90;;125;10;20;;30;;;;28;;;;;;;;;;10;;;;;;;;;;;;;;;;;;1;1;;Stone Eater Worker
+    
+|Dungeon Bat = 1;o_bat;Melee;beast;omnivore;fangs;Light;tiny;flesh;5;20;;;;;;85;60;;;;;;;5;30;;;3;20;;-50;;;20;;;;;10;5;5;5;12;2;;7;;100;;;100;1;1;2;2;;;;;150;;;;15;;10;;;;;2;;;;;;;;;;;;;;;;;;;;;;;;;;1;;This ancient breed of giant bats once inhabited the Aldorian forests but was driven out into deep dungeons.
+    
+|Rat Swarm = 1;o_rat;Melee;beast;omnivore;fangs;Light;tiny;flesh;5;50;50;;;;;65;50;;;;;;;;35;;;5;20;;-50;;;15;;;;15;;3;3;6;6;1;;6;;;;;100;;1;;;;;999;;150;;10;;5;;;;7;;;3;;;;;;;30;;;;;;;;;25;;;;;;;;;;1;;With no shortage of fresh carrion, rats seem to breed and multiply as never before.
+    
+|Feral Dog = 1;o_wild_dog;Melee;beast;omnivore;fangs;Light;small;flesh;20;40;90;;;;;73;30;;;;;1;;10;39;;;30;35;;-15;;;10;;;;15;10;0;0;0;0;0;;10;;;;;25;1;1;1;1;1;1;;;150;;10;;5;;;;12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;;Dogs suffer from war just as much as people: many were left without owners or driven into the wild by starvation. The ones that survived no longer resemble the pets they once were.
+    
+|Wolf = 2;o_wolf;Melee;beast;carnivore;fangs;Light;medium;flesh;50;90;100;;;;;84;33;;;;10;6;10;14;24;;;5;60;-30;;;;40;;;;;;10;12;10;14;4;;7;;;;;;1;1;2;2;;;90;;125;10;20;;30;;;;23;;;;;;;;;;10;;;;;;;;;;;;;;;;;;1;1;;Wolves have grown extremely ferocious lately: they gather in huge packs and aren't afraid to attack people.
+    
+|Deathstinger Swarm = 2;o_hornets;Melee;beast;carnivore;sting;Light;tiny;chitin;20;20;20;;;;;90;90;;;;;3;;33;30;;;5;10;;200;200;200;;;;;;40;5;5;5;5;2;;5;;;;;;;1;;;;;999;200;0;;;;60;;5;;;;;10;;;;;;;50;;;;25;;;-33;33;75;;-25;;;;;;;;99;;Deathstingers are the scourge of the local woods. A large enough swarm of these fist-sized insects can make short work of pretty much anything or anyone.
+    
+|Boar = 3;o_boar;Melee;beast;omnivore;fangs;Light;medium;flesh;75;120;150;;;;;78;16;;;;25;10;15;8;27;;35;3;20;-30;40;25;10;;;;40;;40;6;6;6;10;3;;7;;;;;;1;1;2;2;;;;20;25;12;20;;35;;;;29;;;;;;;;;;15;;;;;;;;;;;;;;;;;;1;1;;May be quite dangerous when angered.
+    
+|Harpy = 3;o_harpy;Melee;beast;carnivore;claws;Light;medium;flesh;75;100;160;10;;;;80;60;;;;33;20;10;30;20;;;5;25;;60;70;30;50;;50;;;50;5;5;5;5;2;;7;;;;;100;1;1;;;1;1;;;125;;20;;30;;;;28;;;;;;;;;;25;25;25;;15;;;25;;50;;25;;;;;;;;0;;Initially, harpies inhabited only the ridges of Aldorian foothills, but now they can be encountered across the entire realm. Their habits haven't changed in the slightest though: these perpetually ravenous beasts are still the source of constant nuisance, attacking livestock and lonely travelers.
+    
+|Moose = 4;o_moose;Melee;beast;herbivore;antlers;Light;large;flesh;100;350;150;;;;;90;10;;;;35;25;30;10;20;;25;3;20;-50;70;50;20;;50;100;50;;;7;7;10;10;3;;7;;;;;;1;1;2;2;;;;25;20;14;20;;40;;;35;;;;;;;;;;;20;20;;;;;;;;;;;;;;;;;1;1;;The moose is the king of Aldorian forests. Running into one of these mighty animals is a rare occurrence.
+    
+|Bison = 4;o_bison;Melee;beast;herbivore;antlers;Light;large;flesh;100;500;150;;;;;85;;;;;30;20;20;10;20;;50;5;25;-30;80;60;25;;75;75;75;;;30;10;30;10;5;;4;;;;;;1;1;2;2;;;;35;15;14;20;;50;;;32;;;;;;;;;;;20;20;;;;;;;;;;;;;;;;;1;1;;In olden days, huge bison herds grazed all over Aldor, but thanks to the efforts of overly determined hunters, there aren't many left around anymore.
+    
+|Crawler = 4;o_crawler;Melee;beast;carnivore;fangs;Light;medium;chitin;100;70;150;15;15;15;15;75;20;;;;;10;25;15;30;;;75;50;;-33;100;50;40;;;;65;;12;14;6;8;4;;5;;;;;;1;1;4;4;;;75;200;0;;20;;20;;16;;;;;8;4;;;;;;10;10;10;;;-25;;;;50;;;;;;;;;;100;;Crawlers are hated and feared: one wrong move, one careless sound, and even an experienced hunter becomes the prey. To everyone's relief, crawlers don't stray far from their burrows.
+    
+|Bear = 5;o_bear;Melee;beast;omnivore;fangs;Light;large;flesh;200;500;200;;;;;85;;;;;35;35;50;10;15;;50;3;20;-20;80;60;30;100;50;50;;;100;20;8;20;5;4;;6;;;;;;1;1;2;2;;;;50;10;14;35;;60;;;;45;;;;;;;;;;25;25;;;10;;;;;;;;;;;;;;1;1;;Bears aren't the most aggressive beasts, but they quickly lose their temper when they spot a trespasser on their territory.
+    
+|Gulon = 5;o_wolf;Melee;beast;carnivore;fangs;Light;medium;flesh;150;350;200;;;;;95;30;;;;40;20;33;20;15;;25;20;60;-30;70;40;30;85;;;;;66;10;12;10;14;4;;7;;35;35;;;1;1;2;2;;;100;35;20;8;40;;50;;;;33;;;;;;;;;;20;20;;;;;;;;;;;;;;;;;1;1;;A cross between a bear and a huge cat, the gulon is extraordinarily voracious. Those who meet this unusual creature rarely survive to share the tale.
+    
+|Young Troll = 5;o_small_troll;Melee;beast;carnivore;claws;Medium;giant;flesh;250;600;400;8;8;8;8;90;-15;;;;50;40;100;5;25;;25;50;33;;100;80;50;33;;33;33;;33;20;8;20;5;4;;7;;;;;;1;1;2;2;;;;;25;6;40;;40;;;;36;;;;;;;;;;35;35;35;;;;;;;;;;;;;;;;1;1;;Trolls never stop growing, but even in their early years they can already boast formidable size and incredible strength. Luckily for everyone, they multiply at a very slow rate.
+    
+|Hedgehog = 0;o_hedgehog;Melee;beast;herbivore;fangs;Light;tiny;flesh;1;10;100;;;;;120;65;;;;;;;33;;;;3;20;;-50;;;;;;;;;4;10;4;4;4;;4;;;;;50;1;1;2;2;;;;;0;;;;;;;;5;;;;;;;;;;;;;;;;;;;90;;;;;;;;;1;1;;Despite their small size, hedgehogs are brave and inquisitive critters.
+    
+|Rabbit = 0;o_bunny;Melee;beast;herbivore;fangs;Light;tiny;flesh;1;10;100;;;;;95;75;;;;;;;;;;;3;20;;-50;;;;;;;;;4;20;4;12;4;;6;;;;;50;1;1;2;2;;;;;0;;;;;;1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;1;;Fluffy and harmless.
+    
+|Squirrel = 0;o_squirrel;Melee;beast;herbivore;fangs;Light;tiny;flesh;1;10;100;;;;;95;90;;;;;;;;;;;3;20;;-50;;;;;;;;;4;20;4;12;4;;6;;;;;50;1;1;2;2;;;;;0;;;;;;1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;1;;A fast, nimble rodent, known for its hoarding behaviour.
+    
+|Viper = 1;o_snake;Melee;beast;carnivore;fangs;Light;tiny;flesh;1;10;50;;;;;75;75;;;;;;;;;;;5;25;;-50;;;;;;;;;5;16;5;10;2;;4;;;;;50;1;1;;;;;;;0;;;;;;2;;;;;10;;;;;;;;;;;;;;;;50;;;;;;;;;1;1;;The bite of a viper is deadly - at least it only attacks when disturbed.
+    
+|Fox = 0;o_fox;Melee;beast;omnivore;claws;Light;medium;flesh;5;50;100;;;;;75;66;;;;;;;;;;;3;20;-75;;;;;;;;;;5;5;5;10;3;;7;;;;;;1;1;2;2;;;;;300;;;;;;;;8;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;1;;Its pelt is valuable indeed.
+    
+|Deer = 0;o_deer_m;Melee;beast;herbivore;antlers;Light;medium;flesh;10;80;100;;;;;85;35;;;;;;;;;;;3;20;-75;30;;;;;;;;;6;6;6;14;3;;8;;;;;;1;1;2;2;;;;;0;;;;;;;4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;1;;Deer are among the most numerous inhabitants of the local woods.
+    
+|Saiga = 0;o_saiga_m;Melee;beast;herbivore;antlers;Light;medium;flesh;5;75;100;;;;;85;50;;;;;;;;;;;3;20;-75;20;;;;;;;;;6;6;6;14;3;;8;;;;;;1;1;2;2;;;;;0;;;;;;;4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;1;;Herds of saigas are a common sight in Aldorian steppes, but their remarkable wariness makes them a pain to hunt.
+    
+|Pig = 0;;Melee;beast;omnivore;antlers;Light;medium;flesh;1;5;;;;;;95;-100;;;;;;;;;;;3;20;;;;;;;;;;;5;5;5;10;2;;12;;;;;;1;1;2;2;;;;;0;;;;;;;;4;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;1;;The war wasn't kind to Aldorian pigs: those of them which didn't starve to death were largely appropriated by marauding soldiers.
+    
+|Sheep = 0;;Melee;beast;herbivore;antlers;Light;medium;flesh;1;5;;;;;;95;-25;;;;;;;;;;;3;20;;;;;;;;;;;5;5;5;10;2;;12;;;;;;1;1;2;2;;;;;0;;;;;;;8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;1;;Sheep farming is an ancient trade in Aldor: these animals are easy to take care of, they can graze even on barren lands, and their wool and milk are always in demand.
+    
+|Cow = 0;;Melee;beast;herbivore;antlers;Light;large;flesh;1;5;;;;;;95;-50;;;;;;;;;;;3;20;;35;;;;;;;;;5;5;5;10;2;;12;;;;;;1;1;2;2;;;;;0;;;;;;;10;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;1;;Owning a cow is a sign of rural prosperity. Only the most well-to-do families can afford one.
+    
+|Horse = 0;;Melee;beast;herbivore;antlers;Light;large;flesh;1;5;;;;;;95;0;;;;;;;;;;;3;20;;;;;;;;;;;20;10;20;5;3;;12;;;;;;1;1;2;2;;;;;0;;;;;;;14;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;1;;Pulling a plow, carrying goods, serving as a mount - the entire kingdom relies on hardy local horse breeds.
+    
+|Dog = 0;;Melee;beast;omnivore;fangs;Light;small;flesh;1;5;;;;;;95;0;;;;;;;;;;;1;20;;;;;;;;;;;10;15;6;10;4;;12;;;;;;1;1;2;2;;;;;0;;;;;;;;8;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;1;;Man's most loyal companion.
+    
+|Cat = 0;;Melee;beast;carnivore;claws;Light;tiny;flesh;1;5;;;;;;95;0;;;;;;;;;;;3;20;;;;;;;;;;;2;20;9;15;6;;12;;;;;50;1;1;2;2;;;;;0;;;;;;;;3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;;It naps, provides the feeling of homely coziness, and occasionally catches mice.
+    
+|Chicken = 0;;Melee;beast;herbivore;fangs;Light;small;flesh;1;5;;;;;;95;0;;;;;;;;;;;3;20;;;;;;;;;;;1;1;1;1;1;;12;;;;;;1;1;2;2;;;;;0;;;;;;1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;;Chickens aren't picky. All they want from life is a warm coop and a handful of grain.
+    
+|Rooster = 0;;Melee;beast;herbivore;fangs;Light;small;flesh;1;5;;;;;;95;0;;;;;;;;;;;3;20;;;;;;;;;;;1;1;1;1;1;;12;;;;;;1;1;2;2;;;;;0;;;;;;2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;;In Aldor the beginning of a new day is heralded not by a sunrise but by a rooster's crow.
+    
+|Duck = 0;;Melee;beast;herbivore;fangs;Light;small;flesh;1;5;;;;;;95;0;;;;;;;;;;;3;20;;;;;;;;;;;1;3;1;3;1;;12;;;;;100;1;1;2;2;;;;;0;;;;;;2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;1;;Ducks are much more fickle and demanding when compared to other poultry birds, so they are rarely farmed in Aldor.
+    
+|Raven = 0;;Melee;beast;omnivore;fangs;Light;tiny;flesh;1;5;;;;;;95;80;;;;;;;;;;;3;20;;;;;;;;;;;1;3;1;3;1;;12;;;;;100;1;1;2;2;;;;;0;;;;;;1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;;Most people dislike ravens, seeing them as an ill omen of death, war, and grief.
+    
+|Seagull = 0;;Melee;beast;herbivore;fangs;Light;tiny;flesh;1;5;;;;;;95;80;;;;;;;;;;;3;20;;;;;;;;;;;1;3;1;3;1;;12;;;;;100;1;1;2;2;;;;;0;;;;;;3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;1;;Seagulls are abundant along the Southern Sea's coast, paying no mind to the noise of the cities.
+    
+|Pigeon = 0;;Melee;beast;herbivore;fangs;Light;tiny;flesh;1;5;;;;;;95;60;;;;;;;;;;;3;20;;;;;;;;;;;1;3;1;3;1;;12;;;;;100;1;1;2;2;;;;;0;;;;;;1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;;Pigeons are used in large cities and castles to deliver messages. A well-trained carrier pigeon is worth its weight in silver.
+    
+|Jay = 0;;Melee;beast;herbivore;fangs;Light;tiny;flesh;1;5;;;;;;95;100;;;;;;;;;;;3;20;;;;;;;;;;;1;3;1;3;1;;12;;;;;100;1;1;2;2;;;;;0;;;;;;1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;;The skittishness of jays is perhaps the main reason for the large size of their population.
+    
+|Thrush = 0;;Melee;beast;herbivore;fangs;Light;tiny;flesh;1;5;;;;;;95;100;;;;;;;;;;;3;20;;;;;;;;;;;1;3;1;3;1;;12;;;;;100;1;1;2;2;;;;;0;;;;;;1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;;Thrushes have a great singing voice, but alas, they are more valued for their tasty, nourishing meat.
+    
+|Bunting = 0;;Melee;beast;herbivore;fangs;Light;tiny;flesh;1;5;;;;;;95;120;;;;;;;;;;;3;20;;;;;;;;;;;1;3;1;3;1;;12;;;;;100;1;1;2;2;;;;;0;;;;;;1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;;Buntings prefer making their nests close to cultivated fields.
+    
+|Swallow = 0;;Melee;beast;herbivore;fangs;Light;tiny;flesh;1;5;;;;;;95;100;;;;;;;;;;;3;20;;;;;;;;;;;1;3;1;3;1;;12;;;;;100;1;1;2;2;;;;;0;;;;;;1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;;Swallows have lots of superstitions attached to them: people predict weather by their flight, and a swallow's nest built in the eaves of a house supposedly brings good fortune to its residents.
+    
+|Wren = 0;;Melee;beast;herbivore;fangs;Light;tiny;flesh;1;5;;;;;;95;100;;;;;;;;;;;3;20;;;;;;;;;;;1;3;1;3;1;;12;;;;;100;1;1;2;2;;;;;0;;;;;;1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;;The superstitions surrounding this small bird are centuries-old: even the ancient Firns held a belief that the guise of wrens is often adopted by mischievous forest spirits.
+    
+|Sparrow = 0;;Melee;beast;herbivore;fangs;Light;tiny;flesh;1;5;;;;;;95;100;;;;;;;;;;;3;20;;;;;;;;;;;1;3;1;3;1;;12;;;;;100;1;1;2;2;;;;;0;;;;;;1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;;The common folk have little appreciation for sparrows, thinking of them as thieves and annoying critters.
+    
+|Tit = 0;;Melee;beast;herbivore;fangs;Light;tiny;flesh;1;5;;;;;;95;100;;;;;;;;;;;3;20;;;;;;;;;;;1;3;1;3;1;;12;;;;;100;1;1;2;2;;;;;0;;;;;;1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;;The tit is seen as a symbol of luck, so no harm comes to these birds without a good reason - they are hunted only by those stricken with poverty or starvation.
+    
+|Mallard = 0;;Melee;beast;herbivore;fangs;Light;small;flesh;1;5;;;;;;95;80;;;;;;;;;;;3;20;;;;;;;;;;;1;3;1;3;1;;12;;;;;100;1;1;2;2;;;;;0;;;;;;2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;1;;Hunting wild ducks with hawks and dogs has long been a distinguished pastime of the nobility.
+    
+|Mallard = 0;;Melee;beast;herbivore;fangs;Light;small;flesh;1;5;;;;;;95;80;;;;;;;;;;;3;20;;;;;;;;;;;1;3;1;3;1;;12;;;;;100;1;1;2;2;;;;;0;;;;;;2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;1;;Hunting wild ducks with hawks and dogs has long been a distinguished pastime of the nobility.
+    
+|Owl = 0;;Melee;beast;omnivore;fangs;Light;small;flesh;1;5;;;;;;95;80;;;;;;;;;;;3;20;;;;;;;;;;;1;3;1;3;1;;12;;;;;100;1;1;2;2;;;;;0;;;;;;2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;A lone hunter and the monarch of the nightly canopy.
+    
+|Deathstinger Hive = 2;o_hornethive;Melee;spawner;carnivore;;Light;giant;other;100;100;;;;;;;-100;;;;;;;;;;;;;;300;300;300;;;;;;;10;10;10;10;10;;;;;;;;;1;;;;;999;200;0;;;;;;;;;;;;;;;;;;10;20;50;;10;-30;;-50;;200;;25;;;;;;;;1;;A hive of deathstingers. Better not disturb it.
+    
+|Harpies Nest = 3;o_harpynest;Melee;spawner;carnivore;;Light;giant;other;200;80;;;;;;;-100;;;;;;;;;;;;;;300;300;300;;;;;;;10;10;10;10;10;;;;;;;;;1;;;;;999;200;0;;;;;;;;;;;;;;;;;;10;20;50;;;-30;;-50;;200;;50;;;;;;;;1;;Harpies are always on a lookout, ready to defend their nests against any interloper.
+    
+|Crawler Burrow = 4;o_crawler_hive;Melee;spawner;carnivore;;Light;giant;other;300;120;;;;;;;-100;;;;;;;;;;;;;;300;300;300;;;;;;;10;10;10;10;10;;;;;;;;;1;;;;;999;200;0;;;;;;;;;;;;;;;;;;10;20;50;;;-30;;-50;;200;;50;;;;;;;;1;;Crawlers make their burrows in deep woods, where they hunt small wildlife. Other predators do their best to stay away - crawlers' blood and bites are venomous, and their ability to almost instantaneously heal their fragile carapaces turns any encounter with them into a battle of attrition.
+    
+|Ancient Troll = 5;o_ancientTroll;Melee;beast;carnivore;claws;Medium;giant;flesh;1000;1600;1000;9;9;9;9;100;-25;;;;20;;;;5;;35;5;50;;250;66;66;;;;40;;40;70;6;90;15;6;;18;;;;;;1;1;1;1;1;1;85;66;0;;40;;50;;;;33;;;;;;;;;;15;30;30;;;;;;;;;;;;;;;;;0;;These gluttonous monstrosities rarely leave the forests, but when they do, it usually ends in a disaster. Their astonishing strength and toughness make them a threat which only experienced and well-armed warriors have a chance of dealing with.
+    
+|Manticore = 5;o_manticore;Melee;beast;carnivore;claws;Medium;giant;flesh;2000;2000;4000;12;12;12;12;95;33;;;;35;;;;;-100;25;20;100;;150;60;60;60;;75;75;;75;90;60;70;40;60;;30;;30;30;;;1;1;1;1;1;1;;100;0;;30;;60;;5;;35;;;;;;5;5;5;;33;40;40;;;;;;;;;;;;;;;;;1;;A spawn of ancient magic that combines the ferocity of a wild beast and the craftiness of a skilled warlock.
+    
+|Straw Dummy = 1;o_test(dummy);Melee;;;claws;Light;medium;other;0;1000;1000;;;;;100;;;;;;;;;;;;0;0;;300;;;;;;;;;10;10;10;10;10;;0;;;;;;1;1;1;1;1;1;999;100;0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2;Straw Dummy;It can take literally any amount of abuse.
+    
+|Straw Dummy (Medium) = 1;o_test(dummy);Melee;;;claws;Medium;medium;other;0;1000;1000;8;8;8;8;100;;;;;;;;;;;;0;0;;300;;;;;;;;;10;10;10;10;10;;0;;;;;;1;1;1;1;1;1;999;100;0;;;;;;;;;;;;;;;;;;15;15;15;;;;;;;;;;;;;;;;;2;Straw Dummy;It can take literally any amount of abuse.
+    
+|Straw Dummy (Armored) = 1;o_test(dummy);Melee;;;claws;Heavy;medium;other;0;1000;1000;16;16;16;16;100;;;;;;;;;;;;0;0;;300;;;;;;;;;10;10;10;10;10;;0;;;;;;1;1;1;1;1;1;999;100;0;;;;;;;;;;;;;;;;;;35;35;35;;;;;;;;;;;;;;;;;2;Straw Dummy;It can take literally any amount of abuse.
+
+|#default = Data does not exist.}}</includeonly><noinclude>[[Category:Data]]</noinclude><noinclude>[[Category:Data]]</noinclude>

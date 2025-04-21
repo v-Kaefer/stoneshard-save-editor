@@ -1,0 +1,78 @@
+<noinclude>Page for all Stoneshard Sword skill data.
+</noinclude><includeonly>{{#switch: {{{1}}}
+
+|Cleaving Strike= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Area, 3 Tiles
+|Range=1
+|Energy=10
+|Cooldown=8
+|Modifiers=Strength, Agility, Perception
+|Requirements=- Requires one-handed sword
+|Description=Delivers a strike to three adjacent targets with {{Positive|+25%}} Bodypart Damage and {{Positive|+50%}} Bleed Chance.<br><br>Grants {{Positive|+5%}} Counter Chance for {{W|5}} turns for each enemy hit by the strike.<br><br>The effect stacks up to {{W|3}} times.
+|Formuladesc=Delivers a strike to three adjacent targets with {{Positive|+(15 + AGL)%}} Bodypart Damage and {{Positive|+(30 + (2 * STR))%}} Bleed Chance.<br><br>Grants {{Positive|+(0.5 * PRC)%}} Counter Chance for {{W|5}} turns for each enemy hit by the strike.<br><br>The effect stacks up to {{W|3}} times.
+|Enemydesc=Delivers a strike to three adjacent targets with {{Positive|+{{#expr: 15 + {{EnemyAttributes|AGL}}}}%}} Bodypart Damage and {{Positive|+{{#expr: 30 + (2 * {{EnemyAttributes|STR}})}}%}} Bleed Chance.<br><br>Grants {{Positive|+{{#expr: 0.5 * {{EnemyAttributes|PRC}}}}%}} Counter Chance for {{W|5}} turns for each enemy hit by the strike.<br><br>The effect stacks up to {{W|3}} times.
+|formula_raw=Bodypart Damage: {{Positive| 10 + STR}}<br>Bleeding Chance: {{Positive| 20 + 2 * AGL}}<br>
+|#default = }}
+
+|Keeping Distance= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=Target Tile
+|Range=1
+|Energy=14
+|Cooldown=10
+|Modifiers=Strength, Agility, Perception
+|Requirements=- Requires one-handed sword
+|Description={{W|Repositions}} to an adjacent tile.<br><br>Next turn delivers a free strike to a random adjacent enemy with {{Positive|+50%}} Stagger Chance and {{Positive|+10%}} Crit Chance.
+|Formuladesc={{W|Repositions}} to an adjacent tile.<br><br>Next turn delivers a free strike to a random adjacent enemy with {{Positive|+(30 + (2 * STR))%}} Stagger Chance and {{Positive|+((0.5 * AGL) +(0.5 * PRC))%}} Crit Chance.
+|formula_raw=Stagger Chance: {{Positive| 20 + 1.5 * STR}}<br>Crit Chance: {{Positive| 0.25 * AGL + 0.5 * PRC}}<br>
+|#default = }}
+
+|Blade Maintenance= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=- Requires one-handed sword
+|Description=Grants sword strikes {{Pos|+5%}} Bleed Chance if the equipped {{W|sword's}} Durability is above {{W|80%}}, {{Pos|+5%}} Weapon Damage if its above {{W|90%}}, and {{Pos|+3%}} Crit Chance if it's above {{W|95%}}.<br><br>Reduces {{W|swords'}} Durability loss by {{W|50%}} when blocking with them and by {{W|20%}} when delivering strikes.
+|#default = }}
+
+|Fencer Stance= {{#switch: {{{2}}}
+|Active=stance
+|Type=No Target
+|Energy=12
+|Cooldown=10
+|Requirements=- Requires one-handed sword
+|Description=Activates {{Pos|"Fencer Stance"}} for {{W|8}} turns:<br><br>{{Pos|+5%}} Counter Chance <br>{{Pos|+5%}} Block Chance <br>{{Pos|+5%}} Dodge Chance <br>{{Pos|+8%}} Bleed Chance<br><br>Using this ability tree's skills grants an extra stack of the effect (up to {{W|IV}} stacks).<br><br>Basic sword strikes prolong the duration by {{Pos|1}} turn (up to {{W|12}}) but reduce its number of stacks (no more than once per turn).<br><br>Only one {{W|Stance}} effect can be active at a time.
+|formula_raw=Weapon Damage: {{Positive| Weapon Damage - 10}}<br>
+|#default = }}
+
+|Steady Tempo= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=- Requires one-handed sword
+|Description=Using the ability tree's skills grants {{pos|+10%}} Energy Restoration for {{W|5}} turns and reduces the cooldown of the ability tree's random {{W|Attack}} skill by {{pos|1}} turn.<br><br> The effect stacks up to {{W|4}} times.
+|#default = }}
+
+|Gloat= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=- Requires one-handed sword
+|Description=Grants sword strikes {{Pos|+1.5%}} Crit Chance, {{Pos|+3%}} Weapon Damage, and {{pos|+3%}} Energy Drain for each negative effect affecting the target.<br><br>{{pos|Doubles}} the bonuses if the negative effect is {{neg|Bleeding}}.
+|#default = }}
+
+|Onrush= {{#switch: {{{2}}}
+|Active=attack/charge
+|Type=Target Object
+|Range=4
+|Energy=20
+|Cooldown=14
+|Modifiers=Strength, Agility, Perception
+|Requirements=- Requires one-handed sword
+|Description=Performs a {{W|Charge}} towards the target and delivers a strike with {{Positive|+20%}} Weapon Damage and {{Positive|+10%}} Armor Penetration.<br><br>If the strike does damage, applies the target with {{Negative|-15%}} Bleed Resistance and {{Negative|+10%}} Damage Taken for {{W|4}} turns.
+|Formuladesc=Performs a {{W|Charge}} towards the target and delivers a strike with {{Positive|(PRC + AGL)%}} Weapon Damage and {{Positive|((0.5 * AGL) + (0.5 * STR))%}} Armor Penetration.<br><br>If the strike does damage, applies the target {{Negative|-(1.5 * AGL)%}} Bleed Resistance and {{Negative|+(PRC))%}} Damage Taken for {{W|4}} turns.
+|formula_raw=Weapon Damage: {{Positive| 1.5 * STR + 0.5 * AGL}}<br>Armor Piercing: {{Positive| 0.5 * AGL + PRC}}<br>Bleed Debuff: {{Positive| 1.5 * AGL}}<br>Damage Debuff: {{Positive| PRC}}<br>
+|#default = }}
+
+|Honed Edge= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=- Requires one-handed sword
+|Description=Sword hits grants {{Pos|+5%}} Bleed Chance and {{Pos|+3%}} Armor Penetration for {{W|5}} turns.<br>The effect stacks up to {{W|5}} times.
+|#default = }}
+
+|#default = Data does not exist.}}</includeonly><noinclude>[[Category:Data]]</noinclude>

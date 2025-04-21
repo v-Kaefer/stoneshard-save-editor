@@ -1,0 +1,321 @@
+<noinclude>Page for all Stoneshard Beast enemies skill data.
+</noinclude><includeonly>{{#switch: {{{1}}}
+
+|Animated Servant= {{#switch: {{{2}}}
+|Active=spell
+|Type=No Target
+|Range=7
+|Energy=30
+|Cooldown=4
+|Backfireper=12.50
+|Backfiredmg=0
+|Requirements=
+|Description=Summons two skeletons from the bone mounds closest to the character. <br><br>The skeletons persist for {{w|24}} turns, then fall apart, replenishing {{pos|4%}} Max Health and {{C|Energy|8%}} Max Energy to the Manticore.
+|#default = }}
+
+|Baleful Scream (harpy)= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=Target Object
+|Range=6
+|Energy=13
+|Cooldown=9
+|Requirements=
+|Description=Lets out a scream, dealing {{w|7 Psionic Damage}} to its target. <br>Has {{w|75%}} chance to {{w|Daze}} its target for {{w|2}} turns or to {{w|Stagger}} for {{w|4}} turns.
+|#default = }}
+
+|Bone Pyres= {{#switch: {{{2}}}
+|Active=spell
+|Type=No Target
+|Range=
+|Energy=30
+|Cooldown=8
+|Backfireper=12.50
+|Backfiredmg=0
+|Requirements=
+|Description=Destroys every skeleton in the arena, sending bone shards that deal {{w|12 Piercing}} and {{unholy|10}} Unholy Damage with {{w|40%}} Armor Penetration to all adjacent enemies. <br><br> Creates {{C|Arcane|aether fires}} in place of destroyed skeletons for {{w|8}} turns. While the character is adjacent to an aether fire, it burns {{C|Energy|5%}} of their Max Energy each turn. <br><br>Aether fires can't be extinguished with water, but they can be stamped out by walking over them. Doing so deals {{C|fire|5 Fire}}, {{unholy|5 Unholy}}, {{C|sacred|5 Sacred}}, and {{arcane|5 Arcane Damage}} with {{w|100%}} Armor Penetration.
+|#default = }}
+
+|Claw Swipe= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Object
+|Range=3
+|Energy=
+|Cooldown=
+|Requirements=
+|Description=Delivers a strike, dealing {{pos|+100%}} Damage. <br><br>If the Troll's Energy is more than {{C|Energy|10%}}, the strike gains {{pos|+33%}} Damage, {{pos|+50%}} Bleed Chance, {{pos|+125%}} Knockback Chance, {{pos|+25%}} Accuracy, and {{pos|+30%}} Armor Penetration.
+|#default = }}
+
+|Corrosive Blood= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Receiving melee attacks deals {{C|Caustic|2 Caustic}} and {{C|Poison|1 Poison}} Damage to the attacker. <br><br> Each {{neg|Bleeding}} and {{neg|degree of injury}} increases {{C|Caustic|Caustic Damage}} by {{w|1}}.
+|#default = }}
+
+
+|Dash (animal)= {{#switch: {{{2}}}
+|Active=charge
+|Type=Target Object
+|Range=3
+|Energy=24
+|Cooldown=18
+|Requirements=
+|Description=Performs a dash towards a targeted tile. <br><br>The skill's Energy Cost is increased by {{neg|15%}} for each enemy adjacent to the starting position. <br><br>On arrival grants {{pos|+20%}} Counter Chance and {{pos|+20%}} Dodge Chance for {{w|4}} turns if there's an adjacent enemy.
+|#default = }}
+
+|Deadly Tail= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Object
+|Range=1
+|Energy=
+|Cooldown=
+|Requirements=
+|Description=Delivers a strike to the target: <br><br>With {{w|33%}} chance applies it with {{poison|Poisoning}} for {{w|6}} turns <br> Or with {{w|33%}} chance applies it with {{neg|"Sacrificial Blood"}} for {{w|6}} turns <br>Or with {{w|33%}} chance applies it with {{neg|"Curse"}} for {{w|6}} turns <br><br>The chance of receiving these effects is reduced with Poison, Bleed. and Unholy Resistances respectively.
+|#default = }}
+
+|Deafening Roar= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=No Target
+|Range=3
+|Energy=40
+|Cooldown=12
+|Requirements=
+|Description=Lets out a roar, dealing {{psionic|5 Psionic Damage}} to all enemies over a huge area. <br><br>Deafening Roar has {{w|25%}} chance to {{w|Disarm}}, forcing equipped weapons to fall on the ground. <br>If this effect fails to apply, has {{w|75%}} chance to {{w|Stun}} for {{w|2}} turns. <br>If this other effect fails to apply as well, has {{w|100%}} chance to {{w|Daze}} for {{w|5}} turns.
+|#default = }}
+
+|Disturbed Hive= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Every {{w|8}} turns spawns a {{neg|Deathsting Swarm}} {{w|(up to 3)}}. <br><br>Each instance of Damage {{neg|reduces}} the countdown for the next swarm by {{w|1}} turn.
+|#default = }}
+
+|Dying Rage= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Grants {{pos|-50}} Pain Limit, {{pos|-25}} Damage Taken, and {{pos|+25}} Damage when Health is below {{neg|40%}}.
+|#default = }}
+
+|Earthshaking Strike (Young Troll)= {{#switch: {{{2}}}
+|Active=attack
+|Type=No Target
+|Range=3
+|Energy=30
+|Cooldown=3
+|Requirements=
+|Description=Strikes the ground, affecting targets in a large area. This attack has {{pos|+33%}} Stun Chance and {{pos|+66%}} Daze Chance.
+|#default = }}
+
+|Elusive Predators= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Grants {{pos|+50%}} Dodge Chance and {{pos|25%}} Counter Chance. <br>Allows to escape from the battlefield {{w|2}} turns after beginning to {{w|Retreat}}.
+|#default = }}
+
+|Grab ’Em!= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=Target Object
+|Range=1
+|Energy=6
+|Cooldown=10
+|Requirements=
+|Description=Attacks a target's random body part, dealing {{pos|100%}} damage with {{pos|+25%}} Bodypart Damage. <br><br>If the attack hits the legs, it has a chance to {{w|Immobilize}}. <br>If the attack hits the arms, it has a chance to {{w|Disarm}}, causing a weapon from the corresponding slot to fall on the ground. <br><br>The higher the {{w|Protection}} of the affected Body Part, the lower the chances of {{w|Immobilization}} and {{w|Disarming}}.
+|#default = }}
+
+|Howl= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=No Target
+|Range=
+|Energy=
+|Cooldown=30
+|Requirements=
+|Description=Generates a large amount of {{w|Noise}}, attracting nearby wolves within this map tile and instantly {{pos|refreshing}} active Cooldowns of all other wolves within Vision.
+|#default = }}
+
+|Lion Leap= {{#switch: {{{2}}}
+|Active=charge
+|Type=Target Tile
+|Range=7
+|Energy=20
+|Cooldown=4
+|Requirements=
+|Description=Performs a leap to a targeted tile. This ability can't be used if one of the paws is {{neg|Severely Injured}}.
+|#default = }}
+
+|Loud Barking= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=No Target
+|Range=
+|Energy=6
+|Cooldown=30
+|Requirements=
+|Description=When the Dog becomes Hostile, puts this ability on a {{W|5}} turn cooldown. Makes a huge ammount of {{w|noise}}, attracting all allies within {{W|25}} tiles.
+|#default = }}
+
+|Pack Sense= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Grants {{pos|+3%}} Dodge Chance, {{pos|+3%}} Crit Chance, and {{pos|-5%}} Cooldown Duration for every other wolf within Vision.
+|#default = }}
+
+|Peck= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Object
+|Range=1
+|Energy=6
+|Cooldown=10
+|Requirements=
+|Description=Performs an attack with  {{pos|+50%}} Bodypart Damage, {{pos|+25%}} Crit Chance, and {{pos|+50%}} Bleed Chance. <br><br>If this attack hits the {{w|head}} and deals at least {{neg|4%}} of the target Max Health as damage, applies the target with {{neg|Blindness}} for {{w|2}} turns.
+|#default = }}
+
+|Primal Aether= {{#switch: {{{2}}}
+|Active=spell
+|Type=Target Area
+|Range=7
+|Energy=30
+|Cooldown=4
+|Backfireper=12.50
+|Backfiredmg=0
+|Requirements=
+|Description=Marks an area <br><br> Next turn launches an energy arc that hits everything in its trajectory, dealing {{arcane|12 Arcane}}, {{C|sacred|12 Sacred}}, and {{unholy|12 Unholy Damage}} with {{w|80%}} Armor Penetration, {{pos|+125%}} Knockback Chance, and {{pos|+100%}} Stun Chance.
+|#default = }}
+
+|Ramming Charge (bison)= {{#switch: {{{2}}}
+|Active=attack/charge
+|Type=Target Object
+|Range=6
+|Energy=10
+|Cooldown=10
+|Requirements=
+|Description=Rushes towards the target from up to {{w|6}} tiles away, delivering an attack with {{pos|+10%}} Damage, {{pos|+15%}} Stun Chance, and {{pos|20%}} Knockback chance for each tile traveled.
+|#default = }}
+
+|Ramming Charge (boar)= {{#switch: {{{2}}}
+|Active=attack/charge
+|Type=Target Object
+|Range=6
+|Energy=10
+|Cooldown=10
+|Requirements=
+|Description=Rushes towards the target from up to {{w|6}} tiles away, delivering an attack with {{pos|+10%}} Damage, {{pos|+15%}} Stun Chance, and {{pos|20%}} Knockback chance for each tile traveled.
+|#default = }}
+
+|Ramming Charge (moose)= {{#switch: {{{2}}}
+|Active=attack/charge
+|Type=Target Object
+|Range=6
+|Energy=10
+|Cooldown=10
+|Requirements=
+|Description=Rushes towards the target from up to {{w|6}} tiles away, delivering an attack with {{pos|+10%}} Damage, {{pos|+15%}} Stun Chance, and {{pos|20%}} Knockback chance for each tile traveled.
+|#default = }}
+
+|Rapid Flight= {{#switch: {{{2}}}
+|Active=charge
+|Type=Target Tile
+|Range=7
+|Energy=20
+|Cooldown=20
+|Requirements=
+|Description=Rushes towards a targeted tile, receiving {{pos|+25%}} Dodge Chance for {{w|2}} turns. <br><br>This skill doesn't go on cooldown if the harpy's wings aren't injured.
+|#default = }}
+
+|Regenerative Carapace= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Each turn restores {{pos|5%}} Armor Durability. Every {{w|1%}} of Armor Durability grants {{pos|+0.5%}} Magic and Nature Resistances.
+|#default = }}
+
+|Rend Flesh= {{#switch: {{{2}}}
+|Active=active
+|Type=Target Object
+|Range=1
+|Energy=10
+|Cooldown=10
+|Requirements=
+|Description=Delivers a strike with {{pos|+100%}} Bodypart Damage and {{pos|+50%}} Armor Damage.
+|#default = }}
+
+|Rock Toss= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=Target Area
+|Range=16
+|Energy=80
+|Cooldown=10
+|Requirements=
+|Description=Marks an area. Next turn throws a rock at it, dealing {{w|60 Crushing Damage}} to all affected targets. <br><br>Each tile of distance to the target increases the Damage of Rock Toss by {{pos|10%}}.
+|#default = }}
+
+|Shockwave= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Area
+|Range=3
+|Energy=30
+|Cooldown=3
+|Requirements=
+|Description=Marks an area. Next turn delivers a strike, dealing {{w|45 Crushing Damage}} to all affected targets with {{w|150%}} chance to Knock them back. Each tile of distance to the target increases the Shockwave Damage by {{pos|10%}}.
+|#default = }}
+
+|Snake Stealth= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Snakes hide in the grass, only attacking when encroached upon. <br><br> Snakes can be spotted with high {{w|Perception}} or by using {{w|"Examine Surroundings"}}.
+|#default = }}
+
+|Swarm= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Grants {{pos|+0.25%}} Dodge Chance and {{neg|-1%}} Damage for each {{neg|missing}} percent of Health.
+|#default = }}
+
+|Taste for Flesh= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Object
+|Range=1
+|Energy=25
+|Cooldown=10
+|Requirements=
+|Description=Delivers a strike with {{pos|+150%}} Bodypart Damage, {{pos|+80%}} Bleed Chance, and {{pos|+25%}} Life Drain. If this attack inflicts an injury or worsens an already existing one, the Gulon replenishes {{pos|+25%}} Max Health.
+|#default = }}
+
+|Troll Regeneration= {{#switch: {{{2}}}
+|Active=maneuver
+|Type=No target
+|Range=
+|Energy=60
+|Cooldown=16
+|Requirements=
+|Description=Removes all negative effects. then grants the effect of {{pos|"Troll Regeneration"}} for {{w|4}} turns: <br><br>{{pos|-75%}} Damage Taken <br>{{pos|+50%}} Fortitude <br>Replenishes {{pos|5%}} Max Health per turn <br>{{neg|Can't use abilities, move, or attack}} <br>Receiving a melee hit {{neg|removes}} the effect and applies {{neg|+200%}} Damage Taken for {{w|2}} turns.
+|#default = }}
+
+|Unbearable Stench= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Has {{w|33%}} chance to provoke {{neg|Coughing}} in all adjacent enemies. This effect from multiple harpies doesn't stack.
+|#default = }}
+
+|Vengeance of the Dead= {{#switch: {{{2}}}
+|Active=spell
+|Type=No target
+|Range=
+|Energy=30
+|Cooldown=8
+|Requirements=
+|Description=Marks {{w|6-8}} tiles in a large area around the character, including the tile they're currently standing on. <br><br>Next turn cause bone spikes to erupt from the marked tiles, dealing {{w|28 Piercing}} and {{unholy|12 Unholy Damage}} with {{w|60%}} Armor Penetration, {{pos|+100%}} Bleed Chance, and {{pos|+100%}} Immobilization Chance. Bone Spikes persist for {{w|12}} turns, but can be destroyed with damage or when this ability is used again.
+|#default = }}
+
+|Voracity= {{#switch: {{{2}}}
+|Active=passive
+|Requirements=
+|Description=Each subsequent attack against a target grants {{pos|+15%}} Life Drain and {{pos|7.5%}} Armor Penetration for {{w|6}} turns.
+|#default = }}
+
+|Web Spit= {{#switch: {{{2}}}
+|Active=attack
+|Type=Target Object
+|Range=5
+|Energy=20
+|Cooldown=60
+|Requirements=
+|Description=Spits a web at the target, dealing {{C|Caustic|8 Caustic}} and {{C|Poison|4 Poison}} Damage to the target while also applying the effect of {{neg|"Web"}} for {{w|6-8}} turns.
+|#default = }}
+
+|#default = Data does not exist.}}</includeonly><noinclude>[[Category:Data]]</noinclude>
