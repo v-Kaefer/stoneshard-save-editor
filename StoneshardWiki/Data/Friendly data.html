@@ -1,0 +1,554 @@
+<noinclude>Page for all Stoneshard friendly NPC data.
+
+---
+
+Friendly NPC data is maintined manually (for now).
+
+*Occupation - shown in the trade screen next to the NPC name
+*Contract - if the NPC offers Contracts (quests for specific dungeons with a time limit)
+*Quest - if the NPC offers personal quests (quests with no time limit)
+*QuestRequirement - When the Quest is only available after a special condition is met, describe it here.
+*Trader - if the NPC is a dedicated trader, usually by standing near a stall or in a shop and offering wide variety of goods. NPCs like farmers that sell a single food item don't count as Traders.
+*Repair - if the NPC offers repair services
+*Rumors - if the NPC offers talking about Rumours
+*Lore - if the NPC offers dialogue options that gives details about the game lore and setting
+*UniqueDialogue - if the NPC has a unique dialogue specific to this NPC
+*Residence - Town of residence (Osbrook, Brynn, etc.)
+*Sells - if the NPC is a trader, what item categories do they sell (Maces, Shields, Food, Drugs, etc.)
+
+
+If a parameter is empty (for example, [[Ormond]] the Butcher does not offer any Contracts), it can be left empty or omitted completely.<br>
+Here are two examples of Friendly NPC data syntax, these two would produce the same result:
+
+    <nowiki>
+|Ormond = {{#switch: {{{2}}}
+|Occupation=Butcher
+|Contract=
+|Quest=
+|QuestRequirement=
+|Trader=1
+|Repair=
+|Rumors=1
+|Lore=
+|UniqueDialogue=
+|Residence=Osbrook
+|Sells=Food
+|#default = }}</nowiki>
+
+    <nowiki>
+|Ormond = {{#switch: {{{2}}}
+|Occupation=Butcher
+|Trader=1
+|Rumors=1
+|Residence=Osbrook
+|Sells=Food
+|#default = }}</nowiki>
+
+Used by:
+* {{tl|NPCTable/row}} template.
+* {{tl|NPCTable/end}} template.
+</noinclude><includeonly>{{#switch: {{{1}}}
+<!--
+
+----- OSBROOK -----
+
+-->
+|Ormond = {{#switch: {{{2}}}
+|Occupation=Butcher
+|Trader=1
+|Rumors=1
+|Residence=Osbrook
+|Sells=Food
+|#default = }}
+
+|Jurg = {{#switch: {{{2}}}
+|Occupation=Carpenter
+|Quest=1
+|Trader=1
+|Repair=1
+|Rumors=1
+|Lore=1
+|UniqueDialogue=1
+|Residence=Osbrook
+|Sells=Maces, Staves, Shields, Bows, Xbows, Ammunition
+|#default = }}
+
+|Ram = {{#switch: {{{2}}}
+|Occupation=Drunkard
+|Quest=1
+|Rumors=1
+|UniqueDialogue=1
+|Residence=Osbrook
+|#default = }}
+
+|Odar = {{#switch: {{{2}}}
+|Occupation=Elder
+|Contract=1
+|Rumors=1
+|Lore=1
+|UniqueDialogue=1
+|Residence=Osbrook
+|#default = }}
+
+|Rickerd = {{#switch: {{{2}}}
+|Occupation=Emissary
+|Quest=1
+|QuestRequirement=Emissary offers his Quest only after he has been kidnapped and you save him.
+|Lore=1
+|UniqueDialogue=1
+|Residence=Osbrook
+|#default = }}
+
+|Margyt = {{#switch: {{{2}}}
+|Occupation=Food Trader
+|Trader=1
+|Repair=
+|Rumors=1
+|Lore=
+|UniqueDialogue=
+|Residence=Osbrook
+|Sells=Food
+|#default = }}
+
+|Gina = {{#switch: {{{2}}}
+|Occupation=Fruit Trader
+|Trader=1
+|Rumors=1
+|Lore=
+|Residence=Osbrook
+|Sells=Food
+|#default = }}
+
+|Frid = {{#switch: {{{2}}}
+|Occupation=Herbalist
+|Quest=1
+|Trader=1
+|Rumors=1
+|Residence=Osbrook
+|Sells=Herbs, Medicine, Scrolls
+|#default = }}
+
+|Osbrook Guards = {{#switch: {{{2}}}
+|Name=Random Names
+|Image=
+|Occupation=Guard (6x)
+|Rumors=1
+|Residence=Osbrook
+|#default = }}
+
+|Brukk = {{#switch: {{{2}}}
+|Occupation=Innkeeper
+|Trader=1
+|Rumors=1
+|Lore=1
+|UniqueDialogue=1
+|Quest=1
+|QuestRequirement=Find Boar Head in Abandoned Manor
+|Residence=Osbrook
+|Sells=Food, Drinks, Waterskin
+|#default = }}
+
+|Osbrook Female Innkeeper = {{#switch: {{{2}}}
+|Name=Random Name
+|Image=Innkeeper_female1.png
+|Occupation=Hostess
+|Trader=1
+|Rumors=1
+|Residence=Osbrook
+|Sells=Food, Drinks, Waterskin
+|#default = }}
+
+|Bert = {{#switch: {{{2}}}
+|Occupation=Merchant
+|Quest=1
+|Trader=1
+|Rumors=1
+|Lore=1
+|UniqueDialogue=1
+|Residence=Osbrook
+|Sells=Weapons, Armor, Jewelry, Medicine, Valuables, Food, Junk
+|#default = }}
+
+|Alan = {{#switch: {{{2}}}
+|Occupation=Miller
+|Trader=1
+|Residence=Osbrook
+|Sells=Food
+|#default = }}
+
+|Rona = {{#switch: {{{2}}}
+|Image=Peasant_female4.png
+|Occupation=Peasant
+|Rumors=1
+|Residence=Osbrook
+|#default = }}
+
+|Ursa = {{#switch: {{{2}}}
+|Image=Peasant_female2.png
+|Occupation=Peasant
+|Rumors=1
+|Residence=Osbrook
+|#default = }}
+
+|Osbrook Peasants = {{#switch: {{{2}}}
+|Name=Random Names
+|Image=Peasant_female1.png
+|Image2=Peasant_female3.png
+|Image3=Peasant_male1.png
+|Image4=Peasant_male2.png
+|Occupation=Peasant (4x)
+|Rumors=1
+|Residence=Osbrook
+|#default = }}
+
+|Osbrook Sergeant = {{#switch: {{{2}}}
+|Occupation=Sergeant
+|Name=Random Name
+|Image=Osbrook Sergeant.png
+|Quest=1
+|QuestRequirement=Sergeant actually has no Quest, but instead gives you a choice of a starting weapon. Refusing to pick any weapon awards [[Reputation]] with Osbrook.
+|Rumors=1
+|Residence=Osbrook
+|#default = }}
+
+|Jebar = {{#switch: {{{2}}}
+|Occupation=Smith
+|Quest=1
+|Trader=1
+|Repair=1
+|Rumors=1
+|Residence=Osbrook
+|Sells=Weapons, Lockpicks, Traps
+|#default = }}
+
+|Anselm = {{#switch: {{{2}}}
+|Occupation=Stableman
+|Rumors=1
+|Residence=Osbrook
+|#default = }}
+
+|Hold = {{#switch: {{{2}}}
+|Occupation=Tailor
+|Quest=1
+|Trader=1
+|Repair=1
+|Rumors=1
+|Lore=1
+|UniqueDialogue=1
+|Residence=Osbrook
+|#default = }}
+
+<!--
+
+----- MANNSHIRE -----
+
+-->
+
+|Lynd = {{#switch: {{{2}}}
+|Occupation=Apprentice
+|Trader=1
+|Repair=1
+|UniqueDialogue=1
+|Residence=Mannshire
+|Sells=Misc
+|#default = }}
+
+|Dirk_(NPC) = {{#switch: {{{2}}}
+|Name=Dirk
+|Occupation=Carpenter
+|Trader=1
+|Repair=1
+|Rumors=1
+|UniqueDialogue=1
+|Residence=Mannshire
+|Sells=Maces, Staves, Shields, Bows, Xbows, Ammunition
+|#default = }}
+
+|Lotar = {{#switch: {{{2}}}
+|Occupation=Drunkard
+|Residence=Mannshire
+|#default = }}
+
+|Frida = {{#switch: {{{2}}}
+|Occupation=Drunkard
+|UniqueDialogue=1
+|Residence=Mannshire
+|#default = }}
+
+|Knud = {{#switch: {{{2}}}
+|Occupation=Village Elder
+|Contract=1
+|Quest=1
+|QuestRequirement=
+|Trader=1
+|Rumors=1
+|Lore=1
+|UniqueDialogue=1
+|Residence=Mannshire
+|Sells=Maps
+|#default = }}
+
+|Agna = {{#switch: {{{2}}}
+|Occupation=Food Trader
+|Trader=1
+|Rumors=1
+|Residence=Mannshire
+|Sells=Milk, Cheese
+|#default = }}
+
+|Gunda = {{#switch: {{{2}}}
+|Occupation=Food Trader
+|Trader=1
+|Rumors=1
+|Residence=Mannshire
+|Sells=Wine, Grapes
+|#default = }}
+
+|Weber vir Lecri = {{#switch: {{{2}}}
+|Occupation=Governor
+|Quest=1
+|QuestRequirement=Reach Level 10
+|Trader=1
+|Rumors=1
+|Lore=1
+|UniqueDialogue=1
+|Residence=Mannshire
+|Sells=Maps, Tools
+|#default = }}
+
+|Mannshire Guards = {{#switch: {{{2}}}
+|Name=Random Names
+|Image=
+|Occupation=Guard (2x)
+|Rumors=1
+|Residence=Mannshire
+|#default = }}
+
+|Selma = {{#switch: {{{2}}}
+|Occupation=Hostess
+|Trader=1
+|Rumors=1
+|Lore=1
+|UniqueDialogue=1
+|Residence=Mannshire
+|Sells=Food, Drinks, Waterskin
+|#default = }}
+
+|Arenn = {{#switch: {{{2}}}
+|Occupation=Innkeeper
+|Trader=1
+|Rumors=1
+|Lore=1
+|UniqueDialogue=1
+|Residence=Mannshire
+|Sells=Food, Drinks, Waterskin
+|#default = }}
+
+|Gerlot = {{#switch: {{{2}}}
+|Occupation=Merchant
+|Quest=1
+|QuestRequirement=Ask For Work
+|Trader=1
+|Rumors=1
+|Lore=1
+|UniqueDialogue=1
+|Residence=Mannshire
+|Sells=Weapons, Armor, Jewelry, Medicine, Valuables, Food, Junk
+|#default = }}
+
+|Uta = {{#switch: {{{2}}}
+|Occupation=
+|Quest=
+|QuestRequirement=
+|Trader=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Mannshire
+|Sells=
+|#default = }}
+
+|Hilda = {{#switch: {{{2}}}
+|Occupation=
+|Quest=
+|QuestRequirement=
+|Trader=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Mannshire
+|Sells=
+|#default = }}
+
+|Celz = {{#switch: {{{2}}}
+|Occupation=
+|Quest=
+|QuestRequirement=
+|Trader=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Mannshire
+|Sells=
+|#default = }}
+
+|Alba = {{#switch: {{{2}}}
+|Occupation=
+|Quest=
+|QuestRequirement=
+|Trader=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Mannshire
+|Sells=
+|#default = }}
+
+|Josh = {{#switch: {{{2}}}
+|Occupation=
+|Quest=
+|QuestRequirement=
+|Trader=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Mannshire
+|Sells=
+|#default = }}
+
+|Rald = {{#switch: {{{2}}}
+|Occupation=
+|Quest=
+|QuestRequirement=
+|Trader=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Mannshire
+|Sells=
+|#default = }}
+
+|Unar = {{#switch: {{{2}}}
+|Occupation=
+|Quest=
+|QuestRequirement=
+|Trader=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Mannshire
+|Sells=
+|#default = }}
+
+|Dietrich = {{#switch: {{{2}}}
+|Occupation=
+|Quest=1
+|QuestRequirement=
+|Trader=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Mannshire
+|Sells=
+|#default = }}
+
+|Irma = {{#switch: {{{2}}}
+|Occupation=
+|Quest=
+|QuestRequirement=
+|Trader=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Mannshire
+|Sells=
+|#default = }}
+
+<!--
+
+----- FAIR -----
+
+-->
+
+|Drostan = {{#switch: {{{2}}}
+|Occupation=
+|Quest=
+|QuestRequirement=
+|Trader=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Mannshire
+|Sells=
+|#default = }}
+
+|Gwenyth = {{#switch: {{{2}}}
+|Occupation=Food Trader
+|Contract=
+|Quest=
+|QuestRequirement=
+|Trader=1
+|Repair=
+|Rumors=1
+|Lore=
+|UniqueDialogue=
+|Residence=Fair
+|Sells=Food
+|#default = }}
+
+|Vandon = {{#switch: {{{2}}}
+|Occupation=
+|Quest=
+|QuestRequirement=
+|Trader=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Mannshire
+|Sells=
+|#default = }}
+
+|Aber = {{#switch: {{{2}}}
+|Occupation=
+|Quest=
+|QuestRequirement=
+|Trader=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Mannshire
+|Sells=
+|#default = }}
+
+<!--
+
+----- OTHER NPCS -----
+
+-->
+
+|Bran = {{#switch: {{{2}}}
+|Occupation=Trapper
+|Quest=
+|QuestRequirement=
+|Trader=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Mannshire
+|Sells=
+|#default = }}
+
+|Random = {{#switch: {{{2}}}
+|Occupation=Witch
+|Quest=
+|QuestRequirement=
+|Trader=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Mannshire
+|Sells=
+|#default = }}
+
+
+|#default = NPC {{{1}}} does not exist in [[Friendly data]].}}</includeonly>

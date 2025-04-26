@@ -1,69 +1,74 @@
+{{doc/start}}{{stub}}
+
+'''{{c|+|THIS TEMPLATE IS THE UPDATED VERSION OF THE {{tl|CommoditiesRatioTable/head}} & {{tl|CommoditiesRatioTable/row}} TEMPLATE.}}'''<br>
+'''{{c|+|ALONG WITH THE [[CommoditiesRatio data|COMMODITIESRATIO DATA]], UPDATED TO THE [[Friendly data|FRIENDLY DATA]] PAGE!}}'''
+
+=Updates=
+
+Firstly, the data found in the old temporary [[CommoditiesRatio data]] page, was added to the [[Friendly data]] page.<br>
+'''Therefore, NPCs that had the "Trade=1" parameter, received a new parameter: "Ratios"'''.<br>
+That were adjusted from the older order to the new one.<br>
+
+==Data Format==
+The new datastring order has 7 data columns separated by semicolons. Each column represents the price of a commodity in a specific town.<br>
+Current order of commodities in columns are:
+
+    Sacks of Grain;Barrel of Beer;Crates of Wine;Pails of Cider;Shipment of Timber;Crates of Charcoal;Sacks of Salt
+
+The base values are:
+    280;240;360;300;240;300;400
+
+
+
+==Usage==
+Before, there was th possibility to have different "/head" usages. But, after the "Tabber" implementation, there was really no need for multiple "/head" parameters.<br>
+The template has been simplified to simply {{tl|CommoditiesRatioTable}}, and "controlled" by "Tabber", to show specific towns NPCs.
+
+
+==Examples==
+
+==="Clear" Call===
+{{CommoditiesRatioTable}}
+|}
+
+
+===Header & row===
+{{CommoditiesRatioTable/head}}
+{{CommoditiesRatioTable/row|Osbrook|Brukk}}
+|}
+
+
+==Usage==
+
+{{tl|CommoditiesRatioTable/head|town=Osbrook}}*<br>
+{{tl|CommoditiesRatioTable/row|Osbrook|Brukk}}
+
+*head can use -> |town=Osbrook
+===With Tabber implementation===
 <tabber>
 |-| Commodities Ratios =
 {{#tag:tabber
 | All =
 {{CommoditiesRatioTable/head}}
-{{CommoditiesRatioTable/row|Osbrook|Brukk}}
-{{CommoditiesRatioTable/row|Osbrook|Bert}}
-{{CommoditiesRatioTable/row|Osbrook|Jurg}}
-{{CommoditiesRatioTable/row|Osbrook|Jebar}}
-{{CommoditiesRatioTable/row|Mannshire|Arenn}}
-{{CommoditiesRatioTable/row|Mannshire|Gerlot}}
-{{CommoditiesRatioTable/row|Mannshire|Dirk_(NPC)}}
-{{CommoditiesRatioTable/row|Mannshire|Dietrich}}
-{{CommoditiesRatioTable/row|Brynn Inns|Rico}}
-{{CommoditiesRatioTable/row|Brynn Inns|Rixa}}
-{{CommoditiesRatioTable/row|Brynn Inns|Kred}}
-{{CommoditiesRatioTable/row|Brynn Inns|Farley}}
-{{CommoditiesRatioTable/row|Brynn Shops|Fat Yann}}
-{{CommoditiesRatioTable/row|Brynn Shops|Eric}}
-{{CommoditiesRatioTable/row|Brynn Shops|Idrich}}
-{{CommoditiesRatioTable/row|Brynn Shops|Amis}}
-{{CommoditiesRatioTable/row|Brynn Foreign|Esfah}}
-{{CommoditiesRatioTable/row|Brynn Foreign|Ormi}}
-{{CommoditiesRatioTable/row|Brynn Foreign|Zdenebrad}}
-{{CommoditiesRatioTable/row|Brynn Foreign|Rigo Nevic}}
-{{CommoditiesRatioTable/row|Misc|Wigmar}}
-{{CommoditiesRatioTable/row|Misc|Kenrick}}
-{{CommoditiesRatioTable/row|Misc|Weemart}}
-{{CommoditiesRatioTable/row|Misc|Bryne}}
 {{!}}-{{!}} Osbrook =
 {{CommoditiesRatioTable/head}}
 {{CommoditiesRatioTable/row|Osbrook|Brukk}}
-{{CommoditiesRatioTable/row|Osbrook|Bert}}
-{{CommoditiesRatioTable/row|Osbrook|Jurg}}
-{{CommoditiesRatioTable/row|Osbrook|Jebar}}
 {{!}}-{{!}} Mannshire =
 {{CommoditiesRatioTable/head}}
 {{CommoditiesRatioTable/row|Mannshire|Arenn}}
-{{CommoditiesRatioTable/row|Mannshire|Gerlot}}
-{{CommoditiesRatioTable/row|Mannshire|Dirk_(NPC)}}
-{{CommoditiesRatioTable/row|Mannshire|Dietrich}}
 {{!}}-{{!}} Brynn Inns =
 {{CommoditiesRatioTable/head}}
 {{CommoditiesRatioTable/row|Brynn Inns|Rico}}
-{{CommoditiesRatioTable/row|Brynn Inns|Rixa}}
-{{CommoditiesRatioTable/row|Brynn Inns|Kred}}
-{{CommoditiesRatioTable/row|Brynn Inns|Farley}}
-{{!}}-{{!}} Brynn Shops =
-{{CommoditiesRatioTable/head}}
-{{CommoditiesRatioTable/row|Brynn Shops|Fat Yann}}
-{{CommoditiesRatioTable/row|Brynn Shops|Eric}}
-{{CommoditiesRatioTable/row|Brynn Shops|Idrich}}
-{{CommoditiesRatioTable/row|Brynn Shops|Amis}}
-{{!}}-{{!}} Brynn Foreign =
-{{CommoditiesRatioTable/head}}
-{{CommoditiesRatioTable/row|Brynn Foreign|Esfah}}
-{{CommoditiesRatioTable/row|Brynn Foreign|Ormi}}
-{{CommoditiesRatioTable/row|Brynn Foreign|Zdenebrad}}
-{{CommoditiesRatioTable/row|Brynn Foreign|Rigo Nevic}}
-{{!}}-{{!}} Misc =
-{{CommoditiesRatioTable/head}}
-{{CommoditiesRatioTable/row|Misc|Wigmar}}
-{{CommoditiesRatioTable/row|Misc|Kenrick}}
-{{CommoditiesRatioTable/row|Misc|Weemart}}
-{{CommoditiesRatioTable/row|Misc|Bryne}}
 }}
-|-|Base Values=
-{{Armor|Buckler}}
 </tabber>
+
+
+=== New implementation ===
+The new implementation used in [[Commodities]], do not define 'town' and uses the <tabber> parser tag, in the page itself, instead of the template.<br>
+More information on the <tabber> parser tag, can be found in the [[Stoneshard_wiki:Community_portal|Community Portal]], under "Tabs".
+{{CommoditiesRatioTable/head}}
+{{CommoditiesRatioTable/row|Osbrook|Brukk}}
+{{CommoditiesRatioTable/row|Osbrook|Bert}}
+|}
+
+{{doc/end}}
