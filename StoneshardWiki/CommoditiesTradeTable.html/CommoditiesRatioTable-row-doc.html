@@ -1,0 +1,80 @@
+{{doc/start}}{{stub}}
+
+'''{{c|+|THIS TEMPLATE HAS BEEN UPDATED TO WORK WITH [[Friendly data|FRIENDLY DATA]].}}'''<br>
+'''{{c|+|ALONG WITH THE [[CommoditiesRatio data|COMMODITIESRATIO DATA]], UPDATED TO THE [[Friendly data|FRIENDLY DATA]] PAGE!}}'''
+
+==Commodities Ratio Table==
+
+This is the template for the Commodities Ratio Table. It is used to generate the table on the [[Commodities]] page.
+
+=Updates=
+
+Firstly, the data found in the old temporary [[CommoditiesRatio data]] page, was added to the [[Friendly data]] page.<br>
+'''Therefore, NPCs that had the "Trade=1" parameter, and trade [[Commodities|commodities]] received a new parameter: "Ratios"'''.<br>
+That were adjusted from the older order to the new one.<br>
+
+==Data Format==
+The new datastring order has 7 data columns separated by semicolons. Each column represents the Ratio of said commodity for a specific NPC.<br>
+Sacks of Grain;Barrel of Beer;Crates of Wine;Pails of Cider;Shipment of Timber;Crates of Charcoal;Sacks of Salt
+
+The columns are in the following order:
+
+    OLD ORDER: Grain;Charcoal;Salt;Timber;Beer;Wine;Cider
+    OLD Base : 280  ;300     ;400 ;240   ;240 ;360 ;300
+
+    NEW ORDER: Grain;Beer;Wine;Cider;Timber;Charcoal;Salt
+    NEW Base : 280  ;240 ;360 ;300  ;240   ;300     ;400
+
+==Usage==
+Before, there was the possibility to have different "head|{{x}}" usages. But, after the "Tabber" implementation, there was really no need for multiple parameters.<br>
+The idea was to simplify the template to simply {{tl|CommoditiesRatioTable}}, and "controlled" by "Tabber", to show specific towns NPCs. But tabber would end up requiring repeated code blocks, therefore killing the purpouse of it.
+
+
+
+==Examples==
+
+==="Clear" Call===
+{{CommoditiesRatioTable}}
+|}
+
+
+===Header & row===
+{{CommoditiesRatioTable/head}}
+{{CommoditiesRatioTable/row|Osbrook|Brukk}}
+|}
+
+
+==Usage==
+
+{{tl|CommoditiesRatioTable/head|town=Osbrook}}*<br>
+{{tl|CommoditiesRatioTable/row|Osbrook|Brukk}}
+
+*head can use -> |town=Osbrook
+===With Tabber implementation===
+<tabber>
+|-| Commodities Ratios =
+{{#tag:tabber
+| All =
+{{CommoditiesRatioTable/head}}
+{{!}}-{{!}} Osbrook =
+{{CommoditiesRatioTable/head}}
+{{CommoditiesRatioTable/row|Osbrook|Brukk}}
+{{!}}-{{!}} Mannshire =
+{{CommoditiesRatioTable/head}}
+{{CommoditiesRatioTable/row|Mannshire|Arenn}}
+{{!}}-{{!}} Brynn Inns =
+{{CommoditiesRatioTable/head}}
+{{CommoditiesRatioTable/row|Brynn Inns|Rico}}
+}}
+</tabber>
+
+
+=== New implementation ===
+The new implementation used in [[Commodities]], do not define 'town' and uses the <tabber> parser tag, in the page itself, instead of the template.<br>
+More information on the <tabber> parser tag, can be found in the [[Stoneshard_wiki:Community_portal|Community Portal]], under "Tabs".
+{{CommoditiesRatioTable/head}}
+{{CommoditiesRatioTable/row|Osbrook|Brukk}}
+{{CommoditiesRatioTable/row|Osbrook|Bert}}
+|}
+
+{{doc/end}}
