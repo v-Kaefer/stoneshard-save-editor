@@ -15,6 +15,7 @@ Friendly NPC data is maintined manually (for now).
 *UniqueDialogue - if the NPC has a unique dialogue specific to this NPC
 *Residence - Town of residence (Osbrook, Brynn, etc.)
 *Sells - if the NPC is a trader, what item categories do they sell (Maces, Shields, Food, Drugs, etc.)
+*Ratios - if the NPC is a trader "Trader=1", and it sells/buys commodities, it will have the trading ratios for the commodities it trades(refer to [[Template:CommoditiesRatioTable]])
 
 
 If a parameter is empty (for example, [[Ormond]] the Butcher does not offer any Contracts), it can be left empty or omitted completely.<br>
@@ -71,6 +72,7 @@ Used by:
 |UniqueDialogue=1
 |Residence=Osbrook
 |Sells=Maces, Staves, Shields, Bows, Xbows, Ammunition
+|Ratios=;;;;1.26;;
 |#default = }}
 
 |Ram = {{#switch: {{{2}}}
@@ -146,6 +148,7 @@ Used by:
 |QuestRequirement=Find Boar Head in Abandoned Manor
 |Residence=Osbrook
 |Sells=Food, Drinks, Waterskin
+|Ratios=;1.21;1.26;1.21;;;1.32
 |#default = }}
 
 |Osbrook Female Innkeeper = {{#switch: {{{2}}}
@@ -167,6 +170,7 @@ Used by:
 |UniqueDialogue=1
 |Residence=Osbrook
 |Sells=Weapons, Armor, Jewelry, Medicine, Valuables, Food, Junk
+|Ratios=;1.21;1.21;1.21;1.16;1.16;1.32
 |#default = }}
 
 |Alan = {{#switch: {{{2}}}
@@ -219,6 +223,7 @@ Used by:
 |Rumors=1
 |Residence=Osbrook
 |Sells=Weapons, Lockpicks, Traps
+|Ratios=;;;;;1.26;
 |#default = }}
 
 |Anselm = {{#switch: {{{2}}}
@@ -262,6 +267,7 @@ Used by:
 |UniqueDialogue=1
 |Residence=Mannshire
 |Sells=Maces, Staves, Shields, Bows, Xbows, Ammunition
+|Ratios=;;;;1.38;;
 |#default = }}
 
 |Lotar = {{#switch: {{{2}}}
@@ -342,6 +348,7 @@ Used by:
 |UniqueDialogue=1
 |Residence=Mannshire
 |Sells=Food, Drinks, Waterskin
+|Ratios=1.1;1.26;;;;1.21
 |#default = }}
 
 |Gerlot = {{#switch: {{{2}}}
@@ -354,6 +361,7 @@ Used by:
 |UniqueDialogue=1
 |Residence=Mannshire
 |Sells=Weapons, Armor, Jewelry, Medicine, Valuables, Food, Junk
+|Ratios=1.1;1.21;;;1.26;1.16;1.21
 |#default = }}
 
 |Uta = {{#switch: {{{2}}}
@@ -450,6 +458,7 @@ Used by:
 |UniqueDialogue=
 |Residence=Mannshire
 |Sells=
+|Ratios=;;;;;1.26;
 |#default = }}
 
 |Irma = {{#switch: {{{2}}}
@@ -462,6 +471,168 @@ Used by:
 |UniqueDialogue=
 |Residence=Mannshire
 |Sells=
+|#default = }}
+
+<!--
+
+----- BRYNN INNS -----
+
+-->
+
+|Rico = {{#switch: {{{2}}}
+|Occupation=Merchant
+|Trader=1
+|Repair=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Brynn
+|Sells=
+|Ratios=1.1;1.21;1.38;1.21;;;1.32
+|#default = }}
+
+|Rixa = {{#switch: {{{2}}}
+|Occupation=Merchant
+|Trader=1
+|Repair=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Brynn
+|Sells=
+|Ratios=1.16;1.38;1.26;1.16;;;1.16
+|#default = }}
+
+|Kred = {{#switch: {{{2}}}
+|Occupation=Merchant
+|Trader=1
+|Repair=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Brynn
+|Sells=
+|Ratios=1.16;1.26;1.26;1.21;;;1.16
+|#default = }}
+
+|Farley = {{#switch: {{{2}}}
+|Occupation=Merchant
+|Trader=1
+|Repair=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Brynn
+|Sells=
+|Ratios=1.16;1.26;1.26;1.21;;;1.21
+|#default = }}
+
+<!--
+
+----- BRYNN SHOPS -----
+
+-->
+
+|Fat Yann = {{#switch: {{{2}}}
+|Occupation=Merchant
+|Trader=1
+|Repair=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Brynn
+|Sells=
+|Ratios=1.21;1.16;1.1;1.1;;;1.21
+|#default = }}
+
+|Eric = {{#switch: {{{2}}}
+|Occupation=Merchant
+|Trader=1
+|Repair=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Brynn
+|Sells=
+|Ratios=1.38;;;;;1.16
+|#default = }}
+
+|Idrich = {{#switch: {{{2}}}
+|Occupation=Merchant
+|Trader=1
+|Repair=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Brynn
+|Sells=
+|Ratios=1.16;1.21;1.16;1.16;1.26;1.26;1.16
+|#default = }}
+
+|Amis = {{#switch: {{{2}}}
+|Occupation=Merchant
+|Trader=1
+|Repair=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Brynn
+|Sells=
+|Ratios=1.21;1.16;1.1;;1.32;1.32;1.1
+|#default = }}
+
+<!--
+
+----- BRYNN FOREIGN -----
+
+-->
+
+|Esfah = {{#switch: {{{2}}}
+|Occupation=Merchant
+|Trader=1
+|Repair=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Brynn
+|Sells=
+|Ratios=1.21;1.16;1.1;1.1;1.38;1.32;1.21
+|#default = }}
+
+|Ormi = {{#switch: {{{2}}}
+|Occupation=Merchant
+|Trader=1
+|Repair=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Brynn
+|Sells=
+|Ratios=1.21;1.26;1.16;1.1;1.32;1.38;1.16
+|#default = }}
+
+|Zdenebrad = {{#switch: {{{2}}}
+|Occupation=Merchant
+|Trader=1
+|Repair=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Brynn
+|Sells=
+|Ratios=1.26;1.21;1.21;1.16;1.26;1.26;1.1
+|#default = }}
+
+|Rigo Nevic = {{#switch: {{{2}}}
+|Occupation=Merchant
+|Trader=1
+|Repair=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Brynn
+|Sells=
+|Ratios=1.16;1.16;1.1;1.21;1.32;1.38;1.1
 |#default = }}
 
 <!--
@@ -528,6 +699,51 @@ Used by:
 
 |Bran = {{#switch: {{{2}}}
 |Occupation=Trapper
+|Quest=
+|QuestRequirement=
+|Trader=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=Mannshire
+|Sells=
+|#default = }}
+
+|Wigmar = {{#switch: {{{2}}}
+|Occupation=Merchant
+|Trader=1
+|Repair=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=
+|Sells=
+|#default = }}
+
+|Kenrick = {{#switch: {{{2}}}
+|Occupation=Merchant
+|Trader=1
+|Repair=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=
+|Sells=
+|#default = }}
+
+|Weemart = {{#switch: {{{2}}}
+|Occupation=Merchant
+|Trader=1
+|Repair=
+|Rumors=
+|Lore=
+|UniqueDialogue=
+|Residence=
+|Sells=
+|#default = }}
+
+|Witch = {{#switch: {{{2}}}
+|Occupation=Witch
 |Quest=
 |QuestRequirement=
 |Trader=

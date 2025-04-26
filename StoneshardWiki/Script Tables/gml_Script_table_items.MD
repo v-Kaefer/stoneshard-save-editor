@@ -103,7 +103,7 @@ return [";Русский;English;中文;Deutsch;Español (LATAM);Français;Itali
 "seapearl;Морской жемчуг;Sea Pearls;海水珍珠;Meeresperlen;Perlas de mar;Perles marines;Perle di Mare;Pérolas do Mar;Perły morskie;İnciler;真珠;진주;"
 "amber;Россыпь янтаря;Handful of Amber;琥珀;Handvoll Bernstein;Puñado de ámbar;Poignée d'ambre;Pugno d'Ambra;Punhado de Âmbar;Garść bursztynów;Bir Avuç Kehribar;琥珀のかけら;호박석 조각들;"
 "morion;Морион;Morion;烟晶;Morion;Cuarzo negro;Morion;Morione;Morione;Morion;Morion;黒水晶;흑수정;"
-";;// VALUABLES;// VALUABLES;;;;;// VALUABLES;// VALUABLES;;;;"
+# ";;// VALUABLES;// VALUABLES;;;;;// VALUABLES;// VALUABLES;;;;"
 "golden_cup;Золотой кубок;Gold Cup;金杯;Goldbecher;Cáliz de oro;Coupe en or;Coppa Dorata;Cálice de Ouro;Złoty puchar;Altın Kupa;金の盃;금잔;"
 "golden_cup_water;Золотой кубок;Gold Cup;金杯;Goldbecher;Cáliz de oro;Coupe en or;Coppa Dorata;Cálice de Ouro;Złoty puchar;Altın Kupa;金の盃;금잔;"
 "hourglass;Песочные часы;Hourglass;沙漏;Stundenglas;Reloj de arena;Sablier;Clessidra;Ampulheta;Klepsydra;Kum Saati;砂時計;모래시계;"
