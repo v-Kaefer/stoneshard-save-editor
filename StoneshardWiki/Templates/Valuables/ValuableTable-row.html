@@ -2,12 +2,11 @@
     --- Load complete datastring into a variable - to only load from the Valuable data page once. ---
     -->{{#vardefine:Datastring|{{:Valuable_data|{{{1}}}}}}}<!--
     -- Separate/Allocate values from datastring into individual variables. --
-    -->{{#vardefine:ItemID|{{#explode: {{#var:Datastring}}|;|0}}}}<!-- valuable00;
-    -->{{#vardefine:ImageBase|{{#explode: {{#var:Datastring}}|;|1}}}}<!-- (valuable name);
-    -->{{#vardefine:Variants|{{#explode: {{#var:Datastring}}|;|2}}}}<!--
-    -->{{#vardefine:InvSlots|{{#explode: {{#var:Datastring}}|;|3}}}}<!-- 1x1;
-    -->{{#vardefine:Price|{{#explode: {{#var:Datastring}}|;|4}}}}<!-- 100;
-    -->{{#vardefine:ItemDescription|{{#explode: {{#var:Datastring}}|;|5}}}}<!-- (valuable description)
+    -->{{#vardefine:ImageBase|{{#explode: {{#var:Datastring}}|;|0}}}}<!-- (valuable name);
+    -->{{#vardefine:Variants|{{#explode: {{#var:Datastring}}|;|1}}}}<!--
+    -->{{#vardefine:InvSlots|{{#explode: {{#var:Datastring}}|;|2}}}}<!-- 1x1;
+    -->{{#vardefine:Price|{{#explode: {{#var:Datastring}}|;|3}}}}<!-- 100;
+    -->{{#vardefine:ItemDescription|{{#explode: {{#var:Datastring}}|;|4}}}}<!-- (valuable description)
     --- Load translations that are used multiple times into variables. ---
     -->{{#vardefine:TranslateName|{{Translate|{{{1}}}|ValuableNames}}}}<!--
     --- Load translated description or fallback to base description ---
