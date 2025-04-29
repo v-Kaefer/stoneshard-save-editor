@@ -1,6 +1,4 @@
 <includeonly>{| class="stoneshard sortable fixed-layout cell-hover center" width="{{{width|100%}}}"
-{{#if: {{{town|}}}|! colspan="8" {{!}} [[{{{town|}}}]] NPCs Ratios|}}
-|-
 ! width="8%" | {{Translate|NPCs|Properties}}
 ! width="5%" | {{Translate|Sacks of Grain|Properties}}
 ! width="5%" | {{Translate|Crates of Charcoal|Properties}}
@@ -52,8 +50,8 @@
 | '''{{#if:{{#var:Ratio06}}|<!--
     -->{{#vardefine:Ratio06Diff|{{#ifexpr:{{#var:Ratio06}} < 1.15 | 2.0 - {{#var:Ratio06}} | {{#var:Ratio06}} - 1.0}}}}<!--
     -->{{c|{{#ifexpr:{{#var:Ratio06}} > 1.25 | + |{{#ifexpr:{{#var:Ratio06}} < 1.1 | - | Orange}}}}<!--
--->|{{#var:Ratio06}}}}|-}}'''<!--
---></includeonly><noinclude>
+-->|{{#var:Ratio06}}}}|-}}'''
+|-</includeonly><noinclude>
 {{doc|Template:CommoditiesRatioTable}}
 [[Category:Templates]]
 </noinclude>
