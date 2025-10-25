@@ -16,51 +16,44 @@
 |}
 
 </noinclude><includeonly><!--
-    --- Define variables, to only load from the Data page once. ---
-    --- Loads the parameters from the CONTAINER specified in the first parameter ---
-    -->{{#vardefine:ContainerName|{{{1}}}}} <!--
-    --- Defines Containers' Category in the second parameter ---
-    -->{{#vardefine:Category|{{{2}}}}}<!--
-    --- Pull item list from Container data. This access the {{{2}}} param directly. ---
+    --- Pull item list from Container data ---
     -->{{#vardefine:ItemList|{{:Container data|{{{1}}}|{{{2}}}}}}}<!--
     -->{{#vardefine:Index|&#8239;&bull;&#8239;}}<!--
-    --- Define which Translation "table" to use for the ItemNames ---
-    -->{{#vardefine:TranslationTable|{{#ifeq:{{{2}}}|Jewelry|ValuableNames|{{#ifeq:{{{2}}}|Loot|ValuableNames|{{#ifeq:{{{2}}}|Consumables|ConsumableNames|{{#ifeq:{{{2}}}|Treatises|Treatises|ItemNames}}}}}}}}}}<!--
-    --- Load translations that are used multiple times into variables. ---
-    -->{{#vardefine:TranslateName|{{Translate|{{{1}}}|ContainerName}}}}<!--
-    --- Output ONE table row with two cells -->
-    |-
-    | style="border: 5px solid #1e1a31;"|[[{{{2}}}]]<!-- First Column/Cell & Category -->
-    ! colspan="5" style="border: 5px solid #1e1a31; border-collapse: collapse;" |<!-- Display items
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|0}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|0}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|1}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|1}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|1}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|2}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|2}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|2}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|3}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|3}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|3}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|4}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|4}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|4}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|5}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|5}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|5}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|6}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|6}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|6}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|7}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|7}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|7}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|8}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|8}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|8}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|9}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|9}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|9}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|10}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|10}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|10}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|11}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|11}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|11}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|12}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|12}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|12}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|13}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|13}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|13}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|14}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|14}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|14}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|15}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|15}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|15}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|16}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|16}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|16}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|17}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|17}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|17}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|18}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|18}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|18}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|19}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|19}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|19}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|20}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|20}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|20}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|21}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|21}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|21}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|22}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|22}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|22}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|23}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|23}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|23}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|24}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|24}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|24}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|25}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|25}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|25}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|26}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|26}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|26}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|27}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|27}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|27}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|28}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|28}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|28}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|29}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|29}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|29}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|30}}|{{#var:Index}}| |- }}}}<!--
-    -->{{#if:{{#explode:{{#var:ItemList}}|;|30}}|'''[[{{Translate|{{#replace:{{#explode:{{#var:ItemList}}|;|30}}|_|&#8239;}}|{{#var:TranslationTable}}}}]]'''{{#if:{{#explode:{{#var:ItemList}}|;|31}}|{{#var:Index}}| |- }}}}<!--
+    --- Translation Table variable, reduced to "TT", but still defines which Translation "table" to use for the ItemNames ---
+    -->{{#vardefine:TT|{{#ifeq:{{{2}}}|Jewelry|ValuableNames|{{#ifeq:{{{2}}}|Loot|ValuableNames|{{#ifeq:{{{2}}}|Consumables|ConsumableNames|{{#ifeq:{{{2}}}|Treatises|Treatises|ItemNames}}}}}}}}}}<!--
+    -->|-
+    | style="border: 5px solid #1e1a31;"|[[{{{2}}}]]
+    ! colspan="5" style="border: 5px solid #1e1a31; border-collapse: collapse;" |<!--
+    --- Reuses one variable i for all items instead of calling #explode twice ---
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|0}}}}{{#if:{{#var:i}}|'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|1}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|2}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|3}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|4}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|5}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|6}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|7}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|8}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|9}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|10}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|11}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|12}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|13}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|14}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|15}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|16}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|17}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|18}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|19}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|20}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|21}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|22}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|23}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|24}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|25}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|26}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|27}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|28}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|29}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''}}<!--
+    -->{{#vardefine:i|{{#explode:{{#var:ItemList}}|;|30}}}}{{#if:{{#var:i}}|{{#var:Index}}'''[[{{Translate|{{#replace:{{#var:i}}|_|&#8239;}}|{{#var:TT}}}}]]'''| |- }}<!--
 --></includeonly><noinclude>{{doc|Template:ContainerTable}}[[Category:Templates]]</noinclude>

@@ -30,8 +30,9 @@ Here's a list of all the templates that exist(or not) for other languages:
 {{tl|PT-BR WikiNavigation}} (90%) [Needs Revision]<br>
 {{tl|PT-BR NPCNames}} (80%) [A couple NPCs missing]<br>
 {{tl|PT-BR SkillNames}} (95%) [Needs Revision with game names]<br>
-{{tl|PT-BR SkillDescription}} () []<br>
+{{tl|PT-BR SkillDescription}} (15%) [Beasts, Brigands, Undead]<br>
 {{tl|PT-BR SkillFormulaDescription}} () []<br>
+{{tl|PT-BR EnemySkillDescription}} [] *Newly added for {{tl|SkillTable/row}}.<br>
 
 And the Language templates category page, lists templates where translation is applicable. So in theory, anything that uses one of those templates should get translated.<br>
 (conditions are what we used to call status effects at some point).
@@ -41,12 +42,19 @@ It’s separated in {{tl|CommoditiesRatioTable/head}} & {{tl|CommoditiesRatioTab
 There is no more need for it, since it’s being used with <Tabber>.<br>
  - Remove head & row pages.
  - Simplify to a single page {{tl|CommoditiesRatioTable}}.
-
+====Update====
+* {{tl|CommoditiesRatioTable}} would not work with Tabber for a single page template.<br> Therefore, {{tl|CommoditiesRatioTable/row}} was simplified and is still in use.
+* There can still be better methods to do so, but thats what i know for now.
 
 === ContainerTable ===
 This template needs modifying for a method to display Treatises, since a container can drop multiple Treatises, without a lot of repetition.<br>
 And i also made [[Container data]], for better testing, this needs to either be maintained or implemented as another parameter, probably verifying each item type from a parameter called "Loot", for example, and display them accordingly.<br>
 Therefore, this Template, should follow {{tl|Acquired from}} Template updates, for better integration, and less repetition on data & pages with the same things.
- - Better method to display Treatises
+ - Better method to display Treatises (Currently it's still the same way, in the actual page).
  - Decide to keep or implement somewhere else or to each item, in their own data pages.
- - Keep a look at {{tl|Acquired from}}, for better integration of both, since they are correlated.
+ - '''Keep a look at {{tl|Acquired from}}, for better integration of both, since they are correlated.'''
+
+=== 25/10/25 ===
+ - Implemented {{tl|ContainerTable|Container Table}} Template into all current containers. <br>
+ - Updated [[Container data]] page with all current containers & their loot data. (Still outdated)<br>
+ - Updated [[Container data]] page documentation, to reflect it as not a test page anymore.<br>
